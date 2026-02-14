@@ -100,6 +100,22 @@
       <a href="/privacy.html">Privacy</a>
       <a href="/support.html">Support</a>
     </div>
+
   </footer>
+  <div class="lightbox" id="lightbox" role="dialog" aria-label="Enlarged image">
+    <button class="lightbox-close" aria-label="Close">&times;</button>
+    <img src="/images/yashica-24.jpg" alt="Yashica-24 twin-lens reflex camera">
+  </div>
+  <script>
+  (function(){
+    var lb=document.getElementById('lightbox');
+    if(!lb)return;
+    var img=document.querySelector('.cam-image img');
+    if(!img)return;
+    img.addEventListener('click',function(){lb.classList.add('open');});
+    lb.addEventListener('click',function(e){if(e.target!==lb.querySelector('img'))lb.classList.remove('open');});
+    document.addEventListener('keydown',function(e){if(e.key==='Escape')lb.classList.remove('open');});
+  })();
+  </script>
 </body>
 </html>

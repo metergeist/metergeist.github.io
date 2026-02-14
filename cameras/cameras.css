@@ -294,6 +294,56 @@
   line-height: 1.6;
 }
 
+/* Lightbox */
+.cam-image img {
+  cursor: zoom-in;
+}
+
+.lightbox {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  background: rgba(0, 0, 0, 0.9);
+  align-items: center;
+  justify-content: center;
+  cursor: zoom-out;
+}
+
+.lightbox.open {
+  display: flex;
+}
+
+.lightbox img {
+  max-width: 90vw;
+  max-height: 90vh;
+  object-fit: contain;
+  border-radius: 4px;
+}
+
+.lightbox-close {
+  position: absolute;
+  top: 1rem;
+  right: 1.5rem;
+  background: none;
+  border: none;
+  color: var(--chrome-dim);
+  font-size: 2rem;
+  cursor: pointer;
+  line-height: 1;
+  padding: 0.5rem;
+}
+
+.lightbox-close:hover {
+  color: #fff;
+}
+
+.lightbox-close:focus-visible {
+  outline: 2px solid var(--chrome);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
 /* Tablet */
 @media (max-width: 768px) {
   .cam-layout { gap: 1.5rem; }

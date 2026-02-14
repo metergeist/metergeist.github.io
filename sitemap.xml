@@ -21,6 +21,11 @@
     <priority>0.5</priority>
   </url>
   <url>
+    <loc>https://metergeist.com/guides/long-exposure.html</loc>
+    <lastmod>2026-02-14</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://metergeist.com/cameras/mamiya-c22.html</loc>
     <lastmod>2026-02-13</lastmod>
     <priority>0.7</priority>

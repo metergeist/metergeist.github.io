@@ -3,10 +3,31 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>metergeist — Film Photography Companion</title>
-  <meta name="description" content="A light meter and film roll tracker for film photographers. No ads, no tracking, no subscription.">
+  <title>metergeist — Light Meter App for TLR &amp; Medium Format Film Photography</title>
+  <meta name="description" content="Free light meter app and film roll tracker for TLR and medium format photographers. Real-time metering, 120 film tracking, camera profiles for Rolleiflex, Yashica, Mamiya, and more.">
+  <meta property="og:title" content="metergeist — Light Meter App for Film Photography">
+  <meta property="og:description" content="Free light meter app and film roll tracker for TLR and medium format photographers.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://metergeist.com">
+  <meta property="og:image" content="https://metergeist.com/icon.png">
   <link rel="stylesheet" href="style.css">
   <link rel="icon" href="icon.png" type="image/png">
+  <link rel="canonical" href="https://metergeist.com">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "metergeist",
+    "applicationCategory": "PhotographyApplication",
+    "operatingSystem": "iOS",
+    "description": "A light meter app and film roll tracker for TLR and medium format film photographers.",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    }
+  }
+  </script>
 </head>
 <body>
   <nav>
@@ -15,6 +36,7 @@
       <span>metergeist</span>
     </a>
     <div class="links">
+      <a href="/cameras/">TLR Guide</a>
       <a href="privacy.html">Privacy</a>
       <a href="support.html">Support</a>
     </div>
@@ -24,7 +46,7 @@
     <img src="icon.png" alt="metergeist app icon" class="icon">
     <h1>metergeist</h1>
     <p class="tagline">Meter. Track. Shoot.</p>
-    <p class="subtitle">A light meter and film roll tracker built for photographers who shoot film.</p>
+    <p class="subtitle">A free light meter app and film roll tracker built for <a href="/cameras/">TLR</a> and medium format photographers shooting 120 film.</p>
     <!-- Uncomment when App Store link is live:
     <a href="#" class="app-store-badge">
       <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download on the App Store">
@@ -34,34 +56,35 @@
 
   <div class="features">
     <div class="feature">
-      <h3>Light Metering</h3>
+      <h3>Light Meter for Film Photography</h3>
       <ul>
         <li>Real-time exposure calculation</li>
         <li>Aperture and shutter speed recommendations</li>
         <li>Lock either setting independently</li>
         <li>Exposure priority modes</li>
         <li>Overexposure and low-light warnings</li>
+        <li>EV display</li>
       </ul>
     </div>
 
     <div class="feature">
-      <h3>Film Roll Tracking</h3>
+      <h3>120 Film Roll Tracking</h3>
       <ul>
         <li>Load film onto specific cameras</li>
-        <li>Automatic frame counting</li>
-        <li>Track each roll through its lifecycle</li>
+        <li>Automatic frame counting for 120 film</li>
+        <li>Track each roll: shooting, complete, developed</li>
         <li>Switch cameras — film stays with the right body</li>
         <li>Add and edit notes per roll</li>
       </ul>
     </div>
 
     <div class="feature">
-      <h3>Camera Collection</h3>
+      <h3>TLR &amp; Medium Format Cameras</h3>
       <ul>
+        <li>11 camera profiles with real specs</li>
         <li>Manage multiple cameras with nicknames</li>
         <li>See film status per camera at a glance</li>
-        <li>11 camera profiles with real specs</li>
-        <li>TLR and medium format support</li>
+        <li><a href="/cameras/#rollei">Rolleiflex</a>, <a href="/cameras/#yashica">Yashica</a>, <a href="/cameras/#mamiya">Mamiya</a>, <a href="/cameras/#minolta">Minolta</a></li>
       </ul>
     </div>
 
@@ -96,11 +119,42 @@
 
   <p class="bottom-line">No subscription. No cloud. No ads. No tracking.</p>
 
+  <div class="tlr-section">
+    <h2>Built for Twin-Lens Reflex Photographers</h2>
+    <p>metergeist includes camera profiles with real aperture and shutter speed constraints for the most popular TLR cameras. Load your specific camera, and the light meter recommends only settings your camera can actually use.</p>
+
+    <div class="tlr-cameras">
+      <h3>Supported Camera Profiles</h3>
+      <ul>
+        <li><a href="/cameras/yashica-a.html">Yashica-A</a></li>
+        <li><a href="/cameras/yashica-mat-124g.html">Yashica-Mat 124G</a></li>
+        <li><a href="/cameras/yashica-d.html">Yashica-D</a></li>
+        <li><a href="/cameras/rolleiflex-35f.html">Rolleiflex 3.5F</a></li>
+        <li><a href="/cameras/rolleiflex-28f.html">Rolleiflex 2.8F</a></li>
+        <li><a href="/cameras/rolleicord-v.html">Rolleicord V</a></li>
+        <li><a href="/cameras/rolleicord-vb.html">Rolleicord Vb</a></li>
+        <li><a href="/cameras/mamiya-c330f.html">Mamiya C330f</a></li>
+        <li><a href="/cameras/minolta-autocord.html">Minolta Autocord</a></li>
+      </ul>
+    </div>
+
+    <h3>Explore the TLR Camera Guide</h3>
+    <p>New to twin-lens reflex cameras? Our <a href="/cameras/">TLR Camera Guide</a> covers <strong>48 cameras</strong> across four brands — complete with specs, history, current market prices, manuals, and sample photos.</p>
+
+    <div class="tlr-brands">
+      <a href="/cameras/#rollei">Rolleiflex &amp; Rolleicord</a>
+      <a href="/cameras/#yashica">Yashica TLR Cameras</a>
+      <a href="/cameras/#mamiya">Mamiya TLR System</a>
+      <a href="/cameras/#minolta">Minolta Autocord</a>
+    </div>
+  </div>
+
   <footer>
     &copy; 2026 metergeist
     <div class="links">
-      <a href="privacy.html">Privacy</a>
-      <a href="support.html">Support</a>
+      <a href="/cameras/">TLR Guide</a>
+      <a href="/privacy.html">Privacy</a>
+      <a href="/support.html">Support</a>
     </div>
   </footer>
 </body>

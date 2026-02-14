@@ -1,0 +1,304 @@
+/* TLR Guide styles */
+
+/* Index page */
+.guide-intro {
+  color: var(--text-dim);
+  font-size: 1.05rem;
+  margin-bottom: 1rem;
+  line-height: 1.7;
+}
+
+.guide-intro strong {
+  color: var(--text);
+}
+
+.brand-nav {
+  display: flex;
+  gap: 1rem;
+  margin: 1.5rem 0 2rem;
+  flex-wrap: wrap;
+}
+
+.brand-nav a {
+  padding: 0.4rem 1rem;
+  background: var(--surface);
+  border: 1px solid #333;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  border-bottom: 1px solid #333;
+}
+
+.brand-nav a:hover {
+  border-color: var(--chrome);
+}
+
+.brand-section {
+  margin-bottom: 2.5rem;
+}
+
+.brand-section h2 {
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  padding-bottom: 0.4rem;
+  border-bottom: 1px solid #333;
+  color: var(--chrome);
+}
+
+.camera-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.camera-card {
+  background: var(--surface);
+  border: 1px solid #333;
+  border-radius: 10px;
+  overflow: hidden;
+  text-decoration: none;
+  border-bottom: 1px solid #333;
+  transition: border-color 0.2s;
+}
+
+.camera-card:hover {
+  border-color: var(--chrome);
+}
+
+.camera-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: contain;
+  background: #1e1e1e;
+  padding: 8px;
+}
+
+.card-info {
+  padding: 0.8rem;
+}
+
+.card-info h3 {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 0.2rem;
+}
+
+.card-years, .card-price {
+  font-size: 0.8rem;
+  color: var(--text-dim);
+  display: block;
+}
+
+.card-price {
+  color: var(--chrome-dim);
+  margin-top: 0.1rem;
+}
+
+/* Camera detail page */
+.camera-page .breadcrumb {
+  font-size: 0.85rem;
+  color: var(--text-dim);
+  margin-bottom: 1.5rem;
+}
+
+.camera-page h1 {
+  font-size: 2rem;
+  margin-bottom: 0.3rem;
+}
+
+.cam-tagline {
+  font-size: 1.1rem;
+  color: var(--chrome);
+  font-style: italic;
+  margin-bottom: 1rem;
+}
+
+.cam-meta {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+  font-size: 0.9rem;
+  color: var(--text-dim);
+}
+
+.cam-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.cam-image img {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 8px;
+  background: #1e1e1e;
+}
+
+.attribution {
+  font-size: 0.75rem;
+  color: var(--chrome-dim);
+  margin-top: 0.4rem;
+}
+
+.attribution a {
+  font-size: 0.75rem;
+}
+
+.specs-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+}
+
+.specs-table td {
+  padding: 0.35rem 0;
+  border-bottom: 1px solid #2a2a2a;
+}
+
+.specs-table td:first-child {
+  color: var(--chrome-dim);
+  width: 40%;
+  padding-right: 1rem;
+}
+
+.specs-table td:last-child {
+  color: var(--text);
+}
+
+.features-list {
+  margin-top: 1rem;
+  padding-left: 0;
+  list-style: none;
+  font-size: 0.9rem;
+}
+
+.features-list li {
+  padding: 0.15rem 0;
+  color: var(--text-dim);
+}
+
+.features-list li::before {
+  content: "\2713";
+  color: var(--chrome);
+  margin-right: 0.5rem;
+}
+
+.cam-history, .famous-users, .pop-culture, .innovations,
+.collector-notes, .resources, .related, .pricing-table {
+  margin-bottom: 1.5rem;
+}
+
+.cam-history h2, .cam-details h2 {
+  font-size: 1.15rem;
+  color: var(--chrome);
+  margin-bottom: 0.5rem;
+}
+
+.cam-history p, .famous-users p, .pop-culture p, .collector-notes p {
+  color: var(--text-dim);
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
+
+.innovations ul, .resources ul {
+  padding-left: 1.2rem;
+  color: var(--text-dim);
+  font-size: 0.9rem;
+}
+
+.innovations li, .resources li {
+  margin-bottom: 0.3rem;
+}
+
+.resources .source {
+  color: var(--chrome-dim);
+  font-size: 0.85rem;
+}
+
+.pricing-table h3, .resources h3, .innovations h3,
+.famous-users h3, .pop-culture h3, .collector-notes h3, .related h3 {
+  font-size: 1rem;
+  color: var(--chrome);
+  margin-bottom: 0.5rem;
+}
+
+.pricing-table table {
+  width: 100%;
+  max-width: 360px;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+}
+
+.pricing-table th {
+  text-align: left;
+  padding: 0.4rem 0;
+  border-bottom: 1px solid #444;
+  color: var(--chrome-dim);
+  font-weight: 500;
+}
+
+.pricing-table td {
+  padding: 0.35rem 0;
+  border-bottom: 1px solid #2a2a2a;
+  color: var(--text);
+}
+
+.pricing-table td:first-child {
+  color: var(--text-dim);
+}
+
+.price-source {
+  font-size: 0.8rem;
+  color: var(--chrome-dim);
+  margin-top: 0.3rem;
+}
+
+.shop-link {
+  margin-bottom: 1.5rem;
+}
+
+.shop-link a {
+  font-size: 0.9rem;
+}
+
+.related p {
+  line-height: 1.8;
+  font-size: 0.9rem;
+}
+
+.app-cta {
+  background: var(--surface);
+  border: 1px solid #333;
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-top: 2rem;
+}
+
+.app-cta h2, .app-cta h3 {
+  color: var(--chrome);
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+.app-cta p {
+  color: var(--text-dim);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+@media (max-width: 600px) {
+  .cam-layout {
+    grid-template-columns: 1fr;
+  }
+  .camera-grid {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  }
+  .camera-page h1 {
+    font-size: 1.5rem;
+  }
+  .cam-meta {
+    gap: 0.8rem;
+  }
+}

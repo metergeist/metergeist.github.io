@@ -294,17 +294,92 @@
   line-height: 1.6;
 }
 
+/* Tablet */
+@media (max-width: 768px) {
+  .cam-layout { gap: 1.5rem; }
+  .camera-card img { height: 160px; }
+  .app-cta { padding: 1.2rem; }
+}
+
+/* Mobile */
 @media (max-width: 600px) {
   .cam-layout {
     grid-template-columns: 1fr;
   }
+  .cam-image {
+    text-align: center;
+  }
+  .cam-image img {
+    max-width: 280px;
+    margin: 0 auto;
+  }
   .camera-grid {
     grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 0.8rem;
   }
   .camera-page h1 {
     font-size: 1.5rem;
   }
+  .cam-tagline {
+    font-size: 1rem;
+  }
   .cam-meta {
-    gap: 0.8rem;
+    gap: 0.5rem 1rem;
+    font-size: 0.85rem;
+  }
+  .brand-nav {
+    gap: 0.5rem;
+  }
+  .brand-nav a {
+    padding: 0.35rem 0.8rem;
+    font-size: 0.85rem;
+  }
+  .specs-table {
+    font-size: 0.85rem;
+  }
+  .specs-table td:first-child {
+    width: 45%;
+    padding-right: 0.5rem;
+  }
+  .pricing-table table {
+    max-width: 100%;
+  }
+  .camera-card img {
+    height: 150px;
+  }
+  .card-info { padding: 0.6rem; }
+  .card-info h3 { font-size: 0.9rem; }
+  .app-cta {
+    padding: 1rem;
+    margin-top: 1.5rem;
+  }
+  .app-cta h2, .app-cta h3 {
+    font-size: 1rem;
+  }
+  .guide-intro {
+    font-size: 0.95rem;
+  }
+}
+
+/* Small phones */
+@media (max-width: 375px) {
+  .camera-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 0.6rem;
+  }
+  .camera-card img {
+    height: 130px;
+  }
+  .card-info h3 {
+    font-size: 0.85rem;
+  }
+  .brand-nav {
+    flex-direction: column;
+  }
+  .brand-nav a {
+    text-align: center;
+  }
+  .cam-image img {
+    max-width: 100%;
   }
 }

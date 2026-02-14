@@ -325,11 +325,54 @@ footer .links a {
   font-size: 0.8rem;
 }
 
+/* Tablet */
+@media (max-width: 768px) {
+  .hero { padding: 3rem 1.5rem 1.5rem; }
+  .hero img.icon { width: 100px; height: 100px; border-radius: 20px; }
+  .hero h1 { font-size: 2rem; }
+  .hero .tagline { font-size: 1.1rem; }
+  .features { gap: 1.5rem; }
+  .feature { padding: 1.2rem; }
+  .tlr-section { padding: 1rem 1.5rem 1.5rem; }
+  .content { padding: 1.5rem 1.5rem 3rem; }
+}
+
 /* Mobile */
 @media (max-width: 540px) {
+  nav { padding: 1rem 1rem 0; }
+  nav .logo img { width: 28px; height: 28px; }
+  nav .logo span { font-size: 1rem; }
+  nav .links { gap: 0.8rem; font-size: 0.85rem; }
+
+  .hero { padding: 2.5rem 1rem 1.5rem; }
+  .hero img.icon { width: 88px; height: 88px; border-radius: 18px; margin-bottom: 1rem; }
   .hero h1 { font-size: 1.8rem; }
   .hero .tagline { font-size: 1rem; }
-  .features { grid-template-columns: 1fr; gap: 1rem; }
-  nav { padding: 1rem 1rem 0; }
-  nav .links { gap: 1rem; }
+  .hero .subtitle { font-size: 0.9rem; }
+
+  .features { grid-template-columns: 1fr; gap: 1rem; padding: 1.5rem 1rem 2rem; }
+  .feature { padding: 1.2rem; }
+
+  .bottom-line { padding: 0.8rem 1rem 2rem; font-size: 0.9rem; }
+
+  .tlr-section { padding: 0.8rem 1rem 1.5rem; }
+  .tlr-section h2 { font-size: 1.15rem; }
+  .tlr-cameras ul { gap: 0.3rem 0.8rem; }
+  .tlr-brands { gap: 0.5rem; }
+  .tlr-brands a { padding: 0.35rem 0.8rem; font-size: 0.85rem; }
+
+  .content { padding: 1.5rem 1rem 3rem; }
+  .content h1 { font-size: 1.5rem; }
+
+  footer { padding: 1.5rem 1rem; }
+}
+
+/* Small phones */
+@media (max-width: 375px) {
+  nav .logo span { font-size: 0.9rem; }
+  nav .links { gap: 0.6rem; font-size: 0.8rem; }
+  .hero h1 { font-size: 1.5rem; }
+  .hero .subtitle { font-size: 0.85rem; }
+  .tlr-brands { flex-direction: column; }
+  .tlr-brands a { text-align: center; }
 }

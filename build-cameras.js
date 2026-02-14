@@ -182,6 +182,10 @@ for (const cam of cameras) {
   <meta property="og:type" content="article">
   <meta property="og:url" content="https://metergeist.com/cameras/${cam.id}.html">
   ${imgFile ? `<meta property="og:image" content="https://metergeist.com/images/${imgFile}">` : ''}
+  <meta name="twitter:card" content="${imgFile ? 'summary_large_image' : 'summary'}">
+  <meta name="twitter:title" content="${escHtml(cam.fullName)} — TLR Camera Guide">
+  <meta name="twitter:description" content="${escHtml(metaDesc)}">
+  ${imgFile ? `<meta name="twitter:image" content="https://metergeist.com/images/${imgFile}">` : ''}
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/cameras/cameras.css">
   <link rel="icon" href="/icon.png" type="image/png">
@@ -304,6 +308,11 @@ const indexHtml = `<!DOCTYPE html>
   <meta property="og:description" content="Complete guide to 48 TLR cameras. Specs, history, pricing, and resources for Rolleiflex, Yashica, Mamiya, and Minolta.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://metergeist.com/cameras/">
+  <meta property="og:image" content="https://metergeist.com/icon.png">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="TLR Camera Guide — Twin Lens Reflex Cameras">
+  <meta name="twitter:description" content="Complete guide to 48 TLR cameras. Specs, history, pricing, and resources for Rolleiflex, Yashica, Mamiya, and Minolta.">
+  <meta name="twitter:image" content="https://metergeist.com/icon.png">
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/cameras/cameras.css">
   <link rel="icon" href="/icon.png" type="image/png">

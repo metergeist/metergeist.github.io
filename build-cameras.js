@@ -88,7 +88,7 @@ function relatedCameras(cam) {
 function articlesList(articles) {
   if (!articles || articles.length === 0) return '';
   const items = articles.map(a =>
-    `<li><a href="${escHtml(a.url)}" rel="noopener">${escHtml(a.title)}</a> <span class="source">— ${escHtml(a.source)}</span></li>`
+    `<li><a href="${escHtml(a.url)}" target="_blank" rel="noopener">${escHtml(a.title)}</a> <span class="source">— ${escHtml(a.source)}</span></li>`
   ).join('\n');
   return `<div class="resources"><h3>Articles &amp; Reviews</h3><ul>${items}</ul></div>`;
 }
@@ -96,22 +96,25 @@ function articlesList(articles) {
 function manualsList(manuals) {
   if (!manuals || manuals.length === 0) return '';
   const items = manuals.map(m =>
-    `<li><a href="${escHtml(m.url)}" rel="noopener">${escHtml(m.source)}</a></li>`
+    `<li><a href="${escHtml(m.url)}" target="_blank" rel="noopener">${escHtml(m.source)}</a></li>`
   ).join('\n');
   return `<div class="resources"><h3>Manuals &amp; Documentation</h3><ul>${items}</ul></div>`;
 }
 
 function galleriesList(galleries) {
   if (!galleries || galleries.length === 0) return '';
-  const items = galleries.map(g =>
-    `<li><a href="${escHtml(g.url)}" rel="noopener">${escHtml(g.label)}</a></li>`
-  ).join('\n');
+  const items = galleries.map(g => {
+    // nofollow Google Images links, keep editorial links (Flickr, Wikimedia) as dofollow
+    const isGoogle = g.url && g.url.includes('google.com');
+    const rel = isGoogle ? 'noopener nofollow' : 'noopener';
+    return `<li><a href="${escHtml(g.url)}" target="_blank" rel="${rel}">${escHtml(g.label)}</a></li>`;
+  }).join('\n');
   return `<div class="resources"><h3>Photo Galleries</h3><ul>${items}</ul></div>`;
 }
 
 function imageAttribution(attr) {
   if (!attr) return '';
-  return `<p class="attribution">Photo: ${escHtml(attr.author)} · <a href="${escHtml(attr.licenseUrl)}" rel="noopener">${escHtml(attr.license)}</a> · <a href="${escHtml(attr.sourceUrl)}" rel="noopener">Source</a></p>`;
+  return `<p class="attribution">Photo: ${escHtml(attr.author)} · <a href="${escHtml(attr.licenseUrl)}" target="_blank" rel="noopener">${escHtml(attr.license)}</a> · <a href="${escHtml(attr.sourceUrl)}" target="_blank" rel="noopener">Source</a></p>`;
 }
 
 function jsonLd(cam) {
@@ -164,7 +167,7 @@ for (const cam of cameras) {
     : '';
 
   const ebayHtml = cam.ebayUrl
-    ? `<p class="shop-link"><a href="${escHtml(cam.ebayUrl)}" rel="noopener">Shop for ${escHtml(cam.fullName)} on eBay</a></p>`
+    ? `<p class="shop-link"><a href="${escHtml(cam.ebayUrl)}" target="_blank" rel="noopener nofollow sponsored">Shop for ${escHtml(cam.fullName)} on eBay</a></p>`
     : '';
 
   const html = `<!DOCTYPE html>

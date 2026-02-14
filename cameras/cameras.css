@@ -60,8 +60,14 @@
   transition: border-color 0.2s;
 }
 
-.camera-card:hover {
+.camera-card:hover,
+.camera-card:focus-visible {
   border-color: var(--chrome);
+  outline: none;
+}
+
+.camera-card:focus-visible {
+  box-shadow: 0 0 0 2px var(--chrome);
 }
 
 .camera-card img {

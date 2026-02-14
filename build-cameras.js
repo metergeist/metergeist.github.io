@@ -46,7 +46,7 @@ function formatPrice(pricing) {
     <div class="pricing-table">
       <h3>Current Market Prices (USD)</h3>
       <table>
-        <thead><tr><th>Condition</th><th>Price Range</th></tr></thead>
+        <thead><tr><th scope="col">Condition</th><th scope="col">Price Range</th></tr></thead>
         <tbody>${rows}</tbody>
       </table>
       ${pricing.source ? `<p class="price-source">Source: ${escHtml(pricing.source)}</p>` : ''}
@@ -72,7 +72,7 @@ function specsTable(specs) {
       rows += `<tr><td>${label}</td><td>${escHtml(String(specs[key]))}</td></tr>`;
     }
   }
-  return `<table class="specs-table"><tbody>${rows}</tbody></table>`;
+  return `<table class="specs-table" role="table" aria-label="Camera specifications"><tbody>${rows}</tbody></table>`;
 }
 
 function relatedCameras(cam) {
@@ -139,7 +139,8 @@ function jsonLd(cam) {
 // Generate individual camera pages
 for (const cam of cameras) {
   const years = cam.yearEnd ? `${cam.yearStart}–${cam.yearEnd}` : `${cam.yearStart}`;
-  const metaDesc = `${cam.fullName} (${years}) — ${cam.tagline || 'Twin-lens reflex camera'}. Specs, pricing, history, and resources.`;
+  const taglineClean = (cam.tagline || 'Twin-lens reflex camera').replace(/\.\s*$/, '');
+  const metaDesc = `${cam.fullName} (${years}) — ${taglineClean}. Specs, pricing, history, and resources.`;
   const imgFile = cam.localImage ? path.basename(cam.localImage) : null;
 
   const featuresHtml = cam.features && cam.features.length > 0
@@ -185,7 +186,8 @@ for (const cam of cameras) {
   ${jsonLd(cam)}
 </head>
 <body>
-  <nav>
+  <a href="#main" class="skip-link">Skip to content</a>
+  <nav aria-label="Main navigation">
     <a href="/" class="logo">
       <img src="/icon.png" alt="metergeist icon">
       <span>metergeist</span>
@@ -197,6 +199,7 @@ for (const cam of cameras) {
     </div>
   </nav>
 
+  <main id="main">
   <div class="content camera-page">
     <p class="breadcrumb"><a href="/cameras/">TLR Camera Guide</a> &rsaquo; <a href="/cameras/#${cam.brand.toLowerCase()}">${escHtml(cam.brand)}</a> &rsaquo; ${escHtml(cam.fullName)}</p>
 
@@ -244,6 +247,7 @@ for (const cam of cameras) {
       <p><a href="/">metergeist</a> is a free <a href="/">light meter app</a> and <a href="/">film roll tracker</a> built for <a href="/cameras/">TLR</a> and medium format photographers. Meter light, load film, track every frame.</p>
     </div>
   </div>
+  </main>
 
   <footer>
     &copy; 2026 metergeist
@@ -313,7 +317,8 @@ const indexHtml = `<!DOCTYPE html>
   </script>
 </head>
 <body>
-  <nav>
+  <a href="#main" class="skip-link">Skip to content</a>
+  <nav aria-label="Main navigation">
     <a href="/" class="logo">
       <img src="/icon.png" alt="metergeist icon">
       <span>metergeist</span>
@@ -325,6 +330,7 @@ const indexHtml = `<!DOCTYPE html>
     </div>
   </nav>
 
+  <main id="main">
   <div class="content">
     <h1>TLR Camera Guide</h1>
     <p class="guide-intro">A comprehensive guide to <strong>${cameras.length} twin-lens reflex cameras</strong> spanning 1928 to 1986. Explore specs, history, current market prices, manuals, and sample photos for every major TLR from <a href="#rollei">Rolleiflex</a>, <a href="#yashica">Yashica</a>, <a href="#mamiya">Mamiya</a>, and <a href="#minolta">Minolta</a>.</p>
@@ -345,6 +351,7 @@ const indexHtml = `<!DOCTYPE html>
       <p><a href="/">metergeist</a> is a free <a href="/">light meter app for film photography</a> built for <a href="/cameras/">TLR camera</a> and medium format shooters. Real-time metering, film roll tracking, and reference photos — all on your iPhone.</p>
     </div>
   </div>
+  </main>
 
   <footer>
     &copy; 2026 metergeist

@@ -166,8 +166,11 @@ for (const cam of cameras) {
     ? `<div class="collector-notes"><h3>Collector Notes</h3><p>${escHtml(cam.notes)}</p></div>`
     : '';
 
-  const ebayHtml = cam.ebayUrl
-    ? `<p class="shop-link"><a href="${escHtml(cam.ebayUrl)}" target="_blank" rel="noopener nofollow sponsored">Shop for ${escHtml(cam.fullName)} on eBay</a></p>`
+  const ebayAffiliate = cam.ebayUrl
+    ? cam.ebayUrl + (cam.ebayUrl.includes('?') ? '&' : '?') + 'mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142417&toolid=10001&customid=' + cam.id
+    : null;
+  const ebayHtml = ebayAffiliate
+    ? `<p class="shop-link"><a href="${escHtml(ebayAffiliate)}" target="_blank" rel="noopener nofollow sponsored">Shop for ${escHtml(cam.fullName)} on eBay</a></p>`
     : '';
 
   const html = `<!DOCTYPE html>

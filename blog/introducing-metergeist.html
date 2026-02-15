@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-NGH2JC1T0G"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-NGH2JC1T0G');</script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Introducing metergeist &mdash; metergeist blog</title>
+  <meta name="description" content="A free light meter app for people who shoot film on cameras that were built to last forever.">
+  <meta property="og:title" content="Introducing metergeist">
+  <meta property="og:description" content="A free light meter app for people who shoot film on cameras that were built to last forever.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://metergeist.com/blog/introducing-metergeist.html">
+  <meta property="og:image" content="https://metergeist.com/icon.png">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Introducing metergeist">
+  <meta name="twitter:description" content="A free light meter app for people who shoot film on cameras that were built to last forever.">
+  <link rel="stylesheet" href="../style.css">
+  <link rel="icon" href="../icon.png" type="image/png">
+  <link rel="canonical" href="https://metergeist.com/blog/introducing-metergeist.html">
+</head>
+<body>
+  <a href="#main" class="skip-link">Skip to content</a>
+  <nav aria-label="Main navigation">
+    <a href="/" class="logo">
+      <img src="../icon.png" alt="metergeist icon">
+      <span>metergeist</span>
+    </a>
+    <div class="links">
+      <a href="/cameras/">TLR Guide</a>
+      <a href="/blog/">Blog</a>
+      <a href="/support.html">Support</a>
+    </div>
+  </nav>
+
+  <main id="main">
+  <article class="blog-post">
+    <p class="blog-dateline">February 2026</p>
+
+    <h1>Introducing metergeist</h1>
+
+    <p class="blog-subtitle">A free light meter app for people who shoot film on cameras that were built to last forever.</p>
+
+    <p>There's a particular feeling that comes with shooting a twin-lens reflex camera. You look down into the waist-level finder, and the world appears on the ground glass &mdash; reversed left-to-right, framed in a bright square. You're seeing the scene and composing it at the same time, but from this strange detached angle, like watching something happen in a dream. Then you measure the light, set the aperture and shutter, and make an exposure on a piece of film that will hold exactly twelve frames.</p>
+
+    <p>Every one of those twelve frames costs something. Not just money, but attention. You slow down. You think. And because the light meter in a fifty-year-old camera is usually dead (or was never there to begin with), you need to measure the light some other way.</p>
+
+    <p>That's the problem metergeist solves. But the way it solves it matters more than the fact that it does.</p>
+
+    <h2>The problem with light meter apps</h2>
+
+    <p>There are dozens of light meter apps on the App Store. Most of them work the same way: point your phone at the scene, get an EV reading, then choose your own aperture, shutter speed, and ISO from a set of standard photographic values.</p>
+
+    <p>This is fine if you're shooting a modern camera with a modern lens. You can set f/2.8, or f/4, or f/5.6, or anything in between. You can dial in 1/500 or 1/1000 or any speed you want.</p>
+
+    <p>But a Yashica A doesn't have 1/1000. It has 1/25, 1/50, 1/100, and 1/300. That's it. A Rolleicord V goes to 1/500 but its slowest speed is 1 second. The Mamiya C330f has interchangeable lenses, each with different maximum apertures. Every TLR camera is a specific instrument with specific constraints, and a generic light meter ignores all of them.</p>
+
+    <p>So what actually happens in practice is: the app says f/5.6 at 1/350, and then you do mental math in the field to figure out that your camera can do f/5.6 at 1/300, and that's close enough, and you set it. This works, but it's friction. It takes you out of the flow. It's one more thing between you and the photograph.</p>
+
+    <h2>What metergeist does differently</h2>
+
+    <p>When you open metergeist, the first thing you do is select your camera. Not "a camera" in the abstract &mdash; <em>your</em> camera. The Yashica-Mat 124G on your shelf, with its Yashinon 80mm f/3.5 lens and Copal-SV shutter. The app knows that camera. It knows the lens opens to f/3.5 and stops down to f/32. It knows the shutter clicks at 1, 1/2, 1/4, 1/8, 1/15, 1/30, 1/60, 1/125, 1/250, and 1/500. It knows there's a bulb mode.</p>
+
+    <p>So when you meter a scene, the app doesn't give you theoretical values that you then have to translate. It gives you the actual aperture click-stop and actual shutter speed that exist on your camera. No rounding, no mental math, no friction. The reading you see is the setting you set.</p>
+
+    <p>This sounds like a small thing. It is a small thing. But small things matter when you only have twelve frames.</p>
+
+    <h2>More than a meter</h2>
+
+    <p>Film photography has a record-keeping problem. You load a roll, shoot twelve frames over a weekend (or a month, or six months), send it off to be developed, and get back twelve images with no metadata. Digital cameras write EXIF data into every file: aperture, shutter speed, ISO, timestamp, GPS. Film gives you nothing. Whatever you didn't write down is gone.</p>
+
+    <p>metergeist tracks your film rolls. When you load film &mdash; say, Ilford HP5 Plus into your Yashica A &mdash; the app creates a roll and starts counting frames. Every time you capture a reference photo (a quick snapshot of the scene you're about to shoot on film), the app records the exposure settings alongside it: aperture, shutter speed, film stock, ND filter, metering mode, EV. When you get your film back from the lab, you can compare your reference photos to the developed negatives and learn from the differences.</p>
+
+    <p>You can also record voice notes on any frame ("strong backlight from the left, metered for the shadows, expecting two stops overexposure on the highlights"), write text notes, push or pull the development, and track the roll through its lifecycle: shooting, shot, developed.</p>
+
+    <p>The gallery organizes everything by roll. Tap a roll and you see its reference photos, sorted by frame number, with notes below. It's a lab notebook for film photographers.</p>
+
+    <h2>Constraints as features</h2>
+
+    <p>We made a few decisions early on that shaped everything else.</p>
+
+    <p><strong>No cloud, no accounts, no tracking.</strong> Your photos, notes, and roll data live on your phone and nowhere else. There is no server. There is no analytics SDK watching how you use the app. There is no login screen. This isn't just a privacy stance &mdash; it's a reliability stance. The app works in airplane mode, in the mountains, in the darkroom. It works when our server goes down, because there is no server to go down.</p>
+
+    <p><strong>No subscription, no ads.</strong> The app is free. We didn't want price to be a reason anyone meters a scene wrong or doesn't track their rolls. Film photography is already expensive enough. The app is a tool; it should be available to anyone who needs it.</p>
+
+    <p><strong>Camera-first, not feature-first.</strong> It would be easy to build a Swiss Army knife &mdash; a light meter plus a depth of field calculator plus a sunrise timer plus a film database plus a social network. We chose to build something that does one thing exceptionally well: help you expose film correctly on your specific camera. Everything else in the app (roll tracking, reference photos, voice notes) serves that same goal.</p>
+
+    <p><strong>Respect for the instrument.</strong> TLR cameras are beautifully engineered objects. Many of them are sixty or seventy years old and still work perfectly. The app's interface reflects this: dark surfaces, chrome accents, mechanical typography, the feeling of a precision instrument. This isn't nostalgia for its own sake &mdash; it's acknowledgment that these cameras deserve a companion tool built with the same care.</p>
+
+    <h2>The name</h2>
+
+    <p>"metergeist" is a portmanteau of <em>meter</em> and <em>geist</em>, the German word for spirit or ghost. It's the spirit of the light meter &mdash; the invisible tool that sees what the photographer feels. There's a playful echo of "poltergeist," something unseen that moves things in the physical world, the way light moves silver halide crystals in an emulsion.</p>
+
+    <p>We liked that it was a little unexpected. Film photography apps tend to have names like "Light Meter Pro" or "Exposure Calculator" &mdash; functional, forgettable, interchangeable. We wanted a name you'd remember. One that sounds like it belongs on a camera strap or a darkroom door.</p>
+
+    <h2>What we support</h2>
+
+    <p>The app ships with profiles for 16 TLR and medium format cameras spanning seven decades and eight manufacturers:</p>
+
+    <ul>
+      <li><strong>Yashica</strong> &mdash; A, D, Mat-124G</li>
+      <li><strong>Rollei</strong> &mdash; Rolleiflex 2.8F, Rolleiflex 3.5F, Rolleicord V, Rolleicord Vb</li>
+      <li><strong>Mamiya</strong> &mdash; C330f (with 6 interchangeable lenses)</li>
+      <li><strong>Minolta</strong> &mdash; Autocord</li>
+      <li><strong>Seagull</strong> &mdash; 4A-103</li>
+      <li><strong>LOMO</strong> &mdash; Lubitel 166 Universal</li>
+      <li><strong>Ricoh</strong> &mdash; Ricohflex VII, Diacord L</li>
+      <li><strong>Meopta</strong> &mdash; Flexaret VII</li>
+      <li><strong>Zeiss Ikon</strong> &mdash; Ikoflex Favorit</li>
+      <li><strong>Voigtlander</strong> &mdash; Superb</li>
+    </ul>
+
+    <p>Each profile includes the exact aperture detents, shutter speed clicks, lens specifications, and bulb mode capability for that camera. Not approximations. The real thing.</p>
+
+    <p>For film stocks, we include 19 current films from Kodak, Ilford, Fuji, CineStill, Lomography, and Foma, with reciprocity failure data for long exposures. Load a roll of Fuji Acros 100 II and the app knows that a metered 30-second exposure actually needs 45 seconds on that specific emulsion.</p>
+
+    <h2>Long exposures and bulb mode</h2>
+
+    <p>This is where the camera-specific approach really pays off. When the light is low enough that the metered exposure exceeds your camera's slowest shutter speed, the app switches to bulb mode. It shows "BULB" as the shutter speed and displays the calculated exposure time &mdash; corrected for the reciprocity characteristics of your specific film stock. A built-in timer counts down the exposure for you.</p>
+
+    <p>This matters because reciprocity failure is nonlinear and film-specific. Ilford HP5 at 30 seconds needs maybe 45 seconds. Fuji Acros at 30 seconds needs barely any correction. Getting this wrong means wasted frames, and when you only have twelve, every frame counts.</p>
+
+    <h2>What's next</h2>
+
+    <p>We're continuing to add camera profiles (the TLR universe is vast), improve the sharing workflow for social media, and build out the <a href="/cameras/">TLR Camera Guide</a> on our website &mdash; a growing reference for anyone researching, buying, or shooting these cameras.</p>
+
+    <p>We're also exploring localization (Japanese and German are the priority &mdash; these are the two largest non-English film photography communities), accessibility improvements, and a home screen widget that shows your active roll's frame count at a glance.</p>
+
+    <p>But the core of the app won't change. It's a light meter that knows your camera. It's a notebook for your film. And it respects the way you shoot.</p>
+
+    <div class="blog-divider"></div>
+
+    <blockquote>
+      <p>Meter. Track. Shoot.</p>
+    </blockquote>
+
+    <div class="blog-closing">
+      <p>
+        metergeist is free on the App Store for iPhone.<br>
+        No ads. No subscription. No cloud. No tracking.<br><br>
+        <a href="/">metergeist.com</a>
+      </p>
+    </div>
+
+  </article>
+  </main>
+
+  <footer>
+    &copy; 2026 metergeist
+    <div class="links">
+      <a href="/cameras/">TLR Guide</a>
+      <a href="/blog/">Blog</a>
+      <a href="/privacy.html">Privacy</a>
+      <a href="/support.html">Support</a>
+    </div>
+  </footer>
+</body>
+</html>

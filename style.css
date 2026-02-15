@@ -364,7 +364,154 @@ footer .links a {
   .content { padding: 1.5rem 1rem 3rem; }
   .content h1 { font-size: 1.5rem; }
 
+  .blog-post { padding: 2rem 1rem 3rem; }
+  .blog-post h1 { font-size: 1.6rem; }
+  .blog-post .blog-subtitle { font-size: 1rem; }
+  .blog-post p, .blog-post li { font-size: 0.95rem; }
+
   footer { padding: 1.5rem 1rem; }
+}
+
+/* Blog post */
+.blog-post {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 3rem 1.5rem 4rem;
+}
+
+.blog-post .blog-dateline {
+  font-size: 0.8rem;
+  color: var(--chrome-dim);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  margin-bottom: 0.8rem;
+}
+
+.blog-post h1 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  line-height: 1.15;
+  margin-bottom: 1rem;
+  letter-spacing: -0.02em;
+}
+
+.blog-post .blog-subtitle {
+  font-size: 1.15rem;
+  color: var(--text-dim);
+  line-height: 1.5;
+  margin-bottom: 2.5rem;
+  font-style: italic;
+}
+
+.blog-post h2 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--chrome);
+  margin-top: 2.5rem;
+  margin-bottom: 0.8rem;
+  letter-spacing: -0.01em;
+}
+
+.blog-post p {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 1.05rem;
+  color: var(--text-dim);
+  line-height: 1.8;
+  margin-bottom: 1.2rem;
+}
+
+.blog-post ul {
+  margin: 1rem 0 1.5rem 1.5rem;
+}
+
+.blog-post li {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 1rem;
+  color: var(--text-dim);
+  margin-bottom: 0.5rem;
+  line-height: 1.7;
+}
+
+.blog-post strong {
+  color: var(--text);
+  font-weight: 600;
+}
+
+.blog-post em {
+  color: var(--text);
+}
+
+.blog-post blockquote {
+  border-left: 3px solid #555;
+  padding: 0.8rem 1.2rem;
+  margin: 1.5rem 0;
+  background: rgba(255,255,255,0.03);
+  border-radius: 0 6px 6px 0;
+}
+
+.blog-post blockquote p {
+  font-size: 1rem;
+  color: var(--chrome-dim);
+  margin-bottom: 0;
+}
+
+.blog-divider {
+  width: 60px;
+  height: 1px;
+  background: #444;
+  margin: 2.5rem auto;
+}
+
+.blog-closing {
+  font-size: 0.85rem;
+  color: var(--chrome-dim);
+  text-align: center;
+  margin-top: 2.5rem;
+  line-height: 1.8;
+}
+
+/* Blog index */
+.blog-list {
+  margin-top: 1.5rem;
+}
+
+.blog-card {
+  display: block;
+  padding: 1.2rem 1.5rem;
+  background: var(--surface);
+  border: 1px solid #333;
+  border-radius: 12px;
+  border-bottom: 1px solid #333;
+  margin-bottom: 1rem;
+  transition: border-color 0.2s;
+}
+
+.blog-card:hover {
+  border-color: var(--chrome);
+}
+
+.blog-card-date {
+  display: block;
+  font-size: 0.75rem;
+  color: var(--chrome-dim);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  margin-bottom: 0.3rem;
+}
+
+.blog-card-title {
+  display: block;
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 0.3rem;
+}
+
+.blog-card-desc {
+  display: block;
+  font-size: 0.9rem;
+  color: var(--text-dim);
+  line-height: 1.5;
 }
 
 /* Small phones */

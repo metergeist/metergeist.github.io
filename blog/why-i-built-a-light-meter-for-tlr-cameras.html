@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-NGH2JC1T0G"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-NGH2JC1T0G');</script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Why I Built a Light Meter App Specifically for TLR Cameras &mdash; metergeist blog</title>
+  <meta name="description" content="The story behind metergeist: how a dead selenium meter, a Yashica, and frustration with generic light meter apps led to building something better.">
+  <meta property="og:title" content="Why I Built a Light Meter App Specifically for TLR Cameras">
+  <meta property="og:description" content="How a dead selenium meter and frustration with generic light meter apps led to building something better.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://metergeist.com/blog/why-i-built-a-light-meter-for-tlr-cameras.html">
+  <meta property="og:image" content="https://metergeist.com/icon.png">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Why I Built a Light Meter App Specifically for TLR Cameras">
+  <meta name="twitter:description" content="How a dead selenium meter and frustration with generic light meter apps led to building something better.">
+  <link rel="stylesheet" href="../style.css">
+  <link rel="icon" href="../icon.png" type="image/png">
+  <link rel="canonical" href="https://metergeist.com/blog/why-i-built-a-light-meter-for-tlr-cameras.html">
+</head>
+<body>
+  <a href="#main" class="skip-link">Skip to content</a>
+  <nav aria-label="Main navigation">
+    <a href="/" class="logo">
+      <img src="../icon.png" alt="metergeist icon">
+      <span>metergeist</span>
+    </a>
+    <div class="links">
+      <a href="/cameras/">TLR Guide</a>
+      <a href="/blog/">Blog</a>
+      <a href="/support.html">Support</a>
+    </div>
+  </nav>
+
+  <main id="main">
+  <article class="blog-post">
+    <p class="blog-dateline">February 2026</p>
+
+    <h1>Why I Built a Light Meter App Specifically for TLR Cameras</h1>
+
+    <p class="blog-subtitle">How a dead selenium meter and frustration with generic light meter apps led to building something better.</p>
+
+    <p>I got into TLR cameras the way most people do: I found one. It was at an antique market, sitting on a shelf between a brass clock and a stack of Life magazines. A Yashica, scuffed leather case, surprisingly heavy. I opened the waist-level finder, pointed it at the window, and saw the world upside down on the ground glass. I bought it for less than I'd spend on dinner.</p>
+
+    <p>I didn't know anything about medium format. I'd shot 35mm in college and then, like everyone, switched to digital. But something about looking down into that ground glass pulled me back. The image was bright, reversed, and strangely alive. I bought a roll of Ilford HP5, watched a YouTube video on loading 120 film, and went outside.</p>
+
+    <p>That's when I hit the first problem.</p>
+
+    <h2>The meter was dead</h2>
+
+    <p>The camera had a selenium light meter &mdash; a little window on the front panel connected to a needle visible through a window on the top. Selenium meters don't need batteries. They generate a tiny electrical current when light hits them. Beautiful engineering. The problem is that selenium cells degrade over decades, and this one had stopped responding sometime during the Clinton administration.</p>
+
+    <p>No matter. I downloaded a light meter app. There are dozens on the App Store. I picked one with good reviews, opened it, pointed it at a sunny scene, and got a reading: f/8 at 1/350.</p>
+
+    <p>I looked at my camera. The shutter speed dial had positions for 1/25, 1/50, 1/100, and 1/300. No 1/350. So I set it to 1/300 &mdash; close enough. The aperture was f/8, which my lens did have, so that was fine. I took the photo. It came out well.</p>
+
+    <p>But over the next few rolls, this translation step started to bother me. Not because it was hard &mdash; it wasn't &mdash; but because it was constant. Every single time I metered a scene, I had to take the app's suggestion and mentally map it onto my camera's actual settings. Sometimes the math was trivial. Sometimes it wasn't.</p>
+
+    <h2>The gap between theory and hardware</h2>
+
+    <p>The meter app lived in a world of continuous values. It could suggest any aperture from f/1.0 to f/64 and any shutter speed from 30 seconds to 1/8000. My camera lived in a world of discrete click-stops: seven aperture positions and four shutter speeds. These are fundamentally different domains, and every time I used the app, I was a translator between them.</p>
+
+    <p>f/6.3? My camera doesn't click at f/6.3. That's between f/5.6 and f/8. Which do I pick? It depends on whether I'd rather slightly overexpose or slightly underexpose, which depends on the film stock, which depends on whether I'm going to push the development &mdash; and now I'm standing in a park doing arithmetic instead of looking at the light.</p>
+
+    <p>1/180? My camera has 1/100 and 1/300. That's almost a full stop of difference. Do I compensate with the aperture? Open up a third of a stop? But my aperture ring doesn't have third-stop detents.</p>
+
+    <p>I started to wonder why the app couldn't just tell me what to set. It knew my ISO. Why couldn't it know my camera?</p>
+
+    <h2>What I wished existed</h2>
+
+    <p>I wanted an app that would let me select "Yashica A" and then only ever show me exposure settings that the Yashica A could actually produce. f/3.5, f/4, f/5.6, f/8, f/11, f/16, f/22 &mdash; those apertures and no others. 1/25, 1/50, 1/100, 1/300 &mdash; those speeds and no others. When I metered a scene, the app would find the best combination from that limited set and show it to me. Done. No translation.</p>
+
+    <p>I searched the App Store for this. I found apps with camera "presets" that were really just ISO presets. I found apps with customizable aperture and shutter lists, but they required me to manually enter every value and offered no guidance on which combination to use. I found beautifully designed apps that ignored the problem entirely.</p>
+
+    <p>None of them knew what a Yashica A was. None of them knew that a <a href="/cameras/rolleicord-v.html">Rolleicord V</a> goes from 1 second to 1/500 but a Yashica A stops at 1/300. None of them knew that the <a href="/cameras/mamiya-c330f.html">Mamiya C330f</a> has interchangeable lenses, each with a different maximum aperture. The camera &mdash; the specific, physical instrument with specific, physical constraints &mdash; was invisible to every meter app I tried.</p>
+
+    <p>So I decided to build one.</p>
+
+    <h2>Starting with the cameras</h2>
+
+    <p>The first thing I did was not write code. The first thing I did was research cameras. I wanted to build profiles &mdash; exact specifications for every TLR camera I could find documentation for. Not approximations. The real aperture detents, the real shutter speeds, the real lens specifications.</p>
+
+    <p>This turned out to be a deeper rabbit hole than I expected. Original documentation for many of these cameras is scarce. Manufacturer specifications sometimes conflict with what the cameras actually offer. The <a href="/cameras/yashica-mat-124g.html">Yashica-Mat 124G</a>'s manual lists certain shutter speeds, but the Copal-SV shutter installed in the camera has its own spec sheet with slightly different information. Which do you trust? The answer is: you find someone who owns the camera and ask them to count the click-stops.</p>
+
+    <p>I built profiles for the most popular TLRs first: the Yashica-Mat 124G, the Rolleiflex 2.8F and 3.5F, the Rolleicord V and Vb, the Mamiya C330f. Then the less common ones: the <a href="/cameras/yashica-a.html">Yashica A</a> and <a href="/cameras/yashica-d.html">D</a>, the <a href="/cameras/minolta-autocord.html">Minolta Autocord</a>, the Seagull 4A-103. Each profile is a complete description of what the camera can do: minimum and maximum aperture, every click-stop in between, minimum and maximum shutter speed, every click-stop in between, whether it has bulb mode, the lens focal length and maximum aperture.</p>
+
+    <p>The app now ships with 16 camera profiles across eight manufacturers. But the profiles were where it all started, because the profiles are the point. Without knowing the camera, you're just another meter app.</p>
+
+    <h2>Then the film</h2>
+
+    <p>Once the camera profiles were working, I realized the same principle applied to film. Different film stocks have different characteristics that affect exposure decisions, and the most important one for TLR photographers is <em>reciprocity failure</em>.</p>
+
+    <p>Reciprocity failure is what happens when you make long exposures. Below about 1 second, film responds linearly to light: double the exposure time, double the light on the film. But above 1 second, the relationship breaks down. The film becomes less efficient. A metered 10-second exposure might actually need 15 seconds. A metered 30-second exposure might need 90 seconds. And the correction factor is different for every film stock.</p>
+
+    <p>This matters for TLR photographers because we shoot medium format, often at smaller apertures for depth of field, sometimes in low light, and frequently on tripods for landscapes and architecture. Long exposures come up more often than you'd think. And getting reciprocity wrong means wasting a frame &mdash; which, when you only have twelve, is a serious cost.</p>
+
+    <p>So metergeist includes reciprocity failure data for every film stock in the app. Load Ilford HP5 Plus, and the app knows that a metered 30-second exposure needs about 45 seconds on that emulsion. Load Fuji Acros 100 II, and the app knows it barely needs any correction at all. When the metered exposure exceeds your camera's slowest shutter speed, the app automatically switches to bulb mode, shows the corrected exposure time, and starts a countdown timer.</p>
+
+    <h2>Then the film rolls</h2>
+
+    <p>Somewhere during development, I realized that metering and film tracking are the same problem. When you're shooting film, you need to know three things: what camera you're using, what film is loaded, and what frame you're on. The meter needs the first two. A film roll tracker needs all three. So why are they separate apps?</p>
+
+    <p>I added roll tracking. When you load a roll of film in real life, you load it in the app: select the camera, select the film stock, and the app creates a roll with the correct number of frames (twelve for 6x6). Every time you capture a reference photo through the app &mdash; a quick snapshot of the scene you're about to shoot on film &mdash; it records the exposure settings and increments the frame counter.</p>
+
+    <p>When you get your developed film back from the lab, you can open the app and compare. Frame 3: f/5.6 at 1/125, Ilford HP5, metered at EV 13 in average mode. Was the negative well-exposed? Thin? Dense? Over time, you build a record of your metering decisions and their outcomes. You learn which situations trick you, which scenes you tend to overexpose, where your instincts are right and where they need calibration.</p>
+
+    <p>The voice notes were an afterthought that turned out to be one of the most-used features. Before you press the shutter on the TLR, you can record a quick audio note: "Backlit, metered for the shadows, expecting highlights to blow." When you review the roll weeks later, that context is invaluable.</p>
+
+    <h2>Design decisions that shaped everything</h2>
+
+    <p>Three early decisions turned out to matter more than I expected.</p>
+
+    <p><strong>No cloud.</strong> Your photos, notes, and roll data stay on your phone. There is no server, no account, no sync. I made this choice partly for privacy and partly for reliability. Film photographers shoot in remote places, on trips, in basements and darkrooms. The app needs to work without an internet connection. It needs to work in airplane mode. It needs to work when the Wi-Fi is down. The simplest way to guarantee that is to not depend on any infrastructure outside the phone.</p>
+
+    <p><strong>No subscription.</strong> I didn't want price to be a barrier. Film photography is already an expensive hobby &mdash; film, development, scanning, maybe printing. The tools around it should be as accessible as possible. The app is free. No ads, no upsells, no premium tier. This limits what I can spend on marketing, but it means anyone who finds the app can use it fully.</p>
+
+    <p><strong>Camera-first interface.</strong> The home screen shows your camera, your loaded film, and the meter reading. Not a settings panel, not a feature grid, not a tutorial. The camera. Because that's what you're holding in your other hand, and the app should feel like an extension of the camera, not a separate thing you have to context-switch into.</p>
+
+    <h2>What I learned</h2>
+
+    <p>Building an app for a niche audience teaches you things that building for a broad audience doesn't.</p>
+
+    <p>The niche knows what it wants. TLR photographers don't need to be told why camera-specific metering matters &mdash; they've experienced the translation problem. They don't need to be convinced that roll tracking is useful &mdash; they've lost exposure notes. When you build for people who already understand the problem, you can focus entirely on the solution.</p>
+
+    <p>The niche is also small. There are maybe a few hundred thousand active TLR photographers worldwide. That's not a market that supports venture-scale ambitions. It is, however, a community that talks to each other, shares recommendations, and values tools built with care. One person on a TLR forum saying "this app actually knows my camera" is worth more than any advertising I could buy.</p>
+
+    <p>And the niche cares about craft. These are people who choose to use sixty-year-old mechanical cameras in a world of autofocus and computational photography. They care about how things are made. They notice when software is built with the same attention to detail that Franke &amp; Heidecke put into a Rolleiflex. The dark interface, the chrome accents, the mechanical typography &mdash; these aren't styling choices. They're respect for the instruments and the people who use them.</p>
+
+    <h2>What's next</h2>
+
+    <p>More cameras. More film stocks. Localization for the Japanese and German film photography communities. Accessibility improvements. A widget that shows your current roll's frame count on the home screen. And the <a href="/cameras/">TLR Camera Guide</a> on the website, which has grown into a resource of its own &mdash; 48 cameras across four brands, with specs, history, and current market prices.</p>
+
+    <p>But the core stays the same. metergeist is a light meter that knows your camera. It's a notebook for your film. And it was built by someone who stands in parks doing arithmetic and decided there had to be a better way.</p>
+
+    <div class="blog-divider"></div>
+
+    <blockquote>
+      <p>metergeist is free on the App Store. No ads. No subscription. No cloud. No tracking.</p>
+    </blockquote>
+
+    <div class="blog-closing">
+      <p>
+        <a href="/">metergeist.com</a>
+      </p>
+    </div>
+
+  </article>
+  </main>
+
+  <footer>
+    &copy; 2026 metergeist
+    <div class="links">
+      <a href="/cameras/">TLR Guide</a>
+      <a href="/blog/">Blog</a>
+      <a href="/privacy.html">Privacy</a>
+      <a href="/support.html">Support</a>
+    </div>
+  </footer>
+</body>
+</html>

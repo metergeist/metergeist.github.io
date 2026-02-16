@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-NGH2JC1T0G"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-NGH2JC1T0G');</script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kodak Portra 400 — Film Guide | metergeist</title>
+  <meta name="description" content="Kodak Portra 400 film guide: the world's finest grain high-speed color negative film. Specs, reciprocity calculator, push/pull data, and shooting tips.">
+  <meta property="og:title" content="Kodak Portra 400 — Film Guide | metergeist">
+  <meta property="og:description" content="Kodak Portra 400 film guide: the world's finest grain high-speed color negative film. Specs, reciprocity calculator, push/pull data, and shooting tips.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://metergeist.com/film/kodak-portra-400.html">
+  <meta property="og:image" content="https://metergeist.com/icon.png">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Kodak Portra 400 — Film Guide | metergeist">
+  <meta name="twitter:description" content="Kodak Portra 400 film guide: the world's finest grain high-speed color negative film. Specs, reciprocity calculator, push/pull data, and shooting tips.">
+  <meta name="twitter:image" content="https://metergeist.com/icon.png">
+  <link rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" href="/film/film.css">
+  <link rel="icon" href="/icon.png" type="image/png">
+  <link rel="canonical" href="https://metergeist.com/film/kodak-portra-400.html">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Product","name":"Kodak Portra 400","description":"The world's finest grain high-speed color negative film","brand":{"@type":"Brand","name":"Kodak"},"category":"Photographic Film"}</script>
+</head>
+<body>
+  <a href="#main" class="skip-link">Skip to content</a>
+  <nav aria-label="Main navigation">
+    <a href="/" class="logo"><img src="/icon.png" alt="metergeist icon"><span>metergeist</span></a>
+    <div class="links">
+      <a href="/cameras/">TLR Guide</a>
+      <a href="/film/">Film Guide</a>
+      <a href="/blog/">Blog</a>
+      <a href="/support.html">Support</a>
+    </div>
+  </nav>
+  <main id="main">
+  <div class="content film-page">
+    <p class="breadcrumb"><a href="/film/">Film Guide</a> &rsaquo; <a href="/film/#color-negative">Color Negative</a> &rsaquo; Kodak Portra 400</p>
+    <h1>Kodak Portra 400</h1>
+    <p class="film-tagline">The gold standard of color portrait film</p>
+    <div class="film-meta">
+      <span class="film-badge film-c41">C-41 Color Negative</span>
+      <span class="film-iso-badge">ISO 400</span>
+      <span class="film-process-badge">C-41 Process</span>
+      <span class="film-brand-badge kodak">KODAK</span>
+      <span class="avail-badge avail-available">Available</span>
+    </div>
+
+    <!-- Specs table -->
+    <div class="film-specs">
+      <h2>Specifications</h2>
+      <table class="specs-table"><tbody>
+        <tr><td>Manufacturer</td><td>Eastman Kodak (USA)</td></tr>
+        <tr><td>Film Type</td><td>Color negative</td></tr>
+        <tr><td>ISO Speed</td><td>400</td></tr>
+        <tr><td>Process</td><td>C-41</td></tr>
+        <tr><td>Grain</td><td>Remarkably fine for ISO 400 — T-GRAIN emulsion technology</td></tr>
+        <tr><td>Exposure Latitude</td><td>Legendary — EI 100 to EI 800 with minimal quality loss</td></tr>
+        <tr><td>Color Palette</td><td>Warm, natural — medium saturation with excellent skin tones</td></tr>
+        <tr><td>Available Formats</td><td>35mm, 120, 4x5, 8x10</td></tr>
+      </tbody></table>
+    </div>
+
+    <!-- Reciprocity calculator -->
+    <div class="film-reciprocity">
+      <h2>Reciprocity Failure Calculator</h2>
+      <p>When exposures exceed one second, Kodak Portra 400 requires additional time to compensate for reciprocity failure. Color negative films generally have less published reciprocity data than B&amp;W films, but Kodak provides guidelines for their professional emulsions.</p>
+      <div class="calc-widget">
+        <label for="metered-time">Metered exposure time (seconds)</label>
+        <input type="number" id="metered-time" min="1" max="3600" step="1" value="10">
+        <div class="calc-result">
+          Corrected time: <span class="result-value" id="corrected-time">&mdash;</span> seconds
+        </div>
+        <div class="calc-formula">corrected = metered<sup>1.30</sup></div>
+        <p class="calc-source">Reciprocity exponent from Kodak Technical Publication</p>
+      </div>
+      <script>
+      (function() {
+        const exp = 1.30;
+        const input = document.getElementById('metered-time');
+        const output = document.getElementById('corrected-time');
+        function calc() {
+          const t = parseFloat(input.value);
+          if (t > 0) {
+            const corrected = Math.pow(t, exp);
+            output.textContent = corrected < 60
+              ? corrected.toFixed(1)
+              : Math.floor(corrected / 60) + 'm ' + Math.round(corrected % 60) + 's';
+          } else { output.textContent = '\u2014'; }
+        }
+        input.addEventListener('input', calc);
+        calc();
+      })();
+      </script>
+    </div>
+
+    <!-- Push/pull table -->
+    <div class="film-pushpull">
+      <h2>Push &amp; Pull Processing</h2>
+      <p>Portra 400 is exceptionally versatile in push and pull processing. Overexposing by one stop (shooting at EI 200) is widely considered the ideal strategy for the smoothest tones and finest grain. The film pushes cleanly to EI 800 and can reach EI 1600 with increased grain and contrast.</p>
+      <table class="pushpull-table">
+        <thead><tr><th>Rating</th><th>Effective ISO</th><th>Stops</th><th>Notes</th></tr></thead>
+        <tbody>
+          <tr><td>Pull &minus;2</td><td>100</td><td>&minus;2</td><td>Extremely smooth, pastel tones — a popular choice</td></tr>
+          <tr><td>Pull &minus;1</td><td>200</td><td>&minus;1</td><td>Widely considered the optimal exposure for Portra 400</td></tr>
+          <tr class="current"><td>Box Speed</td><td>400</td><td>0</td><td>Normal development</td></tr>
+          <tr><td>Push +1</td><td>800</td><td>+1</td><td>Usable grain increase, slightly higher contrast</td></tr>
+          <tr><td>Push +2</td><td>1600</td><td>+2</td><td>Noticeable grain, warmer tones, higher contrast</td></tr>
+          <tr><td>Push +3</td><td>3200</td><td>+3</td><td>Heavy grain, significant contrast boost — emergency use</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Character sections -->
+    <div class="film-character">
+      <h2>Character &amp; Personality</h2>
+      <h3>Grain</h3>
+      <p>Remarkably fine for ISO 400 — Kodak calls it "the world's finest grain high-speed color negative film." Portra 400 uses Kodak's latest T-GRAIN emulsion technology to achieve grain that is astonishingly fine for a 400-speed film. When properly exposed, grain is clean, subtle, and unobtrusive. Even in 35mm, the grain supports large prints and high-resolution scans. In 120 format, grain is essentially invisible.</p>
+      <h3>Exposure Latitude</h3>
+      <p>Legendary — one of the widest of any color film ever made. Portra 400 can be shot anywhere from EI 100 to EI 800 with minimal quality loss. It handles overexposure exceptionally well; overexposing by 1-2 stops actually produces some of the most desirable results, yielding softer tones and smoother skin. This makes it arguably the most forgiving color negative film ever produced.</p>
+      <h3>Color Palette</h3>
+      <p>Warm, natural color palette with medium contrast and excellent skin tone reproduction. Colors are naturally saturated without being garish. The warm base enhances skin tones, making them appear healthy and flattering. Neutral contrast preserves detail in both highlights and shadows. The overall look is what many photographers consider the "gold standard" for color film — the signature "Portra look" of soft, warm, pastel-like tones has defined the aesthetic of film photography's modern revival.</p>
+    </div>
+
+    <div class="film-uses">
+      <h2>Best Suited For</h2>
+      <ul>
+        <li>Portrait photography — the definitive portrait film</li>
+        <li>Wedding and event photography</li>
+        <li>Fashion and editorial work</li>
+        <li>Travel and documentary photography</li>
+        <li>Everyday general-purpose color shooting</li>
+        <li>Low-light situations where a fast color negative film is needed</li>
+      </ul>
+    </div>
+
+    <div class="film-formats">
+      <h2>Available Formats &amp; Pricing</h2>
+      <table class="pricing-table">
+        <thead><tr><th>Format</th><th>Approx. Price</th></tr></thead>
+        <tbody>
+          <tr><td>35mm (36 exp)</td><td>~$14-19 USD</td></tr>
+          <tr><td>120 (5-pack)</td><td>~$55-65 USD</td></tr>
+          <tr><td>4x5 (10 sheets)</td><td>~$55-65 USD</td></tr>
+        </tbody>
+      </table>
+      <p class="source-note">Prices are approximate and vary by retailer. Current as of early 2026.</p>
+    </div>
+
+    <div class="film-notes">
+      <h2>Development Notes</h2>
+      <p>Standard C-41 processing — no special handling required. The film is designed for scanning and produces excellent results on both flatbed and dedicated film scanners. Overexposed negatives scan particularly well, with dense negatives yielding smooth tones. Color balance is neutral and consistent, requiring minimal correction in post. For best scanning results, expose for the shadows by slightly overexposing. Some labs report that pushing Portra 400 to EI 800 produces usable but noticeably grainier results.</p>
+    </div>
+
+    <!-- Cross-links -->
+    <div class="film-related">
+      <h3>Related Films &amp; Guides</h3>
+      <p>For the finest grain at a lower speed, <a href="kodak-portra-160.html">Kodak Portra 160 offers even smoother tones</a> ideal for bright-light portrait sessions. Portra 400's main professional rival was <a href="fujifilm-pro-400h.html">Fujifilm Pro 400H, which delivered cooler, more pastel tones</a> before its discontinuation in 2021. For vibrant, punchy landscapes rather than soft portraits, <a href="kodak-ektar-100.html">Kodak Ektar 100 delivers ultra-saturated color with the world's finest grain</a>. Budget-conscious shooters looking for 400-speed color can consider <a href="kodak-ultramax-400.html">Kodak UltraMax 400 as a more affordable everyday alternative</a>.</p>
+    </div>
+
+    <!-- Sources -->
+    <div class="film-sources">
+      <h3>Sources &amp; Further Reading</h3>
+      <ul>
+        <li><a href="https://www.kodak.com/content/products-brochures/film/PORTRA-400.pdf" target="_blank" rel="noopener">Kodak Portra 400 Technical Data Sheet</a> (manufacturer data)</li>
+        <li><a href="https://www.kodak.com/en/motion/page/portra-400" target="_blank" rel="noopener">Kodak Portra 400 Product Page</a> (manufacturer)</li>
+        <li><a href="https://thedarkroom.com/film/kodak-portra-400/" target="_blank" rel="noopener">The Darkroom — Kodak Portra 400 Review</a> (lab review)</li>
+      </ul>
+    </div>
+
+    <!-- App CTA -->
+    <div class="app-cta">
+      <h3>Shoot Kodak Portra 400 with metergeist</h3>
+      <p>metergeist is a free light meter app with built-in reciprocity correction for Kodak Portra 400 and 21 other film stocks. <a href="/blog/how-to-meter-without-a-built-in-meter.html">Meter your exposures accurately</a> with camera-specific settings for <a href="/cameras/">48 TLR cameras</a>.</p>
+    </div>
+  </div>
+  </main>
+  <footer>
+    &copy; 2026 metergeist
+    <div class="links">
+      <a href="/cameras/">TLR Guide</a>
+      <a href="/film/">Film Guide</a>
+      <a href="/blog/">Blog</a>
+      <a href="/privacy.html">Privacy</a>
+      <a href="/support.html">Support</a>
+    </div>
+  </footer>
+</body>
+</html>

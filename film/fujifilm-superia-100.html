@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-NGH2JC1T0G"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-NGH2JC1T0G');</script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fujifilm Superia 100 — Film Guide | metergeist</title>
+  <meta name="description" content="Fujifilm Superia 100 film guide: the long-discontinued fine-grain consumer film with vivid Fuji color. Specs, reciprocity data, and legacy information.">
+  <meta property="og:title" content="Fujifilm Superia 100 — Film Guide | metergeist">
+  <meta property="og:description" content="Fujifilm Superia 100 film guide: the long-discontinued fine-grain consumer film with vivid Fuji color. Specs, reciprocity data, and legacy information.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://metergeist.com/film/fujifilm-superia-100.html">
+  <meta property="og:image" content="https://metergeist.com/icon.png">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Fujifilm Superia 100 — Film Guide | metergeist">
+  <meta name="twitter:description" content="Fujifilm Superia 100 film guide: the long-discontinued fine-grain consumer film with vivid Fuji color. Specs, reciprocity data, and legacy information.">
+  <meta name="twitter:image" content="https://metergeist.com/icon.png">
+  <link rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" href="/film/film.css">
+  <link rel="icon" href="/icon.png" type="image/png">
+  <link rel="canonical" href="https://metergeist.com/film/fujifilm-superia-100.html">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Product","name":"Fujifilm Superia 100","description":"Long-discontinued fine-grain consumer film with vivid Fuji color","brand":{"@type":"Brand","name":"Fujifilm"},"category":"Photographic Film"}</script>
+</head>
+<body>
+  <a href="#main" class="skip-link">Skip to content</a>
+  <nav aria-label="Main navigation">
+    <a href="/" class="logo"><img src="/icon.png" alt="metergeist icon"><span>metergeist</span></a>
+    <div class="links">
+      <a href="/cameras/">TLR Guide</a>
+      <a href="/film/">Film Guide</a>
+      <a href="/blog/">Blog</a>
+      <a href="/support.html">Support</a>
+    </div>
+  </nav>
+  <main id="main">
+  <div class="content film-page">
+    <p class="breadcrumb"><a href="/film/">Film Guide</a> &rsaquo; <a href="/film/#color-negative">Color Negative</a> &rsaquo; Fujifilm Superia 100</p>
+    <h1>Fujifilm Superia 100</h1>
+    <p class="film-tagline">Vivid Fuji color in a fine-grain package — discontinued circa 2009</p>
+    <div class="film-meta">
+      <span class="film-badge film-c41">C-41 Color Negative</span>
+      <span class="film-iso-badge">ISO 100</span>
+      <span class="film-process-badge">C-41 Process</span>
+      <span class="film-brand-badge fujifilm">FUJIFILM</span>
+      <span class="avail-badge avail-discontinued">Discontinued</span>
+    </div>
+
+    <!-- Specs table -->
+    <div class="film-specs">
+      <h2>Specifications</h2>
+      <table class="specs-table"><tbody>
+        <tr><td>Manufacturer</td><td>Fujifilm (Japan)</td></tr>
+        <tr><td>Film Type</td><td>Color negative</td></tr>
+        <tr><td>ISO Speed</td><td>100</td></tr>
+        <tr><td>Process</td><td>C-41</td></tr>
+        <tr><td>Grain</td><td>Fine for a consumer film — benefits of ISO 100 speed</td></tr>
+        <tr><td>Exposure Latitude</td><td>Good — handles 2-3 stops of overexposure well</td></tr>
+        <tr><td>Color Palette</td><td>Rich, vivid — enhanced color realism with natural skin tones</td></tr>
+        <tr><td>Available Formats</td><td>Discontinued — was 35mm only</td></tr>
+      </tbody></table>
+    </div>
+
+    <!-- Reciprocity calculator -->
+    <div class="film-reciprocity">
+      <h2>Reciprocity Failure Calculator</h2>
+      <p>When exposures exceed one second, Fujifilm Superia 100 requires additional time to compensate for reciprocity failure. This calculator remains useful for photographers shooting remaining expired stock.</p>
+      <div class="calc-widget">
+        <label for="metered-time">Metered exposure time (seconds)</label>
+        <input type="number" id="metered-time" min="1" max="3600" step="1" value="10">
+        <div class="calc-result">
+          Corrected time: <span class="result-value" id="corrected-time">&mdash;</span> seconds
+        </div>
+        <div class="calc-formula">corrected = metered<sup>1.25</sup></div>
+        <p class="calc-source">Reciprocity exponent from Fujifilm technical data</p>
+      </div>
+      <script>
+      (function() {
+        const exp = 1.25;
+        const input = document.getElementById('metered-time');
+        const output = document.getElementById('corrected-time');
+        function calc() {
+          const t = parseFloat(input.value);
+          if (t > 0) {
+            const corrected = Math.pow(t, exp);
+            output.textContent = corrected < 60
+              ? corrected.toFixed(1)
+              : Math.floor(corrected / 60) + 'm ' + Math.round(corrected % 60) + 's';
+          } else { output.textContent = '\u2014'; }
+        }
+        input.addEventListener('input', calc);
+        calc();
+      })();
+      </script>
+    </div>
+
+    <!-- Push/pull table -->
+    <div class="film-pushpull">
+      <h2>Push &amp; Pull Processing</h2>
+      <p>Superia 100 was designed for box speed shooting in bright conditions. As a consumer film, push and pull processing were not commonly done. Given that remaining stock is heavily expired, overexposing by at least one stop per decade since expiration is strongly recommended.</p>
+      <table class="pushpull-table">
+        <thead><tr><th>Rating</th><th>Effective ISO</th><th>Stops</th><th>Notes</th></tr></thead>
+        <tbody>
+          <tr><td>Pull &minus;2</td><td>25</td><td>&minus;2</td><td>Very flat, extremely slow — impractical</td></tr>
+          <tr><td>Pull &minus;1</td><td>50</td><td>&minus;1</td><td>Smoother tones, may help expired stock</td></tr>
+          <tr class="current"><td>Box Speed</td><td>100</td><td>0</td><td>Normal development</td></tr>
+          <tr><td>Push +1</td><td>200</td><td>+1</td><td>Slight grain increase, slightly punchier</td></tr>
+          <tr><td>Push +2</td><td>400</td><td>+2</td><td>Noticeable grain, not commonly done</td></tr>
+          <tr><td>Push +3</td><td>800</td><td>+3</td><td>Significant quality loss — not recommended</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Character sections -->
+    <div class="film-character">
+      <h2>Character &amp; Personality</h2>
+      <h3>Grain</h3>
+      <p>Fine grain for a consumer film. At ISO 100, Superia 100 produced clean, smooth images with good detail rendering. The lower speed allowed for a cleaner, smoother result than the faster Superia variants. At standard print sizes, grain was essentially invisible.</p>
+      <h3>Exposure Latitude</h3>
+      <p>Good — handled 2-3 stops of overexposure well. Some users reported great results even at 3-4 stops overexposed. The latitude was wide enough for reliable results in point-and-shoot cameras, though the slow speed limited its use to bright daylight conditions or flash photography.</p>
+      <h3>Color Palette</h3>
+      <p>Rich, vivid colors with enhanced color realism and natural skin tones. The film featured refined sharpness and accurate reproduction of difficult colors like violets and greens, even under fluorescent lighting. The color palette leaned toward the characteristic Fuji cool tones but with slightly warmer rendering than the faster Superia variants. This combination of vivid color and fine grain made it a sleeper favorite among the Superia lineup.</p>
+    </div>
+
+    <div class="film-uses">
+      <h2>Best Suited For</h2>
+      <ul>
+        <li>Outdoor daylight photography</li>
+        <li>Landscape photography in good light</li>
+        <li>Travel snapshots in bright conditions</li>
+        <li>Studio photography with flash</li>
+        <li>Collectors and expired-film enthusiasts</li>
+      </ul>
+    </div>
+
+    <div class="film-formats">
+      <h2>Available Formats &amp; Pricing</h2>
+      <table class="pricing-table">
+        <thead><tr><th>Format</th><th>Approx. Price</th></tr></thead>
+        <tbody>
+          <tr><td>Expired stock (35mm)</td><td>$20-40+ USD (collector pricing)</td></tr>
+        </tbody>
+      </table>
+      <p class="source-note">Available only as expired stock on the secondary market. Stock is increasingly rare. Current as of early 2026.</p>
+    </div>
+
+    <div class="film-notes">
+      <h2>Development Notes</h2>
+      <p>Standard C-41 processing — no special handling required beyond standard expired-film precautions. For expired stock (all remaining stock is 15+ years expired), overexpose by one stop per decade since expiration. Very old stock may show significant color shifts and increased fog, especially if not cold-stored. Cold-stored stock holds up better, but results are increasingly unpredictable with stock this old. Fujifilm discontinued Superia 100 around 2009, making it one of the longest-discontinued films in this guide and one of the hardest to find.</p>
+    </div>
+
+    <!-- Cross-links -->
+    <div class="film-related">
+      <h3>Related Films &amp; Guides</h3>
+      <p>Superia 100 was the slowest member of the Superia lineup, alongside the later-discontinued <a href="fujifilm-superia-400.html">Fujifilm Superia X-TRA 400, which shared the classic Fuji cool color palette</a>. For a currently available fine-grain ISO 100 color alternative, <a href="kodak-ektar-100.html">Kodak Ektar 100 offers the world's finest grain</a> with ultra-vivid saturation. If you prefer softer tones at a low speed, <a href="kodak-portra-160.html">Kodak Portra 160 provides beautiful skin tones and smooth grain</a>. For an affordable color option from an independent brand, <a href="lomography-color-400.html">Lomography Color Negative 400 offers vibrant color</a> at a competitive price.</p>
+    </div>
+
+    <!-- Sources -->
+    <div class="film-sources">
+      <h3>Sources &amp; Further Reading</h3>
+      <ul>
+        <li><a href="https://www.fujifilm.com/us/en/consumer/film/color-negative" target="_blank" rel="noopener">Fujifilm Color Negative Film Overview</a> (manufacturer archive)</li>
+        <li><a href="https://thedarkroom.com/film/fuji-superia-100/" target="_blank" rel="noopener">The Darkroom — Fujifilm Superia 100 Review</a> (lab review)</li>
+        <li><a href="https://analog.cafe/r/fuji-superia-100-review" target="_blank" rel="noopener">Analog.Cafe — Fujifilm Superia 100 Review</a> (community review)</li>
+      </ul>
+    </div>
+
+    <!-- App CTA -->
+    <div class="app-cta">
+      <h3>Shoot Fujifilm Superia 100 with metergeist</h3>
+      <p>metergeist is a free light meter app with built-in reciprocity correction for Fujifilm Superia 100 and 21 other film stocks. <a href="/blog/how-to-meter-without-a-built-in-meter.html">Meter your exposures accurately</a> with camera-specific settings for <a href="/cameras/">48 TLR cameras</a>.</p>
+    </div>
+  </div>
+  </main>
+  <footer>
+    &copy; 2026 metergeist
+    <div class="links">
+      <a href="/cameras/">TLR Guide</a>
+      <a href="/film/">Film Guide</a>
+      <a href="/blog/">Blog</a>
+      <a href="/privacy.html">Privacy</a>
+      <a href="/support.html">Support</a>
+    </div>
+  </footer>
+</body>
+</html>

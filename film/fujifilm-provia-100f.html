@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-NGH2JC1T0G"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-NGH2JC1T0G');</script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fujifilm Provia 100F — Film Guide | metergeist</title>
+  <meta name="description" content="Fujifilm Provia 100F film guide — the versatile ISO 100 slide film with among the finest grain ever achieved. Reciprocity calculator, push/pull table, and E-6 development notes.">
+  <meta property="og:title" content="Fujifilm Provia 100F — Film Guide | metergeist">
+  <meta property="og:description" content="The versatile ISO 100 slide film with among the finest grain ever achieved. Reciprocity calculator, push/pull table, and E-6 development notes.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://metergeist.com/film/fujifilm-provia-100f.html">
+  <meta property="og:image" content="https://metergeist.com/icon.png">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Fujifilm Provia 100F — Film Guide | metergeist">
+  <meta name="twitter:description" content="The versatile ISO 100 slide film with among the finest grain ever achieved. Reciprocity calculator, push/pull table, and E-6 development notes.">
+  <meta name="twitter:image" content="https://metergeist.com/icon.png">
+  <link rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" href="/film/film.css">
+  <link rel="icon" href="/icon.png" type="image/png">
+  <link rel="canonical" href="https://metergeist.com/film/fujifilm-provia-100f.html">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Product","name":"Fujifilm Provia 100F","description":"Versatile ISO 100 color reversal slide film with among the finest grain ever achieved and natural, accurate color rendering.","brand":{"@type":"Brand","name":"Fujifilm"},"category":"Photographic Film","offers":{"@type":"AggregateOffer","priceCurrency":"USD","lowPrice":18,"highPrice":90,"offerCount":3}}</script>
+</head>
+<body>
+  <a href="#main" class="skip-link">Skip to content</a>
+  <nav aria-label="Main navigation">
+    <a href="/" class="logo">
+      <img src="/icon.png" alt="metergeist icon">
+      <span>metergeist</span>
+    </a>
+    <div class="links">
+      <a href="/cameras/">TLR Guide</a>
+      <a href="/film/">Film Guide</a>
+      <a href="/blog/">Blog</a>
+      <a href="/support.html">Support</a>
+    </div>
+  </nav>
+
+  <main id="main">
+  <div class="content film-page">
+    <p class="breadcrumb"><a href="/film/">Film Guide</a> &rsaquo; <a href="/film/#slide">Slide Film</a> &rsaquo; Fujifilm Provia 100F</p>
+
+    <h1>Fujifilm Provia 100F</h1>
+    <p class="film-tagline">The all-rounder slide film &mdash; vivid yet accurate, with the finest grain ever achieved.</p>
+
+    <div class="film-meta">
+      <span class="film-badge film-e6">E-6 Slide Film</span>
+      <span class="film-iso-badge">ISO 100</span>
+      <span class="film-process-badge">E-6</span>
+      <span class="film-brand-badge fujifilm">FUJIFILM</span>
+      <span class="avail-badge avail-limited">Variable Stock</span>
+    </div>
+
+    <div class="film-specs">
+      <h2>Specifications</h2>
+      <table class="specs-table"><tbody>
+        <tr><td>Full Name</td><td>Fujifilm Fujichrome Provia 100F Professional (RDP III)</td></tr>
+        <tr><td>Manufacturer</td><td>Fujifilm (Japan)</td></tr>
+        <tr><td>Film Type</td><td>Color reversal (slide film)</td></tr>
+        <tr><td>ISO Speed</td><td>100</td></tr>
+        <tr><td>Process</td><td>E-6 (also CR-56, C6R)</td></tr>
+        <tr><td>Grain</td><td>Among the finest ever &mdash; RMS granularity of 8</td></tr>
+        <tr><td>Exposure Latitude</td><td>Narrow (~1 stop in each direction)</td></tr>
+        <tr><td>Contrast</td><td>Medium-high</td></tr>
+        <tr><td>Available Formats</td><td>35mm, 120, 4x5</td></tr>
+      </tbody></table>
+    </div>
+
+    <div class="film-reciprocity">
+      <h2>Reciprocity Failure Calculator</h2>
+      <p>When exposures exceed one second, Provia 100F requires additional time to compensate for reciprocity failure. The correction formula uses the exponent derived from Fujifilm&rsquo;s technical data.</p>
+      <div class="calc-widget">
+        <label for="metered-time">Metered exposure time (seconds)</label>
+        <input type="number" id="metered-time" min="1" max="3600" step="1" value="10">
+        <div class="calc-result">
+          Corrected time: <span class="result-value" id="corrected-time">&mdash;</span> seconds
+        </div>
+        <div class="calc-formula">corrected = metered<sup>1.22</sup></div>
+        <p class="calc-source">Reciprocity exponent sourced from Fujifilm technical data</p>
+      </div>
+      <script>
+      (function() {
+        var exp = 1.22;
+        var input = document.getElementById('metered-time');
+        var output = document.getElementById('corrected-time');
+        function calc() {
+          var t = parseFloat(input.value);
+          if (t > 0) {
+            var corrected = Math.pow(t, exp);
+            output.textContent = corrected < 60
+              ? corrected.toFixed(1)
+              : Math.floor(corrected / 60) + 'm ' + Math.round(corrected % 60) + 's';
+          } else {
+            output.textContent = '\u2014';
+          }
+        }
+        input.addEventListener('input', calc);
+        calc();
+      })();
+      </script>
+      <p>For all 22 films, see the <a href="/film/reciprocity-calculator.html">reciprocity calculator</a>.</p>
+    </div>
+
+    <div class="film-pushpull">
+      <h2>Push &amp; Pull Processing</h2>
+      <p>Slide film has an extremely narrow exposure latitude of approximately 1/2 stop &mdash; far less forgiving than negative film. That said, Provia 100F is one of the most pushable slide films available and handles push processing better than Velvia or Ektachrome. It can be pushed up to 2 stops with usable results, which is unusual for E-6 film. Communicate push/pull instructions clearly to your lab.</p>
+      <table class="pushpull-table">
+        <thead><tr><th>Rating</th><th>Effective ISO</th><th>Stops</th><th>Notes</th></tr></thead>
+        <tbody>
+          <tr><td>EI 64</td><td>64</td><td>&minus;2/3</td><td>Pull &frac12; stop &mdash; slightly lower contrast and saturation</td></tr>
+          <tr class="current"><td>EI 100</td><td>100</td><td>0</td><td>Box speed &mdash; optimal balance of saturation and accuracy</td></tr>
+          <tr><td>EI 200</td><td>200</td><td>+1</td><td>Push 1 stop &mdash; slightly increased contrast, still excellent color</td></tr>
+          <tr><td>EI 400</td><td>400</td><td>+2</td><td>Push 2 stops &mdash; noticeable contrast increase; usable for low light</td></tr>
+        </tbody>
+      </table>
+      <p>Even with Provia's relatively good push capability, remember that slide film has approximately 1/2 stop of latitude compared to 5+ stops for color negative film. Bracketing in 1/3 stop increments remains essential for critical work. A reliable light meter is non-negotiable.</p>
+    </div>
+
+    <div class="film-character">
+      <h2>Character &amp; Personality</h2>
+      <h3>Grain</h3>
+      <p>Among the finest grain of any film ever made. Provia 100F has an RMS granularity of 8 &mdash; virtually no grain is visible in scans or prints. The ultra-fine grain structure combined with high resolving power produces images of exceptional clarity. Even in 35mm, grain is nearly invisible, making it one of the sharpest films available in any format.</p>
+      <h3>Exposure Latitude</h3>
+      <p>Narrow but more forgiving than Velvia. Provia 100F has approximately 1 stop of usable latitude in each direction, which is relatively generous for slide film. It handles slight overexposure better than Velvia 50. However, this is still far narrower than color negative film &mdash; Portra 400 offers 5+ stops of overexposure tolerance compared to Provia's single stop. Careful metering is essential. A spot meter or incident meter will give far more consistent results than camera matrix metering.</p>
+      <h3>Color &amp; Tonal Character</h3>
+      <p>Vivid but naturally appearing colors with medium saturation and contrast. Unlike Velvia's hyper-saturated rendering, Provia 100F produces accurate, realistic colors with moderate saturation enhancement. Rich tonal rendition with excellent highlight and shadow detail. The film is often described as having &ldquo;the punch of slide film with the accuracy of negative film.&rdquo; Neutral color balance with good skin tone reproduction makes it the best slide film choice for portraits.</p>
+    </div>
+
+    <div class="film-uses">
+      <h2>Best Suited For</h2>
+      <ul>
+        <li>General-purpose slide photography &mdash; the most versatile E-6 film</li>
+        <li>Nature and landscape when natural colors are preferred over Velvia's saturation</li>
+        <li>Travel and documentary photography</li>
+        <li>Portraits &mdash; the best slide film for skin tones</li>
+        <li>Commercial and product photography</li>
+        <li>Scientific and technical photography requiring color accuracy</li>
+      </ul>
+    </div>
+
+    <div class="film-formats">
+      <h2>Available Formats &amp; Pricing</h2>
+      <table class="pricing-table">
+        <thead><tr><th>Format</th><th>Approx. Price</th></tr></thead>
+        <tbody>
+          <tr><td>35mm (36 exp)</td><td>~$18&ndash;25 USD</td></tr>
+          <tr><td>120 (5-pack)</td><td>~$65&ndash;80 USD</td></tr>
+          <tr><td>4x5 (20 sheets)</td><td>~$70&ndash;90 USD</td></tr>
+        </tbody>
+      </table>
+      <p class="source-note">E-6 processing adds approximately $10&ndash;15 per roll on top of the film cost. Prices as of early 2026.</p>
+    </div>
+
+    <div class="film-notes">
+      <h2>Development &amp; Processing Notes</h2>
+      <p><strong>E-6 process</strong> &mdash; the same specialized processing required by all current slide films. E-6 labs are becoming less common, so locate a reliable lab before shooting. Many photographers ship their film to dedicated E-6 labs.</p>
+      <p>Provia 100F is more tolerant of push processing than Velvia &mdash; it produces usable results at EI 200&ndash;400 with extended development. Pulling 1/2 stop slightly reduces contrast and saturation. Cross-processing in C-41 produces high-contrast, color-shifted results that are popular for experimental work.</p>
+      <p>E-6 processing costs typically add $10&ndash;15 on top of the film cost. The film's excellent push capabilities make it more flexible than other slide films for changing lighting conditions. Store slides in cool, dry conditions to prevent color fading.</p>
+    </div>
+
+    <div class="film-related">
+      <h3>Related Films &amp; Guides</h3>
+      <p>For maximum color saturation, <a href="/film/fujifilm-velvia-50.html">Fujifilm Velvia 50</a> is the more extreme choice &mdash; hyper-vivid landscapes at the cost of even tighter exposure latitude. <a href="/film/kodak-ektachrome-e100.html">Kodak Ektachrome E100</a> offers Kodak&rsquo;s neutral color science and is optimized for scanning workflows with the best reciprocity characteristics of the three slide films.</p>
+      <p>If you want the look of slide film with more forgiving exposure, <a href="/film/kodak-ektar-100.html">Kodak Ektar 100</a> is the most saturated color negative film and handles exposure errors much more gracefully. For portraiture, <a href="/film/kodak-portra-400.html">Kodak Portra 400</a> offers unmatched skin tone rendering and latitude.</p>
+      <p>Provia works beautifully in precision cameras like the <a href="/cameras/rolleiflex-28f.html">Rolleiflex 2.8F</a> and the <a href="/cameras/yashica-mat-124g.html">Yashica Mat-124G</a> where the fine grain in 120 format is virtually invisible. For essential metering technique, read <a href="/blog/how-to-meter-without-a-built-in-meter.html">how to meter without a built-in meter</a>. For the contemplative approach that slide film rewards, explore <a href="/blog/twelve-frames.html">the discipline of twelve frames</a>.</p>
+    </div>
+
+    <div class="film-sources">
+      <h3>Sources &amp; Further Reading</h3>
+      <ul>
+        <li><a href="https://www.fujifilm.com/us/en/business/professional-imaging/professional-photographic-films/fujichrome-provia-100f" target="_blank" rel="noopener">Fujifilm Provia 100F product page</a> (manufacturer)</li>
+        <li><a href="https://asset.fujifilm.com/www/us/files/2024-07/0fd7f53f2acdbbd76e5ef1a5c7db1b91/provia_100f_datasheet.pdf" target="_blank" rel="noopener">Fujifilm Provia 100F Technical Data Sheet</a></li>
+        <li><a href="https://www.digitaltruth.com/devchart.php" target="_blank" rel="noopener">Massive Dev Chart &mdash; E-6 processing reference</a></li>
+      </ul>
+    </div>
+
+    <div class="app-cta">
+      <h3>Shoot Provia 100F with metergeist</h3>
+      <p>metergeist is a free light meter app with built-in reciprocity correction for Provia 100F and 21 other film stocks. Accurate metering is critical with slide film &mdash; load Provia as your active film and the app will <a href="/blog/how-to-meter-without-a-built-in-meter.html">automatically correct your long exposures</a>. Track every frame on your roll and never lose count again.</p>
+    </div>
+  </div>
+  </main>
+
+  <footer>
+    &copy; 2026 metergeist
+    <div class="links">
+      <a href="/cameras/">TLR Guide</a>
+      <a href="/film/">Film Guide</a>
+      <a href="/blog/">Blog</a>
+      <a href="/privacy.html">Privacy</a>
+      <a href="/support.html">Support</a>
+    </div>
+  </footer>
+</body>
+</html>

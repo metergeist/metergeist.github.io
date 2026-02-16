@@ -1,0 +1,609 @@
+/* Film Guide styles */
+
+/* Index page */
+.film-intro {
+  color: var(--text-dim);
+  font-size: 1.05rem;
+  margin-bottom: 1rem;
+  line-height: 1.7;
+}
+
+.film-intro strong {
+  color: var(--text);
+}
+
+.type-nav {
+  display: flex;
+  gap: 1rem;
+  margin: 1.5rem 0 2rem;
+  flex-wrap: wrap;
+}
+
+.type-nav a {
+  padding: 0.4rem 1rem;
+  background: var(--surface);
+  border: 1px solid #333;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  border-bottom: 1px solid #333;
+}
+
+.type-nav a:hover {
+  border-color: var(--chrome);
+}
+
+.film-type-section {
+  margin-bottom: 2.5rem;
+}
+
+.film-type-section h2 {
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  padding-bottom: 0.4rem;
+  border-bottom: 1px solid #333;
+  color: var(--chrome);
+}
+
+.film-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.film-card {
+  background: var(--surface);
+  border: 1px solid #333;
+  border-radius: 10px;
+  overflow: hidden;
+  text-decoration: none;
+  border-bottom: 1px solid #333;
+  transition: border-color 0.2s;
+  position: relative;
+}
+
+.film-card:hover,
+.film-card:focus-visible {
+  border-color: var(--chrome);
+  outline: none;
+}
+
+.film-card:focus-visible {
+  box-shadow: 0 0 0 2px var(--chrome);
+}
+
+.film-card .brand-stripe {
+  height: 4px;
+  width: 100%;
+}
+
+.brand-stripe.ilford    { background: #bf4040; }
+.brand-stripe.kodak     { background: #cca633; }
+.brand-stripe.fujifilm  { background: #409966; }
+.brand-stripe.cinestill { background: #cc7333; }
+.brand-stripe.lomography{ background: #8c4da6; }
+.brand-stripe.foma      { background: #808c99; }
+
+.film-card-info {
+  padding: 1rem;
+}
+
+.film-card-info h3 {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 0.2rem;
+}
+
+.film-card-brand {
+  font-size: 0.8rem;
+  color: var(--text-dim);
+  display: block;
+  margin-bottom: 0.4rem;
+}
+
+.film-card-meta {
+  display: flex;
+  gap: 0.6rem;
+  align-items: center;
+}
+
+.film-card-iso {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--chrome);
+}
+
+.film-card-type {
+  font-size: 0.75rem;
+  color: var(--chrome-dim);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+/* Film detail page */
+.film-page .breadcrumb {
+  font-size: 0.85rem;
+  color: var(--text-dim);
+  margin-bottom: 1.5rem;
+}
+
+.film-page h1 {
+  font-size: 2rem;
+  margin-bottom: 0.3rem;
+}
+
+.film-tagline {
+  font-size: 1.1rem;
+  color: var(--chrome);
+  font-style: italic;
+  margin-bottom: 1rem;
+}
+
+.film-meta {
+  display: flex;
+  gap: 0.8rem;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+  font-size: 0.85rem;
+  align-items: center;
+}
+
+.film-badge {
+  padding: 0.25rem 0.7rem;
+  border-radius: 4px;
+  font-weight: 600;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.film-bw {
+  background: #333;
+  color: var(--text);
+}
+
+.film-c41 {
+  background: #3d2e1a;
+  color: #e6c87a;
+}
+
+.film-e6 {
+  background: #1a2e3d;
+  color: #7ac4e6;
+}
+
+.film-iso-badge {
+  font-weight: 600;
+  color: var(--chrome);
+}
+
+.film-process-badge {
+  color: var(--text-dim);
+}
+
+.film-brand-badge {
+  display: inline-block;
+  padding: 0.2rem 0.6rem;
+  border-radius: 3px;
+  font-weight: 700;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #f2ede0;
+}
+
+.film-brand-badge.ilford    { background: #bf4040; }
+.film-brand-badge.kodak     { background: #cca633; color: #1e1a0d; }
+.film-brand-badge.fujifilm  { background: #409966; }
+.film-brand-badge.cinestill { background: #cc7333; }
+.film-brand-badge.lomography{ background: #8c4da6; }
+.film-brand-badge.foma      { background: #808c99; }
+
+/* Sections */
+.film-specs, .film-character, .film-uses, .film-formats,
+.film-reciprocity, .film-pushpull, .where-to-buy,
+.film-notes, .film-sources, .film-related {
+  margin-bottom: 2rem;
+}
+
+.film-page h2 {
+  font-size: 1.15rem;
+  color: var(--chrome);
+  margin-bottom: 0.6rem;
+}
+
+.film-page h3 {
+  font-size: 1rem;
+  color: var(--chrome);
+  margin-bottom: 0.4rem;
+  margin-top: 1rem;
+}
+
+.film-page p {
+  color: var(--text-dim);
+  font-size: 0.95rem;
+  line-height: 1.7;
+  margin-bottom: 0.8rem;
+}
+
+.film-page ul {
+  padding-left: 1.2rem;
+  color: var(--text-dim);
+  font-size: 0.9rem;
+  margin-bottom: 0.8rem;
+}
+
+.film-page li {
+  margin-bottom: 0.3rem;
+  line-height: 1.6;
+}
+
+/* Specs table (reuse camera pattern) */
+.film-page .specs-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+  max-width: 480px;
+}
+
+.film-page .specs-table td {
+  padding: 0.4rem 0;
+  border-bottom: 1px solid #2a2a2a;
+}
+
+.film-page .specs-table td:first-child {
+  color: var(--chrome-dim);
+  width: 40%;
+  padding-right: 1rem;
+}
+
+.film-page .specs-table td:last-child {
+  color: var(--text);
+}
+
+/* Reciprocity calculator widget */
+.calc-widget {
+  background: var(--surface);
+  border: 1px solid #333;
+  border-radius: 10px;
+  padding: 1.2rem;
+  margin: 1rem 0;
+  max-width: 480px;
+}
+
+.calc-widget label {
+  display: block;
+  font-size: 0.85rem;
+  color: var(--chrome-dim);
+  margin-bottom: 0.4rem;
+}
+
+.calc-widget input[type="number"],
+.calc-widget input[type="range"] {
+  width: 100%;
+  max-width: 200px;
+}
+
+.calc-widget input[type="number"] {
+  background: var(--bg);
+  border: 1px solid #444;
+  border-radius: 6px;
+  color: var(--text);
+  font-size: 1.1rem;
+  padding: 0.5rem 0.8rem;
+  font-family: 'SF Mono', 'Fira Code', 'Cascadia Code', monospace;
+}
+
+.calc-widget input[type="number"]:focus {
+  outline: none;
+  border-color: var(--chrome);
+}
+
+.calc-result {
+  margin-top: 1rem;
+  font-size: 1rem;
+  color: var(--text-dim);
+}
+
+.calc-result .result-value {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--text);
+  font-family: 'SF Mono', 'Fira Code', 'Cascadia Code', monospace;
+}
+
+.calc-formula {
+  font-size: 0.8rem;
+  color: var(--chrome-dim);
+  margin-top: 0.5rem;
+  font-family: 'SF Mono', 'Fira Code', 'Cascadia Code', monospace;
+}
+
+.calc-source {
+  font-size: 0.8rem;
+  color: var(--chrome-dim);
+  margin-top: 0.8rem;
+  font-style: italic;
+}
+
+/* Push/pull table */
+.pushpull-table {
+  width: 100%;
+  max-width: 520px;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+}
+
+.pushpull-table th {
+  text-align: left;
+  padding: 0.4rem 0.8rem 0.4rem 0;
+  border-bottom: 1px solid #444;
+  color: var(--chrome-dim);
+  font-weight: 500;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.pushpull-table td {
+  padding: 0.4rem 0.8rem 0.4rem 0;
+  border-bottom: 1px solid #2a2a2a;
+  color: var(--text);
+}
+
+.pushpull-table tr.current td {
+  color: var(--chrome);
+  font-weight: 600;
+}
+
+.pushpull-table td:first-child {
+  color: var(--text-dim);
+  font-weight: 500;
+}
+
+/* Pricing table */
+.film-page .pricing-table {
+  width: 100%;
+  max-width: 400px;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+}
+
+.film-page .pricing-table th {
+  text-align: left;
+  padding: 0.4rem 0;
+  border-bottom: 1px solid #444;
+  color: var(--chrome-dim);
+  font-weight: 500;
+}
+
+.film-page .pricing-table td {
+  padding: 0.35rem 0;
+  border-bottom: 1px solid #2a2a2a;
+  color: var(--text);
+}
+
+.film-page .pricing-table td:first-child {
+  color: var(--text-dim);
+  padding-right: 1.5rem;
+}
+
+/* Source attribution */
+.source-note {
+  font-size: 0.8rem;
+  color: var(--chrome-dim);
+  font-style: italic;
+}
+
+.film-sources ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.film-sources li {
+  padding: 0.3rem 0;
+}
+
+.film-sources li::before {
+  content: "\2192";
+  color: var(--chrome-dim);
+  margin-right: 0.5rem;
+}
+
+/* Related films / cross-links */
+.film-related p {
+  line-height: 1.8;
+  font-size: 0.95rem;
+}
+
+/* App CTA (reuse camera pattern) */
+.film-page .app-cta {
+  background: var(--surface);
+  border: 1px solid #333;
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-top: 2rem;
+}
+
+.film-page .app-cta h3 {
+  color: var(--chrome);
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+  margin-top: 0;
+}
+
+.film-page .app-cta p {
+  color: var(--text-dim);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 0;
+}
+
+/* Standalone calculator page */
+.calc-page select {
+  background: var(--bg);
+  border: 1px solid #444;
+  border-radius: 6px;
+  color: var(--text);
+  font-size: 1rem;
+  padding: 0.5rem 0.8rem;
+  width: 100%;
+  max-width: 320px;
+  margin-bottom: 1rem;
+}
+
+.calc-page select:focus {
+  outline: none;
+  border-color: var(--chrome);
+}
+
+/* Comparison page */
+.compare-selectors {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.compare-selectors select {
+  background: var(--bg);
+  border: 1px solid #444;
+  border-radius: 6px;
+  color: var(--text);
+  font-size: 0.9rem;
+  padding: 0.5rem 0.8rem;
+  flex: 1;
+  min-width: 200px;
+}
+
+.compare-selectors select:focus {
+  outline: none;
+  border-color: var(--chrome);
+}
+
+.compare-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+}
+
+.compare-table th {
+  text-align: left;
+  padding: 0.5rem 0.8rem;
+  border-bottom: 2px solid #444;
+  color: var(--chrome);
+  font-weight: 600;
+}
+
+.compare-table td {
+  padding: 0.45rem 0.8rem;
+  border-bottom: 1px solid #2a2a2a;
+  color: var(--text);
+  vertical-align: top;
+}
+
+.compare-table td:first-child {
+  color: var(--chrome-dim);
+  font-weight: 500;
+  width: 25%;
+}
+
+.compare-table tr:hover td {
+  background: rgba(255,255,255,0.02);
+}
+
+/* Resources page */
+.resource-card {
+  background: var(--surface);
+  border: 1px solid #333;
+  border-radius: 10px;
+  padding: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.resource-card h3 {
+  font-size: 1rem;
+  color: var(--text);
+  margin-bottom: 0.3rem;
+  margin-top: 0;
+}
+
+.resource-card p {
+  font-size: 0.9rem;
+  color: var(--text-dim);
+  margin-bottom: 0;
+  line-height: 1.5;
+}
+
+.resource-card .resource-type {
+  font-size: 0.75rem;
+  color: var(--chrome-dim);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-bottom: 0.4rem;
+  display: block;
+}
+
+/* Availability badges */
+.avail-badge {
+  display: inline-block;
+  padding: 0.15rem 0.5rem;
+  border-radius: 3px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.avail-available {
+  background: #1a3d2e;
+  color: #7ae6a6;
+}
+
+.avail-limited {
+  background: #3d3a1a;
+  color: #e6d87a;
+}
+
+.avail-discontinued {
+  background: #3d1a1a;
+  color: #e67a7a;
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+  .film-grid { gap: 0.8rem; }
+  .film-page .app-cta { padding: 1.2rem; }
+  .compare-selectors { flex-direction: column; }
+  .compare-table { font-size: 0.85rem; }
+}
+
+/* Mobile */
+@media (max-width: 540px) {
+  .film-page h1 { font-size: 1.5rem; }
+  .film-tagline { font-size: 1rem; }
+  .film-meta { gap: 0.5rem; font-size: 0.8rem; }
+  .film-grid {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 0.8rem;
+  }
+  .film-card-info { padding: 0.8rem; }
+  .film-card-info h3 { font-size: 0.9rem; }
+  .type-nav { gap: 0.5rem; }
+  .type-nav a { padding: 0.35rem 0.8rem; font-size: 0.85rem; }
+  .calc-widget { padding: 1rem; }
+  .pushpull-table { font-size: 0.85rem; }
+  .compare-table td, .compare-table th { padding: 0.35rem 0.5rem; }
+  .film-page .app-cta { padding: 1rem; margin-top: 1.5rem; }
+}
+
+/* Small phones */
+@media (max-width: 375px) {
+  .film-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 0.6rem;
+  }
+  .type-nav { flex-direction: column; }
+  .type-nav a { text-align: center; }
+}

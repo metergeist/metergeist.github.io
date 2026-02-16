@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-NGH2JC1T0G"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-NGH2JC1T0G');</script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kodak Gold 200 — Film Guide | metergeist</title>
+  <meta name="description" content="Kodak Gold 200 film guide: the warm, golden consumer film that defined the Kodak look. Specs, reciprocity calculator, push/pull data, and shooting tips.">
+  <meta property="og:title" content="Kodak Gold 200 — Film Guide | metergeist">
+  <meta property="og:description" content="Kodak Gold 200 film guide: the warm, golden consumer film that defined the Kodak look. Specs, reciprocity calculator, push/pull data, and shooting tips.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://metergeist.com/film/kodak-gold-200.html">
+  <meta property="og:image" content="https://metergeist.com/icon.png">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Kodak Gold 200 — Film Guide | metergeist">
+  <meta name="twitter:description" content="Kodak Gold 200 film guide: the warm, golden consumer film that defined the Kodak look. Specs, reciprocity calculator, push/pull data, and shooting tips.">
+  <meta name="twitter:image" content="https://metergeist.com/icon.png">
+  <link rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" href="/film/film.css">
+  <link rel="icon" href="/icon.png" type="image/png">
+  <link rel="canonical" href="https://metergeist.com/film/kodak-gold-200.html">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Product","name":"Kodak Gold 200","description":"The warm, golden consumer film that defined the Kodak look","brand":{"@type":"Brand","name":"Kodak"},"category":"Photographic Film"}</script>
+</head>
+<body>
+  <a href="#main" class="skip-link">Skip to content</a>
+  <nav aria-label="Main navigation">
+    <a href="/" class="logo"><img src="/icon.png" alt="metergeist icon"><span>metergeist</span></a>
+    <div class="links">
+      <a href="/cameras/">TLR Guide</a>
+      <a href="/film/">Film Guide</a>
+      <a href="/blog/">Blog</a>
+      <a href="/support.html">Support</a>
+    </div>
+  </nav>
+  <main id="main">
+  <div class="content film-page">
+    <p class="breadcrumb"><a href="/film/">Film Guide</a> &rsaquo; <a href="/film/#color-negative">Color Negative</a> &rsaquo; Kodak Gold 200</p>
+    <h1>Kodak Gold 200</h1>
+    <p class="film-tagline">The quintessential warm, golden film — nostalgia in every frame</p>
+    <div class="film-meta">
+      <span class="film-badge film-c41">C-41 Color Negative</span>
+      <span class="film-iso-badge">ISO 200</span>
+      <span class="film-process-badge">C-41 Process</span>
+      <span class="film-brand-badge kodak">KODAK</span>
+      <span class="avail-badge avail-available">Available</span>
+    </div>
+
+    <!-- Specs table -->
+    <div class="film-specs">
+      <h2>Specifications</h2>
+      <table class="specs-table"><tbody>
+        <tr><td>Manufacturer</td><td>Eastman Kodak (USA)</td></tr>
+        <tr><td>Film Type</td><td>Color negative</td></tr>
+        <tr><td>ISO Speed</td><td>200</td></tr>
+        <tr><td>Process</td><td>C-41</td></tr>
+        <tr><td>Grain</td><td>Medium — noticeable in 35mm, fine at standard print sizes</td></tr>
+        <tr><td>Exposure Latitude</td><td>Good — 2 stops under to 3 stops over</td></tr>
+        <tr><td>Color Palette</td><td>Warm, golden — heavy yellow and magenta tones, saturated</td></tr>
+        <tr><td>Available Formats</td><td>35mm, 120</td></tr>
+      </tbody></table>
+    </div>
+
+    <!-- Reciprocity calculator -->
+    <div class="film-reciprocity">
+      <h2>Reciprocity Failure Calculator</h2>
+      <p>When exposures exceed one second, Kodak Gold 200 requires additional time to compensate for reciprocity failure. Note that color negative films generally have less published reciprocity data than B&amp;W films.</p>
+      <div class="calc-widget">
+        <label for="metered-time">Metered exposure time (seconds)</label>
+        <input type="number" id="metered-time" min="1" max="3600" step="1" value="10">
+        <div class="calc-result">
+          Corrected time: <span class="result-value" id="corrected-time">&mdash;</span> seconds
+        </div>
+        <div class="calc-formula">corrected = metered<sup>1.30</sup></div>
+        <p class="calc-source">Reciprocity exponent estimated from Kodak guidelines</p>
+      </div>
+      <script>
+      (function() {
+        const exp = 1.30;
+        const input = document.getElementById('metered-time');
+        const output = document.getElementById('corrected-time');
+        function calc() {
+          const t = parseFloat(input.value);
+          if (t > 0) {
+            const corrected = Math.pow(t, exp);
+            output.textContent = corrected < 60
+              ? corrected.toFixed(1)
+              : Math.floor(corrected / 60) + 'm ' + Math.round(corrected % 60) + 's';
+          } else { output.textContent = '\u2014'; }
+        }
+        input.addEventListener('input', calc);
+        calc();
+      })();
+      </script>
+    </div>
+
+    <!-- Push/pull table -->
+    <div class="film-pushpull">
+      <h2>Push &amp; Pull Processing</h2>
+      <p>Kodak Gold 200 is designed as a consumer film and performs best at box speed. Push processing is not recommended as grain and contrast increase rapidly. Overexposing by one stop produces warmer, more saturated results that many photographers prefer.</p>
+      <table class="pushpull-table">
+        <thead><tr><th>Rating</th><th>Effective ISO</th><th>Stops</th><th>Notes</th></tr></thead>
+        <tbody>
+          <tr><td>Pull &minus;2</td><td>50</td><td>&minus;2</td><td>Very soft, low contrast — not commonly done</td></tr>
+          <tr><td>Pull &minus;1</td><td>100</td><td>&minus;1</td><td>Smoother tones, enhanced warmth</td></tr>
+          <tr class="current"><td>Box Speed</td><td>200</td><td>0</td><td>Normal development</td></tr>
+          <tr><td>Push +1</td><td>400</td><td>+1</td><td>Noticeable grain increase, punchier contrast</td></tr>
+          <tr><td>Push +2</td><td>800</td><td>+2</td><td>Heavy grain, harsh highlights — not recommended</td></tr>
+          <tr><td>Push +3</td><td>1600</td><td>+3</td><td>Extreme grain, significant quality loss</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Character sections -->
+    <div class="film-character">
+      <h2>Character &amp; Personality</h2>
+      <h3>Grain</h3>
+      <p>Medium grain that is noticeable in 35mm enlargements but fine for standard print sizes. The Print Grain Index (PGI) of 44 means grain is not visible at 4x6 prints but becomes evident in larger prints. The grain has a warm, organic quality consistent with the overall Kodak Gold aesthetic — it adds to the nostalgic feel rather than detracting from it.</p>
+      <h3>Exposure Latitude</h3>
+      <p>Good — handles 2 stops of underexposure to 3 stops of overexposure gracefully. Kodak Gold 200 is a forgiving consumer film that works well in point-and-shoot cameras with imprecise metering. Overexposure tends to produce warmer, more saturated results, which many photographers intentionally exploit for the enhanced "golden" look.</p>
+      <h3>Color Palette</h3>
+      <p>Strong warm cast with heavy yellow and magenta tones. This is the quintessential "Kodak look" — warm, golden, nostalgic. Colors are saturated and punchy, with a bias toward warm tones that gives images a sun-kissed quality. Contrast is moderate. The warmth is most pronounced in daylight conditions and is baked into the emulsion — it cannot be fully corrected out without losing the film's character. The "Kodak Gold look" has become one of the most imitated color profiles in digital photography.</p>
+    </div>
+
+    <div class="film-uses">
+      <h2>Best Suited For</h2>
+      <ul>
+        <li>Everyday snapshots and casual photography</li>
+        <li>Outdoor and daylight photography</li>
+        <li>Travel and vacation photography</li>
+        <li>Point-and-shoot cameras</li>
+        <li>Beginners learning film photography</li>
+        <li>Anyone chasing the nostalgic warm "Kodak Gold" look</li>
+      </ul>
+    </div>
+
+    <div class="film-formats">
+      <h2>Available Formats &amp; Pricing</h2>
+      <table class="pricing-table">
+        <thead><tr><th>Format</th><th>Approx. Price</th></tr></thead>
+        <tbody>
+          <tr><td>35mm (36 exp)</td><td>~$9-12 USD</td></tr>
+          <tr><td>120 (5-pack)</td><td>~$45-55 USD</td></tr>
+        </tbody>
+      </table>
+      <p class="source-note">Prices are approximate and vary by retailer. One of the most affordable color films available. Current as of early 2026.</p>
+    </div>
+
+    <div class="film-notes">
+      <h2>Development Notes</h2>
+      <p>Standard C-41 processing at any lab. Very tolerant of minor development variations. The warm cast is baked into the emulsion and cannot be fully corrected out without losing the film's character. Scans well on consumer scanners, and the strong color cast is easy for auto-correction algorithms to handle. Not recommended for push processing, as grain and contrast increase rapidly. Now available in 120 format as "Professional Gold 200," which is unusual for a consumer film and opens up medium format shooting possibilities.</p>
+    </div>
+
+    <!-- Cross-links -->
+    <div class="film-related">
+      <h3>Related Films &amp; Guides</h3>
+      <p>The closest sibling is <a href="kodak-colorplus-200.html">Kodak ColorPlus 200, which shares a very similar warm color palette</a> at an even lower price point. For more speed with the same Kodak warmth, <a href="kodak-ultramax-400.html">Kodak UltraMax 400 provides ISO 400 versatility</a> with punchier saturation. If you want the warm Kodak color in a professional emulsion, <a href="kodak-portra-400.html">Kodak Portra 400 offers finer grain and wider latitude</a> at a higher price. Gold 200's new 120 format pairs well with affordable TLRs — read about <a href="/blog/your-first-roll-of-120-film.html">shooting your first roll of 120 film</a> to get started.</p>
+    </div>
+
+    <!-- Sources -->
+    <div class="film-sources">
+      <h3>Sources &amp; Further Reading</h3>
+      <ul>
+        <li><a href="https://www.kodak.com/content/products-brochures/film/GOLD-200.pdf" target="_blank" rel="noopener">Kodak Gold 200 Technical Data Sheet</a> (manufacturer data)</li>
+        <li><a href="https://thedarkroom.com/film/kodak-gold-200/" target="_blank" rel="noopener">The Darkroom — Kodak Gold 200 Review</a> (lab review)</li>
+        <li><a href="https://www.bhphotovideo.com/c/product/1826889-REG/" target="_blank" rel="noopener">B&amp;H Photo — Kodak Gold 200 Listing</a> (retailer)</li>
+      </ul>
+    </div>
+
+    <!-- App CTA -->
+    <div class="app-cta">
+      <h3>Shoot Kodak Gold 200 with metergeist</h3>
+      <p>metergeist is a free light meter app with built-in reciprocity correction for Kodak Gold 200 and 21 other film stocks. <a href="/blog/how-to-meter-without-a-built-in-meter.html">Meter your exposures accurately</a> with camera-specific settings for <a href="/cameras/">48 TLR cameras</a>.</p>
+    </div>
+  </div>
+  </main>
+  <footer>
+    &copy; 2026 metergeist
+    <div class="links">
+      <a href="/cameras/">TLR Guide</a>
+      <a href="/film/">Film Guide</a>
+      <a href="/blog/">Blog</a>
+      <a href="/privacy.html">Privacy</a>
+      <a href="/support.html">Support</a>
+    </div>
+  </footer>
+</body>
+</html>

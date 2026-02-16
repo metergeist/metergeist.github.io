@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-NGH2JC1T0G"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-NGH2JC1T0G');</script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kodak Ektachrome E100 — Film Guide | metergeist</title>
+  <meta name="description" content="Kodak Ektachrome E100 film guide — Kodak's only slide film, relaunched in 2018 with neutral color rendering and scanning-optimized design. Reciprocity calculator and E-6 processing notes.">
+  <meta property="og:title" content="Kodak Ektachrome E100 — Film Guide | metergeist">
+  <meta property="og:description" content="Kodak's only slide film, relaunched in 2018 with neutral color rendering and scanning-optimized design. Reciprocity calculator and E-6 processing notes.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://metergeist.com/film/kodak-ektachrome-e100.html">
+  <meta property="og:image" content="https://metergeist.com/icon.png">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Kodak Ektachrome E100 — Film Guide | metergeist">
+  <meta name="twitter:description" content="Kodak's only slide film, relaunched in 2018 with neutral color rendering and scanning-optimized design. Reciprocity calculator and E-6 processing notes.">
+  <meta name="twitter:image" content="https://metergeist.com/icon.png">
+  <link rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" href="/film/film.css">
+  <link rel="icon" href="/icon.png" type="image/png">
+  <link rel="canonical" href="https://metergeist.com/film/kodak-ektachrome-e100.html">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Product","name":"Kodak Ektachrome E100","description":"Kodak's only slide film, relaunched in 2018 with neutral color rendering optimized for modern scanning workflows.","brand":{"@type":"Brand","name":"Eastman Kodak"},"category":"Photographic Film","offers":{"@type":"AggregateOffer","priceCurrency":"USD","lowPrice":18,"highPrice":75,"offerCount":2}}</script>
+</head>
+<body>
+  <a href="#main" class="skip-link">Skip to content</a>
+  <nav aria-label="Main navigation">
+    <a href="/" class="logo">
+      <img src="/icon.png" alt="metergeist icon">
+      <span>metergeist</span>
+    </a>
+    <div class="links">
+      <a href="/cameras/">TLR Guide</a>
+      <a href="/film/">Film Guide</a>
+      <a href="/blog/">Blog</a>
+      <a href="/support.html">Support</a>
+    </div>
+  </nav>
+
+  <main id="main">
+  <div class="content film-page">
+    <p class="breadcrumb"><a href="/film/">Film Guide</a> &rsaquo; <a href="/film/#slide">Slide Film</a> &rsaquo; Kodak Ektachrome E100</p>
+
+    <h1>Kodak Ektachrome E100</h1>
+    <p class="film-tagline">The comeback kid &mdash; Kodak&rsquo;s only slide film, reborn for the scanning era.</p>
+
+    <div class="film-meta">
+      <span class="film-badge film-e6">E-6 Slide Film</span>
+      <span class="film-iso-badge">ISO 100</span>
+      <span class="film-process-badge">E-6</span>
+      <span class="film-brand-badge kodak">KODAK</span>
+      <span class="avail-badge avail-available">Available</span>
+    </div>
+
+    <div class="film-specs">
+      <h2>Specifications</h2>
+      <table class="specs-table"><tbody>
+        <tr><td>Full Name</td><td>Kodak Professional Ektachrome E100</td></tr>
+        <tr><td>Manufacturer</td><td>Eastman Kodak (USA)</td></tr>
+        <tr><td>Film Type</td><td>Color reversal (slide film)</td></tr>
+        <tr><td>ISO Speed</td><td>100</td></tr>
+        <tr><td>Process</td><td>E-6</td></tr>
+        <tr><td>Grain</td><td>Extremely fine &mdash; RMS granularity of 8</td></tr>
+        <tr><td>Exposure Latitude</td><td>Narrow (~1/2 to 1 stop)</td></tr>
+        <tr><td>Contrast</td><td>Medium</td></tr>
+        <tr><td>Available Formats</td><td>35mm, 120, 4x5, Super 8</td></tr>
+      </tbody></table>
+    </div>
+
+    <div class="film-reciprocity">
+      <h2>Reciprocity Failure Calculator</h2>
+      <p>When exposures exceed one second, Ektachrome E100 requires additional time to compensate for reciprocity failure. Ektachrome has the best reciprocity performance of the three current slide films, with the lowest correction exponent (1.20).</p>
+      <div class="calc-widget">
+        <label for="metered-time">Metered exposure time (seconds)</label>
+        <input type="number" id="metered-time" min="1" max="3600" step="1" value="10">
+        <div class="calc-result">
+          Corrected time: <span class="result-value" id="corrected-time">&mdash;</span> seconds
+        </div>
+        <div class="calc-formula">corrected = metered<sup>1.20</sup></div>
+        <p class="calc-source">Reciprocity exponent sourced from Kodak Technical Publication E-4052</p>
+      </div>
+      <script>
+      (function() {
+        var exp = 1.20;
+        var input = document.getElementById('metered-time');
+        var output = document.getElementById('corrected-time');
+        function calc() {
+          var t = parseFloat(input.value);
+          if (t > 0) {
+            var corrected = Math.pow(t, exp);
+            output.textContent = corrected < 60
+              ? corrected.toFixed(1)
+              : Math.floor(corrected / 60) + 'm ' + Math.round(corrected % 60) + 's';
+          } else {
+            output.textContent = '\u2014';
+          }
+        }
+        input.addEventListener('input', calc);
+        calc();
+      })();
+      </script>
+      <p>For all 22 films, see the <a href="/film/reciprocity-calculator.html">reciprocity calculator</a>.</p>
+    </div>
+
+    <div class="film-pushpull">
+      <h2>Push &amp; Pull Processing</h2>
+      <p>Slide film has an extremely narrow exposure latitude of approximately 1/2 stop &mdash; far less forgiving than negative film. Ektachrome E100 can be pushed 1 stop with acceptable results, but push/pull processing with E-6 is more challenging than with C-41 or B&amp;W films. Communicate any push or pull instructions clearly to your E-6 lab.</p>
+      <table class="pushpull-table">
+        <thead><tr><th>Rating</th><th>Effective ISO</th><th>Stops</th><th>Notes</th></tr></thead>
+        <tbody>
+          <tr><td>EI 64</td><td>64</td><td>&minus;2/3</td><td>Pull &frac12; stop &mdash; slightly lower contrast</td></tr>
+          <tr class="current"><td>EI 100</td><td>100</td><td>0</td><td>Box speed &mdash; optimal neutral rendering</td></tr>
+          <tr><td>EI 200</td><td>200</td><td>+1</td><td>Push 1 stop &mdash; increased contrast, acceptable results</td></tr>
+        </tbody>
+      </table>
+      <p>Unlike color negative film which tolerates 3&ndash;5 stops of overexposure, slide film demands precise metering. Bracketing in 1/3 stop increments is recommended for any critical work. A dedicated light meter app or handheld meter is strongly advised.</p>
+    </div>
+
+    <div class="film-character">
+      <h2>Character &amp; Personality</h2>
+      <h3>Grain</h3>
+      <p>Extremely fine grain with an RMS granularity of 8, matching Provia 100F as one of the finest-grained films available. The grain is virtually invisible in normal viewing and scanning conditions. Images appear sharp, clean, and detailed with smooth tonal transitions. In 120 and larger formats, grain is completely absent from any reasonable viewing distance.</p>
+      <h3>Exposure Latitude</h3>
+      <p>Narrow but reasonable for slide film &mdash; approximately 1/2 to 1 stop of latitude in each direction. More forgiving of slight overexposure than Velvia 50 but still requires careful metering. The film maintains good shadow and highlight detail within its usable range. This is still far narrower than color negative film: where Portra 400 gives you 5 or more stops of latitude, Ektachrome gives you roughly 1. Precise metering is not optional.</p>
+      <h3>Color &amp; Tonal Character</h3>
+      <p>Natural color rendition with moderately enhanced saturation. The color palette is distinctly different from Fuji slide films &mdash; more neutral and less vivid. Ektachrome produces clean, accurate colors with a neutral gray scale and pleasing skin tones. Designed for scanning, it has an unusually wide dynamic range for slide film. The overall look is refined and natural, sitting between the extreme saturation of Velvia and the accurate neutrality of Provia. Less post-processing color correction is needed compared to Fuji slide films.</p>
+    </div>
+
+    <div class="film-uses">
+      <h2>Best Suited For</h2>
+      <ul>
+        <li>General-purpose slide photography</li>
+        <li>Landscape and travel where Kodak color science is preferred</li>
+        <li>Portraits where accurate skin tones matter</li>
+        <li>Commercial and product photography</li>
+        <li>Scanning-optimized slide work</li>
+        <li>Long exposures &mdash; best reciprocity performance of any slide film</li>
+        <li>Super 8 motion picture work (the only current-production E-6 Super 8 film)</li>
+      </ul>
+    </div>
+
+    <div class="film-formats">
+      <h2>Available Formats &amp; Pricing</h2>
+      <table class="pricing-table">
+        <thead><tr><th>Format</th><th>Approx. Price</th></tr></thead>
+        <tbody>
+          <tr><td>35mm (36 exp)</td><td>~$18&ndash;22 USD</td></tr>
+          <tr><td>120 (5-pack)</td><td>~$60&ndash;75 USD</td></tr>
+          <tr><td>Super 8</td><td>Available from Kodak</td></tr>
+        </tbody>
+      </table>
+      <p class="source-note">E-6 processing adds approximately $10&ndash;15 per roll on top of the film cost. Ektachrome is generally easier to find in stock than Fuji's slide film offerings. Prices as of early 2026.</p>
+    </div>
+
+    <div class="film-notes">
+      <h2>Development &amp; Processing Notes</h2>
+      <p><strong>E-6 process</strong> &mdash; the same specialized processing required by all current slide films. Ektachrome was designed with modern scanning workflows in mind: the low D-min (bright whites) translates well to digital post-processing.</p>
+      <p>The neutral color balance means less correction is needed in post compared to Fuji slide films. Cross-processing in C-41 yields distinctive high-contrast, warm-toned results for experimental work. Ektachrome E100 is reported to be more consistent batch-to-batch than some recent Fuji slide film production runs.</p>
+      <p>Relaunched in 2018 after being discontinued in 2012, Ektachrome&rsquo;s return was one of the biggest events in the analog photography revival. It is Kodak&rsquo;s sole remaining slide film and the only current-production E-6 film in Super 8 format.</p>
+    </div>
+
+    <div class="film-related">
+      <h3>Related Films &amp; Guides</h3>
+      <p>For more vivid, saturated slide results, <a href="/film/fujifilm-velvia-50.html">Fujifilm Velvia 50</a> delivers the most intense color of any film ever made &mdash; but with even tighter exposure latitude. <a href="/film/fujifilm-provia-100f.html">Fujifilm Provia 100F</a> sits between Ektachrome and Velvia in saturation and offers the best push processing capability of the three slide films (up to 2 stops).</p>
+      <p>If you want vivid colors with more forgiving exposure, <a href="/film/kodak-ektar-100.html">Kodak Ektar 100</a> is the most saturated color negative film and handles exposure errors far more gracefully than any slide film. For portrait work, <a href="/film/kodak-portra-400.html">Kodak Portra 400</a> is the standard choice with its legendary latitude and warm skin tones.</p>
+      <p>Ektachrome is a natural fit for precision TLR cameras like the <a href="/cameras/rolleiflex-28f.html">Rolleiflex 2.8F</a> or the more accessible <a href="/cameras/yashica-mat-124g.html">Yashica Mat-124G</a>. Accurate metering is essential with slide film &mdash; read <a href="/blog/how-to-meter-without-a-built-in-meter.html">how to meter without a built-in meter</a>. For the contemplative approach to shooting that twelve frames of slide film demands, see <a href="/blog/twelve-frames.html">the discipline of twelve frames</a>.</p>
+    </div>
+
+    <div class="film-sources">
+      <h3>Sources &amp; Further Reading</h3>
+      <ul>
+        <li><a href="https://www.kodak.com/en/motion/page/ektachrome-100" target="_blank" rel="noopener">Kodak Ektachrome E100 product page</a> (manufacturer)</li>
+        <li><a href="https://www.kodak.com/content/products-brochures/Film/KODAK_PROFESSIONAL_EKTACHROME_Film_E100_Technical_Data.pdf" target="_blank" rel="noopener">Kodak Technical Publication E-4052 &mdash; Ektachrome E100 Data Sheet</a></li>
+        <li><a href="https://www.digitaltruth.com/devchart.php" target="_blank" rel="noopener">Massive Dev Chart &mdash; E-6 processing reference</a></li>
+      </ul>
+    </div>
+
+    <div class="app-cta">
+      <h3>Shoot Ektachrome E100 with metergeist</h3>
+      <p>metergeist is a free light meter app with built-in reciprocity correction for Ektachrome E100 and 21 other film stocks. Precise metering is critical with slide film &mdash; load Ektachrome as your active film and the app will <a href="/blog/how-to-meter-without-a-built-in-meter.html">automatically correct your long exposures</a>. Track every frame on your roll and never lose count again.</p>
+    </div>
+  </div>
+  </main>
+
+  <footer>
+    &copy; 2026 metergeist
+    <div class="links">
+      <a href="/cameras/">TLR Guide</a>
+      <a href="/film/">Film Guide</a>
+      <a href="/blog/">Blog</a>
+      <a href="/privacy.html">Privacy</a>
+      <a href="/support.html">Support</a>
+    </div>
+  </footer>
+</body>
+</html>

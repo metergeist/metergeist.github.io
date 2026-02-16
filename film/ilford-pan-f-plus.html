@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-NGH2JC1T0G"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-NGH2JC1T0G');</script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ilford Pan F Plus 50 — Film Guide | metergeist</title>
+  <meta name="description" content="Ilford Pan F Plus 50 film guide — the finest-grained film in Ilford's lineup with a luminous, creamy tonality. Reciprocity calculator, push/pull table, and development notes.">
+  <meta property="og:title" content="Ilford Pan F Plus 50 — Film Guide | metergeist">
+  <meta property="og:description" content="The finest-grained film in Ilford's entire range with a luminous, creamy tonality prized for fine art and studio work.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://metergeist.com/film/ilford-pan-f-plus.html">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Ilford Pan F Plus 50 — Film Guide | metergeist">
+  <meta name="twitter:description" content="The finest-grained film in Ilford's entire range with luminous tonality for fine art and studio work.">
+  <link rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" href="/film/film.css">
+  <link rel="icon" href="/icon.png" type="image/png">
+  <link rel="canonical" href="https://metergeist.com/film/ilford-pan-f-plus.html">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Product","name":"Ilford Pan F Plus 50","description":"The finest-grained film in Ilford's entire range, producing luminous images with creamy tonality prized for fine art printing and studio work.","brand":{"@type":"Brand","name":"Ilford Photo"},"category":"Photographic Film","offers":{"@type":"AggregateOffer","priceCurrency":"USD","lowPrice":8,"highPrice":13,"offerCount":2}}</script>
+</head>
+<body>
+  <a href="#main" class="skip-link">Skip to content</a>
+  <nav aria-label="Main navigation">
+    <a href="/" class="logo">
+      <img src="/icon.png" alt="metergeist icon">
+      <span>metergeist</span>
+    </a>
+    <div class="links">
+      <a href="/cameras/">TLR Guide</a>
+      <a href="/film/">Film Guide</a>
+      <a href="/blog/">Blog</a>
+      <a href="/support.html">Support</a>
+    </div>
+  </nav>
+
+  <main id="main">
+  <div class="content film-page">
+    <p class="breadcrumb"><a href="/film/">Film Guide</a> &rsaquo; <a href="/film/#bw">Black &amp; White</a> &rsaquo; Ilford Pan F Plus</p>
+
+    <h1>Ilford Pan F Plus 50</h1>
+    <p class="film-tagline">The fine art film &mdash; luminous, creamy, and utterly grainless.</p>
+
+    <div class="film-meta">
+      <span class="film-badge film-bw">Black &amp; White</span>
+      <span class="film-iso-badge">ISO 50</span>
+      <span class="film-process-badge">Standard B&amp;W</span>
+      <span class="film-brand-badge ilford">ILFORD</span>
+      <span class="avail-badge avail-available">Available</span>
+    </div>
+
+    <div class="film-specs">
+      <h2>Specifications</h2>
+      <table class="specs-table"><tbody>
+        <tr><td>Manufacturer</td><td>Ilford Photo (Harman Technology, UK)</td></tr>
+        <tr><td>Film Type</td><td>Black &amp; white negative</td></tr>
+        <tr><td>ISO Speed</td><td>50</td></tr>
+        <tr><td>Process</td><td>Standard B&amp;W (Perceptol, ID-11, D-76, etc.)</td></tr>
+        <tr><td>Grain</td><td>Ultra-fine &mdash; the finest in Ilford's entire lineup</td></tr>
+        <tr><td>Exposure Latitude</td><td>Moderate (performs best with careful metering)</td></tr>
+        <tr><td>Contrast</td><td>High</td></tr>
+        <tr><td>Available Formats</td><td>35mm, 120, bulk</td></tr>
+      </tbody></table>
+    </div>
+
+    <div class="film-reciprocity">
+      <h2>Reciprocity Failure Calculator</h2>
+      <p>When exposures exceed one second, Pan F Plus requires additional time to compensate for reciprocity failure. Note that Pan F Plus has a higher reciprocity exponent (1.33) than the faster FP4 Plus (1.26) despite being a slower film &mdash; so long-exposure correction is more significant than you might expect.</p>
+      <div class="calc-widget">
+        <label for="metered-time">Metered exposure time (seconds)</label>
+        <input type="number" id="metered-time" min="1" max="3600" step="1" value="10">
+        <div class="calc-result">
+          Corrected time: <span class="result-value" id="corrected-time">&mdash;</span> seconds
+        </div>
+        <div class="calc-formula">corrected = metered<sup>1.33</sup></div>
+        <p class="calc-source">Reciprocity exponent from Ilford Pan F Plus Technical Data Sheet</p>
+      </div>
+      <script>
+      (function() {
+        var exp = 1.33;
+        var input = document.getElementById('metered-time');
+        var output = document.getElementById('corrected-time');
+        function calc() {
+          var t = parseFloat(input.value);
+          if (t > 0) {
+            var corrected = Math.pow(t, exp);
+            output.textContent = corrected < 60
+              ? corrected.toFixed(1)
+              : Math.floor(corrected / 60) + 'm ' + Math.round(corrected % 60) + 's';
+          } else {
+            output.textContent = '\u2014';
+          }
+        }
+        input.addEventListener('input', calc);
+        calc();
+      })();
+      </script>
+    </div>
+
+    <div class="film-pushpull">
+      <h2>Push &amp; Pull Processing</h2>
+      <p>Pan F Plus is not suited for push processing &mdash; the film quickly loses its fine-grain advantage when pushed. It performs best at box speed or slightly pulled. The high contrast can be tamed by reducing development time, which also yields even smoother tonal transitions.</p>
+      <table class="pushpull-table">
+        <thead><tr><th>Rating</th><th>Effective ISO</th><th>Stops</th><th>Notes</th></tr></thead>
+        <tbody>
+          <tr><td>EI 25</td><td>25</td><td>&minus;1</td><td>Maximum smoothness; reduced contrast; ideal for high-key work</td></tr>
+          <tr class="current"><td>EI 50</td><td>50</td><td>0</td><td>Box speed &mdash; luminous, creamy tonality with ultra-fine grain</td></tr>
+          <tr><td>EI 100</td><td>100</td><td>+1</td><td>Not recommended &mdash; grain increases, fine-grain advantage diminishes</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="film-character">
+      <h2>Character &amp; Personality</h2>
+      <h3>Grain</h3>
+      <p>Ultra-fine grain &mdash; the finest in Ilford's entire lineup. Pan F Plus produces images with extremely fine, smooth grain that is nearly invisible even in 35mm enlargements. The grain has a creamy quality with smooth transitions, making it ideal for fine art printing. In 120 format, the grain is essentially invisible, producing images of remarkable clarity.</p>
+      <h3>Exposure Latitude</h3>
+      <p>Moderate. Pan F Plus has decent latitude but is not as forgiving as FP4 Plus or HP5 Plus, particularly when underexposed. The film performs best when carefully metered, ideally with a slight bias toward overexposure. It rewards disciplined exposure technique with outstanding tonal range and exceptional brightness.</p>
+      <h3>Tonal Character</h3>
+      <p>High contrast with excellent tonal separation. The film produces bright, luminous highlights and rich shadows. The overall look is crisp and detailed with a luminous quality that makes it prized for fine art and studio work. The "creamy" tonality is often described as the B&amp;W equivalent of slide film quality &mdash; a unique glow that no other Ilford film can quite match.</p>
+    </div>
+
+    <div class="film-uses">
+      <h2>Best Suited For</h2>
+      <ul>
+        <li>Studio portraiture with controlled lighting</li>
+        <li>Fine art and exhibition printing</li>
+        <li>Architecture on sunny days</li>
+        <li>Still life and product photography</li>
+        <li>Fashion photography</li>
+        <li>Bright outdoor conditions (sunny days, beaches, snow)</li>
+      </ul>
+    </div>
+
+    <div class="film-formats">
+      <h2>Available Formats &amp; Pricing</h2>
+      <table class="pricing-table">
+        <thead><tr><th>Format</th><th>Approx. Price</th></tr></thead>
+        <tbody>
+          <tr><td>35mm (36 exp)</td><td>~$10&ndash;13 USD</td></tr>
+          <tr><td>120</td><td>~$8&ndash;11 USD</td></tr>
+          <tr><td>35mm bulk (100ft)</td><td>Available</td></tr>
+        </tbody>
+      </table>
+      <p class="source-note">Prices are approximate and vary by retailer. Current as of early 2026.</p>
+    </div>
+
+    <div class="film-notes">
+      <h2>Development Notes</h2>
+      <p>Perceptol (Ilford's fine-grain developer) at full strength is the classic recommendation for Pan F Plus and produces the smoothest, finest-grained results. ID-11 at 1:1 provides slightly more contrast while maintaining fine grain &mdash; a good choice when you want a bit more punch.</p>
+      <p>Rodinal can be used but will emphasize grain more than with faster films. Pan F Plus is very sensitive to overdevelopment &mdash; err on the side of slightly less time rather than more. The high contrast can be tamed by reducing development time by 10&ndash;15%. Avoid push processing entirely, as the film loses its fine-grain advantage quickly. Pan F Plus is excellent for Zone System work due to its predictable tonal response.</p>
+    </div>
+
+    <div class="film-related">
+      <h3>Related Films &amp; Guides</h3>
+      <p>Pan F Plus sits at the slow, fine-grained extreme of Ilford's B&amp;W range. For more speed while staying in the Ilford family, step up to <a href="/film/ilford-fp4-plus.html">Ilford FP4 Plus at ISO 125, which offers wider latitude and better reciprocity performance</a>. At the opposite end of the spectrum, <a href="/film/ilford-delta-3200.html">Ilford Delta 3200 provides extreme speed for near-darkness shooting</a>. Pan F Plus's luminous tonality makes it a beautiful match for portrait work on the <a href="/cameras/rolleiflex-35f.html">Rolleiflex 3.5F</a>, where the larger 6x6 negative eliminates any trace of grain. If you are new to medium format, our guide to <a href="/blog/your-first-roll-of-120-film.html">shooting your first roll of 120 film</a> will help you get started.</p>
+    </div>
+
+    <div class="film-sources">
+      <h3>Sources &amp; Further Reading</h3>
+      <ul>
+        <li><a href="https://www.ilfordphoto.com/wp/wp-content/uploads/2017/06/Pan-F-Plus-Technical-Information.pdf" target="_blank" rel="noopener">Ilford Pan F Plus Technical Data Sheet</a> (manufacturer)</li>
+        <li><a href="https://www.digitaltruth.com/devchart.php" target="_blank" rel="noopener">Massive Dev Chart development times</a></li>
+        <li><a href="https://www.ilfordphoto.com/pan-f-plus" target="_blank" rel="noopener">Ilford Pan F Plus product page</a></li>
+      </ul>
+    </div>
+
+    <div class="app-cta">
+      <h3>Shoot Pan F Plus with metergeist</h3>
+      <p>metergeist is a free light meter app with built-in reciprocity correction for Pan F Plus and 21 other film stocks. Load it as your active film and the app will <a href="/blog/how-to-meter-without-a-built-in-meter.html">automatically correct your long exposures</a>. At ISO 50, careful metering is essential &mdash; let metergeist handle the math so you can focus on the image.</p>
+    </div>
+  </div>
+  </main>
+
+  <footer>
+    &copy; 2026 metergeist
+    <div class="links">
+      <a href="/cameras/">TLR Guide</a>
+      <a href="/film/">Film Guide</a>
+      <a href="/blog/">Blog</a>
+      <a href="/privacy.html">Privacy</a>
+      <a href="/support.html">Support</a>
+    </div>
+  </footer>
+</body>
+</html>

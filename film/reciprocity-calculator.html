@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-NGH2JC1T0G"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-NGH2JC1T0G');</script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reciprocity Failure Calculator — All 22 Film Stocks | metergeist</title>
+  <meta name="description" content="Interactive reciprocity failure calculator for 22 popular film stocks. Enter your metered time and get the corrected exposure for long exposures on any Kodak, Ilford, Fujifilm, or other film.">
+  <meta property="og:title" content="Reciprocity Failure Calculator — All 22 Film Stocks | metergeist">
+  <meta property="og:description" content="Interactive reciprocity failure calculator for 22 popular film stocks. Enter your metered time and get the corrected exposure for long exposures.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://metergeist.com/film/reciprocity-calculator.html">
+  <meta property="og:image" content="https://metergeist.com/icon.png">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Reciprocity Failure Calculator — All 22 Film Stocks">
+  <meta name="twitter:description" content="Interactive reciprocity failure calculator for 22 popular film stocks. Corrected exposure times for long exposures.">
+  <meta name="twitter:image" content="https://metergeist.com/icon.png">
+  <link rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" href="/film/film.css">
+  <link rel="icon" href="/icon.png" type="image/png">
+  <link rel="canonical" href="https://metergeist.com/film/reciprocity-calculator.html">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Reciprocity Failure Calculator","description":"Interactive calculator for correcting long exposure times across 22 film stocks.","url":"https://metergeist.com/film/reciprocity-calculator.html","applicationCategory":"PhotographyApplication"}</script>
+</head>
+<body>
+  <a href="#main" class="skip-link">Skip to content</a>
+  <nav aria-label="Main navigation">
+    <a href="/" class="logo">
+      <img src="/icon.png" alt="metergeist icon">
+      <span>metergeist</span>
+    </a>
+    <div class="links">
+      <a href="/cameras/">TLR Guide</a>
+      <a href="/film/">Film Guide</a>
+      <a href="/blog/">Blog</a>
+      <a href="/support.html">Support</a>
+    </div>
+  </nav>
+
+  <main id="main">
+  <div class="content film-page calc-page">
+    <p class="breadcrumb"><a href="/film/">Film Guide</a> &rsaquo; Reciprocity Calculator</p>
+
+    <h1>Reciprocity Failure Calculator</h1>
+    <p class="film-tagline">Corrected exposure times for long exposures on 22 film stocks.</p>
+
+    <div class="film-reciprocity">
+      <h2>Calculate Corrected Exposure</h2>
+      <p>Select your film stock and enter the metered exposure time. The calculator will show the corrected time accounting for reciprocity failure.</p>
+
+      <div class="calc-widget" style="max-width: 560px;">
+        <label for="film-select">Film stock</label>
+        <select id="film-select">
+          <optgroup label="Black &amp; White">
+            <option value="ilford-hp5-plus">Ilford HP5 Plus (1.31)</option>
+            <option value="kodak-tri-x">Kodak Tri-X 400 (1.33)</option>
+            <option value="ilford-delta-3200">Ilford Delta 3200 (1.33)</option>
+            <option value="ilford-fp4-plus">Ilford FP4 Plus (1.26)</option>
+            <option value="kodak-tmax-100">Kodak T-Max 100 (1.15)</option>
+            <option value="fomapan-100">Fomapan 100 (1.30)</option>
+            <option value="ilford-pan-f-plus">Ilford Pan F Plus (1.33)</option>
+          </optgroup>
+          <optgroup label="Color Negative (C-41)">
+            <option value="kodak-portra-400">Kodak Portra 400 (1.30)</option>
+            <option value="kodak-portra-160">Kodak Portra 160 (1.30)</option>
+            <option value="fujifilm-pro-400h">Fujifilm Pro 400H (1.25)</option>
+            <option value="cinestill-800t">CineStill 800T (1.30)</option>
+            <option value="kodak-gold-200">Kodak Gold 200 (1.30)</option>
+            <option value="kodak-colorplus-200">Kodak ColorPlus 200 (1.30)</option>
+            <option value="kodak-ultramax-400">Kodak UltraMax 400 (1.30)</option>
+            <option value="fujifilm-superia-400">Fujifilm Superia 400 (1.30)</option>
+            <option value="fujifilm-superia-100">Fujifilm Superia 100 (1.25)</option>
+            <option value="kodak-ektar-100">Kodak Ektar 100 (1.18)</option>
+            <option value="lomography-color-400">Lomography Color 400 (1.30)</option>
+            <option value="lomography-color-800">Lomography Color 800 (1.30)</option>
+          </optgroup>
+          <optgroup label="Slide Film (E-6)">
+            <option value="fujifilm-velvia-50">Fujifilm Velvia 50 (1.25)</option>
+            <option value="fujifilm-provia-100f">Fujifilm Provia 100F (1.22)</option>
+            <option value="kodak-ektachrome-e100">Kodak Ektachrome E100 (1.20)</option>
+          </optgroup>
+        </select>
+
+        <label for="calc-metered-time" style="margin-top: 1rem;">Metered exposure time (seconds)</label>
+        <input type="number" id="calc-metered-time" min="1" max="3600" step="1" value="10">
+
+        <div class="calc-result" style="margin-top: 1.2rem;">
+          Corrected time: <span class="result-value" id="calc-corrected-time">&mdash;</span>
+        </div>
+        <div class="calc-formula" id="calc-formula-display">corrected = metered<sup>1.31</sup></div>
+      </div>
+    </div>
+
+    <div class="film-specs" style="margin-top: 2rem;">
+      <h2>Common Exposure Corrections</h2>
+      <p>The table below shows corrected times for common metered exposures with the selected film stock. Times under 1 second do not require correction.</p>
+      <table class="specs-table" id="corrections-table" style="max-width: 600px;">
+        <thead>
+          <tr style="border-bottom: 2px solid #444;">
+            <td style="color: var(--chrome-dim); font-weight: 500; text-transform: uppercase; font-size: 0.8rem; letter-spacing: 0.04em;">Metered</td>
+            <td style="color: var(--chrome-dim); font-weight: 500; text-transform: uppercase; font-size: 0.8rem; letter-spacing: 0.04em;">Corrected</td>
+            <td style="color: var(--chrome-dim); font-weight: 500; text-transform: uppercase; font-size: 0.8rem; letter-spacing: 0.04em;">Added Time</td>
+          </tr>
+        </thead>
+        <tbody id="corrections-tbody">
+        </tbody>
+      </table>
+    </div>
+
+    <div class="film-character" style="margin-top: 2rem;">
+      <h2>What Is Reciprocity Failure?</h2>
+      <p>In normal photography, doubling the exposure time doubles the amount of light reaching the film &mdash; a linear, reciprocal relationship. But when exposure times exceed roughly one second, this relationship breaks down. The film becomes less efficient at capturing light, requiring progressively more time than your meter indicates. This phenomenon is called <strong>reciprocity failure</strong> (or reciprocity law failure).</p>
+      <h3>The Correction Formula</h3>
+      <p>The standard correction formula used by metergeist and this calculator is:</p>
+      <p style="font-family: 'SF Mono', 'Fira Code', monospace; font-size: 1rem; color: var(--text); background: var(--surface); padding: 0.8rem 1rem; border-radius: 6px; display: inline-block;">corrected_time = metered_time<sup>exponent</sup></p>
+      <p>Each film stock has a unique exponent that determines how severely it is affected by reciprocity failure. A lower exponent means less correction is needed, making the film better suited for long exposures. For example, Kodak T-Max 100 (exponent 1.15) needs far less correction than Kodak Tri-X 400 (exponent 1.33) at the same metered time.</p>
+      <h3>When Does It Matter?</h3>
+      <p>Reciprocity failure is only relevant for exposures longer than approximately one second. This typically occurs in:</p>
+      <ul>
+        <li>Landscape photography at dawn, dusk, or in deep shade</li>
+        <li>Night photography and astrophotography</li>
+        <li>Long exposure creative work (waterfalls, light trails, etc.)</li>
+        <li>Indoor photography without flash in dim conditions</li>
+        <li>Pinhole photography, where all exposures are inherently long</li>
+      </ul>
+      <p>For exposures under one second, no correction is needed &mdash; the reciprocity law holds true.</p>
+    </div>
+
+    <div class="film-specs" style="margin-top: 2rem;">
+      <h2>All Film Exponents</h2>
+      <p>Sorted from lowest (least correction needed) to highest (most correction needed).</p>
+      <table class="specs-table" style="max-width: 520px;">
+        <tbody>
+          <tr><td><a href="/film/kodak-tmax-100.html">Kodak T-Max 100</a></td><td>1.15</td></tr>
+          <tr><td><a href="/film/kodak-ektar-100.html">Kodak Ektar 100</a></td><td>1.18</td></tr>
+          <tr><td><a href="/film/kodak-ektachrome-e100.html">Kodak Ektachrome E100</a></td><td>1.20</td></tr>
+          <tr><td><a href="/film/fujifilm-provia-100f.html">Fujifilm Provia 100F</a></td><td>1.22</td></tr>
+          <tr><td><a href="/film/fujifilm-velvia-50.html">Fujifilm Velvia 50</a></td><td>1.25</td></tr>
+          <tr><td><a href="/film/fujifilm-pro-400h.html">Fujifilm Pro 400H</a></td><td>1.25</td></tr>
+          <tr><td><a href="/film/fujifilm-superia-100.html">Fujifilm Superia 100</a></td><td>1.25</td></tr>
+          <tr><td><a href="/film/ilford-fp4-plus.html">Ilford FP4 Plus</a></td><td>1.26</td></tr>
+          <tr><td><a href="/film/fomapan-100.html">Fomapan 100</a></td><td>1.30</td></tr>
+          <tr><td><a href="/film/kodak-portra-400.html">Kodak Portra 400</a></td><td>1.30</td></tr>
+          <tr><td><a href="/film/kodak-portra-160.html">Kodak Portra 160</a></td><td>1.30</td></tr>
+          <tr><td><a href="/film/cinestill-800t.html">CineStill 800T</a></td><td>1.30</td></tr>
+          <tr><td><a href="/film/kodak-gold-200.html">Kodak Gold 200</a></td><td>1.30</td></tr>
+          <tr><td><a href="/film/kodak-colorplus-200.html">Kodak ColorPlus 200</a></td><td>1.30</td></tr>
+          <tr><td><a href="/film/kodak-ultramax-400.html">Kodak UltraMax 400</a></td><td>1.30</td></tr>
+          <tr><td><a href="/film/fujifilm-superia-400.html">Fujifilm Superia 400</a></td><td>1.30</td></tr>
+          <tr><td><a href="/film/lomography-color-400.html">Lomography Color 400</a></td><td>1.30</td></tr>
+          <tr><td><a href="/film/lomography-color-800.html">Lomography Color 800</a></td><td>1.30</td></tr>
+          <tr><td><a href="/film/ilford-hp5-plus.html">Ilford HP5 Plus</a></td><td>1.31</td></tr>
+          <tr><td><a href="/film/ilford-delta-3200.html">Ilford Delta 3200</a></td><td>1.33</td></tr>
+          <tr><td><a href="/film/kodak-tri-x.html">Kodak Tri-X 400</a></td><td>1.33</td></tr>
+          <tr><td><a href="/film/ilford-pan-f-plus.html">Ilford Pan F Plus</a></td><td>1.33</td></tr>
+        </tbody>
+      </table>
+      <p class="source-note">Reciprocity exponents sourced from manufacturer technical data sheets where available. Community-validated values used for films without published manufacturer data.</p>
+    </div>
+
+    <div class="app-cta">
+      <h3>Automatic reciprocity correction in your pocket</h3>
+      <p>metergeist is a free light meter app that automatically applies reciprocity correction for all 22 film stocks. Just select your film, meter the scene, and the app handles the math. No tables, no mental arithmetic. <a href="/blog/how-to-meter-without-a-built-in-meter.html">Learn how it works</a>.</p>
+    </div>
+  </div>
+  </main>
+
+  <footer>
+    &copy; 2026 metergeist
+    <div class="links">
+      <a href="/cameras/">TLR Guide</a>
+      <a href="/film/">Film Guide</a>
+      <a href="/blog/">Blog</a>
+      <a href="/privacy.html">Privacy</a>
+      <a href="/support.html">Support</a>
+    </div>
+  </footer>
+
+  <script>
+  (function() {
+    var films = [
+      { name: "Ilford HP5 Plus", exp: 1.31, type: "bw", slug: "ilford-hp5-plus" },
+      { name: "Kodak Tri-X 400", exp: 1.33, type: "bw", slug: "kodak-tri-x" },
+      { name: "Ilford Delta 3200", exp: 1.33, type: "bw", slug: "ilford-delta-3200" },
+      { name: "Ilford FP4 Plus", exp: 1.26, type: "bw", slug: "ilford-fp4-plus" },
+      { name: "Kodak T-Max 100", exp: 1.15, type: "bw", slug: "kodak-tmax-100" },
+      { name: "Fomapan 100", exp: 1.30, type: "bw", slug: "fomapan-100" },
+      { name: "Ilford Pan F Plus", exp: 1.33, type: "bw", slug: "ilford-pan-f-plus" },
+      { name: "Kodak Portra 400", exp: 1.30, type: "c41", slug: "kodak-portra-400" },
+      { name: "Kodak Portra 160", exp: 1.30, type: "c41", slug: "kodak-portra-160" },
+      { name: "Fujifilm Pro 400H", exp: 1.25, type: "c41", slug: "fujifilm-pro-400h" },
+      { name: "CineStill 800T", exp: 1.30, type: "c41", slug: "cinestill-800t" },
+      { name: "Kodak Gold 200", exp: 1.30, type: "c41", slug: "kodak-gold-200" },
+      { name: "Kodak ColorPlus 200", exp: 1.30, type: "c41", slug: "kodak-colorplus-200" },
+      { name: "Kodak UltraMax 400", exp: 1.30, type: "c41", slug: "kodak-ultramax-400" },
+      { name: "Fujifilm Superia 400", exp: 1.30, type: "c41", slug: "fujifilm-superia-400" },
+      { name: "Fujifilm Superia 100", exp: 1.25, type: "c41", slug: "fujifilm-superia-100" },
+      { name: "Kodak Ektar 100", exp: 1.18, type: "c41", slug: "kodak-ektar-100" },
+      { name: "Lomography Color 400", exp: 1.30, type: "c41", slug: "lomography-color-400" },
+      { name: "Lomography Color 800", exp: 1.30, type: "c41", slug: "lomography-color-800" },
+      { name: "Fujifilm Velvia 50", exp: 1.25, type: "e6", slug: "fujifilm-velvia-50" },
+      { name: "Fujifilm Provia 100F", exp: 1.22, type: "e6", slug: "fujifilm-provia-100f" },
+      { name: "Kodak Ektachrome E100", exp: 1.20, type: "e6", slug: "kodak-ektachrome-e100" }
+    ];
+
+    var filmMap = {};
+    films.forEach(function(f) { filmMap[f.slug] = f; });
+
+    var select = document.getElementById('film-select');
+    var input = document.getElementById('calc-metered-time');
+    var output = document.getElementById('calc-corrected-time');
+    var formulaDisplay = document.getElementById('calc-formula-display');
+    var tbody = document.getElementById('corrections-tbody');
+    var commonTimes = [1, 2, 4, 8, 15, 30, 60, 120];
+
+    function formatTime(seconds) {
+      if (seconds < 60) return seconds.toFixed(1) + 's';
+      var m = Math.floor(seconds / 60);
+      var s = Math.round(seconds % 60);
+      return m + 'm ' + s + 's';
+    }
+
+    function update() {
+      var film = filmMap[select.value];
+      if (!film) return;
+      var exp = film.exp;
+
+      // Update main calculator
+      var t = parseFloat(input.value);
+      if (t > 0) {
+        var corrected = Math.pow(t, exp);
+        output.textContent = formatTime(corrected);
+      } else {
+        output.textContent = '\u2014';
+      }
+      formulaDisplay.innerHTML = 'corrected = metered<sup>' + exp + '</sup>';
+
+      // Update common times table
+      var html = '';
+      commonTimes.forEach(function(mt) {
+        var ct = Math.pow(mt, exp);
+        var added = ct - mt;
+        html += '<tr>';
+        html += '<td>' + formatTime(mt) + '</td>';
+        html += '<td style="color: var(--text); font-weight: 600;">' + formatTime(ct) + '</td>';
+        html += '<td style="color: var(--chrome-dim);">+' + formatTime(added) + '</td>';
+        html += '</tr>';
+      });
+      tbody.innerHTML = html;
+    }
+
+    select.addEventListener('change', update);
+    input.addEventListener('input', update);
+    update();
+  })();
+  </script>
+</body>
+</html>

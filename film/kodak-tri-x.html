@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-NGH2JC1T0G"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-NGH2JC1T0G');</script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kodak Tri-X 400 — Film Guide | metergeist</title>
+  <meta name="description" content="Kodak Tri-X 400 film guide — the most legendary B&W film in history. Reciprocity calculator, push/pull processing table, and development notes.">
+  <meta property="og:title" content="Kodak Tri-X 400 — Film Guide | metergeist">
+  <meta property="og:description" content="The most legendary B&W film in history, used by virtually every famous photojournalist since the 1950s. Reciprocity calculator, push/pull data, and development notes.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://metergeist.com/film/kodak-tri-x.html">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Kodak Tri-X 400 — Film Guide | metergeist">
+  <meta name="twitter:description" content="The most legendary B&W film in history. Reciprocity calculator, push/pull data, and development notes.">
+  <link rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" href="/film/film.css">
+  <link rel="icon" href="/icon.png" type="image/png">
+  <link rel="canonical" href="https://metergeist.com/film/kodak-tri-x.html">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Product","name":"Kodak Tri-X 400","description":"The most legendary black and white film in history, defining the visual language of street photography and photojournalism for over 60 years.","brand":{"@type":"Brand","name":"Kodak"},"category":"Photographic Film","offers":{"@type":"AggregateOffer","priceCurrency":"USD","lowPrice":8,"highPrice":100,"offerCount":3}}</script>
+</head>
+<body>
+  <a href="#main" class="skip-link">Skip to content</a>
+  <nav aria-label="Main navigation">
+    <a href="/" class="logo">
+      <img src="/icon.png" alt="metergeist icon">
+      <span>metergeist</span>
+    </a>
+    <div class="links">
+      <a href="/cameras/">TLR Guide</a>
+      <a href="/film/">Film Guide</a>
+      <a href="/blog/">Blog</a>
+      <a href="/support.html">Support</a>
+    </div>
+  </nav>
+
+  <main id="main">
+  <div class="content film-page">
+    <p class="breadcrumb"><a href="/film/">Film Guide</a> &rsaquo; <a href="/film/#bw">Black &amp; White</a> &rsaquo; Kodak Tri-X 400</p>
+
+    <h1>Kodak Tri-X 400</h1>
+    <p class="film-tagline">The film that defined street photography &mdash; gritty, dramatic, and unmistakable.</p>
+
+    <div class="film-meta">
+      <span class="film-badge film-bw">Black &amp; White</span>
+      <span class="film-iso-badge">ISO 400</span>
+      <span class="film-process-badge">Standard B&amp;W</span>
+      <span class="film-brand-badge kodak">KODAK</span>
+      <span class="avail-badge avail-available">Available</span>
+    </div>
+
+    <div class="film-specs">
+      <h2>Specifications</h2>
+      <table class="specs-table"><tbody>
+        <tr><td>Manufacturer</td><td>Eastman Kodak (USA)</td></tr>
+        <tr><td>Film Type</td><td>Black &amp; white negative</td></tr>
+        <tr><td>ISO Speed</td><td>400</td></tr>
+        <tr><td>Process</td><td>Standard B&amp;W (D-76, HC-110, XTOL, Rodinal, etc.)</td></tr>
+        <tr><td>Grain</td><td>Medium-coarse &mdash; iconic gritty texture that defines photojournalism</td></tr>
+        <tr><td>Exposure Latitude</td><td>Wide (~10 stops in D-76)</td></tr>
+        <tr><td>Contrast</td><td>Medium-high</td></tr>
+        <tr><td>Available Formats</td><td>35mm, 120, 4x5, 5x7, 8x10, 11x14, bulk</td></tr>
+      </tbody></table>
+    </div>
+
+    <div class="film-reciprocity">
+      <h2>Reciprocity Failure Calculator</h2>
+      <p>When exposures exceed one second, Tri-X 400 requires additional time to compensate for reciprocity failure. The correction formula below uses the exponent derived from Kodak's published technical data.</p>
+      <div class="calc-widget">
+        <label for="metered-time">Metered exposure time (seconds)</label>
+        <input type="number" id="metered-time" min="1" max="3600" step="1" value="10">
+        <div class="calc-result">
+          Corrected time: <span class="result-value" id="corrected-time">&mdash;</span> seconds
+        </div>
+        <div class="calc-formula">corrected = metered<sup>1.33</sup></div>
+        <p class="calc-source">Reciprocity exponent derived from Kodak Technical Publication F-4017</p>
+      </div>
+      <script>
+      (function() {
+        var exp = 1.33;
+        var input = document.getElementById('metered-time');
+        var output = document.getElementById('corrected-time');
+        function calc() {
+          var t = parseFloat(input.value);
+          if (t > 0) {
+            var corrected = Math.pow(t, exp);
+            output.textContent = corrected < 60
+              ? corrected.toFixed(1)
+              : Math.floor(corrected / 60) + 'm ' + Math.round(corrected % 60) + 's';
+          } else {
+            output.textContent = '\u2014';
+          }
+        }
+        input.addEventListener('input', calc);
+        calc();
+      })();
+      </script>
+    </div>
+
+    <div class="film-pushpull">
+      <h2>Push &amp; Pull Processing</h2>
+      <p>Tri-X is one of the most pushed and pulled films in the world. It responds beautifully across a wide range of ratings, from EI 200 for smoother tones to EI 6400 for extreme low-light situations. The Tri-X character becomes more intense as you push further.</p>
+      <table class="pushpull-table">
+        <thead><tr><th>Rating</th><th>Effective ISO</th><th>Stops</th><th>Notes</th></tr></thead>
+        <tbody>
+          <tr><td>EI 200</td><td>200</td><td>&minus;1</td><td>Finer grain, smoother tones; excellent for controlled light</td></tr>
+          <tr class="current"><td>EI 400</td><td>400</td><td>0</td><td>Box speed &mdash; the classic Tri-X look</td></tr>
+          <tr><td>EI 800</td><td>800</td><td>+1</td><td>Classic push; slight grain increase, punchier contrast</td></tr>
+          <tr><td>EI 1600</td><td>1600</td><td>+2</td><td>Pronounced grain, dramatic contrast; the Winogrand look</td></tr>
+          <tr><td>EI 3200</td><td>3200</td><td>+3</td><td>Heavy grain, strong contrast; gritty and atmospheric</td></tr>
+          <tr><td>EI 6400</td><td>6400</td><td>+4</td><td>Extreme push; very coarse grain with deep shadows</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="film-character">
+      <h2>Character &amp; Personality</h2>
+      <h3>Grain</h3>
+      <p>Medium-coarse grain with an iconic, almost tangible texture. Tri-X has a distinctive grain structure that has defined the look of photojournalism for over 60 years. The grain is more pronounced than HP5 Plus and has a gritty, organic quality that gives images a timeless feel. This pronounced grain pattern is one of the primary reasons Tri-X images appear free from the constraints of any particular era.</p>
+      <h3>Exposure Latitude</h3>
+      <p>Wide &mdash; approximately 10 stops of dynamic range in D-76. Tri-X handles overexposure well and captures high-contrast scenes with consistent tonality. It pushes beautifully to EI 800 and EI 1600, and can be pushed as far as EI 6400 with more specialized development. Pulling to EI 200 yields finer grain and smoother tones.</p>
+      <h3>Tonal Character</h3>
+      <p>Slightly warm tonal rendering with punchy midtone contrast. Tri-X is known for its deep, rich blacks and bright, clean highlights. The contrast curve is more pronounced than HP5 Plus, giving images a more dramatic, high-impact look. This inherent contrast is a key part of what makes the Tri-X aesthetic so immediately recognizable.</p>
+    </div>
+
+    <div class="film-uses">
+      <h2>Best Suited For</h2>
+      <ul>
+        <li>Street photography (the definitive street film)</li>
+        <li>Photojournalism and documentary work</li>
+        <li>Portraits with dramatic lighting</li>
+        <li>Low light and available light photography</li>
+        <li>Any situation demanding a classic, gritty B&amp;W look</li>
+      </ul>
+    </div>
+
+    <div class="film-formats">
+      <h2>Available Formats &amp; Pricing</h2>
+      <table class="pricing-table">
+        <thead><tr><th>Format</th><th>Approx. Price</th></tr></thead>
+        <tbody>
+          <tr><td>35mm (36 exp)</td><td>~$11&ndash;13 USD</td></tr>
+          <tr><td>120 (5-pack)</td><td>~$40&ndash;50 USD</td></tr>
+          <tr><td>4x5 (50 sheets)</td><td>~$85&ndash;100 USD</td></tr>
+        </tbody>
+      </table>
+      <p class="source-note">Prices are approximate and vary by retailer. Kodak implemented a 30% price drop on 35mm Tri-X in January 2024. Current as of early 2026.</p>
+    </div>
+
+    <div class="film-notes">
+      <h2>Development Notes</h2>
+      <p>D-76 at 1:1 is the classic Tri-X combination and the standard by which other developer pairings are judged. XTOL provides slightly finer grain while maintaining the Tri-X character. HC-110 dilution B gives higher contrast and slightly more grain for a punchier look.</p>
+      <p>Rodinal at 1:50 or 1:100 (stand development) yields extremely sharp results with enhanced grain &mdash; a popular choice for photographers who want to maximize the gritty Tri-X aesthetic. For push to EI 1600, increase D-76 time by about 40%. Tri-X is very tolerant of development time variations, making it nearly impossible to ruin.</p>
+    </div>
+
+    <div class="film-related">
+      <h3>Related Films &amp; Guides</h3>
+      <p>The great debate in B&amp;W film: Tri-X versus <a href="/film/ilford-hp5-plus.html">Ilford HP5 Plus, its long-time ISO 400 rival</a>. HP5 Plus offers smoother tones and wider latitude, while Tri-X delivers more contrast and that unmistakable grain. For a modern, fine-grained alternative at a lower speed, try <a href="/film/kodak-tmax-100.html">Kodak T-Max 100 with its revolutionary T-GRAIN technology</a>. Tri-X loaded in a <a href="/cameras/rolleiflex-35f.html">Rolleiflex 3.5F</a> is one of the most iconic combinations in the history of photography. New to film? Read our guide on <a href="/blog/how-to-meter-without-a-built-in-meter.html">how to meter without a built-in light meter</a>.</p>
+    </div>
+
+    <div class="film-sources">
+      <h3>Sources &amp; Further Reading</h3>
+      <ul>
+        <li><a href="https://www.kodak.com/content/products-brochures/film/TRI-X-400-Technical-Data.pdf" target="_blank" rel="noopener">Kodak Technical Publication F-4017 (Tri-X 400 Data Sheet)</a> (manufacturer)</li>
+        <li><a href="https://www.digitaltruth.com/devchart.php" target="_blank" rel="noopener">Massive Dev Chart development times</a></li>
+        <li><a href="https://www.kodak.com/en/motion/page/tri-x-400" target="_blank" rel="noopener">Kodak Tri-X 400 product page</a></li>
+      </ul>
+    </div>
+
+    <div class="app-cta">
+      <h3>Shoot Tri-X with metergeist</h3>
+      <p>metergeist is a free light meter app with built-in reciprocity correction for Tri-X and 21 other film stocks. Load it as your active film and the app will <a href="/blog/how-to-meter-without-a-built-in-meter.html">automatically correct your long exposures</a>. Track every frame on your roll and never lose count again.</p>
+    </div>
+  </div>
+  </main>
+
+  <footer>
+    &copy; 2026 metergeist
+    <div class="links">
+      <a href="/cameras/">TLR Guide</a>
+      <a href="/film/">Film Guide</a>
+      <a href="/blog/">Blog</a>
+      <a href="/privacy.html">Privacy</a>
+      <a href="/support.html">Support</a>
+    </div>
+  </footer>
+</body>
+</html>

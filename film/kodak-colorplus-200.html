@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-NGH2JC1T0G"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-NGH2JC1T0G');</script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kodak ColorPlus 200 — Film Guide | metergeist</title>
+  <meta name="description" content="Kodak ColorPlus 200 film guide: the most affordable Kodak color film with warm tones. Specs, reciprocity calculator, push/pull data, and beginner tips.">
+  <meta property="og:title" content="Kodak ColorPlus 200 — Film Guide | metergeist">
+  <meta property="og:description" content="Kodak ColorPlus 200 film guide: the most affordable Kodak color film with warm tones. Specs, reciprocity calculator, push/pull data, and beginner tips.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://metergeist.com/film/kodak-colorplus-200.html">
+  <meta property="og:image" content="https://metergeist.com/icon.png">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Kodak ColorPlus 200 — Film Guide | metergeist">
+  <meta name="twitter:description" content="Kodak ColorPlus 200 film guide: the most affordable Kodak color film with warm tones. Specs, reciprocity calculator, push/pull data, and beginner tips.">
+  <meta name="twitter:image" content="https://metergeist.com/icon.png">
+  <link rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" href="/film/film.css">
+  <link rel="icon" href="/icon.png" type="image/png">
+  <link rel="canonical" href="https://metergeist.com/film/kodak-colorplus-200.html">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Product","name":"Kodak ColorPlus 200","description":"The most affordable Kodak color film with classic warm tones","brand":{"@type":"Brand","name":"Kodak"},"category":"Photographic Film"}</script>
+</head>
+<body>
+  <a href="#main" class="skip-link">Skip to content</a>
+  <nav aria-label="Main navigation">
+    <a href="/" class="logo"><img src="/icon.png" alt="metergeist icon"><span>metergeist</span></a>
+    <div class="links">
+      <a href="/cameras/">TLR Guide</a>
+      <a href="/film/">Film Guide</a>
+      <a href="/blog/">Blog</a>
+      <a href="/support.html">Support</a>
+    </div>
+  </nav>
+  <main id="main">
+  <div class="content film-page">
+    <p class="breadcrumb"><a href="/film/">Film Guide</a> &rsaquo; <a href="/film/#color-negative">Color Negative</a> &rsaquo; Kodak ColorPlus 200</p>
+    <h1>Kodak ColorPlus 200</h1>
+    <p class="film-tagline">Budget-friendly Kodak warmth for everyday shooting</p>
+    <div class="film-meta">
+      <span class="film-badge film-c41">C-41 Color Negative</span>
+      <span class="film-iso-badge">ISO 200</span>
+      <span class="film-process-badge">C-41 Process</span>
+      <span class="film-brand-badge kodak">KODAK</span>
+      <span class="avail-badge avail-available">Available</span>
+    </div>
+
+    <!-- Specs table -->
+    <div class="film-specs">
+      <h2>Specifications</h2>
+      <table class="specs-table"><tbody>
+        <tr><td>Manufacturer</td><td>Eastman Kodak (USA)</td></tr>
+        <tr><td>Film Type</td><td>Color negative</td></tr>
+        <tr><td>ISO Speed</td><td>200</td></tr>
+        <tr><td>Process</td><td>C-41</td></tr>
+        <tr><td>Grain</td><td>Fine for a consumer film — PGI ~44</td></tr>
+        <tr><td>Exposure Latitude</td><td>Good — 2 stops under to 3 stops over</td></tr>
+        <tr><td>Color Palette</td><td>Warm, golden — similar to Kodak Gold 200</td></tr>
+        <tr><td>Available Formats</td><td>35mm only</td></tr>
+      </tbody></table>
+    </div>
+
+    <!-- Reciprocity calculator -->
+    <div class="film-reciprocity">
+      <h2>Reciprocity Failure Calculator</h2>
+      <p>When exposures exceed one second, Kodak ColorPlus 200 requires additional time to compensate for reciprocity failure. Note that color negative films generally have less published reciprocity data than B&amp;W films.</p>
+      <div class="calc-widget">
+        <label for="metered-time">Metered exposure time (seconds)</label>
+        <input type="number" id="metered-time" min="1" max="3600" step="1" value="10">
+        <div class="calc-result">
+          Corrected time: <span class="result-value" id="corrected-time">&mdash;</span> seconds
+        </div>
+        <div class="calc-formula">corrected = metered<sup>1.30</sup></div>
+        <p class="calc-source">Reciprocity exponent estimated from Kodak guidelines</p>
+      </div>
+      <script>
+      (function() {
+        const exp = 1.30;
+        const input = document.getElementById('metered-time');
+        const output = document.getElementById('corrected-time');
+        function calc() {
+          const t = parseFloat(input.value);
+          if (t > 0) {
+            const corrected = Math.pow(t, exp);
+            output.textContent = corrected < 60
+              ? corrected.toFixed(1)
+              : Math.floor(corrected / 60) + 'm ' + Math.round(corrected % 60) + 's';
+          } else { output.textContent = '\u2014'; }
+        }
+        input.addEventListener('input', calc);
+        calc();
+      })();
+      </script>
+    </div>
+
+    <!-- Push/pull table -->
+    <div class="film-pushpull">
+      <h2>Push &amp; Pull Processing</h2>
+      <p>Kodak ColorPlus 200 is designed to be shot at box speed. As a consumer film, it is not intended for push or pull processing. Best results come from accurate exposure at ISO 200 in daylight or well-lit conditions.</p>
+      <table class="pushpull-table">
+        <thead><tr><th>Rating</th><th>Effective ISO</th><th>Stops</th><th>Notes</th></tr></thead>
+        <tbody>
+          <tr><td>Pull &minus;2</td><td>50</td><td>&minus;2</td><td>Very soft, flat — not commonly done</td></tr>
+          <tr><td>Pull &minus;1</td><td>100</td><td>&minus;1</td><td>Slightly warmer, smoother tones</td></tr>
+          <tr class="current"><td>Box Speed</td><td>200</td><td>0</td><td>Normal development</td></tr>
+          <tr><td>Push +1</td><td>400</td><td>+1</td><td>Noticeable grain increase, slightly punchier</td></tr>
+          <tr><td>Push +2</td><td>800</td><td>+2</td><td>Heavy grain, not recommended</td></tr>
+          <tr><td>Push +3</td><td>1600</td><td>+3</td><td>Extreme grain — not suitable for this emulsion</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Character sections -->
+    <div class="film-character">
+      <h2>Character &amp; Personality</h2>
+      <h3>Grain</h3>
+      <p>Fine for a consumer film, with a PGI of approximately 44, comparable to Kodak Gold 200. At standard 4x6 print sizes, grain is not visible. At larger sizes or in crops, grain becomes apparent but retains a pleasant, organic quality. The grain structure contributes to the classic analog feel that makes consumer Kodak films so popular.</p>
+      <h3>Exposure Latitude</h3>
+      <p>Good — handles 2 stops of underexposure to 3 stops of overexposure. Similar to Gold 200 in its forgiving nature. The wide latitude makes it well-suited for cameras with less precise metering systems, including disposable and basic point-and-shoot cameras. This forgiving nature makes it an excellent choice for first-time film shooters.</p>
+      <h3>Color Palette</h3>
+      <p>Warm color cast with a yellow/golden bias, similar to Gold 200. Bright, saturated colors in daylight with deep blue skies and warm skin tones. The film renders with good color saturation and a slight warm shift through almost every frame. It is essentially in the same color family as Kodak Gold but positioned as the budget alternative. There is ongoing debate about whether ColorPlus 200 and Gold 200 use the same emulsion in different packaging.</p>
+    </div>
+
+    <div class="film-uses">
+      <h2>Best Suited For</h2>
+      <ul>
+        <li>Budget everyday color photography</li>
+        <li>Casual outdoor and travel snapshots</li>
+        <li>Point-and-shoot cameras</li>
+        <li>First-time film shooters and beginners</li>
+        <li>High-volume shooting where cost per frame matters</li>
+        <li>Student photography projects</li>
+      </ul>
+    </div>
+
+    <div class="film-formats">
+      <h2>Available Formats &amp; Pricing</h2>
+      <table class="pricing-table">
+        <thead><tr><th>Format</th><th>Approx. Price</th></tr></thead>
+        <tbody>
+          <tr><td>35mm (36 exp)</td><td>~$7-10 USD</td></tr>
+        </tbody>
+      </table>
+      <p class="source-note">The cheapest Kodak color negative film currently in production. 35mm only — no 120 or sheet film available. Current as of early 2026.</p>
+    </div>
+
+    <div class="film-notes">
+      <h2>Development Notes</h2>
+      <p>Standard C-41 processing at any lab. Very tolerant of processing variations. Similar scanning characteristics to Kodak Gold 200. The warm color cast is inherent and consistent across rolls. Not designed for push or pull processing — shoot at box speed for best results. DX coded for compatibility with automatic-exposure point-and-shoot cameras.</p>
+    </div>
+
+    <!-- Cross-links -->
+    <div class="film-related">
+      <h3>Related Films &amp; Guides</h3>
+      <p>The closest alternative is <a href="kodak-gold-200.html">Kodak Gold 200, which shares a very similar warm color palette</a> and is also available in 120 format for medium format cameras. For more speed in the same price range, <a href="kodak-ultramax-400.html">Kodak UltraMax 400 offers ISO 400 versatility</a> with slightly more vibrant saturation. Photographers on a budget might also consider <a href="lomography-color-400.html">Lomography Color Negative 400 for creative color shooting</a> at a competitive per-roll price. If you are new to film photography, our guide on <a href="/blog/how-to-meter-without-a-built-in-meter.html">metering without a built-in meter</a> covers the basics of getting accurate exposures.</p>
+    </div>
+
+    <!-- Sources -->
+    <div class="film-sources">
+      <h3>Sources &amp; Further Reading</h3>
+      <ul>
+        <li><a href="https://www.kodak.com/content/products-brochures/film/COLORPLUS-200.pdf" target="_blank" rel="noopener">Kodak ColorPlus 200 Technical Data Sheet</a> (manufacturer data)</li>
+        <li><a href="https://thedarkroom.com/film/kodak-colorplus-200/" target="_blank" rel="noopener">The Darkroom — Kodak ColorPlus 200 Review</a> (lab review)</li>
+        <li><a href="https://analog.cafe/r/kodak-colorplus-200-film-review-sksf" target="_blank" rel="noopener">Analog.Cafe — Kodak ColorPlus 200 Review</a> (community review)</li>
+      </ul>
+    </div>
+
+    <!-- App CTA -->
+    <div class="app-cta">
+      <h3>Shoot Kodak ColorPlus 200 with metergeist</h3>
+      <p>metergeist is a free light meter app with built-in reciprocity correction for Kodak ColorPlus 200 and 21 other film stocks. <a href="/blog/how-to-meter-without-a-built-in-meter.html">Meter your exposures accurately</a> with camera-specific settings for <a href="/cameras/">48 TLR cameras</a>.</p>
+    </div>
+  </div>
+  </main>
+  <footer>
+    &copy; 2026 metergeist
+    <div class="links">
+      <a href="/cameras/">TLR Guide</a>
+      <a href="/film/">Film Guide</a>
+      <a href="/blog/">Blog</a>
+      <a href="/privacy.html">Privacy</a>
+      <a href="/support.html">Support</a>
+    </div>
+  </footer>
+</body>
+</html>

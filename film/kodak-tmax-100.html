@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-NGH2JC1T0G"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-NGH2JC1T0G');</script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kodak T-Max 100 — Film Guide | metergeist</title>
+  <meta name="description" content="Kodak T-Max 100 film guide — the sharpest B&W film with revolutionary T-GRAIN technology and the best reciprocity failure of any B&W film. Calculator and dev notes.">
+  <meta property="og:title" content="Kodak T-Max 100 — Film Guide | metergeist">
+  <meta property="og:description" content="The sharpest B&W film with revolutionary T-GRAIN technology and the best reciprocity failure characteristics of any black and white film.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://metergeist.com/film/kodak-tmax-100.html">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Kodak T-Max 100 — Film Guide | metergeist">
+  <meta name="twitter:description" content="The sharpest B&W film with revolutionary T-GRAIN technology and exceptional reciprocity failure performance.">
+  <link rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" href="/film/film.css">
+  <link rel="icon" href="/icon.png" type="image/png">
+  <link rel="canonical" href="https://metergeist.com/film/kodak-tmax-100.html">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Product","name":"Kodak T-Max 100","description":"Extremely fine-grained ISO 100 black and white film using revolutionary T-GRAIN tabular grain technology, with the best reciprocity failure characteristics of any B&W film.","brand":{"@type":"Brand","name":"Kodak"},"category":"Photographic Film","offers":{"@type":"AggregateOffer","priceCurrency":"USD","lowPrice":9,"highPrice":100,"offerCount":3}}</script>
+</head>
+<body>
+  <a href="#main" class="skip-link">Skip to content</a>
+  <nav aria-label="Main navigation">
+    <a href="/" class="logo">
+      <img src="/icon.png" alt="metergeist icon">
+      <span>metergeist</span>
+    </a>
+    <div class="links">
+      <a href="/cameras/">TLR Guide</a>
+      <a href="/film/">Film Guide</a>
+      <a href="/blog/">Blog</a>
+      <a href="/support.html">Support</a>
+    </div>
+  </nav>
+
+  <main id="main">
+  <div class="content film-page">
+    <p class="breadcrumb"><a href="/film/">Film Guide</a> &rsaquo; <a href="/film/#bw">Black &amp; White</a> &rsaquo; Kodak T-Max 100</p>
+
+    <h1>Kodak T-Max 100</h1>
+    <p class="film-tagline">The technical masterpiece &mdash; razor-sharp grain, clinical precision, and unmatched long-exposure performance.</p>
+
+    <div class="film-meta">
+      <span class="film-badge film-bw">Black &amp; White</span>
+      <span class="film-iso-badge">ISO 100</span>
+      <span class="film-process-badge">Standard B&amp;W</span>
+      <span class="film-brand-badge kodak">KODAK</span>
+      <span class="avail-badge avail-available">Available</span>
+    </div>
+
+    <div class="film-specs">
+      <h2>Specifications</h2>
+      <table class="specs-table"><tbody>
+        <tr><td>Manufacturer</td><td>Eastman Kodak (USA)</td></tr>
+        <tr><td>Film Type</td><td>Black &amp; white negative</td></tr>
+        <tr><td>ISO Speed</td><td>100</td></tr>
+        <tr><td>Process</td><td>Standard B&amp;W (T-Max developer recommended; also D-76, HC-110, XTOL)</td></tr>
+        <tr><td>Grain</td><td>Extremely fine &mdash; T-GRAIN tabular grain with 200+ lines/mm resolution</td></tr>
+        <tr><td>Exposure Latitude</td><td>Good (EI 25&ndash;200 without changed development)</td></tr>
+        <tr><td>Contrast</td><td>Medium</td></tr>
+        <tr><td>Available Formats</td><td>35mm, 120, 4x5, bulk</td></tr>
+      </tbody></table>
+    </div>
+
+    <div class="film-reciprocity">
+      <h2>Reciprocity Failure Calculator</h2>
+      <p>T-Max 100 has the best reciprocity failure characteristics of any black and white film, with an exponent of just 1.15. This makes it the ideal B&amp;W choice for long-exposure photography &mdash; a 10-second metered exposure only needs about 14 seconds of correction, compared to 20+ seconds for most other B&amp;W films.</p>
+      <div class="calc-widget">
+        <label for="metered-time">Metered exposure time (seconds)</label>
+        <input type="number" id="metered-time" min="1" max="3600" step="1" value="10">
+        <div class="calc-result">
+          Corrected time: <span class="result-value" id="corrected-time">&mdash;</span> seconds
+        </div>
+        <div class="calc-formula">corrected = metered<sup>1.15</sup></div>
+        <p class="calc-source">Reciprocity exponent derived from Kodak Technical Publication F-4016</p>
+      </div>
+      <script>
+      (function() {
+        var exp = 1.15;
+        var input = document.getElementById('metered-time');
+        var output = document.getElementById('corrected-time');
+        function calc() {
+          var t = parseFloat(input.value);
+          if (t > 0) {
+            var corrected = Math.pow(t, exp);
+            output.textContent = corrected < 60
+              ? corrected.toFixed(1)
+              : Math.floor(corrected / 60) + 'm ' + Math.round(corrected % 60) + 's';
+          } else {
+            output.textContent = '\u2014';
+          }
+        }
+        input.addEventListener('input', calc);
+        calc();
+      })();
+      </script>
+    </div>
+
+    <div class="film-pushpull">
+      <h2>Push &amp; Pull Processing</h2>
+      <p>T-Max 100 can be pushed up to 3 stops with increased grain and contrast, though it is most commonly shot at or near box speed to take full advantage of its extraordinary resolution. Pulling yields even finer grain and smoother tones for maximum quality.</p>
+      <table class="pushpull-table">
+        <thead><tr><th>Rating</th><th>Effective ISO</th><th>Stops</th><th>Notes</th></tr></thead>
+        <tbody>
+          <tr><td>EI 25</td><td>25</td><td>&minus;2</td><td>Maximum fine grain; extremely smooth tones; tripod essential</td></tr>
+          <tr><td>EI 50</td><td>50</td><td>&minus;1</td><td>Finer grain, lower contrast; superb for landscapes</td></tr>
+          <tr class="current"><td>EI 100</td><td>100</td><td>0</td><td>Box speed &mdash; the sharpest results with finest grain</td></tr>
+          <tr><td>EI 200</td><td>200</td><td>+1</td><td>Slight grain increase; still very fine; good versatility</td></tr>
+          <tr><td>EI 400</td><td>400</td><td>+2</td><td>Noticeable grain; higher contrast; loses some of the T-Max finesse</td></tr>
+          <tr><td>EI 800</td><td>800</td><td>+3</td><td>Visible grain, high contrast; emergency use only</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="film-character">
+      <h2>Character &amp; Personality</h2>
+      <h3>Grain</h3>
+      <p>Extremely fine grain with exceptional sharpness. T-Max 100 uses Kodak's tabular grain (T-GRAIN) technology, which fundamentally changed the shape of silver halide crystals from cubic to flat, tablet-shaped. This dramatically increases the surface area of each grain, resulting in extremely fine, tight grain with very high resolution. The grain pattern is more uniform and structured than traditional cubic-grain films, and resolving power exceeds 200 lines/mm &mdash; among the highest of any B&amp;W film.</p>
+      <h3>Exposure Latitude</h3>
+      <p>Good but not as wide as cubic-grain films. T-Max 100 has an effective shooting range of EI 25&ndash;200 without changing development. Compared to FP4 Plus, T-Max 100 is somewhat less forgiving of exposure errors, especially underexposure. The film rewards careful metering with outstanding results.</p>
+      <h3>Tonal Character</h3>
+      <p>Neutral to slightly cool tonal rendering. Very smooth tonal gradations with excellent separation between similar tones. High sharpness and resolving power give images a clean, technical quality. Some photographers describe the rendering as "clinical" or "modern" compared to the warmer, more organic look of traditional cubic-grain films like Tri-X or HP5 Plus.</p>
+    </div>
+
+    <div class="film-uses">
+      <h2>Best Suited For</h2>
+      <ul>
+        <li>Landscape and nature photography</li>
+        <li>Architecture and urban photography</li>
+        <li>Studio work requiring maximum detail</li>
+        <li>Long exposure photography (best reciprocity of any B&amp;W film)</li>
+        <li>Fine art printing and exhibition work</li>
+        <li>Any application demanding the finest possible grain from B&amp;W film</li>
+      </ul>
+    </div>
+
+    <div class="film-formats">
+      <h2>Available Formats &amp; Pricing</h2>
+      <table class="pricing-table">
+        <thead><tr><th>Format</th><th>Approx. Price</th></tr></thead>
+        <tbody>
+          <tr><td>35mm (36 exp)</td><td>~$12&ndash;14 USD</td></tr>
+          <tr><td>120 (5-pack)</td><td>~$45&ndash;55 USD</td></tr>
+          <tr><td>4x5 (50 sheets)</td><td>~$85&ndash;100 USD</td></tr>
+        </tbody>
+      </table>
+      <p class="source-note">Prices are approximate and vary by retailer. Current as of early 2026.</p>
+    </div>
+
+    <div class="film-notes">
+      <h2>Development Notes</h2>
+      <p>Kodak T-Max developer is strongly recommended &mdash; the film was designed for it, and T-Max developer produces the finest grain and best tonal range. T-Max 100 can also be developed in D-76, HC-110, or XTOL, but results may not be as refined.</p>
+      <p>T-Max 100 is more sensitive to development time and temperature variations than cubic-grain films. Agitation pattern matters more with T-Max films &mdash; inconsistent agitation can cause uneven development. The thin film base can be tricky in some processing tanks, so ensure the film is loaded properly. Some photographers find the negatives harder to print in the darkroom due to the different grain structure, though scanning produces excellent results.</p>
+    </div>
+
+    <div class="film-related">
+      <h3>Related Films &amp; Guides</h3>
+      <p>T-Max 100 is the modern, technical alternative to <a href="/film/ilford-fp4-plus.html">Ilford FP4 Plus, which offers wider exposure latitude and a more organic tonal character</a>. For the ultimate contrast in approaches, compare T-Max 100's clinical precision with the gritty character of <a href="/film/kodak-tri-x.html">Kodak Tri-X 400</a>. Budget-conscious photographers should consider <a href="/film/fomapan-100.html">Fomapan 100 as an affordable ISO 100 alternative</a>, though with coarser grain. T-Max 100 in 120 format on a <a href="/cameras/rolleiflex-35f.html">Rolleiflex 3.5F</a> delivers stunning landscape results with essentially invisible grain.</p>
+    </div>
+
+    <div class="film-sources">
+      <h3>Sources &amp; Further Reading</h3>
+      <ul>
+        <li><a href="https://www.kodak.com/content/products-brochures/film/TMAX-100-Technical-Data.pdf" target="_blank" rel="noopener">Kodak Technical Publication F-4016 (T-Max 100 Data Sheet)</a> (manufacturer)</li>
+        <li><a href="https://www.digitaltruth.com/devchart.php" target="_blank" rel="noopener">Massive Dev Chart development times</a></li>
+        <li><a href="https://www.kodak.com/en/motion/page/t-max-100" target="_blank" rel="noopener">Kodak T-Max 100 product page</a></li>
+      </ul>
+    </div>
+
+    <div class="app-cta">
+      <h3>Shoot T-Max 100 with metergeist</h3>
+      <p>metergeist is a free light meter app with built-in reciprocity correction for T-Max 100 and 21 other film stocks. Load it as your active film and the app will <a href="/blog/how-to-meter-without-a-built-in-meter.html">automatically correct your long exposures</a>. With T-Max 100's industry-leading reciprocity performance, your long exposures will need less correction than any other B&amp;W film.</p>
+    </div>
+  </div>
+  </main>
+
+  <footer>
+    &copy; 2026 metergeist
+    <div class="links">
+      <a href="/cameras/">TLR Guide</a>
+      <a href="/film/">Film Guide</a>
+      <a href="/blog/">Blog</a>
+      <a href="/privacy.html">Privacy</a>
+      <a href="/support.html">Support</a>
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-NGH2JC1T0G"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-NGH2JC1T0G');</script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ilford HP5 Plus 400 — Film Guide | metergeist</title>
+  <meta name="description" content="Ilford HP5 Plus 400 film guide — the classic ISO 400 B&W film with legendary push processing latitude. Reciprocity calculator, push/pull table, and development notes.">
+  <meta property="og:title" content="Ilford HP5 Plus 400 — Film Guide | metergeist">
+  <meta property="og:description" content="The classic ISO 400 B&W film with legendary push processing latitude. Reciprocity calculator, push/pull data, and development notes.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://metergeist.com/film/ilford-hp5-plus.html">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Ilford HP5 Plus 400 — Film Guide | metergeist">
+  <meta name="twitter:description" content="The classic ISO 400 B&W film with legendary push processing latitude. Reciprocity calculator, push/pull data, and development notes.">
+  <link rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" href="/film/film.css">
+  <link rel="icon" href="/icon.png" type="image/png">
+  <link rel="canonical" href="https://metergeist.com/film/ilford-hp5-plus.html">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Product","name":"Ilford HP5 Plus 400","description":"Classic ISO 400 black and white negative film with legendary push processing latitude and wide exposure tolerance.","brand":{"@type":"Brand","name":"Ilford Photo"},"category":"Photographic Film","offers":{"@type":"AggregateOffer","priceCurrency":"USD","lowPrice":8,"highPrice":55,"offerCount":3}}</script>
+</head>
+<body>
+  <a href="#main" class="skip-link">Skip to content</a>
+  <nav aria-label="Main navigation">
+    <a href="/" class="logo">
+      <img src="/icon.png" alt="metergeist icon">
+      <span>metergeist</span>
+    </a>
+    <div class="links">
+      <a href="/cameras/">TLR Guide</a>
+      <a href="/film/">Film Guide</a>
+      <a href="/blog/">Blog</a>
+      <a href="/support.html">Support</a>
+    </div>
+  </nav>
+
+  <main id="main">
+  <div class="content film-page">
+    <p class="breadcrumb"><a href="/film/">Film Guide</a> &rsaquo; <a href="/film/#bw">Black &amp; White</a> &rsaquo; Ilford HP5 Plus</p>
+
+    <h1>Ilford HP5 Plus 400</h1>
+    <p class="film-tagline">The photojournalist's film &mdash; forgiving, pushable, and timeless.</p>
+
+    <div class="film-meta">
+      <span class="film-badge film-bw">Black &amp; White</span>
+      <span class="film-iso-badge">ISO 400</span>
+      <span class="film-process-badge">Standard B&amp;W</span>
+      <span class="film-brand-badge ilford">ILFORD</span>
+      <span class="avail-badge avail-available">Available</span>
+    </div>
+
+    <div class="film-specs">
+      <h2>Specifications</h2>
+      <table class="specs-table"><tbody>
+        <tr><td>Manufacturer</td><td>Ilford Photo (Harman Technology, UK)</td></tr>
+        <tr><td>Film Type</td><td>Black &amp; white negative</td></tr>
+        <tr><td>ISO Speed</td><td>400</td></tr>
+        <tr><td>Process</td><td>Standard B&amp;W (D-76, ID-11, HC-110, Ilfotec, Rodinal, etc.)</td></tr>
+        <tr><td>Grain</td><td>Medium &mdash; classic cubic crystal structure with organic texture</td></tr>
+        <tr><td>Exposure Latitude</td><td>Wide (~12 stops of usable dynamic range)</td></tr>
+        <tr><td>Contrast</td><td>Medium</td></tr>
+        <tr><td>Available Formats</td><td>35mm, 120, 4x5, 5x7, 8x10, bulk</td></tr>
+      </tbody></table>
+    </div>
+
+    <div class="film-reciprocity">
+      <h2>Reciprocity Failure Calculator</h2>
+      <p>When exposures exceed one second, HP5 Plus requires additional time to compensate for reciprocity failure. The correction formula below uses the exponent published in Ilford's technical data sheet.</p>
+      <div class="calc-widget">
+        <label for="metered-time">Metered exposure time (seconds)</label>
+        <input type="number" id="metered-time" min="1" max="3600" step="1" value="10">
+        <div class="calc-result">
+          Corrected time: <span class="result-value" id="corrected-time">&mdash;</span> seconds
+        </div>
+        <div class="calc-formula">corrected = metered<sup>1.31</sup></div>
+        <p class="calc-source">Reciprocity exponent from Ilford HP5 Plus Technical Data Sheet</p>
+      </div>
+      <script>
+      (function() {
+        var exp = 1.31;
+        var input = document.getElementById('metered-time');
+        var output = document.getElementById('corrected-time');
+        function calc() {
+          var t = parseFloat(input.value);
+          if (t > 0) {
+            var corrected = Math.pow(t, exp);
+            output.textContent = corrected < 60
+              ? corrected.toFixed(1)
+              : Math.floor(corrected / 60) + 'm ' + Math.round(corrected % 60) + 's';
+          } else {
+            output.textContent = '\u2014';
+          }
+        }
+        input.addEventListener('input', calc);
+        calc();
+      })();
+      </script>
+    </div>
+
+    <div class="film-pushpull">
+      <h2>Push &amp; Pull Processing</h2>
+      <p>HP5 Plus is legendary for its push processing capability. It can be rated from EI 200 all the way up to EI 3200 with adjusted development, making it one of the most versatile B&amp;W films for unpredictable lighting conditions.</p>
+      <table class="pushpull-table">
+        <thead><tr><th>Rating</th><th>Effective ISO</th><th>Stops</th><th>Notes</th></tr></thead>
+        <tbody>
+          <tr><td>EI 100</td><td>100</td><td>&minus;2</td><td>Very fine grain, lower contrast; ideal for bright conditions</td></tr>
+          <tr><td>EI 200</td><td>200</td><td>&minus;1</td><td>Finer grain, smooth tones; great for controlled lighting</td></tr>
+          <tr class="current"><td>EI 400</td><td>400</td><td>0</td><td>Box speed &mdash; classic HP5 Plus look</td></tr>
+          <tr><td>EI 800</td><td>800</td><td>+1</td><td>Slight grain increase; excellent results, very common push</td></tr>
+          <tr><td>EI 1600</td><td>1600</td><td>+2</td><td>Visible grain with gritty character; still very usable</td></tr>
+          <tr><td>EI 3200</td><td>3200</td><td>+3</td><td>Heavy grain, high contrast; dramatic photojournalistic look</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="film-character">
+      <h2>Character &amp; Personality</h2>
+      <h3>Grain</h3>
+      <p>Medium grain with a classic cubic crystal structure. HP5 Plus uses traditional cubic grain emulsion, which produces an organic, textured look that is the epitome of classic black and white photography. In 35mm, the grain is quite pronounced and characterful. In 120 format, grain becomes subtle and almost unnoticeable. The grain adds to the film's timeless photojournalistic aesthetic.</p>
+      <h3>Exposure Latitude</h3>
+      <p>Exceptionally wide &mdash; approximately 12 stops of usable dynamic range. HP5 Plus is one of the most forgiving B&amp;W films available. It tolerates significant overexposure and underexposure gracefully, which makes it an excellent choice for beginners and situations where lighting is unpredictable. The film responds extremely well to push processing and can be rated from EI 200 up to EI 3200 with adjusted development.</p>
+      <h3>Tonal Character</h3>
+      <p>Neutral to slightly warm tonal rendering with medium contrast that reproduces a full range of tones from deep blacks to bright whites. The tonal curve is smooth and gradual, avoiding the harshness some higher-contrast B&amp;W films exhibit. Highlights roll off gently rather than clipping abruptly, making HP5 Plus forgiving in high-contrast scenes.</p>
+    </div>
+
+    <div class="film-uses">
+      <h2>Best Suited For</h2>
+      <ul>
+        <li>Street photography and photojournalism</li>
+        <li>Documentary and travel photography</li>
+        <li>Sports and action (thanks to ISO 400 speed)</li>
+        <li>Indoor available light photography</li>
+        <li>Push processing for low-light situations</li>
+        <li>General all-purpose B&amp;W shooting</li>
+      </ul>
+    </div>
+
+    <div class="film-formats">
+      <h2>Available Formats &amp; Pricing</h2>
+      <table class="pricing-table">
+        <thead><tr><th>Format</th><th>Approx. Price</th></tr></thead>
+        <tbody>
+          <tr><td>35mm (36 exp)</td><td>~$11&ndash;13 USD</td></tr>
+          <tr><td>120</td><td>~$8&ndash;10 USD</td></tr>
+          <tr><td>4x5 (25 sheets)</td><td>~$45&ndash;55 USD</td></tr>
+          <tr><td>35mm bulk (100ft)</td><td>Available</td></tr>
+        </tbody>
+      </table>
+      <p class="source-note">Prices are approximate and vary by retailer. Current as of early 2026.</p>
+    </div>
+
+    <div class="film-notes">
+      <h2>Development Notes</h2>
+      <p>HP5 Plus is extremely versatile in development and works well with virtually any B&amp;W developer. Standard development in ID-11 or D-76 at 1:1 dilution yields classic results with smooth tonal gradations. HC-110 dilution B provides slightly more contrast for a punchier look. Rodinal at 1:50 emphasizes the grain for an artistic, textured aesthetic.</p>
+      <p>For push processing to EI 1600&ndash;3200, increase development time by 50&ndash;100% depending on the developer. Temperature tolerance is forgiving &mdash; slight deviations from 20&deg;C/68&deg;F are not catastrophic, making HP5 Plus an excellent film for home development beginners.</p>
+    </div>
+
+    <div class="film-related">
+      <h3>Related Films &amp; Guides</h3>
+      <p>The eternal debate: HP5 Plus versus <a href="/film/kodak-tri-x.html">Kodak Tri-X 400, its classic ISO 400 rival</a>. Tri-X delivers punchier contrast and more pronounced grain, while HP5 Plus offers smoother tones and slightly wider latitude. For a finer-grained alternative at a lower speed, consider <a href="/film/ilford-fp4-plus.html">Ilford FP4 Plus 125</a>. HP5 Plus pairs beautifully with twin-lens reflex cameras like the <a href="/cameras/yashica-mat-124g.html">Yashica Mat-124G</a> for street and documentary work. If you are new to medium format, our guide to <a href="/blog/your-first-roll-of-120-film.html">shooting your first roll of 120 film</a> is a great place to start.</p>
+    </div>
+
+    <div class="film-sources">
+      <h3>Sources &amp; Further Reading</h3>
+      <ul>
+        <li><a href="https://www.ilfordphoto.com/wp/wp-content/uploads/2017/06/HP5-Plus-Technical-Information.pdf" target="_blank" rel="noopener">Ilford HP5 Plus Technical Data Sheet</a> (manufacturer)</li>
+        <li><a href="https://www.digitaltruth.com/devchart.php" target="_blank" rel="noopener">Massive Dev Chart development times</a></li>
+        <li><a href="https://www.ilfordphoto.com/hp5-plus" target="_blank" rel="noopener">Ilford HP5 Plus product page</a></li>
+      </ul>
+    </div>
+
+    <div class="app-cta">
+      <h3>Shoot HP5 Plus with metergeist</h3>
+      <p>metergeist is a free light meter app with built-in reciprocity correction for HP5 Plus and 21 other film stocks. Load it as your active film and the app will <a href="/blog/how-to-meter-without-a-built-in-meter.html">automatically correct your long exposures</a>. Track every frame on your roll and never lose count again.</p>
+    </div>
+  </div>
+  </main>
+
+  <footer>
+    &copy; 2026 metergeist
+    <div class="links">
+      <a href="/cameras/">TLR Guide</a>
+      <a href="/film/">Film Guide</a>
+      <a href="/blog/">Blog</a>
+      <a href="/privacy.html">Privacy</a>
+      <a href="/support.html">Support</a>
+    </div>
+  </footer>
+</body>
+</html>

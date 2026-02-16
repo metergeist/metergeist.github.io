@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-NGH2JC1T0G"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-NGH2JC1T0G');</script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Compare Film Stocks Side by Side | metergeist</title>
+  <meta name="description" content="Compare up to 3 film stocks side by side. ISO, grain, latitude, color character, reciprocity data, pricing, and format availability for 22 popular films.">
+  <meta property="og:title" content="Compare Film Stocks Side by Side | metergeist">
+  <meta property="og:description" content="Compare up to 3 film stocks side by side. ISO, grain, latitude, color, reciprocity, pricing, and formats for 22 popular films.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://metergeist.com/film/compare.html">
+  <meta property="og:image" content="https://metergeist.com/icon.png">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Compare Film Stocks Side by Side | metergeist">
+  <meta name="twitter:description" content="Compare up to 3 film stocks side by side. ISO, grain, latitude, color, reciprocity, pricing, and formats.">
+  <meta name="twitter:image" content="https://metergeist.com/icon.png">
+  <link rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" href="/film/film.css">
+  <link rel="icon" href="/icon.png" type="image/png">
+  <link rel="canonical" href="https://metergeist.com/film/compare.html">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Film Stock Comparison Tool","description":"Compare up to 3 film stocks side by side across key specifications.","url":"https://metergeist.com/film/compare.html","applicationCategory":"PhotographyApplication"}</script>
+</head>
+<body>
+  <a href="#main" class="skip-link">Skip to content</a>
+  <nav aria-label="Main navigation">
+    <a href="/" class="logo">
+      <img src="/icon.png" alt="metergeist icon">
+      <span>metergeist</span>
+    </a>
+    <div class="links">
+      <a href="/cameras/">TLR Guide</a>
+      <a href="/film/">Film Guide</a>
+      <a href="/blog/">Blog</a>
+      <a href="/support.html">Support</a>
+    </div>
+  </nav>
+
+  <main id="main">
+  <div class="content film-page">
+    <p class="breadcrumb"><a href="/film/">Film Guide</a> &rsaquo; Compare Films</p>
+
+    <h1>Compare Film Stocks</h1>
+    <p class="film-tagline">Select up to three films to compare side by side.</p>
+
+    <div class="compare-selectors">
+      <select id="film-1" aria-label="First film to compare">
+        <option value="">Select film 1...</option>
+      </select>
+      <select id="film-2" aria-label="Second film to compare">
+        <option value="">Select film 2...</option>
+      </select>
+      <select id="film-3" aria-label="Third film to compare">
+        <option value="">Select film 3...</option>
+      </select>
+    </div>
+
+    <div id="comparison-result">
+      <p style="color: var(--text-dim);">Select at least two films above to see a side-by-side comparison.</p>
+    </div>
+
+    <div class="film-related" style="margin-top: 2rem;">
+      <h3>More Tools</h3>
+      <p>Use the <a href="/film/reciprocity-calculator.html">reciprocity calculator</a> to calculate long exposure corrections for any film, or browse the full <a href="/film/">film guide</a> for detailed profiles of all 22 stocks. For curated external links, see our <a href="/film/resources.html">film photography resources</a> page.</p>
+    </div>
+
+    <div class="app-cta">
+      <h3>All 22 films in your pocket</h3>
+      <p>metergeist is a free light meter app with built-in profiles for all 22 film stocks, including reciprocity correction, push/pull EI calculation, and <a href="/cameras/">camera-specific constraints</a> for 48 TLR cameras.</p>
+    </div>
+  </div>
+  </main>
+
+  <footer>
+    &copy; 2026 metergeist
+    <div class="links">
+      <a href="/cameras/">TLR Guide</a>
+      <a href="/film/">Film Guide</a>
+      <a href="/blog/">Blog</a>
+      <a href="/privacy.html">Privacy</a>
+      <a href="/support.html">Support</a>
+    </div>
+  </footer>
+
+  <script>
+  (function() {
+    var filmData = {
+      "ilford-hp5-plus": { name: "Ilford HP5 Plus", iso: 400, type: "B&W Negative", process: "Standard B&W", grain: "Medium, classic cubic", latitude: "Very wide (~12 stops)", tone: "Neutral, smooth tonal curve", exp: 1.31, formats: "35mm, 120, 4x5, 8x10, bulk", price: "$8\u201313" },
+      "kodak-tri-x": { name: "Kodak Tri-X 400", iso: 400, type: "B&W Negative", process: "Standard B&W", grain: "Medium-coarse, iconic texture", latitude: "Wide (~10 stops)", tone: "Warm, punchy midtone contrast", exp: 1.33, formats: "35mm, 120, 4x5, 8x10, bulk", price: "$11\u201313" },
+      "ilford-delta-3200": { name: "Ilford Delta 3200", iso: 3200, type: "B&W Negative", process: "Standard B&W", grain: "Coarse but structured (tabular)", latitude: "Extremely wide (EI 400\u201325000)", tone: "Moderate contrast, moody atmosphere", exp: 1.33, formats: "35mm, 120", price: "$13\u201316" },
+      "ilford-fp4-plus": { name: "Ilford FP4 Plus", iso: 125, type: "B&W Negative", process: "Standard B&W", grain: "Fine, sharp cubic grain", latitude: "Exceptionally wide (6 stops over)", tone: "Medium contrast, creamy transitions", exp: 1.26, formats: "35mm, 120, 4x5, 8x10, bulk", price: "$7\u201310" },
+      "kodak-tmax-100": { name: "Kodak T-Max 100", iso: 100, type: "B&W Negative", process: "Standard B&W (T-Max dev)", grain: "Extremely fine (T-GRAIN tabular)", latitude: "Good (EI 25\u2013200)", tone: "Neutral to cool, clinical sharpness", exp: 1.15, formats: "35mm, 120, 4x5, bulk", price: "$12\u201314" },
+      "fomapan-100": { name: "Fomapan 100", iso: 100, type: "B&W Negative", process: "Standard B&W", grain: "Medium for ISO 100, characterful", latitude: "Moderate", tone: "Higher contrast, punchy midtones", exp: 1.30, formats: "35mm, 120, 4x5", price: "$5\u20137" },
+      "ilford-pan-f-plus": { name: "Ilford Pan F Plus", iso: 50, type: "B&W Negative", process: "Standard B&W", grain: "Ultra-fine, creamiest in Ilford lineup", latitude: "Moderate", tone: "High contrast, luminous highlights", exp: 1.33, formats: "35mm, 120, bulk", price: "$10\u201313" },
+      "kodak-portra-400": { name: "Kodak Portra 400", iso: 400, type: "Color Negative", process: "C-41", grain: "Remarkably fine for ISO 400", latitude: "Legendary (EI 100\u2013800+)", tone: "Warm, natural, flattering skin tones", exp: 1.30, formats: "35mm, 120, 4x5, 8x10", price: "$14\u201319" },
+      "kodak-portra-160": { name: "Kodak Portra 160", iso: 160, type: "Color Negative", process: "C-41", grain: "Very fine, nearly grainless", latitude: "Very wide, especially overexposure", tone: "Warm, subtle, low saturation", exp: 1.30, formats: "35mm, 120, 4x5, 8x10", price: "$14\u201316" },
+      "fujifilm-pro-400h": { name: "Fujifilm Pro 400H", iso: 400, type: "Color Negative", process: "C-41", grain: "Fine (Sigma grain technology)", latitude: "Wide (2\u20133 stops over)", tone: "Cool/neutral, soft pastels", exp: 1.25, formats: "Discontinued", price: "Collector pricing" },
+      "cinestill-800t": { name: "CineStill 800T", iso: 800, type: "Color Negative", process: "C-41 / ECN-2", grain: "Moderate, cinematic texture", latitude: "Wide (EI 200\u20131000)", tone: "Tungsten-balanced, red halation", exp: 1.30, formats: "35mm, 120", price: "$17\u201325" },
+      "kodak-gold-200": { name: "Kodak Gold 200", iso: 200, type: "Color Negative", process: "C-41", grain: "Medium, warm organic", latitude: "Good (2 under to 3 over)", tone: "Strong warm cast, golden nostalgic", exp: 1.30, formats: "35mm, 120", price: "$9\u201312" },
+      "kodak-colorplus-200": { name: "Kodak ColorPlus 200", iso: 200, type: "Color Negative", process: "C-41", grain: "Fine for a consumer film", latitude: "Good (2 under to 3 over)", tone: "Warm yellow/golden bias", exp: 1.30, formats: "35mm only", price: "$7\u201310" },
+      "kodak-ultramax-400": { name: "Kodak UltraMax 400", iso: 400, type: "Color Negative", process: "C-41", grain: "Medium, classic Kodak aesthetic", latitude: "Moderate", tone: "Bright, punchy, vibrant warmth", exp: 1.30, formats: "35mm only", price: "$12\u201317" },
+      "fujifilm-superia-400": { name: "Fujifilm Superia 400", iso: 400, type: "Color Negative", process: "C-41", grain: "Medium, flat hexagonal", latitude: "Average for consumer CN", tone: "Cool, green/magenta Fuji look", exp: 1.30, formats: "Discontinued", price: "$15\u201325 (remaining)" },
+      "fujifilm-superia-100": { name: "Fujifilm Superia 100", iso: 100, type: "Color Negative", process: "C-41", grain: "Fine for a consumer film", latitude: "Good (3\u20134 stops over)", tone: "Rich, vivid, natural Fuji tones", exp: 1.25, formats: "Discontinued", price: "$20\u201340+ (expired)" },
+      "kodak-ektar-100": { name: "Kodak Ektar 100", iso: 100, type: "Color Negative", process: "C-41", grain: "Finest grained CN film in world", latitude: "Narrow for CN (careful metering)", tone: "Ultra-vivid, highly saturated", exp: 1.18, formats: "35mm, 120, 4x5, 8x10", price: "$12\u201317" },
+      "lomography-color-400": { name: "Lomography Color 400", iso: 400, type: "Color Negative", process: "C-41", grain: "Fine to medium, analog aesthetic", latitude: "Good for consumer film", tone: "Vibrant, saturated, punchy", exp: 1.30, formats: "35mm, 120", price: "$8\u201312" },
+      "lomography-color-800": { name: "Lomography Color 800", iso: 800, type: "Color Negative", process: "C-41", grain: "Moderate, good for high speed", latitude: "Good", tone: "Natural, mild saturation", exp: 1.30, formats: "35mm, 120", price: "$10\u201314" },
+      "fujifilm-velvia-50": { name: "Fujifilm Velvia 50", iso: 50, type: "Color Reversal (Slide)", process: "E-6", grain: "Extremely fine, virtually invisible", latitude: "Very narrow (~1/2 stop)", tone: "Most saturated film ever made", exp: 1.25, formats: "35mm, 120, 4x5", price: "$18\u201325" },
+      "fujifilm-provia-100f": { name: "Fujifilm Provia 100F", iso: 100, type: "Color Reversal (Slide)", process: "E-6", grain: "Among finest ever (RMS 8)", latitude: "Narrow (~1 stop each way)", tone: "Vivid yet accurate, natural colors", exp: 1.22, formats: "35mm, 120, 4x5", price: "$18\u201325" },
+      "kodak-ektachrome-e100": { name: "Kodak Ektachrome E100", iso: 100, type: "Color Reversal (Slide)", process: "E-6", grain: "Extremely fine (RMS 8)", latitude: "Narrow (~1/2 to 1 stop)", tone: "Neutral, clean, scanning-optimized", exp: 1.20, formats: "35mm, 120, 4x5, Super 8", price: "$18\u201322" }
+    };
+
+    var rows = [
+      { label: "ISO", key: "iso" },
+      { label: "Type", key: "type" },
+      { label: "Process", key: "process" },
+      { label: "Grain", key: "grain" },
+      { label: "Latitude", key: "latitude" },
+      { label: "Color / Tone", key: "tone" },
+      { label: "Reciprocity Exp.", key: "exp" },
+      { label: "Formats", key: "formats" },
+      { label: "Price (35mm)", key: "price" }
+    ];
+
+    var selects = [
+      document.getElementById('film-1'),
+      document.getElementById('film-2'),
+      document.getElementById('film-3')
+    ];
+    var resultDiv = document.getElementById('comparison-result');
+
+    // Populate selects
+    var groups = {
+      "Black & White": [],
+      "Color Negative (C-41)": [],
+      "Slide Film (E-6)": []
+    };
+    Object.keys(filmData).forEach(function(slug) {
+      var f = filmData[slug];
+      var group;
+      if (f.process === "E-6") group = "Slide Film (E-6)";
+      else if (f.process === "C-41" || f.process === "C-41 / ECN-2") group = "Color Negative (C-41)";
+      else group = "Black & White";
+      groups[group].push({ slug: slug, name: f.name });
+    });
+
+    selects.forEach(function(sel) {
+      ["Black & White", "Color Negative (C-41)", "Slide Film (E-6)"].forEach(function(groupName) {
+        var optgroup = document.createElement('optgroup');
+        optgroup.label = groupName;
+        groups[groupName].forEach(function(f) {
+          var opt = document.createElement('option');
+          opt.value = f.slug;
+          opt.textContent = f.name;
+          optgroup.appendChild(opt);
+        });
+        sel.appendChild(optgroup);
+      });
+    });
+
+    // Set defaults
+    selects[0].value = "kodak-portra-400";
+    selects[1].value = "kodak-ektar-100";
+
+    function update() {
+      var selected = [];
+      selects.forEach(function(sel) {
+        if (sel.value && filmData[sel.value]) {
+          selected.push({ slug: sel.value, data: filmData[sel.value] });
+        }
+      });
+
+      if (selected.length < 2) {
+        resultDiv.innerHTML = '<p style="color: var(--text-dim);">Select at least two films above to see a side-by-side comparison.</p>';
+        return;
+      }
+
+      var html = '<table class="compare-table"><thead><tr><th>Spec</th>';
+      selected.forEach(function(s) {
+        html += '<th><a href="/film/' + s.slug + '.html">' + s.data.name + '</a></th>';
+      });
+      html += '</tr></thead><tbody>';
+
+      rows.forEach(function(row) {
+        html += '<tr><td>' + row.label + '</td>';
+        selected.forEach(function(s) {
+          html += '<td>' + s.data[row.key] + '</td>';
+        });
+        html += '</tr>';
+      });
+
+      html += '</tbody></table>';
+      html += '<p style="font-size: 0.85rem; color: var(--text-dim); margin-top: 1rem;">Click any film name in the table header to view its full profile page.</p>';
+      resultDiv.innerHTML = html;
+    }
+
+    selects.forEach(function(sel) {
+      sel.addEventListener('change', update);
+    });
+    update();
+  })();
+  </script>
+</body>
+</html>

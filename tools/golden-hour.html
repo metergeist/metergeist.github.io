@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-NGH2JC1T0G"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-NGH2JC1T0G');</script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Golden Hour Calculator — Sunrise, Sunset &amp; Magic Hour Times | metergeist</title>
+  <meta name="description" content="Calculate golden hour and blue hour times for your location. Shows morning and evening golden hour windows for the next 5 days, plus sunrise and sunset times.">
+  <meta property="og:title" content="Golden Hour Calculator | metergeist">
+  <meta property="og:description" content="Find the perfect light. Calculate golden hour and blue hour times for any location, for the next 5 days.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://metergeist.com/tools/golden-hour.html">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Golden Hour Calculator | metergeist">
+  <meta name="twitter:description" content="Calculate golden hour and blue hour times for your location. Next 5 days at a glance.">
+  <link rel="stylesheet" href="/style.css">
+  <link rel="icon" href="/icon.png" type="image/png">
+  <link rel="canonical" href="https://metergeist.com/tools/golden-hour.html">
+  <style>
+    .gh-intro {
+      color: var(--text-dim);
+      font-size: 1.05rem;
+      line-height: 1.7;
+      margin-bottom: 1.5rem;
+    }
+    .gh-location {
+      background: var(--surface);
+      border: 1px solid #333;
+      border-radius: 12px;
+      padding: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    .gh-location h2 {
+      font-size: 1rem;
+      color: var(--chrome);
+      margin-bottom: 1rem;
+      margin-top: 0;
+    }
+    .gh-location-row {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      align-items: flex-end;
+    }
+    .gh-field {
+      flex: 1;
+      min-width: 140px;
+    }
+    .gh-field label {
+      display: block;
+      font-size: 0.8rem;
+      color: var(--chrome-dim);
+      margin-bottom: 0.3rem;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
+    .gh-field input {
+      width: 100%;
+      background: var(--bg);
+      border: 1px solid #444;
+      border-radius: 6px;
+      color: var(--text);
+      font-size: 1rem;
+      padding: 0.5rem 0.8rem;
+      font-family: 'SF Mono', 'Fira Code', 'Cascadia Code', monospace;
+    }
+    .gh-field input:focus {
+      outline: none;
+      border-color: var(--chrome);
+    }
+    .gh-btn {
+      padding: 0.55rem 1.2rem;
+      background: var(--chrome);
+      color: var(--bg);
+      border: none;
+      border-radius: 6px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      cursor: pointer;
+      white-space: nowrap;
+    }
+    .gh-btn:hover { background: #d4d4d4; }
+    .gh-btn:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+    .gh-btn-secondary {
+      background: transparent;
+      color: var(--chrome);
+      border: 1px solid #444;
+    }
+    .gh-btn-secondary:hover {
+      border-color: var(--chrome);
+      background: transparent;
+    }
+    .gh-status {
+      font-size: 0.85rem;
+      color: var(--chrome-dim);
+      margin-top: 0.8rem;
+    }
+    .gh-status.error { color: #e67a7a; }
+    .gh-results {
+      display: none;
+    }
+    .gh-results.visible {
+      display: block;
+    }
+    .gh-day-card {
+      background: var(--surface);
+      border: 1px solid #333;
+      border-radius: 12px;
+      padding: 1.2rem 1.5rem;
+      margin-bottom: 1rem;
+    }
+    .gh-day-card.today {
+      border-color: #555;
+    }
+    .gh-day-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 1rem;
+    }
+    .gh-day-name {
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: var(--text);
+    }
+    .gh-day-date {
+      font-size: 0.8rem;
+      color: var(--chrome-dim);
+    }
+    .gh-today-badge {
+      font-size: 0.7rem;
+      background: #333;
+      color: var(--chrome);
+      padding: 0.15rem 0.5rem;
+      border-radius: 3px;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      font-weight: 600;
+      margin-left: 0.5rem;
+    }
+    .gh-periods {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+    }
+    .gh-period {
+      padding: 0.8rem;
+      border-radius: 8px;
+    }
+    .gh-period.golden-morning { background: rgba(230, 180, 80, 0.08); border: 1px solid rgba(230, 180, 80, 0.15); }
+    .gh-period.golden-evening { background: rgba(230, 120, 60, 0.08); border: 1px solid rgba(230, 120, 60, 0.15); }
+    .gh-period.blue-morning   { background: rgba(100, 140, 200, 0.08); border: 1px solid rgba(100, 140, 200, 0.15); }
+    .gh-period.blue-evening   { background: rgba(80, 100, 180, 0.08); border: 1px solid rgba(80, 100, 180, 0.15); }
+    .gh-period-label {
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      font-weight: 600;
+      margin-bottom: 0.4rem;
+    }
+    .gh-period.golden-morning .gh-period-label { color: #e6b450; }
+    .gh-period.golden-evening .gh-period-label { color: #e6783c; }
+    .gh-period.blue-morning .gh-period-label   { color: #648cc8; }
+    .gh-period.blue-evening .gh-period-label   { color: #5064b4; }
+    .gh-period-time {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--text);
+      font-family: 'SF Mono', 'Fira Code', 'Cascadia Code', monospace;
+    }
+    .gh-period-duration {
+      font-size: 0.75rem;
+      color: var(--chrome-dim);
+      margin-top: 0.2rem;
+    }
+    .gh-sun-times {
+      display: flex;
+      gap: 1.5rem;
+      margin-top: 0.8rem;
+      padding-top: 0.8rem;
+      border-top: 1px solid #2a2a2a;
+      font-size: 0.85rem;
+      color: var(--text-dim);
+    }
+    .gh-sun-times span {
+      display: flex;
+      align-items: center;
+      gap: 0.3rem;
+    }
+    .gh-sun-icon { font-size: 0.9rem; }
+    .gh-sun-time {
+      font-family: 'SF Mono', 'Fira Code', 'Cascadia Code', monospace;
+      color: var(--text);
+    }
+    .gh-explanation {
+      margin-top: 2.5rem;
+    }
+    .gh-explanation h2 {
+      font-size: 1.15rem;
+      color: var(--chrome);
+      margin-bottom: 0.6rem;
+    }
+    .gh-explanation p {
+      font-size: 0.95rem;
+      color: var(--text-dim);
+      line-height: 1.7;
+      margin-bottom: 0.8rem;
+    }
+    .gh-explanation h3 {
+      font-size: 1rem;
+      color: var(--chrome);
+      margin-top: 1.2rem;
+      margin-bottom: 0.4rem;
+    }
+    @media (max-width: 540px) {
+      .gh-periods { grid-template-columns: 1fr; }
+      .gh-location-row { flex-direction: column; }
+      .gh-field { min-width: 100%; }
+      .gh-btn { width: 100%; text-align: center; }
+      .gh-sun-times { flex-direction: column; gap: 0.5rem; }
+    }
+  </style>
+</head>
+<body>
+  <a href="#main" class="skip-link">Skip to content</a>
+  <nav aria-label="Main navigation">
+    <a href="/" class="logo">
+      <img src="/icon.png" alt="metergeist icon">
+      <span>metergeist</span>
+    </a>
+    <div class="links">
+      <a href="/cameras/">TLR Guide</a>
+      <a href="/film/">Film Guide</a>
+      <a href="/blog/">Blog</a>
+      <a href="/support.html">Support</a>
+    </div>
+  </nav>
+
+  <main id="main">
+  <div class="content">
+    <h1>Golden Hour Calculator</h1>
+    <p class="gh-intro">Find the best light for photography. Enter your location to see golden hour and blue hour times for the next 5 days.</p>
+
+    <div class="gh-location">
+      <h2>Your Location</h2>
+      <div class="gh-location-row">
+        <div class="gh-field">
+          <label for="lat">Latitude</label>
+          <input type="number" id="lat" step="0.0001" min="-90" max="90" placeholder="40.7128">
+        </div>
+        <div class="gh-field">
+          <label for="lng">Longitude</label>
+          <input type="number" id="lng" step="0.0001" min="-180" max="180" placeholder="-74.0060">
+        </div>
+        <button class="gh-btn" id="calc-btn" onclick="calculate()">Calculate</button>
+        <button class="gh-btn gh-btn-secondary" id="geo-btn" onclick="geolocate()">Use My Location</button>
+      </div>
+      <div class="gh-status" id="status"></div>
+    </div>
+
+    <div class="gh-results" id="results"></div>
+
+    <div class="gh-explanation">
+      <h2>What is Golden Hour?</h2>
+      <p>Golden hour is the period shortly after sunrise and before sunset when the sun is low on the horizon (roughly 0&ndash;6&deg; elevation). Sunlight travels through more atmosphere at these angles, scattering blue wavelengths and leaving warm reds, oranges, and yellows. Shadows are long and soft, contrast is lower, and skin tones glow. It&rsquo;s widely considered the most flattering natural light for photography.</p>
+
+      <h3>Blue Hour</h3>
+      <p>Blue hour occurs just before sunrise and just after sunset, when the sun is between 4&deg; and 6&deg; below the horizon. The sky takes on a deep blue tone with cool, even illumination and no direct sunlight. It&rsquo;s ideal for cityscapes, landscapes with artificial lighting, and moody portraiture.</p>
+
+      <h3>Tips for Shooting</h3>
+      <p><strong>Arrive early.</strong> Golden hour light changes fast &mdash; conditions at the start and end are dramatically different. Get set up 15 minutes before the window opens.</p>
+      <p><strong>Shoot into the light.</strong> Backlighting during golden hour creates rim light, lens flare, and glowing edges. Side light emphasizes texture. Experiment with the sun at different angles.</p>
+      <p><strong>Watch the sky.</strong> A few scattered clouds can make golden hour spectacular by catching and reflecting warm light. Overcast skies eliminate golden hour entirely &mdash; the sun never "breaks through" at a low angle.</p>
+      <p><strong>Use a lower ISO.</strong> Golden hour light is dimmer than midday. On film, you may want to open up a stop or two. With a light meter app like <a href="/">metergeist</a>, you&rsquo;ll get accurate readings for the changing light.</p>
+    </div>
+
+    <div class="app-cta" style="background: var(--surface); border: 1px solid #333; border-radius: 12px; padding: 1.5rem; margin-top: 2rem;">
+      <h3 style="color: var(--chrome); font-size: 1.1rem; margin-bottom: 0.5rem; margin-top: 0;">Meter the golden light</h3>
+      <p style="color: var(--text-dim); font-size: 0.95rem; line-height: 1.6; margin-bottom: 0;">metergeist is a free light meter app for film photographers with automatic reciprocity correction for long exposures during blue hour and beyond. <a href="/">Learn more</a></p>
+    </div>
+  </div>
+  </main>
+
+  <footer>
+    &copy; 2026 metergeist
+    <div class="links">
+      <a href="/cameras/">TLR Guide</a>
+      <a href="/film/">Film Guide</a>
+      <a href="/blog/">Blog</a>
+      <a href="/privacy.html">Privacy</a>
+      <a href="/support.html">Support</a>
+    </div>
+  </footer>
+
+  <script>
+  (function() {
+    var RAD = Math.PI / 180;
+    var DEG = 180 / Math.PI;
+
+    // Solar calculations based on NOAA algorithms
+    function julianDay(date) {
+      var y = date.getFullYear();
+      var m = date.getMonth() + 1;
+      var d = date.getDate();
+      if (m <= 2) { y--; m += 12; }
+      var A = Math.floor(y / 100);
+      var B = 2 - A + Math.floor(A / 4);
+      return Math.floor(365.25 * (y + 4716)) + Math.floor(30.6001 * (m + 1)) + d + B - 1524.5;
+    }
+
+    function solarDeclination(jd) {
+      var T = (jd - 2451545.0) / 36525.0;
+      var L0 = (280.46646 + T * (36000.76983 + 0.0003032 * T)) % 360;
+      var M = (357.52911 + T * (35999.05029 - 0.0001537 * T)) % 360;
+      var Mrad = M * RAD;
+      var C = (1.914602 - T * (0.004817 + 0.000014 * T)) * Math.sin(Mrad)
+            + (0.019993 - 0.000101 * T) * Math.sin(2 * Mrad)
+            + 0.000289 * Math.sin(3 * Mrad);
+      var sunLon = L0 + C;
+      var omega = 125.04 - 1934.136 * T;
+      var apparentLon = sunLon - 0.00569 - 0.00478 * Math.sin(omega * RAD);
+      var obliquity = 23.439291 - 0.013004167 * T;
+      var oblCorr = obliquity + 0.00256 * Math.cos(omega * RAD);
+      var dec = Math.asin(Math.sin(oblCorr * RAD) * Math.sin(apparentLon * RAD)) * DEG;
+      return { dec: dec, T: T, L0: L0, M: M, C: C };
+    }
+
+    function equationOfTime(T, L0, M, C) {
+      var omega = 125.04 - 1934.136 * T;
+      var obliquity = 23.439291 - 0.013004167 * T;
+      var oblCorr = obliquity + 0.00256 * Math.cos(omega * RAD);
+      var y = Math.tan(oblCorr * RAD / 2);
+      y *= y;
+      var Mrad = M * RAD;
+      var L0rad = L0 * RAD;
+      var eot = y * Math.sin(2 * L0rad)
+              - 2 * 0.016709 * Math.sin(Mrad)
+              + 4 * 0.016709 * y * Math.sin(Mrad) * Math.cos(2 * L0rad)
+              - 0.5 * y * y * Math.sin(4 * L0rad)
+              - 1.25 * 0.016709 * 0.016709 * Math.sin(2 * Mrad);
+      return eot * 4 * DEG; // minutes
+    }
+
+    // Get time (in fractional hours, local time) when sun is at a given altitude
+    function sunTimeForAltitude(altitude, lat, dec, eot, lng, date) {
+      var latRad = lat * RAD;
+      var decRad = dec * RAD;
+      var cosHA = (Math.sin(altitude * RAD) - Math.sin(latRad) * Math.sin(decRad))
+                / (Math.cos(latRad) * Math.cos(decRad));
+      if (cosHA > 1 || cosHA < -1) return null; // sun never reaches this altitude
+      var HA = Math.acos(cosHA) * DEG;
+      var tzOffset = -date.getTimezoneOffset() / 60;
+      var solarNoon = (720 - 4 * lng - eot) / 60 + tzOffset;
+      var rise = solarNoon - HA / 15;
+      var set = solarNoon + HA / 15;
+      return { rise: rise, set: set };
+    }
+
+    function formatTime(hours) {
+      if (hours < 0) hours += 24;
+      if (hours >= 24) hours -= 24;
+      var h = Math.floor(hours);
+      var m = Math.round((hours - h) * 60);
+      if (m === 60) { h++; m = 0; }
+      var ampm = h >= 12 ? 'pm' : 'am';
+      var h12 = h % 12 || 12;
+      return (h12 < 10 ? '\u2007' : '') + h12 + ':' + (m < 10 ? '0' : '') + m + ' ' + ampm;
+    }
+
+    function durationMinutes(start, end) {
+      var mins = Math.round((end - start) * 60);
+      return mins + ' min';
+    }
+
+    function dayName(date, isToday) {
+      if (isToday) return 'Today';
+      var days = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+      return days[date.getDay()];
+    }
+
+    function formatDate(date) {
+      var months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+      return months[date.getMonth()] + ' ' + date.getDate() + ', ' + date.getFullYear();
+    }
+
+    function calculateDay(date, lat, lng) {
+      var jd = julianDay(date);
+      var solar = solarDeclination(jd);
+      var eot = equationOfTime(solar.T, solar.L0, solar.M, solar.C);
+
+      var sunrise  = sunTimeForAltitude(-0.833, lat, solar.dec, eot, lng, date);
+      var golden6  = sunTimeForAltitude(6, lat, solar.dec, eot, lng, date);
+      var blueNeg4 = sunTimeForAltitude(-4, lat, solar.dec, eot, lng, date);
+      var blueNeg6 = sunTimeForAltitude(-6, lat, solar.dec, eot, lng, date);
+
+      if (!sunrise) return null;
+
+      return {
+        sunrise: sunrise.rise,
+        sunset: sunrise.set,
+        goldenMorning: golden6 ? { start: sunrise.rise, end: golden6.rise } : null,
+        goldenEvening: golden6 ? { start: golden6.set, end: sunrise.set } : null,
+        blueMorning: blueNeg6 && blueNeg4 ? { start: blueNeg6.rise, end: blueNeg4.rise } : null,
+        blueEvening: blueNeg4 && blueNeg6 ? { start: blueNeg4.set, end: blueNeg6.set } : null
+      };
+    }
+
+    window.calculate = function() {
+      var lat = parseFloat(document.getElementById('lat').value);
+      var lng = parseFloat(document.getElementById('lng').value);
+      var statusEl = document.getElementById('status');
+      var resultsEl = document.getElementById('results');
+
+      if (isNaN(lat) || isNaN(lng) || lat < -90 || lat > 90 || lng < -180 || lng > 180) {
+        statusEl.textContent = 'Please enter valid coordinates (latitude: -90 to 90, longitude: -180 to 180).';
+        statusEl.className = 'gh-status error';
+        return;
+      }
+
+      statusEl.textContent = '';
+      statusEl.className = 'gh-status';
+
+      var html = '';
+      var today = new Date();
+      today.setHours(12, 0, 0, 0);
+
+      for (var i = 0; i < 5; i++) {
+        var date = new Date(today);
+        date.setDate(date.getDate() + i);
+        var isToday = i === 0;
+        var data = calculateDay(date, lat, lng);
+
+        html += '<div class="gh-day-card' + (isToday ? ' today' : '') + '">';
+        html += '<div class="gh-day-header">';
+        html += '<div><span class="gh-day-name">' + dayName(date, isToday) + '</span>';
+        if (isToday) html += '<span class="gh-today-badge">Today</span>';
+        html += '</div>';
+        html += '<span class="gh-day-date">' + formatDate(date) + '</span>';
+        html += '</div>';
+
+        if (!data) {
+          html += '<p style="color: var(--text-dim); font-size: 0.9rem;">No sunrise/sunset at this latitude on this date (polar day or polar night).</p>';
+        } else {
+          html += '<div class="gh-periods">';
+
+          if (data.goldenMorning) {
+            html += '<div class="gh-period golden-morning">';
+            html += '<div class="gh-period-label">Morning Golden Hour</div>';
+            html += '<div class="gh-period-time">' + formatTime(data.goldenMorning.start) + ' &ndash; ' + formatTime(data.goldenMorning.end) + '</div>';
+            html += '<div class="gh-period-duration">' + durationMinutes(data.goldenMorning.start, data.goldenMorning.end) + '</div>';
+            html += '</div>';
+          }
+
+          if (data.goldenEvening) {
+            html += '<div class="gh-period golden-evening">';
+            html += '<div class="gh-period-label">Evening Golden Hour</div>';
+            html += '<div class="gh-period-time">' + formatTime(data.goldenEvening.start) + ' &ndash; ' + formatTime(data.goldenEvening.end) + '</div>';
+            html += '<div class="gh-period-duration">' + durationMinutes(data.goldenEvening.start, data.goldenEvening.end) + '</div>';
+            html += '</div>';
+          }
+
+          if (data.blueMorning) {
+            html += '<div class="gh-period blue-morning">';
+            html += '<div class="gh-period-label">Morning Blue Hour</div>';
+            html += '<div class="gh-period-time">' + formatTime(data.blueMorning.start) + ' &ndash; ' + formatTime(data.blueMorning.end) + '</div>';
+            html += '<div class="gh-period-duration">' + durationMinutes(data.blueMorning.start, data.blueMorning.end) + '</div>';
+            html += '</div>';
+          }
+
+          if (data.blueEvening) {
+            html += '<div class="gh-period blue-evening">';
+            html += '<div class="gh-period-label">Evening Blue Hour</div>';
+            html += '<div class="gh-period-time">' + formatTime(data.blueEvening.start) + ' &ndash; ' + formatTime(data.blueEvening.end) + '</div>';
+            html += '<div class="gh-period-duration">' + durationMinutes(data.blueEvening.start, data.blueEvening.end) + '</div>';
+            html += '</div>';
+          }
+
+          html += '</div>';
+
+          html += '<div class="gh-sun-times">';
+          html += '<span><span class="gh-sun-icon">&#x2600;</span> Sunrise <span class="gh-sun-time">' + formatTime(data.sunrise) + '</span></span>';
+          html += '<span><span class="gh-sun-icon">&#x1F305;</span> Sunset <span class="gh-sun-time">' + formatTime(data.sunset) + '</span></span>';
+          html += '</div>';
+        }
+
+        html += '</div>';
+      }
+
+      resultsEl.innerHTML = html;
+      resultsEl.className = 'gh-results visible';
+    };
+
+    window.geolocate = function() {
+      var statusEl = document.getElementById('status');
+      var geoBtn = document.getElementById('geo-btn');
+
+      if (!navigator.geolocation) {
+        statusEl.textContent = 'Geolocation is not supported by your browser.';
+        statusEl.className = 'gh-status error';
+        return;
+      }
+
+      geoBtn.disabled = true;
+      statusEl.textContent = 'Getting your location...';
+      statusEl.className = 'gh-status';
+
+      navigator.geolocation.getCurrentPosition(
+        function(pos) {
+          document.getElementById('lat').value = pos.coords.latitude.toFixed(4);
+          document.getElementById('lng').value = pos.coords.longitude.toFixed(4);
+          statusEl.textContent = '';
+          geoBtn.disabled = false;
+          calculate();
+        },
+        function(err) {
+          statusEl.textContent = 'Could not get location: ' + err.message;
+          statusEl.className = 'gh-status error';
+          geoBtn.disabled = false;
+        },
+        { timeout: 10000 }
+      );
+    };
+  })();
+  </script>
+</body>
+</html>

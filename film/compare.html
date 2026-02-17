@@ -86,28 +86,28 @@
   <script>
   (function() {
     var filmData = {
-      "ilford-hp5-plus": { name: "Ilford HP5 Plus", iso: 400, type: "B&W Negative", process: "Standard B&W", grain: "Medium, classic cubic", latitude: "Very wide (~12 stops)", tone: "Neutral, smooth tonal curve", exp: 1.31, formats: "35mm, 120, 4x5, 8x10, bulk", price: "$8\u201313" },
-      "kodak-tri-x": { name: "Kodak Tri-X 400", iso: 400, type: "B&W Negative", process: "Standard B&W", grain: "Medium-coarse, iconic texture", latitude: "Wide (~10 stops)", tone: "Warm, punchy midtone contrast", exp: 1.33, formats: "35mm, 120, 4x5, 8x10, bulk", price: "$11\u201313" },
-      "ilford-delta-3200": { name: "Ilford Delta 3200", iso: 3200, type: "B&W Negative", process: "Standard B&W", grain: "Coarse but structured (tabular)", latitude: "Extremely wide (EI 400\u201325000)", tone: "Moderate contrast, moody atmosphere", exp: 1.33, formats: "35mm, 120", price: "$13\u201316" },
-      "ilford-fp4-plus": { name: "Ilford FP4 Plus", iso: 125, type: "B&W Negative", process: "Standard B&W", grain: "Fine, sharp cubic grain", latitude: "Exceptionally wide (6 stops over)", tone: "Medium contrast, creamy transitions", exp: 1.26, formats: "35mm, 120, 4x5, 8x10, bulk", price: "$7\u201310" },
-      "kodak-tmax-100": { name: "Kodak T-Max 100", iso: 100, type: "B&W Negative", process: "Standard B&W (T-Max dev)", grain: "Extremely fine (T-GRAIN tabular)", latitude: "Good (EI 25\u2013200)", tone: "Neutral to cool, clinical sharpness", exp: 1.15, formats: "35mm, 120, 4x5, bulk", price: "$12\u201314" },
-      "fomapan-100": { name: "Fomapan 100", iso: 100, type: "B&W Negative", process: "Standard B&W", grain: "Medium for ISO 100, characterful", latitude: "Moderate", tone: "Higher contrast, punchy midtones", exp: 1.30, formats: "35mm, 120, 4x5", price: "$5\u20137" },
-      "ilford-pan-f-plus": { name: "Ilford Pan F Plus", iso: 50, type: "B&W Negative", process: "Standard B&W", grain: "Ultra-fine, creamiest in Ilford lineup", latitude: "Moderate", tone: "High contrast, luminous highlights", exp: 1.33, formats: "35mm, 120, bulk", price: "$10\u201313" },
-      "kodak-portra-400": { name: "Kodak Portra 400", iso: 400, type: "Color Negative", process: "C-41", grain: "Remarkably fine for ISO 400", latitude: "Legendary (EI 100\u2013800+)", tone: "Warm, natural, flattering skin tones", exp: 1.30, formats: "35mm, 120, 4x5, 8x10", price: "$14\u201319" },
-      "kodak-portra-160": { name: "Kodak Portra 160", iso: 160, type: "Color Negative", process: "C-41", grain: "Very fine, nearly grainless", latitude: "Very wide, especially overexposure", tone: "Warm, subtle, low saturation", exp: 1.30, formats: "35mm, 120, 4x5, 8x10", price: "$14\u201316" },
-      "fujifilm-pro-400h": { name: "Fujifilm Pro 400H", iso: 400, type: "Color Negative", process: "C-41", grain: "Fine (Sigma grain technology)", latitude: "Wide (2\u20133 stops over)", tone: "Cool/neutral, soft pastels", exp: 1.25, formats: "Discontinued", price: "Collector pricing" },
-      "cinestill-800t": { name: "CineStill 800T", iso: 800, type: "Color Negative", process: "C-41 / ECN-2", grain: "Moderate, cinematic texture", latitude: "Wide (EI 200\u20131000)", tone: "Tungsten-balanced, red halation", exp: 1.30, formats: "35mm, 120", price: "$17\u201325" },
-      "kodak-gold-200": { name: "Kodak Gold 200", iso: 200, type: "Color Negative", process: "C-41", grain: "Medium, warm organic", latitude: "Good (2 under to 3 over)", tone: "Strong warm cast, golden nostalgic", exp: 1.30, formats: "35mm, 120", price: "$9\u201312" },
-      "kodak-colorplus-200": { name: "Kodak ColorPlus 200", iso: 200, type: "Color Negative", process: "C-41", grain: "Fine for a consumer film", latitude: "Good (2 under to 3 over)", tone: "Warm yellow/golden bias", exp: 1.30, formats: "35mm only", price: "$7\u201310" },
-      "kodak-ultramax-400": { name: "Kodak UltraMax 400", iso: 400, type: "Color Negative", process: "C-41", grain: "Medium, classic Kodak aesthetic", latitude: "Moderate", tone: "Bright, punchy, vibrant warmth", exp: 1.30, formats: "35mm only", price: "$12\u201317" },
-      "fujifilm-superia-400": { name: "Fujifilm Superia 400", iso: 400, type: "Color Negative", process: "C-41", grain: "Medium, flat hexagonal", latitude: "Average for consumer CN", tone: "Cool, green/magenta Fuji look", exp: 1.30, formats: "Discontinued", price: "$15\u201325 (remaining)" },
-      "fujifilm-superia-100": { name: "Fujifilm Superia 100", iso: 100, type: "Color Negative", process: "C-41", grain: "Fine for a consumer film", latitude: "Good (3\u20134 stops over)", tone: "Rich, vivid, natural Fuji tones", exp: 1.25, formats: "Discontinued", price: "$20\u201340+ (expired)" },
-      "kodak-ektar-100": { name: "Kodak Ektar 100", iso: 100, type: "Color Negative", process: "C-41", grain: "Finest grained CN film in world", latitude: "Narrow for CN (careful metering)", tone: "Ultra-vivid, highly saturated", exp: 1.18, formats: "35mm, 120, 4x5, 8x10", price: "$12\u201317" },
-      "lomography-color-400": { name: "Lomography Color 400", iso: 400, type: "Color Negative", process: "C-41", grain: "Fine to medium, analog aesthetic", latitude: "Good for consumer film", tone: "Vibrant, saturated, punchy", exp: 1.30, formats: "35mm, 120", price: "$8\u201312" },
-      "lomography-color-800": { name: "Lomography Color 800", iso: 800, type: "Color Negative", process: "C-41", grain: "Moderate, good for high speed", latitude: "Good", tone: "Natural, mild saturation", exp: 1.30, formats: "35mm, 120", price: "$10\u201314" },
-      "fujifilm-velvia-50": { name: "Fujifilm Velvia 50", iso: 50, type: "Color Reversal (Slide)", process: "E-6", grain: "Extremely fine, virtually invisible", latitude: "Very narrow (~1/2 stop)", tone: "Most saturated film ever made", exp: 1.25, formats: "35mm, 120, 4x5", price: "$18\u201325" },
-      "fujifilm-provia-100f": { name: "Fujifilm Provia 100F", iso: 100, type: "Color Reversal (Slide)", process: "E-6", grain: "Among finest ever (RMS 8)", latitude: "Narrow (~1 stop each way)", tone: "Vivid yet accurate, natural colors", exp: 1.22, formats: "35mm, 120, 4x5", price: "$18\u201325" },
-      "kodak-ektachrome-e100": { name: "Kodak Ektachrome E100", iso: 100, type: "Color Reversal (Slide)", process: "E-6", grain: "Extremely fine (RMS 8)", latitude: "Narrow (~1/2 to 1 stop)", tone: "Neutral, clean, scanning-optimized", exp: 1.20, formats: "35mm, 120, 4x5, Super 8", price: "$18\u201322" }
+      "ilford-hp5-plus": { name: "Ilford HP5 Plus", iso: 400, type: "B&W Negative", process: "Standard B&W", grain: "Medium, classic cubic", latitude: "Very wide (~12 stops)", tone: "Neutral, smooth tonal curve", exp: 1.31, formats: "35mm, 120, 4x5, 8x10, bulk", price: "$8\u201313", grainN: 5, contrastN: 5, saturationN: 0, latitudeN: 9 },
+      "kodak-tri-x": { name: "Kodak Tri-X 400", iso: 400, type: "B&W Negative", process: "Standard B&W", grain: "Medium-coarse, iconic texture", latitude: "Wide (~10 stops)", tone: "Warm, punchy midtone contrast", exp: 1.33, formats: "35mm, 120, 4x5, 8x10, bulk", price: "$11\u201313", grainN: 6, contrastN: 7, saturationN: 0, latitudeN: 7 },
+      "ilford-delta-3200": { name: "Ilford Delta 3200", iso: 3200, type: "B&W Negative", process: "Standard B&W", grain: "Coarse but structured (tabular)", latitude: "Extremely wide (EI 400\u201325000)", tone: "Moderate contrast, moody atmosphere", exp: 1.33, formats: "35mm, 120", price: "$13\u201316", grainN: 8, contrastN: 5, saturationN: 0, latitudeN: 10 },
+      "ilford-fp4-plus": { name: "Ilford FP4 Plus", iso: 125, type: "B&W Negative", process: "Standard B&W", grain: "Fine, sharp cubic grain", latitude: "Exceptionally wide (6 stops over)", tone: "Medium contrast, creamy transitions", exp: 1.26, formats: "35mm, 120, 4x5, 8x10, bulk", price: "$7\u201310", grainN: 3, contrastN: 5, saturationN: 0, latitudeN: 9 },
+      "kodak-tmax-100": { name: "Kodak T-Max 100", iso: 100, type: "B&W Negative", process: "Standard B&W (T-Max dev)", grain: "Extremely fine (T-GRAIN tabular)", latitude: "Good (EI 25\u2013200)", tone: "Neutral to cool, clinical sharpness", exp: 1.15, formats: "35mm, 120, 4x5, bulk", price: "$12\u201314", grainN: 1, contrastN: 5, saturationN: 0, latitudeN: 5 },
+      "fomapan-100": { name: "Fomapan 100", iso: 100, type: "B&W Negative", process: "Standard B&W", grain: "Medium for ISO 100, characterful", latitude: "Moderate", tone: "Higher contrast, punchy midtones", exp: 1.30, formats: "35mm, 120, 4x5", price: "$5\u20137", grainN: 4, contrastN: 7, saturationN: 0, latitudeN: 4 },
+      "ilford-pan-f-plus": { name: "Ilford Pan F Plus", iso: 50, type: "B&W Negative", process: "Standard B&W", grain: "Ultra-fine, creamiest in Ilford lineup", latitude: "Moderate", tone: "High contrast, luminous highlights", exp: 1.33, formats: "35mm, 120, bulk", price: "$10\u201313", grainN: 1, contrastN: 8, saturationN: 0, latitudeN: 4 },
+      "kodak-portra-400": { name: "Kodak Portra 400", iso: 400, type: "Color Negative", process: "C-41", grain: "Remarkably fine for ISO 400", latitude: "Legendary (EI 100\u2013800+)", tone: "Warm, natural, flattering skin tones", exp: 1.30, formats: "35mm, 120, 4x5, 8x10", price: "$14\u201319", grainN: 3, contrastN: 4, saturationN: 5, latitudeN: 10 },
+      "kodak-portra-160": { name: "Kodak Portra 160", iso: 160, type: "Color Negative", process: "C-41", grain: "Very fine, nearly grainless", latitude: "Very wide, especially overexposure", tone: "Warm, subtle, low saturation", exp: 1.30, formats: "35mm, 120, 4x5, 8x10", price: "$14\u201316", grainN: 2, contrastN: 3, saturationN: 4, latitudeN: 8 },
+      "fujifilm-pro-400h": { name: "Fujifilm Pro 400H", iso: 400, type: "Color Negative", process: "C-41", grain: "Fine (Sigma grain technology)", latitude: "Wide (2\u20133 stops over)", tone: "Cool/neutral, soft pastels", exp: 1.25, formats: "Discontinued", price: "Collector pricing", grainN: 3, contrastN: 4, saturationN: 4, latitudeN: 7 },
+      "cinestill-800t": { name: "CineStill 800T", iso: 800, type: "Color Negative", process: "C-41 / ECN-2", grain: "Moderate, cinematic texture", latitude: "Wide (EI 200\u20131000)", tone: "Tungsten-balanced, red halation", exp: 1.30, formats: "35mm, 120", price: "$17\u201325", grainN: 5, contrastN: 6, saturationN: 7, latitudeN: 7 },
+      "kodak-gold-200": { name: "Kodak Gold 200", iso: 200, type: "Color Negative", process: "C-41", grain: "Medium, warm organic", latitude: "Good (2 under to 3 over)", tone: "Strong warm cast, golden nostalgic", exp: 1.30, formats: "35mm, 120", price: "$9\u201312", grainN: 5, contrastN: 6, saturationN: 7, latitudeN: 6 },
+      "kodak-colorplus-200": { name: "Kodak ColorPlus 200", iso: 200, type: "Color Negative", process: "C-41", grain: "Fine for a consumer film", latitude: "Good (2 under to 3 over)", tone: "Warm yellow/golden bias", exp: 1.30, formats: "35mm only", price: "$7\u201310", grainN: 3, contrastN: 5, saturationN: 6, latitudeN: 6 },
+      "kodak-ultramax-400": { name: "Kodak UltraMax 400", iso: 400, type: "Color Negative", process: "C-41", grain: "Medium, classic Kodak aesthetic", latitude: "Moderate", tone: "Bright, punchy, vibrant warmth", exp: 1.30, formats: "35mm only", price: "$12\u201317", grainN: 5, contrastN: 6, saturationN: 8, latitudeN: 5 },
+      "fujifilm-superia-400": { name: "Fujifilm Superia 400", iso: 400, type: "Color Negative", process: "C-41", grain: "Medium, flat hexagonal", latitude: "Average for consumer CN", tone: "Cool, green/magenta Fuji look", exp: 1.30, formats: "Discontinued", price: "$15\u201325 (remaining)", grainN: 5, contrastN: 6, saturationN: 6, latitudeN: 5 },
+      "fujifilm-superia-100": { name: "Fujifilm Superia 100", iso: 100, type: "Color Negative", process: "C-41", grain: "Fine for a consumer film", latitude: "Good (3\u20134 stops over)", tone: "Rich, vivid, natural Fuji tones", exp: 1.25, formats: "Discontinued", price: "$20\u201340+ (expired)", grainN: 3, contrastN: 5, saturationN: 7, latitudeN: 6 },
+      "kodak-ektar-100": { name: "Kodak Ektar 100", iso: 100, type: "Color Negative", process: "C-41", grain: "Finest grained CN film in world", latitude: "Narrow for CN (careful metering)", tone: "Ultra-vivid, highly saturated", exp: 1.18, formats: "35mm, 120, 4x5, 8x10", price: "$12\u201317", grainN: 1, contrastN: 7, saturationN: 10, latitudeN: 3 },
+      "lomography-color-400": { name: "Lomography Color 400", iso: 400, type: "Color Negative", process: "C-41", grain: "Fine to medium, analog aesthetic", latitude: "Good for consumer film", tone: "Vibrant, saturated, punchy", exp: 1.30, formats: "35mm, 120", price: "$8\u201312", grainN: 4, contrastN: 6, saturationN: 8, latitudeN: 6 },
+      "lomography-color-800": { name: "Lomography Color 800", iso: 800, type: "Color Negative", process: "C-41", grain: "Moderate, good for high speed", latitude: "Good", tone: "Natural, mild saturation", exp: 1.30, formats: "35mm, 120", price: "$10\u201314", grainN: 5, contrastN: 5, saturationN: 5, latitudeN: 6 },
+      "fujifilm-velvia-50": { name: "Fujifilm Velvia 50", iso: 50, type: "Color Reversal (Slide)", process: "E-6", grain: "Extremely fine, virtually invisible", latitude: "Very narrow (~1/2 stop)", tone: "Most saturated film ever made", exp: 1.25, formats: "35mm, 120, 4x5", price: "$18\u201325", grainN: 1, contrastN: 9, saturationN: 10, latitudeN: 1 },
+      "fujifilm-provia-100f": { name: "Fujifilm Provia 100F", iso: 100, type: "Color Reversal (Slide)", process: "E-6", grain: "Among finest ever (RMS 8)", latitude: "Narrow (~1 stop each way)", tone: "Vivid yet accurate, natural colors", exp: 1.22, formats: "35mm, 120, 4x5", price: "$18\u201325", grainN: 1, contrastN: 6, saturationN: 8, latitudeN: 3 },
+      "kodak-ektachrome-e100": { name: "Kodak Ektachrome E100", iso: 100, type: "Color Reversal (Slide)", process: "E-6", grain: "Extremely fine (RMS 8)", latitude: "Narrow (~1/2 to 1 stop)", tone: "Neutral, clean, scanning-optimized", exp: 1.20, formats: "35mm, 120, 4x5, Super 8", price: "$18\u201322", grainN: 1, contrastN: 5, saturationN: 7, latitudeN: 3 }
     };
 
     var rows = [
@@ -119,7 +119,8 @@
       { label: "Color / Tone", key: "tone" },
       { label: "Reciprocity Exp.", key: "exp" },
       { label: "Formats", key: "formats" },
-      { label: "Price (35mm)", key: "price" }
+      { label: "Price (35mm)", key: "price" },
+      { label: "Visual Profile", key: "_bars" }
     ];
 
     var selects = [
@@ -184,7 +185,27 @@
       rows.forEach(function(row) {
         html += '<tr><td>' + row.label + '</td>';
         selected.forEach(function(s) {
-          html += '<td>' + s.data[row.key] + '</td>';
+          if (row.key === '_bars') {
+            var bars = [
+              { cls: 'grain', label: 'Grain', val: s.data.grainN, lo: 'Fine', hi: 'Coarse' },
+              { cls: 'contrast', label: 'Contrast', val: s.data.contrastN, lo: 'Low', hi: 'High' },
+              { cls: 'latitude', label: 'Latitude', val: s.data.latitudeN, lo: 'Narrow', hi: 'Wide' }
+            ];
+            if (s.data.saturationN > 0) {
+              bars.splice(2, 0, { cls: 'saturation', label: 'Saturation', val: s.data.saturationN, lo: 'Low', hi: 'Vivid' });
+            }
+            html += '<td><div class="attr-bars">';
+            bars.forEach(function(b) {
+              html += '<div class="attr-bar-row">'
+                + '<span class="attr-bar-label">' + b.label + '</span>'
+                + '<div class="attr-bar-track"><div class="attr-bar-fill ' + b.cls + '" style="width:' + (b.val * 10) + '%"></div></div>'
+                + '<span class="attr-bar-value">' + b.val + '/10</span>'
+                + '</div>';
+            });
+            html += '</div></td>';
+          } else {
+            html += '<td>' + s.data[row.key] + '</td>';
+          }
         });
         html += '</tr>';
       });

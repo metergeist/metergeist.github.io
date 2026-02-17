@@ -598,6 +598,109 @@
   .film-page .app-cta { padding: 1rem; margin-top: 1.5rem; }
 }
 
+/* Color palette swatches */
+.film-palette {
+  margin-bottom: 2rem;
+}
+
+.palette-swatches {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.palette-swatch {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 2px solid rgba(255,255,255,0.1);
+  position: relative;
+}
+
+.palette-swatch[title]:hover {
+  border-color: var(--chrome);
+  cursor: default;
+}
+
+.palette-label {
+  font-size: 0.8rem;
+  color: var(--chrome-dim);
+  margin-top: 0.4rem;
+  font-style: italic;
+}
+
+/* Attribute bars in compare tool */
+.attr-bar-row {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 0.3rem;
+}
+
+.attr-bar-track {
+  flex: 1;
+  height: 6px;
+  background: #1a1a1a;
+  border-radius: 3px;
+  overflow: hidden;
+  max-width: 120px;
+}
+
+.attr-bar-fill {
+  height: 100%;
+  border-radius: 3px;
+  transition: width 0.3s ease;
+}
+
+.attr-bar-fill.grain { background: #a0a0a0; }
+.attr-bar-fill.contrast { background: #c0c0c0; }
+.attr-bar-fill.saturation { background: #cca633; }
+.attr-bar-fill.latitude { background: #7ae6a6; }
+
+.attr-bar-label {
+  font-size: 0.7rem;
+  color: var(--chrome-dim);
+  min-width: 55px;
+}
+
+.attr-bar-value {
+  font-size: 0.7rem;
+  color: var(--text-dim);
+  min-width: 20px;
+  text-align: right;
+}
+
+.attr-bars {
+  margin-top: 0.5rem;
+}
+
+/* Sample photos / external links section */
+.film-samples ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.film-samples li {
+  padding: 0.3rem 0;
+}
+
+.film-samples li::before {
+  content: "\1F4F7";
+  margin-right: 0.5rem;
+  font-size: 0.85rem;
+}
+
+.film-sources .source-group {
+  margin-top: 0.6rem;
+  margin-bottom: 0.4rem;
+  font-size: 0.75rem;
+  color: var(--chrome);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-weight: 600;
+}
+
 /* Small phones */
 @media (max-width: 375px) {
   .film-grid {

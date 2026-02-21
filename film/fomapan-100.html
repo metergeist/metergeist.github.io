@@ -80,7 +80,7 @@
 
     <div class="film-reciprocity">
       <h2>Reciprocity Failure Calculator</h2>
-      <p>When exposures exceed one second, Fomapan 100 requires additional time to compensate for reciprocity failure. The correction formula below uses the exponent from Foma Bohemia's technical documentation.</p>
+      <p>When exposures exceed one second, Fomapan 100 requires additional time to compensate for reciprocity failure. The correction formula below uses the exponent estimated from Foma Bohemia's technical documentation.</p>
       <div class="calc-widget">
         <label for="metered-time">Metered exposure time (seconds)</label>
         <input type="number" id="metered-time" min="1" max="3600" step="1" value="10">
@@ -88,7 +88,7 @@
           Corrected time: <span class="result-value" id="corrected-time">&mdash;</span> seconds
         </div>
         <div class="calc-formula">corrected = metered<sup>1.30</sup></div>
-        <p class="calc-source">Reciprocity exponent from Foma Bohemia technical documentation</p>
+        <p class="calc-source">Reciprocity exponent estimated from Foma Bohemia technical documentation</p>
       </div>
       <script>
       (function() {

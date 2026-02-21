@@ -256,8 +256,8 @@ for (const cam of cameras) {
 
     <div class="app-cta">
       <h3>Shoot with your ${escHtml(cam.fullName)}</h3>
-      <p><a href="/">metergeist</a> is a free <a href="/">light meter app</a> and <a href="/">film roll tracker</a> built for <a href="/cameras/">TLR</a> and medium format photographers. Meter light, load film, track every frame.</p>
-      <p>Planning a <a href="/guides/long-exposure.html">long exposure</a>? metergeist handles ND filter compensation and reciprocity correction for 19 film stocks.</p>
+      <p><a href="/">TLR Companion</a> is a free <a href="/">light meter app</a> and <a href="/">film roll tracker</a> built for <a href="/cameras/">TLR</a> and medium format photographers. Meter light, load film, track every frame.</p>
+      <p>Planning a <a href="/guides/long-exposure.html">long exposure</a>? TLR Companion handles ND filter compensation and reciprocity correction for 19 film stocks.</p>
     </div>
   </div>
   </main>
@@ -385,7 +385,7 @@ const indexHtml = `<!DOCTYPE html>
 
     <div class="app-cta">
       <h2>Meter light for your TLR</h2>
-      <p><a href="/">metergeist</a> is a free <a href="/">light meter app for film photography</a> built for <a href="/cameras/">TLR camera</a> and medium format shooters. Real-time metering, film roll tracking, and reference photos — all on your iPhone.</p>
+      <p><a href="/">TLR Companion</a> is a free <a href="/">light meter app for film photography</a> built for <a href="/cameras/">TLR camera</a> and medium format shooters. Real-time metering, film roll tracking, and reference photos — all on your iPhone.</p>
     </div>
   </div>
   </main>

@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-NGH2JC1T0G"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-NGH2JC1T0G');</script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TLR Bellows Inspection &amp; Repair Guide &mdash; metergeist</title>
+  <meta name="description" content="How to inspect, repair, and replace bellows on Mamiya C-series TLR cameras. Covers light leak testing, temporary fixes, replacement sources, and preventive care.">
+  <meta property="og:title" content="TLR Bellows Inspection & Repair Guide — metergeist">
+  <meta property="og:description" content="Inspect, repair, and replace bellows on Mamiya C-series TLRs. Light leak testing, temporary fixes, replacement sources, and preventive care.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://metergeist.com/guides/bellows-inspection.html">
+  <meta property="og:image" content="https://metergeist.com/icon.png">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="TLR Bellows Inspection & Repair Guide — metergeist">
+  <meta name="twitter:description" content="Inspect, repair, and replace bellows on Mamiya C-series TLRs. Light leak testing, temporary fixes, and preventive care.">
+  <meta name="twitter:image" content="https://metergeist.com/icon.png">
+  <link rel="canonical" href="https://metergeist.com/guides/bellows-inspection.html">
+  <link rel="stylesheet" href="../style.css">
+  <link rel="icon" href="../icon.png" type="image/png">
+  <style>
+    .guide-table { width: 100%; border-collapse: collapse; margin: 1rem 0 1.5rem; font-size: 0.9rem; }
+    .guide-table th { text-align: left; padding: 0.5rem 0.8rem; border-bottom: 1px solid #444; color: var(--chrome); font-weight: 600; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.04em; }
+    .guide-table td { padding: 0.4rem 0.8rem; border-bottom: 1px solid #2a2a2a; color: var(--text-dim); }
+    .guide-table tr:hover td { background: rgba(255,255,255,0.02); }
+    .tip-box { background: var(--surface); border: 1px solid #333; border-left: 3px solid var(--chrome); border-radius: 8px; padding: 1rem 1.2rem; margin: 1.2rem 0; font-size: 0.9rem; }
+    .tip-box strong { color: var(--chrome); display: block; margin-bottom: 0.3rem; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.04em; }
+    .tip-box p { margin-bottom: 0.4rem; }
+    .step-number { display: inline-block; width: 28px; height: 28px; background: var(--surface); border: 1px solid var(--chrome-dim); border-radius: 50%; text-align: center; line-height: 26px; font-weight: 700; font-size: 0.85rem; color: var(--chrome); margin-right: 0.6rem; flex-shrink: 0; }
+    .step { display: flex; align-items: flex-start; margin-bottom: 1rem; }
+    .step-content { flex: 1; }
+    .step-content h3 { margin-top: 0; margin-bottom: 0.3rem; }
+    .breadcrumb { font-size: 0.85rem; color: var(--text-dim); margin-bottom: 1.5rem; }
+    .breadcrumb a { color: var(--chrome-dim); font-size: 0.85rem; }
+  </style>
+</head>
+<body>
+  <a href="#main" class="skip-link">Skip to content</a>
+  <nav aria-label="Main navigation">
+    <a href="/" class="logo">
+      <img src="../icon.png" alt="metergeist icon">
+      <span>metergeist</span>
+    </a>
+    <div class="links">
+      <a href="/cameras/">TLR Guide</a>
+      <a href="/film/">Film Guide</a>
+      <a href="/blog/">Blog</a>
+      <a href="/support.html">Support</a>
+    </div>
+  </nav>
+
+  <main id="main">
+  <div class="content">
+    <p class="breadcrumb"><a href="/">Home</a> &rsaquo; <a href="/guides/">Guides</a> &rsaquo; Bellows Inspection &amp; Repair</p>
+    <h1>TLR Bellows Inspection &amp; Repair</h1>
+    <p class="updated">A practical guide to diagnosing, fixing, and preventing bellows light leaks on Mamiya C-series TLRs</p>
+
+    <p>Most twin-lens reflex cameras use a rigid body with no bellows at all. The Mamiya C-series is the major exception. The C22, C33, C220, and C330 all use accordion-style bellows to allow interchangeable lenses and close focusing. That flexibility comes at a cost: bellows deteriorate over time, and light leaks from failing bellows are one of the most common issues on these cameras. This guide covers how to find leaks, fix them, and keep your bellows healthy.</p>
+
+    <h2>Which TLRs Have Bellows?</h2>
+    <p>The bellows design is almost exclusive to the Mamiya C-series in the TLR world. Fixed-lens TLRs like the Rolleiflex, Yashica Mat, and Minolta Autocord use a rigid helicoid focusing system with no bellows to worry about.</p>
+
+    <table class="guide-table" role="table" aria-label="TLR cameras with bellows">
+      <thead>
+        <tr><th>Camera</th><th>Bellows</th><th>Lens System</th><th>Notes</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Mamiya C22</td><td>Yes</td><td>Interchangeable</td><td>Oldest C-series; bellows often heavily worn</td></tr>
+        <tr><td>Mamiya C33</td><td>Yes</td><td>Interchangeable</td><td>Built-in crank focus; same bellows style as C22</td></tr>
+        <tr><td>Mamiya C220</td><td>Yes</td><td>Interchangeable</td><td>Lighter body; bellows more exposed when collapsed</td></tr>
+        <tr><td>Mamiya C330</td><td>Yes</td><td>Interchangeable</td><td>Most common; professional model with metering option</td></tr>
+        <tr><td>Mamiya C330f / C330s</td><td>Yes</td><td>Interchangeable</td><td>Later variants; same bellows design as C330</td></tr>
+        <tr><td>Rolleiflex, Yashica, etc.</td><td>No</td><td>Fixed</td><td>Helicoid focus &mdash; no bellows failure risk</td></tr>
+      </tbody>
+    </table>
+
+    <h2>Why Bellows Fail</h2>
+    <p>Mamiya C-series bellows are made of thin, flexible material &mdash; a fabric core coated with a light-tight layer. After 40&ndash;60 years, several factors conspire against them:</p>
+    <ul>
+      <li><strong>Age and material degradation</strong> &mdash; the coating dries out and becomes brittle, eventually cracking at the fold lines</li>
+      <li><strong>Repeated flexing</strong> &mdash; every time you focus or change lenses, the bellows fold and unfold, stressing the creases</li>
+      <li><strong>UV exposure</strong> &mdash; light slowly breaks down the coating material, especially on cameras stored near windows</li>
+      <li><strong>Dry storage conditions</strong> &mdash; low humidity accelerates cracking; leather and coated fabric need some moisture in the air</li>
+      <li><strong>Improper storage position</strong> &mdash; storing the camera with bellows fully compressed creates deep, permanent creases that crack first</li>
+      <li><strong>Chemical exposure</strong> &mdash; cleaning solvents, mothballs, or off-gassing from foam padding can attack the coating</li>
+    </ul>
+
+    <div class="tip-box">
+      <strong>The corners go first</strong>
+      <p>Bellows almost always fail at the corners of the folds first, where the material flexes in two directions at once. When inspecting, pay extra attention to these points &mdash; they&rsquo;re where pinholes start.</p>
+    </div>
+
+    <h2>Visual Inspection: The Flashlight Test</h2>
+    <p>This is the quickest way to check for bellows leaks and requires nothing more than a bright flashlight or your phone&rsquo;s torch.</p>
+
+    <div class="step">
+      <span class="step-number">1</span>
+      <div class="step-content">
+        <h3>Remove the Lens</h3>
+        <p>Take the lens set off the camera to expose the front of the bellows. If you don&rsquo;t have a spare lens to remove, open the back instead and work from the film plane side.</p>
+      </div>
+    </div>
+    <div class="step">
+      <span class="step-number">2</span>
+      <div class="step-content">
+        <h3>Darken the Room</h3>
+        <p>Work in a dark room or closet. The darker the better &mdash; you&rsquo;re looking for tiny pinholes of light.</p>
+      </div>
+    </div>
+    <div class="step">
+      <span class="step-number">3</span>
+      <div class="step-content">
+        <h3>Shine the Light Inside</h3>
+        <p>Point the flashlight into the front opening of the bellows (or through the back). Move it around slowly so the light hits the bellows from different angles.</p>
+      </div>
+    </div>
+    <div class="step">
+      <span class="step-number">4</span>
+      <div class="step-content">
+        <h3>Inspect the Outside</h3>
+        <p>Look carefully at the outer surface of the bellows for any points of light coming through. Extend the bellows fully and inspect, then collapse them partway and check again &mdash; some leaks only appear when the folds are in certain positions.</p>
+      </div>
+    </div>
+    <div class="step">
+      <span class="step-number">5</span>
+      <div class="step-content">
+        <h3>Mark Problem Areas</h3>
+        <p>Use a small piece of painter&rsquo;s tape or a white china marker to flag any leaks you find. This makes them easy to locate when you move to repairs.</p>
+      </div>
+    </div>
+
+    <div class="tip-box">
+      <strong>Check at multiple extensions</strong>
+      <p>A bellows can pass inspection when fully extended but leak when partially collapsed (or vice versa). Test at minimum, middle, and full extension to catch position-dependent leaks.</p>
+    </div>
+
+    <h2>Film Test for Subtle Leaks</h2>
+    <p>Some leaks are too small to see with a flashlight but still fog film. If you suspect a subtle leak, run a film test:</p>
+    <ul>
+      <li>Load a roll of cheap black-and-white film (Fomapan 100 or Kentmere 400 work well)</li>
+      <li>Shoot a few normal frames, then leave 2&ndash;3 frames unexposed by advancing without firing the shutter</li>
+      <li>After developing, examine the unexposed frames. Fogging that appears as soft orange or gray bands along one edge usually indicates a bellows leak</li>
+      <li>Leak patterns from bellows tend to appear on the <strong>sides</strong> of the frame (left or right), unlike back-door seal leaks which typically show at the top or bottom</li>
+    </ul>
+
+    <h2>Temporary Repairs</h2>
+    <p>If you&rsquo;ve found pinholes but need to keep shooting while sourcing a replacement, several products can seal small leaks temporarily.</p>
+
+    <table class="guide-table" role="table" aria-label="Temporary bellows repair options">
+      <thead>
+        <tr><th>Product</th><th>Application</th><th>Durability</th><th>Notes</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Liquid electrical tape</td><td>Brush on thin coats</td><td>6&ndash;12 months</td><td>Flexible, easy to apply, available at hardware stores</td></tr>
+        <tr><td>Plasti Dip</td><td>Brush or dip</td><td>6&ndash;18 months</td><td>Remains flexible; multiple thin coats recommended</td></tr>
+        <tr><td>Black silicone sealant</td><td>Dab onto pinholes</td><td>1&ndash;2 years</td><td>Very durable but can stiffen the bellows if over-applied</td></tr>
+        <tr><td>Black fabric paint</td><td>Brush on</td><td>3&ndash;6 months</td><td>Least durable but least likely to affect bellows flexibility</td></tr>
+      </tbody>
+    </table>
+
+    <div class="tip-box">
+      <strong>Less is more</strong>
+      <p>Apply any sealant in thin coats. Thick applications stiffen the bellows material and can cause new cracks at the edges of the repair. Two or three thin coats are better than one thick one. Let each coat dry completely before adding the next.</p>
+    </div>
+
+    <h2>Replacement Bellows</h2>
+    <p>When repairs are no longer enough &mdash; if the bellows are cracked in many places or the material has gone stiff throughout &mdash; replacement is the right call.</p>
+
+    <h3>Sources for Replacement Bellows</h3>
+    <ul>
+      <li><strong>eBay</strong> &mdash; search for &ldquo;Mamiya C330 bellows&rdquo; or &ldquo;Mamiya C220 bellows.&rdquo; New-old-stock Mamiya bellows appear occasionally. Third-party replacements from Chinese manufacturers are more common and cost $30&ndash;60</li>
+      <li><strong>Custom bellows makers</strong> &mdash; companies like Custom Bellows (UK) and camerabellows.com produce made-to-order replacements. Expect $60&ndash;120 and a few weeks of lead time</li>
+      <li><strong>Mamiya specialist repair shops</strong> &mdash; some technicians stock replacement bellows or source them for you as part of a CLA</li>
+      <li><strong>Donor cameras</strong> &mdash; a parts-condition C220 or C330 body can sometimes be found cheaper than a new bellows set</li>
+    </ul>
+
+    <h3>DIY Replacement</h3>
+    <p>Replacing bellows yourself is a moderate-difficulty repair. It requires patience rather than specialized tools.</p>
+    <ul>
+      <li>The bellows attach to the camera body with a friction fit and adhesive at the front and rear frames</li>
+      <li>Removal involves carefully peeling the old bellows off the mounting frames and cleaning residual adhesive</li>
+      <li>Installation is the reverse &mdash; seat the new bellows onto the frames and secure with a thin bead of flexible adhesive (contact cement or flexible fabric glue)</li>
+      <li>Allow 24 hours for adhesive to fully cure before testing</li>
+    </ul>
+
+    <div class="tip-box">
+      <strong>When to send it to a professional</strong>
+      <p>If you&rsquo;re not comfortable working with small, fiddly parts, or if the bellows mounting frames are corroded or damaged, a professional CLA technician is worth the cost. A bellows replacement as part of a <a href="/guides/understanding-cla.html">full CLA</a> typically runs $150&ndash;250 including parts and labor.</p>
+    </div>
+
+    <h2>Cost Comparison</h2>
+    <table class="guide-table" role="table" aria-label="Bellows repair cost comparison">
+      <thead>
+        <tr><th>Option</th><th>Cost</th><th>Longevity</th><th>Skill Required</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Temporary patch (liquid tape, etc.)</td><td>$5&ndash;15</td><td>6&ndash;18 months</td><td>Low</td></tr>
+        <tr><td>DIY bellows replacement</td><td>$30&ndash;120 (parts)</td><td>10+ years</td><td>Moderate</td></tr>
+        <tr><td>Professional replacement</td><td>$150&ndash;250</td><td>10+ years</td><td>None (tech does it)</td></tr>
+        <tr><td>Professional CLA + bellows</td><td>$200&ndash;350</td><td>10+ years</td><td>None (tech does it)</td></tr>
+      </tbody>
+    </table>
+
+    <p>For a camera you plan to shoot regularly, replacement is almost always worth it. Temporary patches buy time, but they add stiffness with each application and eventually the entire bellows surface becomes compromised.</p>
+
+    <h2>Bellows Care &amp; Prevention</h2>
+    <p>A few simple habits can add years of life to your bellows:</p>
+    <ul>
+      <li><strong>Store with bellows partially extended</strong> &mdash; don&rsquo;t leave them fully compressed. A mid-range extension distributes stress more evenly across the folds</li>
+      <li><strong>Exercise the bellows periodically</strong> &mdash; if you haven&rsquo;t shot in a while, gently extend and collapse the bellows a few times to keep the material supple</li>
+      <li><strong>Control humidity</strong> &mdash; aim for 40&ndash;55% relative humidity in your storage area. Too dry and the coating cracks; too humid and mold can grow</li>
+      <li><strong>Avoid direct sunlight</strong> &mdash; UV degrades the bellows coating. Store cameras in a bag, cabinet, or away from windows</li>
+      <li><strong>Condition the bellows occasionally</strong> &mdash; a very light application of leather conditioner (like Lexol) on the outer surface can help keep the material flexible. Use sparingly and avoid getting any inside the bellows</li>
+      <li><strong>Never force the focus mechanism</strong> &mdash; if the bellows feel stiff or resistant, stop. Forcing them can tear weakened material</li>
+    </ul>
+
+    <h2>Related Guides</h2>
+    <ul>
+      <li><a href="/guides/understanding-cla.html">Understanding CLA (Clean, Lubricate, Adjust)</a> &mdash; what a professional service includes and when your camera needs one</li>
+      <li><a href="/guides/buying-a-tlr.html">Buying a TLR Camera</a> &mdash; what to check before purchasing, including bellows condition</li>
+    </ul>
+
+    <h2>Sources &amp; Further Reading</h2>
+    <ul>
+      <li>Mamiya C330 Professional Service Manual &mdash; Mamiya Camera Co., Ltd.</li>
+      <li>&ldquo;Mamiya TLR System&rdquo; &mdash; Camera-wiki.org, community reference for all C-series models</li>
+      <li>Custom Bellows Ltd. (custombellows.co.uk) &mdash; UK-based bellows manufacturer with Mamiya-specific products</li>
+      <li>Mamiya Repair forums on Photrio.com &mdash; extensive community threads on bellows repair techniques</li>
+      <li>&ldquo;Light Leak Diagnosis Guide&rdquo; &mdash; Jon Goodman, adapted from darkroom troubleshooting resources</li>
+    </ul>
+
+    <div class="tip-box">
+      <strong>Meter your Mamiya with metergeist</strong>
+      <p>metergeist supports Mamiya C-series cameras with accurate aperture and shutter speed constraints for each model. Load your film, pick your camera, and shoot with confidence &mdash; even while your bellows are being replaced.</p>
+    </div>
+  </div>
+  </main>
+
+  <footer>
+    &copy; 2026 metergeist
+    <div class="links">
+      <a href="/cameras/">TLR Guide</a>
+      <a href="/film/">Film Guide</a>
+      <a href="/blog/">Blog</a>
+      <a href="/support.html">Support</a>
+      <a href="https://www.instagram.com/metergeist" target="_blank" rel="noopener">Instagram</a>
+    </div>
+  </footer>
+</body>
+</html>

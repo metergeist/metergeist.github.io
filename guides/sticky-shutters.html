@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-NGH2JC1T0G"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-NGH2JC1T0G');</script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sticky Shutters &amp; Mechanical Issues on TLR Cameras &mdash; metergeist</title>
+  <meta name="description" content="How to diagnose and deal with sticky or slow shutters on TLR cameras. Covers leaf shutter basics, the exercise trick, CLA decisions, shutter speed testing, and common mechanical problems.">
+  <meta property="og:title" content="Sticky Shutters & Mechanical Issues on TLR Cameras — metergeist">
+  <meta property="og:description" content="Diagnose and fix sticky shutters on vintage TLR cameras. Leaf shutter basics, the exercise trick, when to get a CLA, and testing shutter speed accuracy.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://metergeist.com/guides/sticky-shutters.html">
+  <meta property="og:image" content="https://metergeist.com/icon.png">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Sticky Shutters & Mechanical Issues on TLR Cameras — metergeist">
+  <meta name="twitter:description" content="Diagnose and fix sticky shutters on vintage TLR cameras. Leaf shutter basics, the exercise trick, and when to get a CLA.">
+  <meta name="twitter:image" content="https://metergeist.com/icon.png">
+  <link rel="canonical" href="https://metergeist.com/guides/sticky-shutters.html">
+  <link rel="stylesheet" href="../style.css">
+  <link rel="icon" href="../icon.png" type="image/png">
+  <style>
+    .guide-table { width: 100%; border-collapse: collapse; margin: 1rem 0 1.5rem; font-size: 0.9rem; }
+    .guide-table th { text-align: left; padding: 0.5rem 0.8rem; border-bottom: 1px solid #444; color: var(--chrome); font-weight: 600; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.04em; }
+    .guide-table td { padding: 0.4rem 0.8rem; border-bottom: 1px solid #2a2a2a; color: var(--text-dim); }
+    .guide-table tr:hover td { background: rgba(255,255,255,0.02); }
+    .tip-box { background: var(--surface); border: 1px solid #333; border-left: 3px solid var(--chrome); border-radius: 8px; padding: 1rem 1.2rem; margin: 1.2rem 0; font-size: 0.9rem; }
+    .tip-box strong { color: var(--chrome); display: block; margin-bottom: 0.3rem; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.04em; }
+    .tip-box p { margin-bottom: 0.4rem; }
+    .step-number { display: inline-block; width: 28px; height: 28px; background: var(--surface); border: 1px solid var(--chrome-dim); border-radius: 50%; text-align: center; line-height: 26px; font-weight: 700; font-size: 0.85rem; color: var(--chrome); margin-right: 0.6rem; flex-shrink: 0; }
+    .step { display: flex; align-items: flex-start; margin-bottom: 1rem; }
+    .step-content { flex: 1; }
+    .step-content h3 { margin-top: 0; margin-bottom: 0.3rem; }
+    .breadcrumb { font-size: 0.85rem; color: var(--text-dim); margin-bottom: 1.5rem; }
+    .breadcrumb a { color: var(--chrome-dim); font-size: 0.85rem; }
+  </style>
+</head>
+<body>
+  <a href="#main" class="skip-link">Skip to content</a>
+  <nav aria-label="Main navigation">
+    <a href="/" class="logo">
+      <img src="../icon.png" alt="metergeist icon">
+      <span>metergeist</span>
+    </a>
+    <div class="links">
+      <a href="/cameras/">TLR Guide</a>
+      <a href="/film/">Film Guide</a>
+      <a href="/blog/">Blog</a>
+      <a href="/support.html">Support</a>
+    </div>
+  </nav>
+
+  <main id="main">
+  <div class="content">
+    <p class="breadcrumb"><a href="/">Home</a> &rsaquo; Guides &rsaquo; Sticky Shutters &amp; Mechanical Issues</p>
+    <h1>Sticky Shutters &amp; Mechanical Issues on TLR Cameras</h1>
+    <p class="updated">How to diagnose sluggish shutters, when to exercise them, and when to call a professional</p>
+
+    <p>If you&rsquo;ve picked up a vintage TLR camera, there&rsquo;s a good chance the shutter isn&rsquo;t performing the way it did in 1958. Slow speeds that hang open, a shutter that fires at one speed regardless of the dial setting, or blades that stick partway through &mdash; these are the most common problems with old TLR cameras, and they&rsquo;re almost always caused by the same thing: old lubricant. The good news is that sticky shutters are well-understood and usually fixable.</p>
+
+    <h2>How Leaf Shutters Work</h2>
+    <p>Nearly all TLR cameras use a <strong>leaf shutter</strong> (also called a between-the-lens shutter). Unlike the focal plane shutters in SLR cameras, a leaf shutter sits inside the lens assembly itself. It consists of thin metal blades arranged in a circle that open from the center outward and snap closed again.</p>
+    <p>The speed is controlled by a clockwork escapement &mdash; a tiny gear train that regulates how long the blades stay open. Fast speeds (1/500s, 1/250s) use a quick spring snap with minimal escapement involvement. Slow speeds (1/15s, 1/8s, 1s) rely on the escapement gears to delay the closing. This is why <strong>slow speeds fail first</strong> &mdash; they depend on small, precisely lubricated gears that are the first to gum up.</p>
+
+    <h2>Common Shutter Types in TLRs</h2>
+    <p>Different TLR manufacturers used different shutter units. Knowing which one is in your camera helps when sourcing parts or finding a repair technician.</p>
+
+    <table class="guide-table" role="table" aria-label="Common TLR shutter types">
+      <thead>
+        <tr><th>Shutter</th><th>Country</th><th>Found In</th><th>Top Speed</th><th>Notes</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Compur-Rapid</td><td>Germany</td><td>Rolleiflex, Rolleicord</td><td>1/500s</td><td>High-quality, excellent longevity</td></tr>
+        <tr><td>Synchro-Compur</td><td>Germany</td><td>Later Rolleiflex models</td><td>1/500s</td><td>Added flash sync to the Compur design</td></tr>
+        <tr><td>Copal-MXV</td><td>Japan</td><td>Yashica-Mat 124G, Minolta Autocord</td><td>1/500s</td><td>Very reliable, widely serviced</td></tr>
+        <tr><td>Copal-SV</td><td>Japan</td><td>Yashica-Mat, Yashica-D</td><td>1/500s</td><td>Common and parts are available</td></tr>
+        <tr><td>Seikosha-Rapid</td><td>Japan</td><td>Mamiya C-series, some Yashica</td><td>1/500s</td><td>Robust design, self-timer prone to issues</td></tr>
+        <tr><td>Citizen-MVL</td><td>Japan</td><td>Some Ricoh and Yashica models</td><td>1/400s</td><td>Less common, harder to find parts</td></tr>
+        <tr><td>Optiper MX</td><td>Germany</td><td>Voigtl&auml;nder Superb</td><td>1/300s</td><td>Rare, specialist repair only</td></tr>
+      </tbody>
+    </table>
+
+    <h2>Symptoms of a Sticky Shutter</h2>
+    <p>Here are the telltale signs, roughly in order from mild to severe:</p>
+    <ul>
+      <li><strong>Slow speeds sound wrong.</strong> Fire the shutter at 1s, then 1/2s, then 1/4s. They should sound distinctly different. If 1s and 1/4s sound the same, the slow escapement is sticking.</li>
+      <li><strong>The shutter hangs open on slow speeds.</strong> At 1/8s or 1/4s, the blades open and take a visible pause before closing &mdash; or don&rsquo;t close at all until you tap the camera.</li>
+      <li><strong>Inconsistent results.</strong> Sometimes 1/4s works fine, sometimes it hangs. Temperature and humidity can affect sticky lubricant, making the problem intermittent.</li>
+      <li><strong>Fast speeds sound the same.</strong> If 1/500s and 1/125s produce the same &ldquo;click,&rdquo; the mechanism isn&rsquo;t differentiating speeds. The shutter is just snapping at whatever spring tension allows.</li>
+      <li><strong>Blades don&rsquo;t fully open.</strong> In severe cases the blades open partway, creating underexposed frames with dark edges or a circular vignette pattern.</li>
+      <li><strong>Shutter won&rsquo;t fire at all.</strong> The cocking lever moves but pressing the release does nothing, or produces a faint click with no blade movement.</li>
+    </ul>
+
+    <div class="tip-box">
+      <strong>Which speeds fail first?</strong>
+      <p>Almost always the slow speeds: 1s, 1/2s, 1/4s, 1/8s. These rely on the escapement timing gears, which need clean lubrication to regulate properly. The fast speeds (1/125s and above) are spring-powered and are usually the last to be affected.</p>
+    </div>
+
+    <h2>Why Shutters Get Sticky</h2>
+    <p>Three main causes, often working together:</p>
+    <ul>
+      <li><strong>Old lubricant.</strong> The grease and oil applied at the factory was designed to last 10&ndash;15 years. After 40&ndash;70 years, it thickens, hardens, or migrates onto surfaces it shouldn&rsquo;t touch &mdash; including the shutter blades themselves. This is the single most common cause.</li>
+      <li><strong>Contamination.</strong> Dust, moisture, fungal growth, or tobacco residue work their way into the shutter assembly over decades. Even a microscopic film of contamination on the blade pivot points can cause sticking.</li>
+      <li><strong>Lack of use.</strong> Paradoxically, cameras that sit unused for years are worse off than cameras that were shot regularly. Periodic firing keeps the lubricant distributed and the mechanisms moving. A camera sitting in a closet since 1985 almost certainly has sticky lubricant.</li>
+    </ul>
+
+    <h2>The Exercise Trick</h2>
+    <p>Before spending money on a professional service, try this: <strong>fire the shutter repeatedly at every speed setting, 20&ndash;30 times each.</strong> Start at the fastest speed and work down to the slowest. Cock and fire, cock and fire, over and over.</p>
+    <p>This works because the mechanical action can break through surface-level lubricant thickening. The repeated motion redistributes oil across pivot points and can free gears that have settled into a sticky resting state. Many photographers have &ldquo;woken up&rdquo; a sluggish shutter this way.</p>
+
+    <div class="step">
+      <span class="step-number">1</span>
+      <div class="step-content">
+        <h3>Start at the fastest speed</h3>
+        <p>Set the shutter to 1/500s (or whatever the top speed is). Fire it 20&ndash;30 times. These fast speeds use strong spring tension that helps break through dried lubricant.</p>
+      </div>
+    </div>
+    <div class="step">
+      <span class="step-number">2</span>
+      <div class="step-content">
+        <h3>Work through every speed</h3>
+        <p>Move to 1/250s, then 1/125s, and so on. Fire 20&ndash;30 times at each setting. Listen for the speeds starting to differentiate.</p>
+      </div>
+    </div>
+    <div class="step">
+      <span class="step-number">3</span>
+      <div class="step-content">
+        <h3>Focus on the problem speeds</h3>
+        <p>Once you reach the slow speeds, give them extra attention. 50 or more firings at 1/4s or 1/2s can sometimes be what it takes.</p>
+      </div>
+    </div>
+    <div class="step">
+      <span class="step-number">4</span>
+      <div class="step-content">
+        <h3>Repeat over several days</h3>
+        <p>If the shutter improves but isn&rsquo;t perfect, repeat the process over 3&ndash;5 days. Sometimes the lubricant needs time to redistribute between sessions.</p>
+      </div>
+    </div>
+
+    <div class="tip-box">
+      <strong>When exercising won&rsquo;t work</strong>
+      <p>If the blades are visibly oily (hold the camera open at B and look through the taking lens), exercise alone won&rsquo;t fix it &mdash; the oil has migrated onto the blades and needs to be cleaned. If the shutter has been stuck for many years with zero improvement after 100+ firings, the lubricant has likely solidified and needs a full cleaning. And if any gears are physically damaged or corroded, no amount of exercising will help.</p>
+    </div>
+
+    <h2>Testing Shutter Speed Accuracy</h2>
+    <p>Even if the shutter sounds right, it may not be accurate. Here are ways to check:</p>
+
+    <h3>By Ear</h3>
+    <p>With practice, you can judge shutter speeds surprisingly well. Fire the shutter at 1s &mdash; count &ldquo;one-Mississippi.&rdquo; Then 1/2s should be noticeably shorter. Each step should sound roughly half the duration of the previous. If 1/2s sounds the same as 1s, or 1/4s is indistinguishable from 1/8s, those speeds are off.</p>
+
+    <h3>Phone Apps</h3>
+    <p>Several smartphone apps can measure shutter speed by detecting the sound of the blades opening and closing. They&rsquo;re accurate to within about 10&ndash;15% for leaf shutters, which is good enough to identify a problem. Look for apps like &ldquo;ShutterCount&rdquo; or &ldquo;Shutter Speed Tester&rdquo; on the App Store. Place the phone microphone close to the lens, fire the shutter, and the app reports the actual speed.</p>
+
+    <h3>What Accuracy to Expect</h3>
+    <p>Even a freshly serviced vintage shutter won&rsquo;t be laboratory-perfect. Within 1/3 of a stop is excellent. Within 1/2 a stop is perfectly usable &mdash; negative film has enough latitude to absorb that. More than a full stop off at any speed means the shutter needs service.</p>
+
+    <h2>CLA vs. Serious Repair</h2>
+    <p>A <strong>CLA</strong> (clean, lubricate, adjust) is the standard service for a sticky shutter. The technician disassembles the shutter, ultrasonically cleans all components, applies fresh lubricant, and reassembles and calibrates each speed. This fixes the vast majority of shutter problems. See our <a href="/guides/understanding-cla.html">complete CLA guide</a> for details.</p>
+    <p>A CLA <em>won&rsquo;t</em> fix:</p>
+    <ul>
+      <li><strong>Damaged shutter blades</strong> &mdash; bent, corroded, or worn blades need replacement, which requires donor parts</li>
+      <li><strong>Broken springs</strong> &mdash; the main shutter spring or return springs can snap after decades, especially if someone forced a jammed mechanism</li>
+      <li><strong>Stripped gears</strong> &mdash; gear teeth can wear or break, particularly if the camera was dropped</li>
+      <li><strong>Severe corrosion</strong> &mdash; if moisture got inside and corroded the escapement gears, a CLA won&rsquo;t restore precision</li>
+    </ul>
+
+    <h2>Other Common Mechanical Issues</h2>
+
+    <h3>Stuck Film Advance</h3>
+    <p>The film advance knob won&rsquo;t turn, or turns without advancing the film. Common causes: the film counter mechanism is jammed, the advance gear train has dried lubricant, or (in auto-stop models) the frame spacing mechanism is stuck. Do <em>not</em> force it &mdash; you can strip the gears. A CLA usually resolves this.</p>
+
+    <h3>Frozen Focus</h3>
+    <p>The focus knob is stiff or completely locked. This is almost always dried lubricant on the helicoid (the threaded focusing mechanism). Forcing it can score the helicoid threads. A technician will disassemble, clean, and re-grease the helicoid with appropriate damping grease.</p>
+
+    <h3>Jammed Frame Counter</h3>
+    <p>The counter doesn&rsquo;t advance, advances erratically, or won&rsquo;t reset. In many TLRs (especially Yashica and Minolta), the counter mechanism is linked to the film advance. A jammed counter can prevent the advance from working. This is a CLA item.</p>
+
+    <h3>Self-Timer Problems</h3>
+    <div class="tip-box">
+      <strong>Avoid the self-timer on vintage cameras</strong>
+      <p>The self-timer is the single most failure-prone mechanism in a vintage leaf shutter. It uses its own escapement that is extremely susceptible to dried lubricant. If activated when stuck, it can jam the entire shutter mechanism, requiring professional disassembly. Many experienced TLR users recommend <strong>never using the self-timer</strong> on an unserviced camera. If your camera has been CLA&rsquo;d, the self-timer should be fine &mdash; but on an un-serviced camera, leave it alone.</p>
+    </div>
+
+    <h3>Sticky Aperture Blades</h3>
+    <p>The aperture (iris) blades can also become sluggish from oil migration. Symptoms include the aperture ring feeling gritty, or the blades not closing down fully at small apertures. Like shutter blade oil, this requires cleaning during a CLA.</p>
+
+    <h2>DIY vs. Professional Repair</h2>
+    <p>Be honest about your skill level. Some things are safe to try yourself; others are not.</p>
+
+    <table class="guide-table" role="table" aria-label="DIY vs professional repair guide">
+      <thead>
+        <tr><th>Task</th><th>DIY?</th><th>Notes</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Exercise the shutter</td><td>Yes</td><td>No risk. Try this first, always.</td></tr>
+        <tr><td>Test shutter speeds</td><td>Yes</td><td>Phone app or by ear.</td></tr>
+        <tr><td>Clean exterior / viewfinder</td><td>Yes</td><td>Use a blower and microfiber cloth.</td></tr>
+        <tr><td>Replace light seals</td><td>Yes</td><td>See our <a href="/guides/light-seal-replacement.html">light seal guide</a>.</td></tr>
+        <tr><td>Clean front lens element</td><td>Yes</td><td>See our <a href="/guides/lens-cleaning.html">lens cleaning guide</a>.</td></tr>
+        <tr><td>Disassemble the shutter</td><td>No</td><td>Requires specialized tools, clean room conditions, and reassembly expertise.</td></tr>
+        <tr><td>Lubricate the shutter</td><td>No</td><td>Wrong lubricant or quantity makes things worse. Leave it to a pro.</td></tr>
+        <tr><td>Calibrate shutter speeds</td><td>No</td><td>Requires precision timing equipment and experience.</td></tr>
+        <tr><td>Repair helicoid focus</td><td>No</td><td>Helicoid reassembly is notoriously tricky &mdash; one wrong thread and the focus scale is off.</td></tr>
+        <tr><td>Fix film advance mechanism</td><td>No</td><td>Internal gear trains are complex and camera-specific.</td></tr>
+      </tbody>
+    </table>
+
+    <h2>Cost Expectations</h2>
+    <p>Prices vary by technician, camera model, and what&rsquo;s actually wrong, but here are rough ranges as of 2025&ndash;2026:</p>
+
+    <table class="guide-table" role="table" aria-label="Typical repair costs">
+      <thead>
+        <tr><th>Service</th><th>Cost (USD)</th><th>Turnaround</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Shutter CLA only</td><td>$80&ndash;$150</td><td>2&ndash;4 weeks</td></tr>
+        <tr><td>Full camera CLA</td><td>$150&ndash;$300</td><td>4&ndash;8 weeks</td></tr>
+        <tr><td>CLA + shutter blade replacement</td><td>$200&ndash;$350</td><td>6&ndash;12 weeks (parts dependent)</td></tr>
+        <tr><td>Helicoid cleaning &amp; re-grease</td><td>$80&ndash;$120</td><td>2&ndash;4 weeks</td></tr>
+        <tr><td>Film advance repair</td><td>$100&ndash;$200</td><td>4&ndash;8 weeks</td></tr>
+      </tbody>
+    </table>
+
+    <p>Wait times can be long because there are only a handful of experienced TLR technicians working today. Book early and be patient. For more on what a CLA involves and how to find a technician, see our <a href="/guides/understanding-cla.html">Understanding CLA</a> guide.</p>
+
+    <div class="tip-box">
+      <strong>Is it worth the cost?</strong>
+      <p>For a quality TLR like a Rolleiflex 2.8 or Yashica-Mat 124G, a full CLA is almost always worth it &mdash; the camera is worth several times the service cost. For a lower-end TLR, compare the CLA price to the cost of buying another copy in better condition. Sometimes it&rsquo;s more economical to buy a working example.</p>
+    </div>
+
+    <h2>Related Guides</h2>
+    <ul>
+      <li><a href="/guides/understanding-cla.html">Understanding CLA</a> &mdash; what a clean-lubricate-adjust service involves, and how to find a technician</li>
+      <li><a href="/guides/buying-a-tlr.html">Buying a TLR Camera</a> &mdash; what to check for when buying a used TLR, including shutter condition</li>
+      <li><a href="/guides/lens-cleaning.html">Lens Cleaning Guide</a> &mdash; safe cleaning for front and rear elements</li>
+      <li><a href="/guides/light-seal-replacement.html">Light Seal Replacement</a> &mdash; a DIY repair you can do yourself</li>
+    </ul>
+
+    <h2>Sources &amp; Further Reading</h2>
+    <ul>
+      <li>Prochnow, Claus. <em>Rollei Report</em> &mdash; comprehensive technical reference for Rolleiflex and Rolleicord shutters and mechanisms</li>
+      <li>Tomosy, Thomas. <em>Camera Maintenance &amp; Repair</em>, Books 1 &amp; 2 &mdash; practical repair guides covering leaf shutter disassembly and calibration</li>
+      <li>Compur shutter technical documentation (Friedrich Deckel GmbH) &mdash; original engineering specs for Compur-Rapid and Synchro-Compur shutters</li>
+      <li><a href="https://www.markcamerarepair.com" target="_blank" rel="noopener">Mark Hama Camera Repair</a> &mdash; articles on TLR shutter mechanisms and common failure modes</li>
+      <li><a href="https://www.tlr-cameras.com" target="_blank" rel="noopener">TLR-Cameras.com</a> &mdash; community resource for TLR identification, shutter types, and maintenance tips</li>
+      <li>Copal shutter technical manuals &mdash; engineering details for Copal-MXV and Copal-SV shutters used in Japanese TLRs</li>
+    </ul>
+
+    <div class="tip-box">
+      <strong>Meter with metergeist</strong>
+      <p>Once your shutter is running smoothly, metergeist is a free light meter app designed for film photographers with TLR cameras. It knows your camera&rsquo;s exact aperture and shutter speed ranges, so the readings it gives are always values your camera can actually shoot. No ads, no subscriptions.</p>
+    </div>
+  </div>
+  </main>
+
+  <footer>
+    &copy; 2026 metergeist
+    <div class="links">
+      <a href="/cameras/">TLR Guide</a>
+      <a href="/film/">Film Guide</a>
+      <a href="/blog/">Blog</a>
+      <a href="/support.html">Support</a>
+      <a href="https://www.instagram.com/metergeist" target="_blank" rel="noopener">Instagram</a>
+    </div>
+  </footer>
+</body>
+</html>

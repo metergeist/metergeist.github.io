@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-NGH2JC1T0G"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-NGH2JC1T0G');</script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aperture &mdash; Learn Film Photography | metergeist</title>
+  <meta name="description" content="Understand the iris diaphragm, f-stop numbers, the relationship between aperture and depth of field, bokeh, diffraction limits, and typical TLR aperture ranges.">
+  <link rel="canonical" href="https://metergeist.com/learn/04-aperture.html">
+  <link rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" href="/learn/learn.css">
+  <link rel="icon" href="/icon.png" type="image/png">
+</head>
+<body class="chalkboard">
+  <a href="#main" class="skip-link">Skip to content</a>
+  <nav aria-label="Main navigation">
+    <a href="/" class="logo">
+      <img src="/icon.png" alt="metergeist icon">
+      <span>metergeist</span>
+    </a>
+    <div class="links">
+      <a href="/cameras/">TLR Guide</a>
+      <a href="/film/">Film Guide</a>
+      <a href="/learn/">Learn</a>
+      <a href="/blog/">Blog</a>
+    </div>
+  </nav>
+
+  <main id="main">
+  <article class="lesson">
+    <div class="lesson-unit">Unit 1: Light &amp; Optics</div>
+    <h1>Aperture</h1>
+    <div class="lesson-number">Lesson 4 of 19</div>
+
+    <p>In the previous three lessons, we explored what light is, how lenses bend it to form images, and how multi-element lens designs correct the aberrations inherent in simple optics. Now we turn to the mechanism that controls how much of the lens is actually used to form the image: the aperture. Along with shutter speed and film sensitivity, aperture is one of the three pillars of exposure &mdash; but it also profoundly affects the look of the image through its influence on depth of field and diffraction.</p>
+
+    <h2>What Is an Aperture?</h2>
+
+    <p>The aperture is simply the opening in the lens through which light passes on its way to the film. In the most basic sense, a larger opening lets more light through; a smaller opening lets less. But in a photographic lens, the aperture is not just any hole &mdash; it is a precisely engineered, adjustable opening called an <strong>iris diaphragm</strong>.</p>
+
+    <p>The iris diaphragm is named for its resemblance to the iris of the human eye, which expands and contracts to regulate the amount of light reaching the retina. A photographic iris consists of a ring of thin, overlapping metal blades arranged in a circle around the optical axis. When the aperture ring on the lens barrel is turned, a mechanism rotates the blades, causing them to slide over one another. This opens or closes the central hole, changing its diameter smoothly and continuously.</p>
+
+    <p>The number of blades varies by lens design. Common blade counts are five, six, eight, and ten. More blades produce an opening that is closer to a perfect circle, which affects the shape of out-of-focus highlights (bokeh) &mdash; we will discuss this in detail later in the lesson. Many classic TLR lenses use five blades, which produces a distinctive pentagonal bokeh shape. The Zeiss Planar 80mm f/2.8 in the Rolleiflex 2.8F uses five blades as well, though its wide open performance is so good that the blade shape is only visible when stopped down.</p>
+
+    <h2>F-Numbers: A Universal Scale</h2>
+
+    <p>Photographers describe the size of the aperture opening using <strong>f-numbers</strong> (also called f-stops). The f-number is the ratio of the lens's focal length to the diameter of the aperture opening:</p>
+
+    <div class="chalk-box">
+      <p><strong>F-number equation:</strong> N = f / D, where N is the f-number, f is the focal length, and D is the diameter of the aperture. An 80 mm lens with a 28.6 mm aperture opening has an f-number of 80/28.6 = f/2.8.</p>
+    </div>
+
+    <p>This definition has an elegant consequence: two lenses at the same f-number transmit the same amount of light per unit area of film, regardless of their focal lengths. A 50 mm lens at f/4 and a 200 mm lens at f/4 produce the same image brightness. The 200 mm lens has a much larger physical aperture (50 mm diameter versus 12.5 mm), but it also spreads the light over a larger image circle. The two effects cancel exactly, which is why f-numbers are universal &mdash; you can set the same f-number on any lens and get the same exposure.</p>
+
+    <p>This universality is why the f-number system became standard. It was formalized in the late 19th century, though aperture markings on lenses were not standardized until the early 20th century. The notation "f/" (lowercase f, forward slash) has been convention since the early 1900s.</p>
+
+    <h2>The F-Stop Scale</h2>
+
+    <p>The standard f-stop scale runs: f/1, f/1.4, f/2, f/2.8, f/4, f/5.6, f/8, f/11, f/16, f/22, f/32. Each step in this sequence represents a halving of the light admitted &mdash; what photographers call "one stop."</p>
+
+    <p>Why these particular numbers? The amount of light passing through a circular opening is proportional to the area of that circle, which is proportional to the square of its diameter. To halve the light, you need to divide the area by two, which means dividing the diameter by the square root of two (&radic;2 &asymp; 1.414). Each f-number in the standard scale is approximately &radic;2 times the previous one:</p>
+
+    <ul>
+      <li>f/1 &times; &radic;2 = f/1.414 &asymp; f/1.4</li>
+      <li>f/1.4 &times; &radic;2 = f/1.98 &asymp; f/2</li>
+      <li>f/2 &times; &radic;2 = f/2.83 &asymp; f/2.8</li>
+      <li>f/2.8 &times; &radic;2 = f/3.96 &asymp; f/4</li>
+      <li>f/4 &times; &radic;2 = f/5.66 &asymp; f/5.6</li>
+      <li>...and so on.</li>
+    </ul>
+
+    <div class="chalk-box">
+      <p><strong>Key concept:</strong> Each full f-stop doubles or halves the light. Going from f/5.6 to f/8 halves the light (one stop less). Going from f/5.6 to f/4 doubles the light (one stop more). The confusing part: a <em>larger</em> f-number means a <em>smaller</em> opening and <em>less</em> light. This is because the f-number is a ratio with the diameter in the denominator.</p>
+    </div>
+
+    <p>This inverse relationship trips up many beginners, but there is a logical reason for it. Since N = f/D, a larger N means a smaller D. Think of the f-number as a fraction: f/16 is a smaller fraction of the focal length than f/2. The naming convention was chosen so that the number would always be meaningful regardless of the focal length &mdash; f/8 on any lens means the aperture diameter is one-eighth of the focal length.</p>
+
+    <div class="diagram">
+      <svg viewBox="0 0 700 240" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Series of aperture circles showing f/2.8, f/4, f/5.6, f/8, f/11, and f/16 with decreasing sizes">
+        <!-- f/2.8 -->
+        <circle cx="70" cy="100" r="55" fill="none" stroke="#d4d8c8" stroke-width="2" stroke-linecap="round"/>
+        <circle cx="70" cy="100" r="50" fill="rgba(212,216,200,0.08)" stroke="none"/>
+        <text x="70" y="175" font-family="Georgia, serif" font-size="14" fill="#f0c75e" text-anchor="middle">f/2.8</text>
+        <text x="70" y="195" font-family="Georgia, serif" font-size="11" fill="#8fa089" text-anchor="middle">28.6 mm</text>
+        <!-- f/4 -->
+        <circle cx="185" cy="100" r="55" fill="none" stroke="#8fa089" stroke-width="1" stroke-dasharray="3,3"/>
+        <circle cx="185" cy="100" r="39" fill="none" stroke="#d4d8c8" stroke-width="2" stroke-linecap="round"/>
+        <circle cx="185" cy="100" r="35" fill="rgba(212,216,200,0.08)" stroke="none"/>
+        <text x="185" y="175" font-family="Georgia, serif" font-size="14" fill="#d4d8c8" text-anchor="middle">f/4</text>
+        <text x="185" y="195" font-family="Georgia, serif" font-size="11" fill="#8fa089" text-anchor="middle">20 mm</text>
+        <!-- f/5.6 -->
+        <circle cx="300" cy="100" r="55" fill="none" stroke="#8fa089" stroke-width="1" stroke-dasharray="3,3"/>
+        <circle cx="300" cy="100" r="28" fill="none" stroke="#d4d8c8" stroke-width="2" stroke-linecap="round"/>
+        <circle cx="300" cy="100" r="24" fill="rgba(212,216,200,0.08)" stroke="none"/>
+        <text x="300" y="175" font-family="Georgia, serif" font-size="14" fill="#d4d8c8" text-anchor="middle">f/5.6</text>
+        <text x="300" y="195" font-family="Georgia, serif" font-size="11" fill="#8fa089" text-anchor="middle">14.3 mm</text>
+        <!-- f/8 -->
+        <circle cx="415" cy="100" r="55" fill="none" stroke="#8fa089" stroke-width="1" stroke-dasharray="3,3"/>
+        <circle cx="415" cy="100" r="19.5" fill="none" stroke="#d4d8c8" stroke-width="2" stroke-linecap="round"/>
+        <circle cx="415" cy="100" r="16" fill="rgba(212,216,200,0.08)" stroke="none"/>
+        <text x="415" y="175" font-family="Georgia, serif" font-size="14" fill="#d4d8c8" text-anchor="middle">f/8</text>
+        <text x="415" y="195" font-family="Georgia, serif" font-size="11" fill="#8fa089" text-anchor="middle">10 mm</text>
+        <!-- f/11 -->
+        <circle cx="530" cy="100" r="55" fill="none" stroke="#8fa089" stroke-width="1" stroke-dasharray="3,3"/>
+        <circle cx="530" cy="100" r="14" fill="none" stroke="#d4d8c8" stroke-width="2" stroke-linecap="round"/>
+        <circle cx="530" cy="100" r="11" fill="rgba(212,216,200,0.08)" stroke="none"/>
+        <text x="530" y="175" font-family="Georgia, serif" font-size="14" fill="#d4d8c8" text-anchor="middle">f/11</text>
+        <text x="530" y="195" font-family="Georgia, serif" font-size="11" fill="#8fa089" text-anchor="middle">7.3 mm</text>
+        <!-- f/16 -->
+        <circle cx="640" cy="100" r="55" fill="none" stroke="#8fa089" stroke-width="1" stroke-dasharray="3,3"/>
+        <circle cx="640" cy="100" r="10" fill="none" stroke="#d4d8c8" stroke-width="2" stroke-linecap="round"/>
+        <circle cx="640" cy="100" r="7" fill="rgba(212,216,200,0.08)" stroke="none"/>
+        <text x="640" y="175" font-family="Georgia, serif" font-size="14" fill="#d4d8c8" text-anchor="middle">f/16</text>
+        <text x="640" y="195" font-family="Georgia, serif" font-size="11" fill="#8fa089" text-anchor="middle">5 mm</text>
+        <!-- Light amount labels -->
+        <text x="70" y="210" font-family="Georgia, serif" font-size="10" fill="#f0c75e" text-anchor="middle">Most light</text>
+        <text x="640" y="210" font-family="Georgia, serif" font-size="10" fill="#8fa089" text-anchor="middle">Least light</text>
+        <!-- Arrow -->
+        <line x1="120" y1="225" x2="590" y2="225" stroke="#8fa089" stroke-width="1" stroke-linecap="round"/>
+        <polygon points="590,222 598,225 590,228" fill="#8fa089"/>
+        <text x="355" y="238" font-family="Georgia, serif" font-size="11" fill="#8fa089" text-anchor="middle">Each stop halves the light</text>
+      </svg>
+      <p class="diagram-caption">Relative aperture sizes for an 80 mm lens (typical TLR) from f/2.8 to f/16, shown to scale. The dashed outer circle represents the full lens diameter for reference. Diameters and areas decrease by a factor of &radic;2 and 2 respectively at each full stop.</p>
+    </div>
+
+    <h2>Depth of Field</h2>
+
+    <p>Aperture does far more than control the amount of light. It also determines the <strong>depth of field</strong> &mdash; the range of distances in the scene that appear acceptably sharp in the final image. A wider aperture (smaller f-number) produces a shallower depth of field; a narrower aperture (larger f-number) produces a deeper depth of field.</p>
+
+    <p>To understand why, we need to revisit the thin lens equation from Lesson 2. A lens can only bring one distance to perfect focus at a time. Points at other distances form not as points on the film but as small discs called <strong>circles of confusion</strong>. An out-of-focus point produces a cone of light that is either converging toward or diverging from its true focus; where this cone intersects the film plane, it creates a circle rather than a point.</p>
+
+    <p>Here is the crucial insight: the size of that circle of confusion depends on the aperture. A wider aperture creates a wider cone of light, so the circle of confusion for out-of-focus points is larger. A narrower aperture creates a narrower cone, producing smaller circles of confusion. When the circles of confusion are small enough that the eye cannot distinguish them from true points, the image appears sharp. The range of distances for which this is true defines the depth of field.</p>
+
+    <div class="diagram">
+      <svg viewBox="0 0 700 340" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Depth of field diagram comparing wide aperture shallow focus to narrow aperture deep focus">
+        <!-- Top: Wide aperture (shallow DOF) -->
+        <text x="350" y="22" font-family="Georgia, serif" font-size="13" fill="#f0c75e" text-anchor="middle">Wide aperture (f/2.8) &mdash; shallow depth of field</text>
+        <!-- Lens (wide open) -->
+        <ellipse cx="250" cy="85" rx="6" ry="50" fill="none" stroke="#d4d8c8" stroke-width="2"/>
+        <!-- Film plane -->
+        <line x1="450" y1="40" x2="450" y2="130" stroke="#d4d8c8" stroke-width="2" stroke-linecap="round"/>
+        <text x="460" y="90" font-family="Georgia, serif" font-size="10" fill="#8fa089">film</text>
+        <!-- In-focus point -->
+        <circle cx="120" cy="85" r="3" fill="#f0c75e"/>
+        <text x="120" y="75" font-family="Georgia, serif" font-size="10" fill="#f0c75e" text-anchor="middle">in focus</text>
+        <line x1="120" y1="85" x2="247" y2="38" stroke="#f0c75e" stroke-width="1" stroke-linecap="round"/>
+        <line x1="120" y1="85" x2="247" y2="132" stroke="#f0c75e" stroke-width="1" stroke-linecap="round"/>
+        <line x1="253" y1="38" x2="450" y2="85" stroke="#f0c75e" stroke-width="1" stroke-linecap="round"/>
+        <line x1="253" y1="132" x2="450" y2="85" stroke="#f0c75e" stroke-width="1" stroke-linecap="round"/>
+        <circle cx="450" cy="85" r="2" fill="#f0c75e"/>
+        <!-- Out-of-focus point (nearer) -->
+        <circle cx="70" cy="85" r="3" fill="#8fa089"/>
+        <text x="55" y="75" font-family="Georgia, serif" font-size="10" fill="#8fa089" text-anchor="middle">near</text>
+        <line x1="70" y1="85" x2="247" y2="42" stroke="#8fa089" stroke-width="0.8" stroke-linecap="round" stroke-dasharray="4,3"/>
+        <line x1="70" y1="85" x2="247" y2="128" stroke="#8fa089" stroke-width="0.8" stroke-linecap="round" stroke-dasharray="4,3"/>
+        <line x1="253" y1="42" x2="450" y2="74" stroke="#8fa089" stroke-width="0.8" stroke-linecap="round" stroke-dasharray="4,3"/>
+        <line x1="253" y1="128" x2="450" y2="96" stroke="#8fa089" stroke-width="0.8" stroke-linecap="round" stroke-dasharray="4,3"/>
+        <!-- Big circle of confusion on film -->
+        <circle cx="450" cy="85" r="11" fill="none" stroke="#8fa089" stroke-width="1.5"/>
+        <text x="480" y="72" font-family="Georgia, serif" font-size="9" fill="#8fa089">large circle</text>
+        <text x="480" y="82" font-family="Georgia, serif" font-size="9" fill="#8fa089">of confusion</text>
+        <!-- DOF zone (narrow) -->
+        <rect x="105" y="130" width="30" height="8" rx="4" fill="#f0c75e" opacity="0.3"/>
+        <text x="120" y="150" font-family="Georgia, serif" font-size="10" fill="#f0c75e" text-anchor="middle">shallow DOF</text>
+
+        <!-- Bottom: Narrow aperture (deep DOF) -->
+        <text x="350" y="192" font-family="Georgia, serif" font-size="13" fill="#d4d8c8" text-anchor="middle">Narrow aperture (f/16) &mdash; deep depth of field</text>
+        <!-- Lens (stopped down) -->
+        <ellipse cx="250" cy="255" rx="6" ry="50" fill="none" stroke="#8fa089" stroke-width="1" stroke-dasharray="3,3"/>
+        <!-- Aperture blades -->
+        <line x1="250" y1="208" x2="250" y2="238" stroke="#d4d8c8" stroke-width="2" stroke-linecap="round"/>
+        <line x1="250" y1="272" x2="250" y2="302" stroke="#d4d8c8" stroke-width="2" stroke-linecap="round"/>
+        <!-- Small opening -->
+        <ellipse cx="250" cy="255" rx="4" ry="17" fill="none" stroke="#d4d8c8" stroke-width="2"/>
+        <!-- Film plane -->
+        <line x1="450" y1="210" x2="450" y2="300" stroke="#d4d8c8" stroke-width="2" stroke-linecap="round"/>
+        <text x="460" y="260" font-family="Georgia, serif" font-size="10" fill="#8fa089">film</text>
+        <!-- In-focus point -->
+        <circle cx="120" cy="255" r="3" fill="#f0c75e"/>
+        <line x1="120" y1="255" x2="248" y2="240" stroke="#f0c75e" stroke-width="1" stroke-linecap="round"/>
+        <line x1="120" y1="255" x2="248" y2="270" stroke="#f0c75e" stroke-width="1" stroke-linecap="round"/>
+        <line x1="252" y1="240" x2="450" y2="255" stroke="#f0c75e" stroke-width="1" stroke-linecap="round"/>
+        <line x1="252" y1="270" x2="450" y2="255" stroke="#f0c75e" stroke-width="1" stroke-linecap="round"/>
+        <circle cx="450" cy="255" r="2" fill="#f0c75e"/>
+        <!-- Out-of-focus point (nearer) -->
+        <circle cx="70" cy="255" r="3" fill="#d4d8c8"/>
+        <text x="55" y="245" font-family="Georgia, serif" font-size="10" fill="#d4d8c8" text-anchor="middle">near</text>
+        <line x1="70" y1="255" x2="248" y2="242" stroke="#d4d8c8" stroke-width="0.8" stroke-linecap="round" stroke-dasharray="4,3"/>
+        <line x1="70" y1="255" x2="248" y2="268" stroke="#d4d8c8" stroke-width="0.8" stroke-linecap="round" stroke-dasharray="4,3"/>
+        <line x1="252" y1="242" x2="450" y2="250" stroke="#d4d8c8" stroke-width="0.8" stroke-linecap="round" stroke-dasharray="4,3"/>
+        <line x1="252" y1="268" x2="450" y2="260" stroke="#d4d8c8" stroke-width="0.8" stroke-linecap="round" stroke-dasharray="4,3"/>
+        <!-- Tiny circle of confusion on film -->
+        <circle cx="450" cy="255" r="4" fill="none" stroke="#d4d8c8" stroke-width="1.5"/>
+        <text x="480" y="252" font-family="Georgia, serif" font-size="9" fill="#d4d8c8">small circle</text>
+        <text x="480" y="262" font-family="Georgia, serif" font-size="9" fill="#d4d8c8">of confusion</text>
+        <!-- DOF zone (wide) -->
+        <rect x="55" y="300" width="130" height="8" rx="4" fill="#d4d8c8" opacity="0.3"/>
+        <text x="120" y="320" font-family="Georgia, serif" font-size="10" fill="#d4d8c8" text-anchor="middle">deep DOF</text>
+      </svg>
+      <p class="diagram-caption">Depth of field compared at wide and narrow apertures. A wider aperture creates larger cones of light, so out-of-focus points produce larger circles of confusion on the film plane. A narrower aperture restricts the cones, keeping the circles small across a wider range of distances.</p>
+    </div>
+
+    <h2>Circle of Confusion</h2>
+
+    <p>The <strong>circle of confusion</strong> (CoC) is the maximum size of blur circle that still appears as a point to the viewer. It depends on the viewing conditions: how large the final print is, how far the viewer stands from it, and the resolving power of the viewer's eyes. For medium format 6&times;6 cm negatives, a commonly used CoC value is approximately 0.05 mm (50 micrometers). For 35 mm film, the standard is about 0.03 mm.</p>
+
+    <p>The larger CoC for medium format means that, all else being equal, a medium format camera produces a greater depth of field than a 35 mm camera at the same f-number and the same field of view. This is one reason medium format photographers often work at wider apertures than 35 mm photographers &mdash; the larger negative gives them more depth of field to spare. However, to achieve the same field of view, the medium format camera uses a longer focal length (80 mm versus 50 mm for "normal"), which reduces depth of field. The two effects partially cancel, but medium format still has a slight depth-of-field advantage in practice.</p>
+
+    <div class="chalk-box">
+      <p><strong>Key concept:</strong> Depth of field is not a binary &mdash; there is no hard boundary between "sharp" and "unsharp." Sharpness falls off gradually as distance from the focal plane increases. The depth of field is the zone where the blur is small enough to be invisible at a given viewing size and distance. The circle of confusion threshold defines that boundary.</p>
+    </div>
+
+    <h2>Factors Affecting Depth of Field</h2>
+
+    <p>Three factors control depth of field:</p>
+
+    <ol>
+      <li><strong>Aperture</strong> &mdash; The most direct control. Wider aperture = shallower depth of field. This is the primary tool photographers use to control how much of the scene appears sharp.</li>
+      <li><strong>Subject distance</strong> &mdash; Closer subjects have shallower depth of field. This is why macro photography has razor-thin depth of field even at small apertures, and why landscape photographs focused at infinity appear sharp from foreground to background even at moderate apertures.</li>
+      <li><strong>Focal length</strong> &mdash; Longer focal lengths produce shallower depth of field at the same subject distance and aperture. However, when comparing at the same field of view (different focal length, different distance), the effect is smaller and interacts with the subject-distance factor.</li>
+    </ol>
+
+    <p>For TLR photographers shooting medium format, a practical rule of thumb emerges: at f/3.5 with the subject at 2 meters, depth of field is only about 10&ndash;15 cm deep. At f/8 with the subject at 3 meters, depth of field expands to roughly 1 meter. At f/16 focused at 5 meters, nearly everything from about 2.5 meters to infinity will appear sharp. Understanding this progression lets you choose the right aperture for the image you want to make.</p>
+
+    <h2>Bokeh: The Quality of Blur</h2>
+
+    <p>While depth of field describes how much of the image is sharp, <strong>bokeh</strong> (from the Japanese word <em>boke</em>, meaning blur or haze) describes the aesthetic quality of the out-of-focus areas. Two lenses might produce the same depth of field at the same aperture, but the character of their blur can be dramatically different.</p>
+
+    <p>Several factors influence bokeh quality:</p>
+
+    <ul>
+      <li><strong>Blade count and shape</strong> &mdash; The aperture blades determine the shape of out-of-focus highlights. A perfectly circular aperture produces round, smooth bokeh discs. A five-blade iris produces pentagonal highlights. More blades generally produce rounder highlights, though blade shape (straight versus curved) also matters. Some modern lenses use curved blades to maintain a nearly circular opening even when stopped down.</li>
+      <li><strong>Spherical aberration correction</strong> &mdash; Lenses with under-corrected spherical aberration tend to produce softer-edged, more "creamy" bokeh discs. Over-corrected lenses produce bokeh discs with bright, hard edges &mdash; what photographers sometimes call "nervous" or "busy" bokeh. The Zeiss Planar is known for producing particularly smooth, pleasing bokeh, which is one reason it is so prized for portraiture.</li>
+      <li><strong>Foreground vs. background blur</strong> &mdash; Due to the asymmetry of the optical system, blur in front of the focal plane often has a different character than blur behind it. Most photographers find smooth background blur more aesthetically pleasing.</li>
+    </ul>
+
+    <div class="chalk-box">
+      <p><strong>Practical tip:</strong> When shooting portraits with a TLR, try shooting wide open (f/2.8 or f/3.5) with some distance between the subject and the background. The combination of medium-format negative size, moderate focal length, and wide aperture produces a beautiful separation between subject and background, with smooth bokeh that is one of the hallmarks of medium format portraiture.</p>
+    </div>
+
+    <h2>Diffraction: The Limit of Sharpness</h2>
+
+    <p>If a narrower aperture gives greater depth of field, why not simply use the smallest aperture available for every photograph? Because of diffraction. When light passes through a small opening, it does not travel in perfectly straight lines &mdash; the wave nature of light causes it to spread out slightly at the edges of the opening. This spreading is called diffraction, and it becomes increasingly significant as the aperture gets smaller.</p>
+
+    <p>At wide apertures, diffraction is negligible and the lens's optical aberrations are the primary limit on sharpness. As the aperture narrows, aberrations decrease (only the central, best-corrected portion of the lens is used) but diffraction increases. At some point, the two effects cross: the improvement from reduced aberrations is outweighed by the degradation from increased diffraction. This crossover point is where the lens delivers its best overall sharpness, and it typically occurs around f/8 to f/11 for medium format lenses.</p>
+
+    <p>The Airy disc &mdash; the diffraction pattern of a circular aperture, first described by George Biddell Airy in 1835 &mdash; sets the theoretical minimum size of a point image. For green light (550 nm) at f/16, the Airy disc diameter is about 21 micrometers. At f/22, it grows to about 30 micrometers. Since the circle of confusion for medium format is about 50 micrometers, diffraction does not become a serious problem until around f/22 &mdash; but the softening is visible in careful comparisons starting at f/16.</p>
+
+    <div class="chalk-box">
+      <p><strong>Key concept:</strong> Every lens has an optimal aperture range where sharpness is maximized. For TLR lenses, this is typically f/5.6 to f/11. Wider than f/5.6, aberrations reduce sharpness. Narrower than f/11, diffraction starts to soften the image. Use f/16 and f/22 when you need the depth of field, but know that peak sharpness occurs in the middle of the range.</p>
+    </div>
+
+    <h2>Typical TLR Aperture Ranges</h2>
+
+    <p>Most TLR cameras offer an aperture range from about f/3.5 (or f/2.8 on premium models) to f/22. Some go to f/32, though diffraction softening at that setting is considerable. Here is what you can expect at each setting from a typical TLR lens:</p>
+
+    <ul>
+      <li><strong>f/2.8</strong> (Rolleiflex 2.8 models only) &mdash; Maximum light gathering. Shallowest depth of field. Good sharpness in the center, softer in the corners. Excellent for low light and selective focus. The Zeiss Planar at f/2.8 is notably sharper than most Tessar-type lenses at f/3.5.</li>
+      <li><strong>f/3.5</strong> &mdash; Maximum aperture on most TLRs (Yashica-Mat 124G, Minolta Autocord, Rolleicord). Very shallow depth of field. Central sharpness is good; corner sharpness depends on the specific lens. Vignetting (light falloff at corners) may be visible.</li>
+      <li><strong>f/4</strong> &mdash; Slightly improved sharpness and reduced vignetting. Still shallow depth of field. A useful compromise when you want subject isolation but a bit more reliability than wide open.</li>
+      <li><strong>f/5.6</strong> &mdash; Sharpness improves noticeably. Vignetting is gone. Depth of field is moderate. Many photographers consider this the start of the "sweet spot" range.</li>
+      <li><strong>f/8</strong> &mdash; Peak sharpness for most TLR lenses. Excellent corner-to-corner performance. Moderate depth of field. The go-to setting for any situation where you want the best possible image quality and can afford the depth of field.</li>
+      <li><strong>f/11</strong> &mdash; Still extremely sharp, with deeper depth of field. The classic landscape/architecture setting. The old photojournalist's rule "f/8 and be there" could equally be "f/11 and be there" for medium format.</li>
+      <li><strong>f/16</strong> &mdash; Deep depth of field. Very slight diffraction softening begins. Excellent for scenes where front-to-back sharpness matters more than absolute peak resolution.</li>
+      <li><strong>f/22</strong> &mdash; Maximum depth of field. Noticeable diffraction softening. Use when you need everything from a few feet to infinity to be sharp and you are willing to accept a slight loss of resolution. At this aperture, any TLR lens will produce a good image &mdash; the differences between Tessar and Planar designs are minimal.</li>
+    </ul>
+
+    <h2>Aperture and Creative Control</h2>
+
+    <p>Aperture is arguably the most creatively powerful tool available to the photographer. It is the bridge between the technical and the artistic. A wide aperture isolates a portrait subject from a busy background, drawing the viewer's eye to the face. A narrow aperture makes every element in a street scene equally sharp, inviting the viewer to explore the entire frame. The choice of aperture tells the viewer what to look at.</p>
+
+    <p>Many of the greatest photographs made with TLR cameras exploit aperture as a creative tool. Vivian Maier's street photographs often show deep depth of field consistent with apertures of f/8 to f/11 on her Rolleiflex, keeping faces, signs, and architecture all sharp within the frame. Richard Avedon's fashion work sometimes used medium format at wider apertures for a dreamy, selective-focus effect that emphasized the model against a softly blurred environment.</p>
+
+    <p>Understanding aperture also helps you understand exposure. Since each full stop doubles or halves the light, aperture directly connects to shutter speed and film sensitivity. We will explore these connections in depth when we reach the exposure equation in Lesson 6. But even now, the principle is clear: if you open the aperture by one stop (say, from f/8 to f/5.6), you have doubled the light reaching the film, so you must halve the shutter time (from 1/125s to 1/250s, for example) to maintain the same exposure.</p>
+
+    <h2>Looking Ahead</h2>
+
+    <p>With aperture covered, we have now explored all the major elements of the lens system: the glass that bends light, the optical formulas that correct aberrations, and the iris that controls how much light passes through. In the next lesson, we turn to the other side of the exposure equation &mdash; the shutter. Where aperture controls the intensity of light, the shutter controls its duration. Together, they give the photographer complete control over how light reaches the film.</p>
+
+    <div class="lesson-sources">
+      <h2>Sources</h2>
+      <ul>
+        <li><a href="https://en.wikipedia.org/wiki/Aperture">Wikipedia &mdash; Aperture</a></li>
+        <li><a href="https://en.wikipedia.org/wiki/F-number">Wikipedia &mdash; F-number</a></li>
+        <li><a href="https://en.wikipedia.org/wiki/Depth_of_field">Wikipedia &mdash; Depth of field</a></li>
+        <li><a href="https://en.wikipedia.org/wiki/Circle_of_confusion">Wikipedia &mdash; Circle of confusion</a></li>
+        <li><a href="https://en.wikipedia.org/wiki/Bokeh">Wikipedia &mdash; Bokeh</a></li>
+        <li><a href="https://en.wikipedia.org/wiki/Diffraction-limited_system">Wikipedia &mdash; Diffraction-limited system</a></li>
+        <li><a href="https://en.wikipedia.org/wiki/Airy_disk">Wikipedia &mdash; Airy disk</a></li>
+        <li>Ray, Sidney F. <em>Applied Photographic Optics</em>, 3rd edition. Focal Press, 2002. Chapters 6&ndash;8 on aperture, depth of field, and diffraction.</li>
+      </ul>
+    </div>
+
+    <nav class="lesson-nav" aria-label="Lesson navigation">
+      <a href="/learn/03-lens-design-manufacturing.html" class="prev">Lens Design &amp; Manufacturing</a>
+      <a href="/learn/05-the-shutter.html" class="next">The Shutter</a>
+    </nav>
+  </article>
+  </main>
+
+  <footer>
+    &copy; 2026 metergeist
+    <div class="links">
+      <a href="/cameras/">TLR Guide</a>
+      <a href="/film/">Film Guide</a>
+      <a href="/learn/">Learn</a>
+      <a href="/blog/">Blog</a>
+      <a href="/support.html">Support</a>
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-NGH2JC1T0G"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-NGH2JC1T0G');</script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Shutter &mdash; Learn Film Photography | metergeist</title>
+  <meta name="description" content="How shutters control exposure time: leaf shutters vs focal-plane, mechanical escapements, shutter speed scales, flash sync, and why TLRs use leaf shutters.">
+  <link rel="canonical" href="https://metergeist.com/learn/05-the-shutter.html">
+  <link rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" href="/learn/learn.css">
+  <link rel="icon" href="/icon.png" type="image/png">
+</head>
+<body class="chalkboard">
+  <a href="#main" class="skip-link">Skip to content</a>
+  <nav aria-label="Main navigation">
+    <a href="/" class="logo">
+      <img src="/icon.png" alt="metergeist icon">
+      <span>metergeist</span>
+    </a>
+    <div class="links">
+      <a href="/cameras/">TLR Guide</a>
+      <a href="/film/">Film Guide</a>
+      <a href="/learn/">Learn</a>
+      <a href="/blog/">Blog</a>
+    </div>
+  </nav>
+
+  <main id="main">
+  <article class="lesson">
+    <div class="lesson-unit">Unit 2: Capturing Light</div>
+    <h1>The Shutter</h1>
+    <div class="lesson-number">Lesson 5 of 19</div>
+
+    <p>In the previous lesson we explored aperture &mdash; the iris that controls <em>how much</em> light passes through the lens at any given moment. But aperture alone does not make an exposure. The film also needs to know <em>how long</em> that light should fall on it. That is the shutter's job: to act as a precisely timed gate, opening to let light reach the film and closing again after an exact interval. Without a shutter, loading a camera with film and removing the lens cap would immediately fog the entire roll.</p>
+
+    <p>The shutter is one of the most mechanically ingenious components in any camera. It must open and close with repeatable precision, sometimes in less than a thousandth of a second, and it must do so tens of thousands of times over the camera's lifetime without losing accuracy. In this lesson we will examine the two major shutter designs &mdash; leaf shutters and focal-plane shutters &mdash; understand how their timing mechanisms work, and see why twin-lens reflex cameras almost universally chose the leaf shutter.</p>
+
+    <h2>A Precisely Timed Gate</h2>
+
+    <p>At its most basic, a shutter is any mechanism that blocks light from reaching the film until the photographer decides to make an exposure. The earliest cameras had no shutter at all. Daguerreotype photographers in the 1840s simply removed and replaced the lens cap by hand, counting seconds or even minutes aloud. Exposures were so long that mechanical timing was unnecessary.</p>
+
+    <p>As emulsions grew more sensitive through the 1860s and 1870s, exposure times dropped from minutes to fractions of a second. Hand-operated caps became impractical. Photographers needed mechanisms that could open and close faster and more consistently than human reflexes allowed. The first mechanical shutters appeared in the 1880s, and by the end of that decade two fundamental designs had emerged: the leaf shutter (also called a between-the-lens shutter) and the focal-plane shutter. Both survive today, each with distinct advantages.</p>
+
+    <h2>The Leaf Shutter</h2>
+
+    <p>A leaf shutter consists of thin, overlapping metal blades &mdash; typically three to five of them &mdash; arranged in a ring between or near the lens elements. When cocked, the blades are held closed by spring tension. When the shutter release is pressed, the blades swing open from the center outward, remain open for the selected duration, then swing closed again. The motion resembles the petals of a flower opening and closing.</p>
+
+    <p>The key engineering challenge is timing. The blades must open fully, hold, and close in intervals as short as 1/500 of a second. Early leaf shutters used simple spring-and-catch mechanisms, but accuracy improved dramatically with the development of clockwork escapements &mdash; the same principle used in mechanical watches. A gear train regulated by a ticking escapement controls how long the blades stay open. Slower speeds use more ticks of the escapement; faster speeds use fewer.</p>
+
+    <div class="diagram">
+      <svg viewBox="0 0 600 260" xmlns="http://www.w3.org/2000/svg">
+        <!-- Closed shutter -->
+        <text x="150" y="22" font-family="Georgia, serif" font-size="15" fill="#d4d8c8" text-anchor="middle">Closed</text>
+        <!-- Outer ring -->
+        <circle cx="150" cy="140" r="80" stroke="#8fa089" stroke-width="2" fill="none"/>
+        <!-- Five overlapping blades, closed position -->
+        <ellipse cx="150" cy="140" rx="12" ry="45" stroke="#d4d8c8" stroke-width="1.5" fill="#2a3a2e" transform="rotate(0 150 140)"/>
+        <ellipse cx="150" cy="140" rx="12" ry="45" stroke="#d4d8c8" stroke-width="1.5" fill="#2a3a2e" transform="rotate(72 150 140)"/>
+        <ellipse cx="150" cy="140" rx="12" ry="45" stroke="#d4d8c8" stroke-width="1.5" fill="#2a3a2e" transform="rotate(144 150 140)"/>
+        <ellipse cx="150" cy="140" rx="12" ry="45" stroke="#d4d8c8" stroke-width="1.5" fill="#2a3a2e" transform="rotate(216 150 140)"/>
+        <ellipse cx="150" cy="140" rx="12" ry="45" stroke="#d4d8c8" stroke-width="1.5" fill="#2a3a2e" transform="rotate(288 150 140)"/>
+        <!-- Center dot showing blades overlap -->
+        <circle cx="150" cy="140" r="3" fill="#d4d8c8"/>
+        <!-- Light blocked label -->
+        <text x="150" y="245" font-family="Georgia, serif" font-size="12" fill="#8fa089" text-anchor="middle">Light blocked</text>
+
+        <!-- Arrow between -->
+        <line x1="260" y1="140" x2="330" y2="140" stroke="#f0c75e" stroke-width="2" stroke-linecap="round"/>
+        <polygon points="330,134 342,140 330,146" fill="#f0c75e"/>
+
+        <!-- Open shutter -->
+        <text x="450" y="22" font-family="Georgia, serif" font-size="15" fill="#d4d8c8" text-anchor="middle">Open</text>
+        <!-- Outer ring -->
+        <circle cx="450" cy="140" r="80" stroke="#8fa089" stroke-width="2" fill="none"/>
+        <!-- Five blades retracted to edges -->
+        <ellipse cx="450" cy="68" rx="10" ry="18" stroke="#d4d8c8" stroke-width="1.5" fill="#2a3a2e" transform="rotate(0 450 68)"/>
+        <ellipse cx="519" cy="112" rx="10" ry="18" stroke="#d4d8c8" stroke-width="1.5" fill="#2a3a2e" transform="rotate(72 519 112)"/>
+        <ellipse cx="493" cy="190" rx="10" ry="18" stroke="#d4d8c8" stroke-width="1.5" fill="#2a3a2e" transform="rotate(144 493 190)"/>
+        <ellipse cx="407" cy="190" rx="10" ry="18" stroke="#d4d8c8" stroke-width="1.5" fill="#2a3a2e" transform="rotate(216 407 190)"/>
+        <ellipse cx="381" cy="112" rx="10" ry="18" stroke="#d4d8c8" stroke-width="1.5" fill="#2a3a2e" transform="rotate(288 381 112)"/>
+        <!-- Open center showing light path -->
+        <circle cx="450" cy="140" r="50" stroke="#f0c75e" stroke-width="1.5" fill="none" stroke-dasharray="6 4"/>
+        <!-- Light passes label -->
+        <text x="450" y="245" font-family="Georgia, serif" font-size="12" fill="#f0c75e" text-anchor="middle">Light passes through</text>
+      </svg>
+      <p class="diagram-caption">A leaf shutter: five metal blades pivot from closed (left) to open (right). In the closed position the blades overlap to block all light. When triggered, they swing outward to expose the film.</p>
+    </div>
+
+    <p>The three most important leaf shutter manufacturers dominated the twentieth century. <strong>Friedrich Deckel</strong> in Munich produced the Compur shutter beginning in 1912, which became the standard for high-quality cameras. The name &ldquo;Compur&rdquo; derives from &ldquo;Compound,&rdquo; an earlier Deckel shutter design. Compur shutters were used in Rolleiflex TLRs, Hasselblad medium-format cameras, and countless large-format lenses. <strong>Copal</strong>, a Japanese manufacturer founded in 1946, produced shutters that gradually replaced Compur in many applications during the 1960s and 1970s, offering comparable precision at lower cost. <strong>Seikosha</strong> (a division of Seiko) manufactured shutters for Mamiya TLRs and many other Japanese cameras.</p>
+
+    <p>A Compur-Rapid shutter from the 1950s, the type found in a Rolleiflex 2.8C, contains over forty individual parts: springs, levers, gears, an escapement wheel, a speed-regulating governor, and the blades themselves. All are assembled by hand under magnification. Despite this complexity, a well-maintained Compur shutter can remain accurate to within half a stop after seventy years of use &mdash; a testament to the quality of the engineering.</p>
+
+    <h3>Advantages of Leaf Shutters</h3>
+
+    <p>Leaf shutters offer several practical advantages. Because the blades open from the center and close back to the center, at any shutter speed the <em>entire</em> film frame is exposed simultaneously. This means a leaf shutter can synchronize with electronic flash at every speed, not just at slow speeds. For studio photographers and anyone using flash outdoors in bright light, this is an enormous benefit. A Rolleiflex can use flash at 1/500 second, while most focal-plane shutter cameras are limited to 1/60 or 1/125 for flash sync.</p>
+
+    <p>Leaf shutters are also exceptionally quiet. The blades are small and light, producing only a soft click. There is no mirror to slap upward (as in an SLR) and no large curtain to traverse the film gate. Street photographers have long prized this discretion. Vivian Maier, shooting with her Rolleiflex on the streets of Chicago, could make exposures that her subjects never heard.</p>
+
+    <p>Vibration is minimal as well. The blades have very low mass and move only a short distance, so the shutter contributes almost no mechanical shock. This reduces the risk of camera shake at marginal shutter speeds &mdash; another reason medium-format photographers valued the leaf shutter.</p>
+
+    <h2>The Focal-Plane Shutter</h2>
+
+    <p>The focal-plane shutter takes an entirely different approach. Instead of sitting inside the lens, it lives in the camera body, directly in front of the film plane. It consists of two curtains &mdash; fabric or metal &mdash; that travel across the film gate in sequence. The first curtain opens to begin the exposure. After the selected interval, the second curtain follows to end it.</p>
+
+    <p>At slow shutter speeds, the first curtain opens completely, the film is fully exposed for the desired duration, and then the second curtain closes. But at fast speeds something remarkable happens: the second curtain begins closing <em>before</em> the first curtain has finished opening. The result is a narrow slit that travels across the film, exposing each strip of the frame sequentially rather than all at once. At 1/1000 second in a typical 35mm SLR, the slit might be only a few millimeters wide.</p>
+
+    <p>This slit-travel behavior has two important consequences. First, it limits flash synchronization. Because the entire frame is never fully uncovered at fast speeds, an electronic flash fired during a fast exposure will only illuminate the narrow slit, leaving the rest of the frame dark. The fastest speed at which the frame is fully uncovered is called the <strong>X-sync speed</strong>, typically between 1/60 and 1/250 second depending on the camera.</p>
+
+    <p>Second, the sequential exposure can cause distortion of fast-moving subjects. A car racing past the camera may appear to lean forward because the bottom of the frame was exposed slightly later than the top. This &ldquo;rolling shutter&rdquo; effect (though the term is more commonly used for digital sensors) has been a characteristic of focal-plane shutters since their invention.</p>
+
+    <h3>Why SLRs Use Focal-Plane Shutters</h3>
+
+    <p>Despite these limitations, the focal-plane shutter has one overwhelming advantage for single-lens reflex cameras: because the shutter lives in the body, lenses do not need their own shutter. This makes lenses simpler, lighter, and cheaper. An SLR system might offer fifty interchangeable lenses, and none of them needs shutter blades. The economic and engineering savings are enormous. This is why virtually all 35mm SLRs, from the Leica III of 1933 to the Nikon FM2 and Canon AE-1, use focal-plane shutters.</p>
+
+    <p>Early focal-plane shutters used rubberized cloth curtains that traveled horizontally. Modern designs switched to vertical-travel metal blade shutters in the 1980s, reducing travel distance (24mm vertically vs. 36mm horizontally for 35mm format) and enabling faster X-sync speeds. The Nikon FM2, introduced in 1982, achieved a remarkable 1/250 second sync speed with its titanium honeycomb curtain.</p>
+
+    <h2>The Shutter Speed Scale</h2>
+
+    <p>Shutter speeds are organized in a standardized scale where each step &mdash; each <em>stop</em> &mdash; doubles or halves the exposure duration. The standard scale runs:</p>
+
+    <p><strong>1 &mdash; 1/2 &mdash; 1/4 &mdash; 1/8 &mdash; 1/15 &mdash; 1/30 &mdash; 1/60 &mdash; 1/125 &mdash; 1/250 &mdash; 1/500 &mdash; 1/1000</strong></p>
+
+    <p>Each value is approximately half the duration of the one before it. The mathematically precise doubling sequence would be 1, 1/2, 1/4, 1/8, 1/16, 1/32, 1/64, 1/128, 1/256, 1/512, 1/1024 &mdash; but these awkward numbers were rounded to the friendlier values we use today. The standard was formalized by the ASA (now ANSI) and adopted internationally. The rounding means that each stop is not exactly a factor of two, but the discrepancy is negligible in practice.</p>
+
+    <div class="diagram">
+      <svg viewBox="0 0 600 180" xmlns="http://www.w3.org/2000/svg">
+        <!-- Main timeline -->
+        <line x1="30" y1="80" x2="570" y2="80" stroke="#8fa089" stroke-width="2" stroke-linecap="round"/>
+        <!-- Speed markings -->
+        <line x1="30" y1="70" x2="30" y2="90" stroke="#d4d8c8" stroke-width="2" stroke-linecap="round"/>
+        <text x="30" y="110" font-family="Georgia, serif" font-size="13" fill="#d4d8c8" text-anchor="middle">1s</text>
+
+        <line x1="84" y1="70" x2="84" y2="90" stroke="#d4d8c8" stroke-width="2" stroke-linecap="round"/>
+        <text x="84" y="110" font-family="Georgia, serif" font-size="13" fill="#d4d8c8" text-anchor="middle">1/2</text>
+
+        <line x1="138" y1="70" x2="138" y2="90" stroke="#d4d8c8" stroke-width="2" stroke-linecap="round"/>
+        <text x="138" y="110" font-family="Georgia, serif" font-size="13" fill="#d4d8c8" text-anchor="middle">1/4</text>
+
+        <line x1="192" y1="70" x2="192" y2="90" stroke="#d4d8c8" stroke-width="2" stroke-linecap="round"/>
+        <text x="192" y="110" font-family="Georgia, serif" font-size="13" fill="#d4d8c8" text-anchor="middle">1/8</text>
+
+        <line x1="246" y1="70" x2="246" y2="90" stroke="#d4d8c8" stroke-width="2" stroke-linecap="round"/>
+        <text x="246" y="110" font-family="Georgia, serif" font-size="13" fill="#d4d8c8" text-anchor="middle">1/15</text>
+
+        <line x1="300" y1="70" x2="300" y2="90" stroke="#d4d8c8" stroke-width="2" stroke-linecap="round"/>
+        <text x="300" y="110" font-family="Georgia, serif" font-size="13" fill="#d4d8c8" text-anchor="middle">1/30</text>
+
+        <line x1="354" y1="70" x2="354" y2="90" stroke="#d4d8c8" stroke-width="2" stroke-linecap="round"/>
+        <text x="354" y="110" font-family="Georgia, serif" font-size="13" fill="#d4d8c8" text-anchor="middle">1/60</text>
+
+        <line x1="408" y1="70" x2="408" y2="90" stroke="#d4d8c8" stroke-width="2" stroke-linecap="round"/>
+        <text x="408" y="110" font-family="Georgia, serif" font-size="13" fill="#d4d8c8" text-anchor="middle">1/125</text>
+
+        <line x1="462" y1="70" x2="462" y2="90" stroke="#d4d8c8" stroke-width="2" stroke-linecap="round"/>
+        <text x="462" y="110" font-family="Georgia, serif" font-size="13" fill="#d4d8c8" text-anchor="middle">1/250</text>
+
+        <line x1="516" y1="70" x2="516" y2="90" stroke="#d4d8c8" stroke-width="2" stroke-linecap="round"/>
+        <text x="516" y="110" font-family="Georgia, serif" font-size="13" fill="#d4d8c8" text-anchor="middle">1/500</text>
+
+        <line x1="570" y1="70" x2="570" y2="90" stroke="#d4d8c8" stroke-width="2" stroke-linecap="round"/>
+        <text x="570" y="110" font-family="Georgia, serif" font-size="13" fill="#d4d8c8" text-anchor="middle">1/1000</text>
+
+        <!-- Doubling arrows -->
+        <path d="M 57 55 Q 57 40 84 40" stroke="#f0c75e" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+        <text x="70" y="36" font-family="Georgia, serif" font-size="10" fill="#f0c75e" text-anchor="middle">&times;2</text>
+
+        <path d="M 111 55 Q 111 40 138 40" stroke="#f0c75e" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+
+        <path d="M 165 55 Q 165 40 192 40" stroke="#f0c75e" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+
+        <!-- Labels -->
+        <text x="30" y="145" font-family="Georgia, serif" font-size="11" fill="#8fa089" text-anchor="middle">Slow</text>
+        <text x="570" y="145" font-family="Georgia, serif" font-size="11" fill="#8fa089" text-anchor="middle">Fast</text>
+        <text x="300" y="170" font-family="Georgia, serif" font-size="12" fill="#f0c75e" text-anchor="middle">Each step halves the exposure time (one stop)</text>
+      </svg>
+      <p class="diagram-caption">The standard shutter speed scale. Each step to the right halves the exposure duration &mdash; one stop less light reaching the film.</p>
+    </div>
+
+    <p>On the shutter speed ring of a typical TLR, these values are engraved as simple numbers without the &ldquo;1/&rdquo; prefix. A Rolleiflex 2.8F, for example, shows: B &mdash; 1 &mdash; 2 &mdash; 4 &mdash; 8 &mdash; 15 &mdash; 30 &mdash; 60 &mdash; 125 &mdash; 250 &mdash; 500. You read &ldquo;125&rdquo; and understand it means 1/125 of a second. The &ldquo;1&rdquo; means one full second.</p>
+
+    <div class="chalk-box">
+      <p><strong>Key concept:</strong> Every shutter speed step doubles or halves the exposure, just like every aperture stop. This symmetry is what makes the exposure system work &mdash; opening the aperture one stop has exactly the same effect as slowing the shutter by one stop. The two controls are interchangeable in terms of total light delivered to the film.</p>
+    </div>
+
+    <h2>B and T Modes</h2>
+
+    <p>Most shutters include at least one special mode beyond the timed speeds. <strong>B mode</strong> (for &ldquo;Bulb&rdquo;) holds the shutter open for as long as the photographer keeps the release pressed, then closes it when the release is let go. The name comes from the rubber air bulbs that nineteenth-century photographers squeezed to operate pneumatic shutter releases. B mode is essential for exposures longer than the slowest timed speed &mdash; night photography, star trails, or long exposures in dim interiors.</p>
+
+    <p><strong>T mode</strong> (for &ldquo;Time&rdquo;) works similarly but is mechanically latched: one press opens the shutter, a second press closes it. This frees the photographer from holding the release during very long exposures, reducing the risk of vibration. T mode was common on older shutters but disappeared from many later designs as cable releases made B mode more practical.</p>
+
+    <p>Some Compur shutters also include a brief-time setting marked as &ldquo;B&rdquo; alongside a separate &ldquo;T&rdquo; on the speed ring. The Rolleiflex 2.8F has only B mode; earlier Rolleicords often had both B and T.</p>
+
+    <h2>Why TLRs Use Leaf Shutters</h2>
+
+    <p>Nearly every twin-lens reflex camera ever manufactured uses a leaf shutter mounted in or near the taking lens. This is not coincidental &mdash; the TLR design makes the leaf shutter the natural choice for several reasons.</p>
+
+    <p>First, a TLR has no moving mirror. In an SLR, the mirror must flip up out of the light path before the film can be exposed. A focal-plane shutter, sitting right in front of the film, coordinates with this mirror movement. A TLR has a fixed mirror in the viewing path that never moves, so there is no need for the shutter to synchronize with anything other than the photographer's finger. The leaf shutter, living inside the lens assembly, fits this architecture perfectly.</p>
+
+    <p>Second, TLRs generally have a fixed lens (or at most, a few interchangeable lens pairs on models like the Mamiya C series). The main argument for focal-plane shutters &mdash; allowing many lenses to share one shutter &mdash; does not apply when the camera has only one taking lens.</p>
+
+    <p>Third, the practical benefits of leaf shutters are especially valuable for medium-format work. Flash sync at all speeds is a genuine advantage for portrait and wedding photographers, who historically relied on TLRs. The quiet operation suits street photography. And the low vibration helps maintain sharpness on the larger negative, where camera shake is more visible because the image requires less enlargement.</p>
+
+    <h2>Flash Synchronization</h2>
+
+    <p>To understand flash sync, remember that an electronic flash produces its entire burst of light in a very brief interval &mdash; typically between 1/1000 and 1/10,000 of a second. For that flash to illuminate the entire frame, the shutter must be fully open at the moment the flash fires. This is the synchronization problem.</p>
+
+    <p>With a leaf shutter, the blades are fully open at <em>every</em> speed (the blades open, pause while fully open, then close). This means any shutter speed can be used with electronic flash. The camera's sync contact simply fires the flash at the moment the blades reach their fully-open position. This is called <strong>X-sync</strong> (X for &ldquo;xenon,&rdquo; the gas used in electronic flash tubes).</p>
+
+    <p>Older cameras also had an <strong>M-sync</strong> setting for flashbulbs. A single-use flashbulb takes roughly 20 milliseconds to reach peak brightness after being ignited. M-sync fires the bulb early &mdash; before the shutter opens &mdash; so the bulb is at peak brightness when the blades reach their open position. If you accidentally use M-sync with an electronic flash, the flash fires while the shutter is still closed, and you get a blank frame. Many vintage TLR users have learned this lesson the hard way.</p>
+
+    <div class="chalk-box">
+      <p><strong>Practical tip:</strong> If you acquire a vintage TLR, check whether the flash sync switch is set to X or M. Most cameras default to X, but some were left on M by their previous owner. If your flash photos come out dark, this is the first thing to check.</p>
+    </div>
+
+    <h2>The Self-Timer</h2>
+
+    <p>Many leaf shutters include a self-timer mechanism &mdash; a delay device that holds the shutter release for approximately 8 to 12 seconds before firing. The self-timer is a separate clockwork escapement geared to run slowly. When engaged (usually by moving a small lever on the shutter housing), pressing the release starts the self-timer countdown. At the end of the delay, the self-timer releases the main shutter mechanism, which then fires at whatever speed is set.</p>
+
+    <p>The self-timer was originally designed to let the photographer appear in their own photographs, but it has a practical photographic use as well: it provides a completely hands-free shutter release when the camera is on a tripod, eliminating the vibration of pressing the release button. Some photographers use the self-timer as a poor man's cable release.</p>
+
+    <h2>Shutter Accuracy and Aging</h2>
+
+    <p>Mechanical shutters rely on springs, lubricants, and precisely machined parts. Over decades, lubricants can thicken or migrate, springs can weaken, and parts can wear. The most common failure mode in vintage cameras is <em>slow speeds running too slowly</em>. The escapement that regulates the 1-second or 1/2-second speeds is the most delicate timing mechanism in the shutter, and it is the first to be affected by aging lubricant. A shutter that should give 1 second may deliver 2 or 3 seconds. Fast speeds are generally more robust because they rely on spring tension rather than the escapement.</p>
+
+    <p>A camera repair technician can clean, lubricate, and adjust (CLA) a leaf shutter, restoring it to factory specifications. For vintage TLR users, a CLA is one of the best investments you can make. A properly serviced Compur or Copal shutter will remain accurate for another decade or more.</p>
+
+    <div class="chalk-box">
+      <p><strong>Testing your shutter:</strong> You can get a rough sense of shutter accuracy by ear. Fire each speed in sequence from 1 second down to the fastest speed. Each step should sound noticeably shorter than the last. If two adjacent speeds sound identical, or if the slow speeds sound sluggish with a grinding quality, the shutter likely needs service.</p>
+    </div>
+
+    <h2>Choosing a Shutter Speed</h2>
+
+    <p>Beyond its role in exposure, shutter speed controls how motion is rendered. A fast shutter speed (1/250 or above) freezes moving subjects &mdash; a child running, a bird in flight. A slow shutter speed (1/15 or below) allows motion blur, which can convey a sense of speed or fluidity. The choice is creative as well as technical.</p>
+
+    <p>For handheld shooting, a practical rule of thumb is to use a shutter speed at least as fast as the reciprocal of the focal length. A TLR with a 75mm lens should use 1/60 or faster to minimize the effects of hand tremor. With an 80mm lens, 1/125 provides an extra margin of safety. This is not an absolute rule &mdash; steady hands, good technique, and bracing the camera can extend it &mdash; but it is a useful starting point.</p>
+
+    <p>The interplay between shutter speed and aperture forms the core of exposure control. In the next lesson, we will formalize this relationship in the exposure equation, showing how shutter and aperture work together as a system &mdash; and why changing one always demands a compensating change in the other.</p>
+
+    <div class="lesson-sources">
+      <h2>Sources</h2>
+      <ul>
+        <li><a href="https://en.wikipedia.org/wiki/Shutter_(photography)">Wikipedia &mdash; Shutter (photography)</a></li>
+        <li><a href="https://en.wikipedia.org/wiki/Leaf_shutter">Wikipedia &mdash; Leaf shutter</a></li>
+        <li><a href="https://en.wikipedia.org/wiki/Focal-plane_shutter">Wikipedia &mdash; Focal-plane shutter</a></li>
+        <li><a href="https://en.wikipedia.org/wiki/Compur_shutter">Wikipedia &mdash; Compur shutter</a></li>
+        <li><a href="https://en.wikipedia.org/wiki/Flash_synchronization">Wikipedia &mdash; Flash synchronization</a></li>
+        <li><a href="https://www.cameramanuals.org/flashes_meters/flash_guide.htm">Camera Manuals &mdash; Flash synchronization guide</a></li>
+        <li>Rudolf Kingslake, <em>A History of the Photographic Lens</em> (Academic Press, 1989) &mdash; chapters on shutter development</li>
+      </ul>
+    </div>
+
+    <nav class="lesson-nav" aria-label="Lesson navigation">
+      <a href="04-aperture.html" class="prev">Aperture</a>
+      <a href="06-exposure-equation.html" class="next">The Exposure Equation</a>
+    </nav>
+  </article>
+  </main>
+
+  <footer>
+    &copy; 2026 metergeist
+    <div class="links">
+      <a href="/cameras/">TLR Guide</a>
+      <a href="/film/">Film Guide</a>
+      <a href="/learn/">Learn</a>
+      <a href="/blog/">Blog</a>
+      <a href="/support.html">Support</a>
+    </div>
+  </footer>
+</body>
+</html>

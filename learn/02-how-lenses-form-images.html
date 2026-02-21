@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-NGH2JC1T0G"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-NGH2JC1T0G');</script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>How Lenses Form Images &mdash; Learn Film Photography | metergeist</title>
+  <meta name="description" content="From pinhole cameras to convex lenses: learn refraction, focal length, the thin lens equation, magnification, and why multi-element lens designs exist.">
+  <link rel="canonical" href="https://metergeist.com/learn/02-how-lenses-form-images.html">
+  <link rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" href="/learn/learn.css">
+  <link rel="icon" href="/icon.png" type="image/png">
+</head>
+<body class="chalkboard">
+  <a href="#main" class="skip-link">Skip to content</a>
+  <nav aria-label="Main navigation">
+    <a href="/" class="logo">
+      <img src="/icon.png" alt="metergeist icon">
+      <span>metergeist</span>
+    </a>
+    <div class="links">
+      <a href="/cameras/">TLR Guide</a>
+      <a href="/film/">Film Guide</a>
+      <a href="/learn/">Learn</a>
+      <a href="/blog/">Blog</a>
+    </div>
+  </nav>
+
+  <main id="main">
+  <article class="lesson">
+    <div class="lesson-unit">Unit 1: Light &amp; Optics</div>
+    <h1>How Lenses Form Images</h1>
+    <div class="lesson-number">Lesson 2 of 19</div>
+
+    <p>In Lesson 1 we learned what light is. Now we need to understand how to control it &mdash; how to gather rays of light scattered from a scene and bring them together into a sharp, focused image. This is the fundamental job of every camera lens, and it rests on a handful of physical principles that have been understood for centuries.</p>
+
+    <h2>The Pinhole Camera</h2>
+
+    <p>The simplest way to form an image requires no lens at all. A pinhole camera &mdash; known since antiquity as a <em>camera obscura</em> &mdash; uses a tiny aperture to project an inverted image of the outside world onto a surface inside a darkened chamber.</p>
+
+    <p>The principle is straightforward. Light travels in straight lines. If you place a small hole in an opaque barrier, only a narrow cone of light rays from each point in the scene can pass through. These rays continue in straight lines and strike the opposite wall of the chamber. Rays from the top of the scene pass through the hole and hit the bottom of the projection surface; rays from the bottom hit the top. The result is an inverted, reversed image of the scene.</p>
+
+    <div class="diagram">
+      <svg viewBox="0 0 650 280" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Pinhole camera ray diagram showing how light from a tree passes through a pinhole to form an inverted image">
+        <!-- Camera box -->
+        <rect x="300" y="40" width="300" height="200" rx="3" fill="none" stroke="#d4d8c8" stroke-width="2" stroke-linecap="round"/>
+        <!-- Pinhole opening -->
+        <line x1="300" y1="40" x2="300" y2="120" stroke="#d4d8c8" stroke-width="2" stroke-linecap="round"/>
+        <line x1="300" y1="160" x2="300" y2="240" stroke="#d4d8c8" stroke-width="2" stroke-linecap="round"/>
+        <!-- Pinhole label -->
+        <text x="308" y="145" font-family="Georgia, serif" font-size="11" fill="#f0c75e">pinhole</text>
+        <!-- Object (tree/arrow on left) -->
+        <line x1="100" y1="80" x2="100" y2="200" stroke="#d4d8c8" stroke-width="2.5" stroke-linecap="round"/>
+        <polygon points="100,80 93,95 107,95" fill="#d4d8c8"/>
+        <text x="100" y="220" font-family="Georgia, serif" font-size="12" fill="#d4d8c8" text-anchor="middle">Object</text>
+        <!-- Ray from top of object through pinhole to bottom of image -->
+        <line x1="100" y1="80" x2="300" y2="140" stroke="#f0c75e" stroke-width="1.5" stroke-linecap="round" stroke-dasharray="6,3"/>
+        <line x1="300" y1="140" x2="570" y2="200" stroke="#f0c75e" stroke-width="1.5" stroke-linecap="round"/>
+        <!-- Ray from bottom of object through pinhole to top of image -->
+        <line x1="100" y1="200" x2="300" y2="140" stroke="#8fa089" stroke-width="1.5" stroke-linecap="round" stroke-dasharray="6,3"/>
+        <line x1="300" y1="140" x2="570" y2="80" stroke="#8fa089" stroke-width="1.5" stroke-linecap="round"/>
+        <!-- Ray from middle -->
+        <line x1="100" y1="140" x2="300" y2="140" stroke="#d4d8c8" stroke-width="1" stroke-linecap="round" stroke-dasharray="4,4"/>
+        <line x1="300" y1="140" x2="570" y2="140" stroke="#d4d8c8" stroke-width="1" stroke-linecap="round"/>
+        <!-- Inverted image on back wall -->
+        <line x1="570" y1="80" x2="570" y2="200" stroke="#d4d8c8" stroke-width="2" stroke-linecap="round"/>
+        <polygon points="570,200 563,185 577,185" fill="#d4d8c8"/>
+        <text x="570" y="220" font-family="Georgia, serif" font-size="12" fill="#d4d8c8" text-anchor="middle">Image</text>
+        <text x="570" y="233" font-family="Georgia, serif" font-size="10" fill="#8fa089" text-anchor="middle">(inverted)</text>
+        <!-- Labels -->
+        <text x="450" y="30" font-family="Georgia, serif" font-size="13" fill="#d4d8c8" text-anchor="middle">Dark chamber</text>
+      </svg>
+      <p class="diagram-caption">A pinhole camera. Light from each point of the object passes through the tiny opening in straight lines, forming an inverted image on the back wall. No lens is needed, but the image is very dim.</p>
+    </div>
+
+    <p>The Chinese philosopher Mozi described the pinhole effect around 400 BCE. Aristotle noted it as well. The Arab scholar Ibn al-Haytham (Alhazen) gave a thorough analysis in his <em>Book of Optics</em> around 1011 CE, and the Renaissance saw camera obscuras used as drawing aids by artists including, it is believed, Vermeer.</p>
+
+    <p>The pinhole camera demonstrates the core principle of image formation, but it has a serious limitation: the image is extremely dim. A smaller pinhole produces a sharper image (by restricting each point to a narrower cone of light) but lets in less light, making the image even dimmer. There is a fundamental trade-off between sharpness and brightness that the pinhole cannot overcome. To collect more light while maintaining sharpness, we need a lens.</p>
+
+    <div class="chalk-box">
+      <p><strong>Key concept:</strong> The pinhole camera works because light travels in straight lines. Each point in the scene projects through the hole to a corresponding point on the image plane, but the image is dim because only a tiny fraction of the available light gets through.</p>
+    </div>
+
+    <h2>Refraction: How Light Bends</h2>
+
+    <p>A lens works by bending light &mdash; a process called refraction. Refraction occurs when light passes from one transparent material into another with a different optical density. When light enters glass from air, it slows down, and this change in speed causes the light ray to change direction.</p>
+
+    <p>The law governing refraction was described independently by the Dutch mathematician Willebrord Snellius (Snell) around 1621 and by Ren&eacute; Descartes in 1637. Snell's law states that when light crosses a boundary between two materials, the ratio of the sines of the angles of incidence and refraction equals the ratio of the refractive indices of the two materials:</p>
+
+    <div class="chalk-box">
+      <p><strong>Snell's Law:</strong> n<sub>1</sub> sin(&theta;<sub>1</sub>) = n<sub>2</sub> sin(&theta;<sub>2</sub>), where n<sub>1</sub> and n<sub>2</sub> are the refractive indices of the two media, and &theta;<sub>1</sub> and &theta;<sub>2</sub> are the angles of incidence and refraction measured from the surface normal.</p>
+    </div>
+
+    <p>The refractive index of a material describes how much it slows light. Vacuum has a refractive index of exactly 1. Air is very close to 1 (approximately 1.0003). Common optical glass ranges from about 1.5 to 1.9. The higher the refractive index, the more the glass bends light.</p>
+
+    <p>When light enters a denser medium (higher refractive index), it bends toward the normal &mdash; the imaginary line perpendicular to the surface. When it exits into a less dense medium, it bends away from the normal. A lens exploits this by shaping its surfaces so that rays from a distant point are all bent to converge at a single point behind the lens.</p>
+
+    <h2>The Convex Lens and Focal Length</h2>
+
+    <p>A simple convex (converging) lens is thicker in the center than at the edges. When parallel light rays &mdash; from a distant source like the sun or a far-away subject &mdash; enter the lens, they are bent inward. Rays near the edges of the lens are bent more steeply than rays near the center. If the lens is well-made, all these rays converge at a single point behind the lens. This point is called the <strong>focal point</strong>, and the distance from the center of the lens to the focal point is the <strong>focal length</strong>.</p>
+
+    <div class="diagram">
+      <svg viewBox="0 0 650 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Convex lens ray diagram showing parallel rays converging to a focal point, and an object being imaged">
+        <!-- Lens -->
+        <ellipse cx="260" cy="150" rx="12" ry="100" fill="none" stroke="#d4d8c8" stroke-width="2"/>
+        <text x="260" y="268" font-family="Georgia, serif" font-size="12" fill="#d4d8c8" text-anchor="middle">Convex lens</text>
+        <!-- Optical axis -->
+        <line x1="30" y1="150" x2="620" y2="150" stroke="#8fa089" stroke-width="1" stroke-dasharray="6,4" stroke-linecap="round"/>
+        <text x="625" y="154" font-family="Georgia, serif" font-size="10" fill="#8fa089">axis</text>
+        <!-- Focal point -->
+        <circle cx="400" cy="150" r="4" fill="#f0c75e"/>
+        <text x="400" y="175" font-family="Georgia, serif" font-size="12" fill="#f0c75e" text-anchor="middle">F</text>
+        <!-- Focal length bracket -->
+        <line x1="260" y1="195" x2="400" y2="195" stroke="#f0c75e" stroke-width="1" stroke-linecap="round"/>
+        <line x1="260" y1="190" x2="260" y2="200" stroke="#f0c75e" stroke-width="1" stroke-linecap="round"/>
+        <line x1="400" y1="190" x2="400" y2="200" stroke="#f0c75e" stroke-width="1" stroke-linecap="round"/>
+        <text x="330" y="215" font-family="Georgia, serif" font-size="12" fill="#f0c75e" text-anchor="middle">focal length (f)</text>
+        <!-- Parallel rays from left converging to focal point -->
+        <line x1="40" y1="80" x2="253" y2="80" stroke="#d4d8c8" stroke-width="1.5" stroke-linecap="round"/>
+        <line x1="253" y1="80" x2="400" y2="150" stroke="#d4d8c8" stroke-width="1.5" stroke-linecap="round"/>
+        <line x1="40" y1="120" x2="256" y2="120" stroke="#d4d8c8" stroke-width="1.5" stroke-linecap="round"/>
+        <line x1="256" y1="120" x2="400" y2="150" stroke="#d4d8c8" stroke-width="1.5" stroke-linecap="round"/>
+        <line x1="40" y1="150" x2="400" y2="150" stroke="#d4d8c8" stroke-width="1.5" stroke-linecap="round"/>
+        <line x1="40" y1="180" x2="264" y2="180" stroke="#d4d8c8" stroke-width="1.5" stroke-linecap="round"/>
+        <line x1="264" y1="180" x2="400" y2="150" stroke="#d4d8c8" stroke-width="1.5" stroke-linecap="round"/>
+        <line x1="40" y1="220" x2="267" y2="220" stroke="#d4d8c8" stroke-width="1.5" stroke-linecap="round"/>
+        <line x1="267" y1="220" x2="400" y2="150" stroke="#d4d8c8" stroke-width="1.5" stroke-linecap="round"/>
+        <!-- Continuation past focal point (diverging) -->
+        <line x1="400" y1="150" x2="520" y2="200" stroke="#8fa089" stroke-width="1" stroke-linecap="round" stroke-dasharray="4,3"/>
+        <line x1="400" y1="150" x2="520" y2="100" stroke="#8fa089" stroke-width="1" stroke-linecap="round" stroke-dasharray="4,3"/>
+        <!-- Label for parallel rays -->
+        <text x="40" y="65" font-family="Georgia, serif" font-size="11" fill="#8fa089">Parallel rays from</text>
+        <text x="40" y="78" font-family="Georgia, serif" font-size="11" fill="#8fa089">distant object</text>
+      </svg>
+      <p class="diagram-caption">A convex lens bends parallel light rays inward to converge at the focal point F. The focal length is the distance from the lens center to this point. Rays near the edge are bent more sharply than those near the center.</p>
+    </div>
+
+    <p>Focal length is the single most important specification of any lens. A 75 mm lens on a TLR camera has its focal point 75 mm behind the lens when focused at infinity. A shorter focal length means more bending power and a wider field of view. A longer focal length means less bending and a narrower field of view (telephoto effect).</p>
+
+    <p>Most twin-lens reflex cameras use a lens with a focal length between 75 mm and 80 mm. On the 6&times;6 cm medium format, this gives a field of view roughly equivalent to a 40&ndash;45 mm lens on a 35 mm camera &mdash; slightly wider than what is conventionally called "normal." The Rolleiflex 2.8F uses a 80 mm Planar or Xenotar; the Yashica-Mat 124G uses a 80 mm Yashinon. These focal lengths were chosen as a good compromise between a natural perspective and practical lens design constraints.</p>
+
+    <h2>The Thin Lens Equation</h2>
+
+    <p>For an idealized thin lens (one where the lens thickness is negligible compared to the focal length), there is an elegant mathematical relationship between the focal length, the distance from the lens to the object, and the distance from the lens to the image:</p>
+
+    <div class="chalk-box">
+      <p><strong>Thin lens equation:</strong> 1/f = 1/d<sub>o</sub> + 1/d<sub>i</sub>, where f is the focal length, d<sub>o</sub> is the distance from the lens to the object, and d<sub>i</sub> is the distance from the lens to the image.</p>
+    </div>
+
+    <p>This equation tells us several important things. When the object is very far away (d<sub>o</sub> approaches infinity), 1/d<sub>o</sub> approaches zero, so d<sub>i</sub> equals f &mdash; the image forms at the focal point. This is why we focus a lens to infinity for distant subjects.</p>
+
+    <p>As the object moves closer, d<sub>i</sub> increases &mdash; the image forms farther behind the lens. This is why camera lenses extend forward when you focus on nearby subjects: the lens-to-film distance must increase. On a TLR, you can observe this directly by watching the lens barrel extend as you turn the focusing knob from infinity down to the minimum focusing distance.</p>
+
+    <div class="diagram">
+      <svg viewBox="0 0 700 260" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Thin lens equation diagram with labeled object distance, image distance, and focal length">
+        <!-- Lens -->
+        <ellipse cx="300" cy="120" rx="10" ry="85" fill="none" stroke="#d4d8c8" stroke-width="2"/>
+        <!-- Optical axis -->
+        <line x1="30" y1="120" x2="670" y2="120" stroke="#8fa089" stroke-width="1" stroke-dasharray="5,4" stroke-linecap="round"/>
+        <!-- Object arrow -->
+        <line x1="100" y1="50" x2="100" y2="120" stroke="#d4d8c8" stroke-width="2.5" stroke-linecap="round"/>
+        <polygon points="100,50 94,63 106,63" fill="#d4d8c8"/>
+        <text x="100" y="140" font-family="Georgia, serif" font-size="12" fill="#d4d8c8" text-anchor="middle">Object</text>
+        <!-- Image arrow (inverted) -->
+        <line x1="540" y1="120" x2="540" y2="190" stroke="#d4d8c8" stroke-width="2.5" stroke-linecap="round"/>
+        <polygon points="540,190 534,177 546,177" fill="#d4d8c8"/>
+        <text x="540" y="210" font-family="Georgia, serif" font-size="12" fill="#d4d8c8" text-anchor="middle">Image</text>
+        <text x="540" y="224" font-family="Georgia, serif" font-size="10" fill="#8fa089" text-anchor="middle">(inverted)</text>
+        <!-- Key rays -->
+        <!-- Ray parallel to axis through far focal point -->
+        <line x1="100" y1="50" x2="295" y2="50" stroke="#f0c75e" stroke-width="1.5" stroke-linecap="round"/>
+        <line x1="295" y1="50" x2="540" y2="190" stroke="#f0c75e" stroke-width="1.5" stroke-linecap="round"/>
+        <!-- Ray through center of lens -->
+        <line x1="100" y1="50" x2="540" y2="190" stroke="#8fa089" stroke-width="1.5" stroke-linecap="round"/>
+        <!-- Ray through near focal point emerges parallel -->
+        <line x1="100" y1="50" x2="305" y2="190" stroke="#d4d8c8" stroke-width="1" stroke-linecap="round" stroke-dasharray="4,3"/>
+        <line x1="305" y1="190" x2="540" y2="190" stroke="#d4d8c8" stroke-width="1" stroke-linecap="round" stroke-dasharray="4,3"/>
+        <!-- Focal points -->
+        <circle cx="200" cy="120" r="3.5" fill="#f0c75e"/>
+        <text x="200" y="110" font-family="Georgia, serif" font-size="11" fill="#f0c75e" text-anchor="middle">F</text>
+        <circle cx="400" cy="120" r="3.5" fill="#f0c75e"/>
+        <text x="400" y="110" font-family="Georgia, serif" font-size="11" fill="#f0c75e" text-anchor="middle">F</text>
+        <!-- Distance labels -->
+        <!-- do -->
+        <line x1="100" y1="245" x2="300" y2="245" stroke="#d4d8c8" stroke-width="1" stroke-linecap="round"/>
+        <line x1="100" y1="240" x2="100" y2="250" stroke="#d4d8c8" stroke-width="1" stroke-linecap="round"/>
+        <line x1="300" y1="240" x2="300" y2="250" stroke="#d4d8c8" stroke-width="1" stroke-linecap="round"/>
+        <text x="200" y="240" font-family="Georgia, serif" font-size="13" fill="#d4d8c8" text-anchor="middle">d&#x2092; (object distance)</text>
+        <!-- di -->
+        <line x1="300" y1="245" x2="540" y2="245" stroke="#d4d8c8" stroke-width="1" stroke-linecap="round"/>
+        <line x1="540" y1="240" x2="540" y2="250" stroke="#d4d8c8" stroke-width="1" stroke-linecap="round"/>
+        <text x="420" y="240" font-family="Georgia, serif" font-size="13" fill="#d4d8c8" text-anchor="middle">d&#x1D62; (image distance)</text>
+      </svg>
+      <p class="diagram-caption">The thin lens equation in action. An object placed beyond the focal point produces a real, inverted image on the other side of the lens. The three principal rays shown here are used to find the image location graphically.</p>
+    </div>
+
+    <h2>Real vs. Virtual Images</h2>
+
+    <p>A convex lens can form two types of images, depending on where the object is placed relative to the focal point.</p>
+
+    <p>When the object is farther from the lens than the focal length (d<sub>o</sub> > f), the lens forms a <strong>real image</strong> &mdash; one that can be projected onto a screen (or a piece of film). Real images are inverted (upside-down and left-right reversed). This is the case in all normal photography: the subject is beyond the focal point, and the lens projects a real, inverted image onto the film plane. If you have ever removed the lens from a camera and looked at the ground glass of a TLR or a view camera, you see the image upside-down. That is the real image.</p>
+
+    <p>When the object is closer to the lens than the focal length (d<sub>o</sub> &lt; f), the light rays diverge after passing through the lens, and no real image is formed. However, if you look through the lens from the far side, your eye traces the diverging rays backward and perceives a <strong>virtual image</strong> &mdash; an upright, magnified image that appears to be behind the object. This is how a simple magnifying glass works. It is also the principle behind the viewing lens of a TLR &mdash; although the TLR viewing system is more complex, involving a mirror and a ground glass, the magnifying loupe on some models uses this virtual-image principle to enlarge the ground glass image for easier composition.</p>
+
+    <h2>Magnification</h2>
+
+    <p>The magnification of a lens describes how large the image is compared to the object. For a thin lens, the magnification (m) is given by:</p>
+
+    <div class="chalk-box">
+      <p><strong>Magnification:</strong> m = &minus;d<sub>i</sub> / d<sub>o</sub> = h<sub>i</sub> / h<sub>o</sub>, where h<sub>i</sub> is the image height and h<sub>o</sub> is the object height. The negative sign indicates that a real image is inverted.</p>
+    </div>
+
+    <p>When you photograph a person standing 3 meters away with an 80 mm lens, the thin lens equation gives d<sub>i</sub> of approximately 82.2 mm. The magnification is about &minus;82.2/3000 = &minus;0.027, meaning the image on the film is about 1/37th the size of the real person. A subject 1.7 meters tall produces an image about 46 mm tall on the 6&times;6 cm negative &mdash; nicely filling the frame.</p>
+
+    <p>At closer distances, magnification increases. When d<sub>o</sub> equals 2f (twice the focal length), d<sub>i</sub> also equals 2f, and the magnification is exactly &minus;1: the image is the same size as the object. This is the basis of 1:1 macro photography. Most TLR cameras cannot focus this close without auxiliary close-up lenses (sometimes called Rolleinar or Yashinon close-up sets), because the bellows extension is limited.</p>
+
+    <h2>Why a Single Lens Is Not Enough</h2>
+
+    <p>The thin lens equation describes an idealized lens that produces a perfect image. Real lenses fall short of this ideal in many ways, producing <strong>aberrations</strong> &mdash; imperfections in the image. A single glass element has significant problems:</p>
+
+    <ul>
+      <li><strong>Chromatic aberration</strong> &mdash; Different wavelengths (colors) of light refract by different amounts. Blue light bends more than red, so a single lens focuses blue light at a shorter distance than red. This creates color fringing around high-contrast edges.</li>
+      <li><strong>Spherical aberration</strong> &mdash; Rays passing through the outer edges of a spherical lens are bent more than the thin lens equation predicts, so they focus at a different point than rays through the center. This creates a soft, hazy look.</li>
+      <li><strong>Coma</strong> &mdash; Off-axis points of light are rendered as comet-shaped streaks rather than crisp points.</li>
+      <li><strong>Astigmatism</strong> &mdash; Lines at different orientations focus at different distances, so vertical and horizontal lines cannot both be sharp at the same time in the outer parts of the image.</li>
+      <li><strong>Field curvature</strong> &mdash; The natural image surface of a simple lens is curved, not flat. Since film is flat, the center and edges of the image cannot both be in perfect focus simultaneously.</li>
+    </ul>
+
+    <p>These problems are why all serious camera lenses use multiple glass elements. By combining elements with different curvatures, thicknesses, and types of glass, lens designers can cancel out aberrations. An achromatic doublet (two elements of different glass types cemented together) largely corrects chromatic aberration. More complex designs address the other aberrations as well. The Cooke Triplet of 1893 was the first design to correct all five primary (Seidel) aberrations using only three elements &mdash; a landmark in optical engineering.</p>
+
+    <div class="chalk-box">
+      <p><strong>Key concept:</strong> Aberrations are the reason camera lenses need multiple elements. Each element introduces its own set of errors, but by carefully choosing the shapes, spacings, and glass types of multiple elements, the errors can be made to cancel. Modern lens design is a sophisticated balancing act.</p>
+    </div>
+
+    <h2>The Image Circle</h2>
+
+    <p>A lens projects a circular image &mdash; the <strong>image circle</strong> &mdash; behind itself. Only the central portion of this circle is sharp enough for photography; quality degrades toward the edges due to increasing aberrations and vignetting (light falloff). The film format must fit entirely within the usable portion of the image circle.</p>
+
+    <p>A lens designed for 6&times;6 cm medium format must project an image circle with a diameter of at least 79 mm (the diagonal of the 56 &times; 56 mm actual image area). This is why medium format lenses are physically larger than lenses for 35 mm cameras &mdash; they must cover a larger image circle. The 80 mm lens on a Rolleiflex is substantially bigger than an 85 mm lens for a 35 mm SLR, even though the focal lengths are similar.</p>
+
+    <p>The image circle is also why you cannot simply mount a 35 mm camera lens on a medium format body and expect good results. The lens's image circle is too small; the corners and edges of the larger format would fall outside the area of usable image quality, resulting in severe vignetting or complete darkness at the frame edges.</p>
+
+    <h2>From Theory to Practice</h2>
+
+    <p>Every photograph you take with a camera uses these principles. Light from the scene refracts through the lens elements, converges to form a real, inverted image on the film plane, and the exposure captures that image chemically. The thin lens equation governs focusing. Magnification determines how large your subject appears in the frame. And the inevitability of aberrations drives the need for multi-element lens designs.</p>
+
+    <p>In the next lesson, we will explore those multi-element designs in detail &mdash; from the elegant Cooke Triplet to the sophisticated Zeiss Planar, the very lens formula used in many of the finest TLR cameras ever made. We will see how optical engineers have spent more than a century finding ever-cleverer ways to bend light precisely while minimizing the imperfections that physics would otherwise impose.</p>
+
+    <div class="lesson-sources">
+      <h2>Sources</h2>
+      <ul>
+        <li><a href="https://en.wikipedia.org/wiki/Pinhole_camera">Wikipedia &mdash; Pinhole camera</a></li>
+        <li><a href="https://en.wikipedia.org/wiki/Camera_obscura">Wikipedia &mdash; Camera obscura</a></li>
+        <li><a href="https://en.wikipedia.org/wiki/Snell%27s_law">Wikipedia &mdash; Snell's law</a></li>
+        <li><a href="https://en.wikipedia.org/wiki/Thin_lens">Wikipedia &mdash; Thin lens</a></li>
+        <li><a href="https://en.wikipedia.org/wiki/Optical_aberration">Wikipedia &mdash; Optical aberration</a></li>
+        <li><a href="https://en.wikipedia.org/wiki/Ibn_al-Haytham">Wikipedia &mdash; Ibn al-Haytham (Alhazen)</a></li>
+        <li><a href="https://en.wikipedia.org/wiki/Image_circle">Wikipedia &mdash; Image circle</a></li>
+        <li>Hecht, Eugene. <em>Optics</em>, 5th edition. Pearson, 2017. Chapter 5 on geometrical optics and lenses.</li>
+        <li>Kingslake, Rudolf. <em>A History of the Photographic Lens</em>. Academic Press, 1989.</li>
+      </ul>
+    </div>
+
+    <nav class="lesson-nav" aria-label="Lesson navigation">
+      <a href="/learn/01-what-is-light.html" class="prev">What Is Light?</a>
+      <a href="/learn/03-lens-design-manufacturing.html" class="next">Lens Design &amp; Manufacturing</a>
+    </nav>
+  </article>
+  </main>
+
+  <footer>
+    &copy; 2026 metergeist
+    <div class="links">
+      <a href="/cameras/">TLR Guide</a>
+      <a href="/film/">Film Guide</a>
+      <a href="/learn/">Learn</a>
+      <a href="/blog/">Blog</a>
+      <a href="/support.html">Support</a>
+    </div>
+  </footer>
+</body>
+</html>

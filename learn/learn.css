@@ -1,0 +1,319 @@
+/* Chalkboard theme for /learn/ */
+
+/* Chalkboard variables */
+:root {
+  --chalk: #d4d8c8;
+  --chalk-dim: #8fa089;
+  --chalk-heading: #e8dcc8;
+  --chalk-highlight: #f0c75e;
+  --chalk-link: #7aa0c8;
+  --board: #2a3a2e;
+  --board-light: #354a38;
+}
+
+/* Chalkboard body override */
+.chalkboard {
+  background: var(--board);
+}
+
+/* Lesson article */
+.lesson {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 3rem 1.5rem 2rem;
+}
+
+.lesson-unit {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--chalk-dim);
+  margin-bottom: 0.3rem;
+}
+
+.lesson h1 {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--chalk-heading);
+  line-height: 1.2;
+  margin-bottom: 0.6rem;
+  letter-spacing: -0.01em;
+}
+
+.lesson .lesson-number {
+  font-size: 0.85rem;
+  color: var(--chalk-dim);
+  margin-bottom: 2rem;
+}
+
+.lesson h2 {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--chalk-heading);
+  margin-top: 2.5rem;
+  margin-bottom: 0.8rem;
+}
+
+.lesson h3 {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--chalk);
+  margin-top: 1.8rem;
+  margin-bottom: 0.5rem;
+}
+
+.lesson p {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 1.05rem;
+  color: var(--chalk);
+  line-height: 1.85;
+  margin-bottom: 1.2rem;
+}
+
+.lesson ul, .lesson ol {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 1.05rem;
+  color: var(--chalk);
+  line-height: 1.85;
+  margin: 0 0 1.2rem 1.5rem;
+}
+
+.lesson li {
+  margin-bottom: 0.4rem;
+}
+
+.lesson strong {
+  color: var(--chalk-heading);
+  font-weight: 600;
+}
+
+.lesson em {
+  color: var(--chalk-highlight);
+  font-style: italic;
+}
+
+.lesson a {
+  color: var(--chalk-link);
+  border-bottom-color: rgba(122, 160, 200, 0.4);
+}
+
+.lesson a:hover {
+  color: #a0c8f0;
+  border-bottom-color: #a0c8f0;
+}
+
+/* Chalkboard callout boxes */
+.chalk-box {
+  background: rgba(255, 255, 255, 0.04);
+  border-left: 3px solid var(--chalk-dim);
+  padding: 1rem 1.2rem;
+  margin: 1.5rem 0;
+  border-radius: 0 6px 6px 0;
+}
+
+.chalk-box p {
+  font-size: 0.95rem;
+  margin-bottom: 0.5rem;
+  color: var(--chalk-dim);
+}
+
+.chalk-box p:last-child {
+  margin-bottom: 0;
+}
+
+.chalk-box strong {
+  color: var(--chalk);
+}
+
+/* SVG diagram containers */
+.diagram {
+  margin: 2rem 0;
+  text-align: center;
+}
+
+.diagram svg {
+  max-width: 100%;
+  height: auto;
+}
+
+.diagram-caption {
+  font-size: 0.85rem;
+  color: var(--chalk-dim);
+  margin-top: 0.6rem;
+  font-style: italic;
+  font-family: Georgia, 'Times New Roman', serif;
+}
+
+/* Lesson navigation (prev/next) */
+.lesson-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 3rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--board-light);
+  gap: 1rem;
+}
+
+.lesson-nav a {
+  font-size: 0.9rem;
+  color: var(--chalk-link);
+  border-bottom: none;
+  padding: 0.5rem 0;
+}
+
+.lesson-nav a:hover {
+  color: #a0c8f0;
+}
+
+.lesson-nav .prev::before {
+  content: "\2190\00a0";
+}
+
+.lesson-nav .next::after {
+  content: "\00a0\2192";
+}
+
+/* Sources section */
+.lesson-sources {
+  margin-top: 2.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--board-light);
+}
+
+.lesson-sources h2 {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--chalk-dim);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  margin-top: 0;
+  margin-bottom: 0.8rem;
+}
+
+.lesson-sources ul {
+  list-style: none;
+  margin-left: 0;
+  padding-left: 0;
+  font-size: 0.85rem;
+}
+
+.lesson-sources li {
+  margin-bottom: 0.3rem;
+  color: var(--chalk-dim);
+}
+
+.lesson-sources a {
+  color: var(--chalk-link);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  font-size: 0.85rem;
+}
+
+/* Syllabus page */
+.syllabus {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 3rem 1.5rem 2rem;
+}
+
+.syllabus h1 {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: var(--chalk-heading);
+  margin-bottom: 0.5rem;
+  letter-spacing: -0.01em;
+}
+
+.syllabus .syllabus-intro {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 1.05rem;
+  color: var(--chalk);
+  line-height: 1.8;
+  margin-bottom: 2.5rem;
+}
+
+.syllabus .unit {
+  margin-bottom: 2rem;
+}
+
+.syllabus .unit-title {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--chalk-highlight);
+  margin-bottom: 0.6rem;
+  padding-bottom: 0.3rem;
+  border-bottom: 1px solid var(--board-light);
+  font-weight: 600;
+}
+
+.syllabus .lesson-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.syllabus .lesson-list li {
+  margin-bottom: 0.4rem;
+}
+
+.syllabus .lesson-link {
+  display: block;
+  padding: 0.7rem 1rem;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--board-light);
+  border-radius: 8px;
+  border-bottom: 1px solid var(--board-light);
+  transition: border-color 0.2s, background 0.2s;
+}
+
+.syllabus .lesson-link:hover {
+  border-color: var(--chalk-dim);
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.syllabus .lesson-link .num {
+  font-size: 0.8rem;
+  color: var(--chalk-dim);
+  margin-right: 0.5rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.syllabus .lesson-link .title {
+  font-size: 1rem;
+  color: var(--chalk);
+  font-weight: 500;
+}
+
+.syllabus .lesson-link .desc {
+  display: block;
+  font-size: 0.85rem;
+  color: var(--chalk-dim);
+  margin-top: 0.2rem;
+  padding-left: 1.8rem;
+  line-height: 1.5;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .lesson { padding: 2rem 1.5rem 1.5rem; }
+  .lesson h1 { font-size: 1.7rem; }
+  .syllabus { padding: 2rem 1.5rem 1.5rem; }
+  .syllabus h1 { font-size: 1.8rem; }
+}
+
+@media (max-width: 540px) {
+  .lesson { padding: 1.5rem 1rem 1.5rem; }
+  .lesson h1 { font-size: 1.5rem; }
+  .lesson h2 { font-size: 1.15rem; }
+  .lesson p, .lesson ul, .lesson ol { font-size: 0.95rem; }
+  .lesson-nav { flex-direction: column; align-items: flex-start; }
+  .syllabus { padding: 1.5rem 1rem 1.5rem; }
+  .syllabus h1 { font-size: 1.5rem; }
+  .syllabus .lesson-link { padding: 0.6rem 0.8rem; }
+  .syllabus .lesson-link .desc { padding-left: 0; }
+}

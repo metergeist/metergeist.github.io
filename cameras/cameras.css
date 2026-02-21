@@ -192,7 +192,7 @@
 }
 
 .cam-history, .famous-users, .pop-culture, .innovations,
-.collector-notes, .resources, .related, .pricing-table {
+.collector-notes, .buying-tips, .resources, .related, .pricing-table {
   margin-bottom: 1.5rem;
 }
 
@@ -202,10 +202,31 @@
   margin-bottom: 0.5rem;
 }
 
-.cam-history p, .famous-users p, .pop-culture p, .collector-notes p {
+.cam-history p, .famous-users p, .pop-culture p, .collector-notes p, .buying-tips p {
   color: var(--text-dim);
   font-size: 0.95rem;
   line-height: 1.7;
+}
+
+.buying-tips ul {
+  padding-left: 1.2rem;
+  color: var(--text-dim);
+  font-size: 0.9rem;
+}
+
+.buying-tips li {
+  margin-bottom: 0.4rem;
+  line-height: 1.6;
+}
+
+.buying-tips li strong {
+  color: var(--text);
+}
+
+.buying-tips .bt-link {
+  font-size: 0.85rem;
+  color: var(--chrome-dim);
+  margin-top: 0.5rem;
 }
 
 .innovations ul, .resources ul {
@@ -224,7 +245,7 @@
 }
 
 .pricing-table h3, .resources h3, .innovations h3,
-.famous-users h3, .pop-culture h3, .collector-notes h3, .related h3 {
+.famous-users h3, .pop-culture h3, .collector-notes h3, .buying-tips h3, .related h3 {
   font-size: 1rem;
   color: var(--chrome);
   margin-bottom: 0.5rem;

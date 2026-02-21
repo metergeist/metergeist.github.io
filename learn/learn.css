@@ -1,19 +1,13 @@
-/* Chalkboard theme for /learn/ */
+/* Learn section — uses site palette from style.css */
 
-/* Chalkboard variables */
 :root {
-  --chalk: #d4d8c8;
-  --chalk-dim: #8fa089;
-  --chalk-heading: #e8dcc8;
-  --chalk-highlight: #f0c75e;
-  --chalk-link: #7aa0c8;
-  --board: #2a3a2e;
-  --board-light: #354a38;
-}
-
-/* Chalkboard body override */
-.chalkboard {
-  background: var(--board);
+  --chalk: var(--text-dim);
+  --chalk-dim: var(--chrome-dim);
+  --chalk-heading: var(--text);
+  --chalk-highlight: var(--text);
+  --chalk-link: var(--chrome);
+  --board: var(--bg);
+  --board-light: #333;
 }
 
 /* Lesson article */
@@ -97,18 +91,18 @@
 
 .lesson a {
   color: var(--chalk-link);
-  border-bottom-color: rgba(122, 160, 200, 0.4);
+  border-bottom-color: var(--chrome-dim);
 }
 
 .lesson a:hover {
-  color: #a0c8f0;
-  border-bottom-color: #a0c8f0;
+  color: #fff;
+  border-bottom-color: #fff;
 }
 
 /* Chalkboard callout boxes */
 .chalk-box {
   background: rgba(255, 255, 255, 0.04);
-  border-left: 3px solid var(--chalk-dim);
+  border-left: 3px solid #555;
   padding: 1rem 1.2rem;
   margin: 1.5rem 0;
   border-radius: 0 6px 6px 0;
@@ -166,7 +160,7 @@
 }
 
 .lesson-nav a:hover {
-  color: #a0c8f0;
+  color: #fff;
 }
 
 .lesson-nav .prev::before {
@@ -244,7 +238,7 @@
   font-size: 0.8rem;
   text-transform: uppercase;
   letter-spacing: 0.1em;
-  color: var(--chalk-highlight);
+  color: var(--chrome);
   margin-bottom: 0.6rem;
   padding-bottom: 0.3rem;
   border-bottom: 1px solid var(--board-light);
@@ -264,16 +258,15 @@
 .syllabus .lesson-link {
   display: block;
   padding: 0.7rem 1rem;
-  background: rgba(255, 255, 255, 0.03);
-  border: 1px solid var(--board-light);
+  background: var(--surface);
+  border: 1px solid #333;
   border-radius: 8px;
-  border-bottom: 1px solid var(--board-light);
-  transition: border-color 0.2s, background 0.2s;
+  border-bottom: 1px solid #333;
+  transition: border-color 0.2s;
 }
 
 .syllabus .lesson-link:hover {
-  border-color: var(--chalk-dim);
-  background: rgba(255, 255, 255, 0.06);
+  border-color: var(--chrome);
 }
 
 .syllabus .lesson-link .num {

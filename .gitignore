@@ -1,0 +1,14 @@
+# Python virtual environment
+.venv/
+
+# Link audit generated artifacts
+link_audit.db
+link_audit.db-shm
+link_audit.db-wal
+link_summary.md
+
+# Draft/staging pages
+film-audit.html
+
+# OS files
+.DS_Store

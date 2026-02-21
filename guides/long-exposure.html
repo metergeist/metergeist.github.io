@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-NGH2JC1T0G"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-NGH2JC1T0G');</script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Long Exposure Guide for Film Photography — metergeist</title>
+  <meta name="description" content="Learn how to take stunning long exposure photos on film with metergeist. Covers ND filters, reciprocity failure compensation, bulb mode timing, and practical tips.">
+  <meta property="og:title" content="Long Exposure Guide for Film Photography — metergeist">
+  <meta property="og:description" content="Master long exposures on film: ND filters, reciprocity failure, bulb timing, and practical tips from TLR Companion.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://metergeist.com/guides/long-exposure.html">
+  <meta property="og:image" content="https://metergeist.com/icon.png">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Long Exposure Guide for Film Photography — metergeist">
+  <meta name="twitter:description" content="Master long exposures on film: ND filters, reciprocity failure, bulb timing, and practical tips.">
+  <meta name="twitter:image" content="https://metergeist.com/icon.png">
+  <link rel="canonical" href="https://metergeist.com/guides/long-exposure.html">
+  <link rel="stylesheet" href="../style.css">
+  <link rel="icon" href="../icon.png" type="image/png">
+  <style>
+    .guide-table { width: 100%; border-collapse: collapse; margin: 1rem 0 1.5rem; font-size: 0.9rem; }
+    .guide-table th { text-align: left; padding: 0.5rem 0.8rem; border-bottom: 1px solid #444; color: var(--chrome); font-weight: 600; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.04em; }
+    .guide-table td { padding: 0.4rem 0.8rem; border-bottom: 1px solid #2a2a2a; color: var(--text-dim); }
+    .guide-table tr:hover td { background: rgba(255,255,255,0.02); }
+    .tip-box { background: var(--surface); border: 1px solid #333; border-left: 3px solid var(--chrome); border-radius: 8px; padding: 1rem 1.2rem; margin: 1.2rem 0; font-size: 0.9rem; }
+    .tip-box strong { color: var(--chrome); display: block; margin-bottom: 0.3rem; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.04em; }
+    .tip-box p { margin-bottom: 0.4rem; }
+    .step-number { display: inline-block; width: 28px; height: 28px; background: var(--surface); border: 1px solid var(--chrome-dim); border-radius: 50%; text-align: center; line-height: 26px; font-weight: 700; font-size: 0.85rem; color: var(--chrome); margin-right: 0.6rem; flex-shrink: 0; }
+    .step { display: flex; align-items: flex-start; margin-bottom: 1rem; }
+    .step-content { flex: 1; }
+    .step-content h3 { margin-top: 0; margin-bottom: 0.3rem; }
+    .formula { background: var(--surface); border: 1px solid #333; border-radius: 8px; padding: 0.8rem 1.2rem; margin: 1rem 0; font-family: "SF Mono", "Menlo", monospace; font-size: 0.9rem; color: var(--chrome); text-align: center; }
+    .breadcrumb { font-size: 0.85rem; color: var(--text-dim); margin-bottom: 1.5rem; }
+    .breadcrumb a { color: var(--chrome-dim); font-size: 0.85rem; }
+  </style>
+</head>
+<body>
+  <a href="#main" class="skip-link">Skip to content</a>
+  <nav aria-label="Main navigation">
+    <a href="/" class="logo">
+      <img src="../icon.png" alt="metergeist icon">
+      <span>metergeist</span>
+    </a>
+    <div class="links">
+      <a href="/cameras/">TLR Guide</a>
+      <a href="/film/">Film Guide</a>
+      <a href="/blog/">Blog</a>
+      <a href="/support.html">Support</a>
+    </div>
+  </nav>
+
+  <main id="main">
+  <div class="content">
+    <p class="breadcrumb"><a href="/">Home</a> &rsaquo; <a href="/guides/">Guides</a> &rsaquo; Long Exposure</p>
+    <h1>Long Exposure Photography on Film</h1>
+    <p class="updated">A practical guide to ND filters, reciprocity failure, and bulb timing with TLR Companion</p>
+
+    <p>Long exposures are one of the most rewarding techniques in film photography. Silky waterfalls, streaked clouds, ghosted crowds, light trails at dusk &mdash; effects that are impossible to replicate in post. But shooting long exposures on film requires more thought than digital. You can&rsquo;t check the LCD and reshoot. This guide covers everything you need to get it right the first time.</p>
+
+    <h2>What You Need</h2>
+    <ul>
+      <li><strong>A camera with bulb mode</strong> &mdash; most <a href="/cameras/">TLR cameras</a> have a B setting that holds the shutter open as long as you press it</li>
+      <li><strong>A tripod</strong> &mdash; essential for any exposure longer than about 1/15s</li>
+      <li><strong>A cable release</strong> &mdash; prevents camera shake when triggering the shutter (many TLRs accept standard cable releases). See our <a href="/guides/accessories-and-hacks.html">accessories guide</a> for recommendations</li>
+      <li><strong>An ND filter</strong> (optional) &mdash; lets you extend exposure times in bright conditions</li>
+      <li><strong>metergeist</strong> &mdash; handles the math (reciprocity correction and timing) so you don&rsquo;t have to</li>
+    </ul>
+
+    <h2>Understanding ND Filters</h2>
+    <p>A neutral density (ND) filter is a dark piece of glass that reduces the amount of light reaching your film. This lets you use slower shutter speeds even in bright conditions &mdash; turning a 1/125s exposure into a 30-second one.</p>
+    <p>ND filters are rated by their <strong>filter factor</strong> (how much they divide the light) or by <strong>stops</strong> of light reduction:</p>
+
+    <table class="guide-table" role="table" aria-label="ND filter reference">
+      <thead>
+        <tr><th>Filter</th><th>Stops</th><th>Light Reduction</th><th>Best For</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>ND2</td><td>1</td><td>&frac12;</td><td>Slight motion blur</td></tr>
+        <tr><td>ND4</td><td>2</td><td>&frac14;</td><td>Wider apertures in daylight</td></tr>
+        <tr><td>ND8</td><td>3</td><td>&#8539;</td><td>Moving water, light clouds</td></tr>
+        <tr><td>ND16</td><td>4</td><td>1/16</td><td>Waterfalls, moderate motion</td></tr>
+        <tr><td>ND64</td><td>6</td><td>1/64</td><td>Smooth water, cloud streaks</td></tr>
+        <tr><td>ND1000</td><td>10</td><td>1/1000</td><td>Extreme long exposure, ghosting</td></tr>
+      </tbody>
+    </table>
+
+    <div class="tip-box">
+      <strong>Which ND to start with?</strong>
+      <p>An ND8 (3-stop) is the most versatile first filter. It turns a 1-second exposure into 8 seconds &mdash; enough for silky water without requiring minutes of timing. An ND1000 (10-stop) is dramatic but requires careful reciprocity compensation.</p>
+    </div>
+
+    <h3>Using ND Filters in metergeist</h3>
+    <p>Tap the <strong>ND</strong> badge in the exposure controls area. Select your filter from the list. The app automatically subtracts the filter&rsquo;s stops from the exposure value, so the aperture and shutter readings account for the light loss.</p>
+    <p>When the adjusted exposure pushes beyond your camera&rsquo;s slowest shutter speed, the display switches to <strong>BULB</strong> and shows the exact time you need.</p>
+
+    <h2>Reciprocity Failure</h2>
+    <p>Here&rsquo;s where film gets tricky. At exposure times longer than about one second, film becomes <em>less sensitive</em> to light. The silver halide crystals need proportionally more photons to form an image at low light levels. This is called <strong>reciprocity failure</strong>.</p>
+    <p>In practice: if your meter says 4 seconds, the actual exposure might need to be 6, 8, or even 12 seconds depending on the film stock. Every film behaves differently.</p>
+
+    <div class="formula">corrected time = metered time<sup>p</sup></div>
+
+    <p>The exponent <strong>p</strong> is specific to each film stock, derived from manufacturer data sheets. metergeist has built-in reciprocity data for all 19 supported film stocks.</p>
+
+    <h3>How Much Does It Matter?</h3>
+    <table class="guide-table" role="table" aria-label="Reciprocity correction examples">
+      <thead>
+        <tr><th>Metered Time</th><th>HP5+ (p=1.31)</th><th>T-Max 100 (p=1.15)</th><th>Tri-X (p=1.33)</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>1s</td><td>1.0s</td><td>1.0s</td><td>1.0s</td></tr>
+        <tr><td>2s</td><td>2.5s</td><td>2.2s</td><td>2.5s</td></tr>
+        <tr><td>4s</td><td>5.7s</td><td>4.6s</td><td>5.9s</td></tr>
+        <tr><td>8s</td><td>13.9s</td><td>9.8s</td><td>14.6s</td></tr>
+        <tr><td>15s</td><td>31s</td><td>20s</td><td>33s</td></tr>
+        <tr><td>30s</td><td>75s</td><td>43s</td><td>80s</td></tr>
+        <tr><td>60s</td><td>180s (3 min)</td><td>93s</td><td>193s (3.2 min)</td></tr>
+      </tbody>
+    </table>
+
+    <p>At 4 seconds, the correction is about half a stop &mdash; noticeable but not critical. By 30 seconds, you&rsquo;re looking at more than a full stop of error if you don&rsquo;t compensate. At a minute or longer, uncorrected exposures will be significantly underexposed.</p>
+
+    <div class="tip-box">
+      <strong>T-Max 100 is special</strong>
+      <p>Kodak T-Max films use tabular-grain technology that resists reciprocity failure better than traditional emulsions. T-Max 100 has an exponent of just 1.15, meaning a metered 30-second exposure only needs 43 seconds &mdash; compared to 80 seconds for Tri-X. If you shoot a lot of long exposures, T-Max is worth considering.</p>
+    </div>
+
+    <h3>How metergeist Handles It</h3>
+    <p>When the calculated exposure time exceeds one second, a <strong>reciprocity badge</strong> appears automatically in the exposure controls. It shows both the metered time and the corrected time for your loaded film. No charts, no mental math &mdash; just the number you need.</p>
+
+    <h2>Using the Bulb Timer</h2>
+    <p>Tap the reciprocity badge to open the <strong>bulb timer</strong>. It shows a countdown with the corrected exposure time, a progress ring, and your film stock name. Here&rsquo;s the workflow:</p>
+
+    <div class="step">
+      <span class="step-number">1</span>
+      <div class="step-content">
+        <h3>Set Up Your Shot</h3>
+        <p>Mount your camera on a tripod. Frame and focus. Attach your cable release.</p>
+      </div>
+    </div>
+    <div class="step">
+      <span class="step-number">2</span>
+      <div class="step-content">
+        <h3>Meter the Scene</h3>
+        <p>Point your iPhone at the scene. If using an ND filter, select it in the app. The exposure controls will show BULB and the reciprocity badge will show the corrected time.</p>
+      </div>
+    </div>
+    <div class="step">
+      <span class="step-number">3</span>
+      <div class="step-content">
+        <h3>Open the Shutter</h3>
+        <p>Set your camera to B (bulb). Press and lock the cable release to open the shutter.</p>
+      </div>
+    </div>
+    <div class="step">
+      <span class="step-number">4</span>
+      <div class="step-content">
+        <h3>Start the Timer</h3>
+        <p>Tap the reciprocity badge, then tap <strong>START EXPOSURE</strong>. The countdown begins. The screen stays on during the exposure, and a notification alerts you if the app goes to the background.</p>
+      </div>
+    </div>
+    <div class="step">
+      <span class="step-number">5</span>
+      <div class="step-content">
+        <h3>Close the Shutter</h3>
+        <p>When the timer hits zero, you&rsquo;ll feel a haptic tap and hear an alert. Release the cable release to close the shutter. Done.</p>
+      </div>
+    </div>
+
+    <h2>Tips for Great Long Exposures</h2>
+
+    <h3>Nail the Basics</h3>
+    <ul>
+      <li><strong>Use a heavy tripod.</strong> Medium format cameras are heavier than 35mm, and vibration during long exposures is the #1 cause of soft images.</li>
+      <li><strong>Shield the viewfinder.</strong> On TLRs with waist-level finders, cover the viewing lens with a lens cap or dark cloth. Light leaking through the viewing lens can fog the film during long exposures.</li>
+      <li><strong>Use a cable release.</strong> Even pressing the shutter by hand on a tripod introduces shake at 1/8s and slower.</li>
+      <li><strong>Wait for the wind.</strong> Or use it &mdash; wind-blown grass and leaves create beautiful streaks in long exposures. But if your subject should be sharp, wait for a calm moment.</li>
+    </ul>
+
+    <h3>Exposure Strategy</h3>
+    <ul>
+      <li><strong>Bracket when you can.</strong> Shoot one frame at the corrected time, one at +1 stop (double the time), and one at -1 stop (half the time). Film is cheap compared to the trip.</li>
+      <li><strong>Meter without the filter.</strong> Take your light reading before attaching the ND filter. metergeist does the math, but metering through a very dark ND (especially ND1000) can give unreliable results on any light meter.</li>
+      <li><strong>Account for changing light.</strong> At sunrise and sunset, the light is changing fast. A 4-minute exposure started at sunset will end in noticeably dimmer conditions. Consider adding 1/3 to 1/2 stop of extra time.</li>
+      <li><strong>Negative film is forgiving.</strong> Color negative and B&amp;W negative films handle overexposure much better than underexposure. When in doubt, round up.</li>
+    </ul>
+
+    <h3>Subjects That Work</h3>
+    <ul>
+      <li><strong>Moving water</strong> &mdash; 2&ndash;8 seconds smooths rapids and cascades. 30+ seconds turns the ocean into glass.</li>
+      <li><strong>Clouds</strong> &mdash; 30 seconds to 4 minutes creates dramatic streaks in partly cloudy skies.</li>
+      <li><strong>Traffic</strong> &mdash; car headlights and taillights at dusk create ribbons of light. 10&ndash;30 seconds usually works.</li>
+      <li><strong>Crowds</strong> &mdash; 15&ndash;60 seconds in a busy intersection ghosts pedestrians into transparent figures while buildings stay sharp.</li>
+      <li><strong>Night architecture</strong> &mdash; no ND needed. Shoot at f/8 or f/11 for maximum sharpness. 15&ndash;120 seconds depending on available light.</li>
+    </ul>
+
+    <div class="tip-box">
+      <strong>The TLR advantage</strong>
+      <p>TLR cameras are excellent for long exposures. The leaf shutter produces almost zero vibration compared to focal plane shutters. The waist-level viewfinder lets you compose without crouching awkwardly at tripod height. And the large 6&times;6 negative captures extraordinary detail in low-light scenes.</p>
+    </div>
+
+    <h2>Quick Reference</h2>
+    <table class="guide-table" role="table" aria-label="ND filter exposure times in daylight">
+      <thead>
+        <tr><th>Without Filter (EV 15)</th><th>ND8</th><th>ND64</th><th>ND1000</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>1/125s</td><td>1/15s</td><td>1s</td><td>8s</td></tr>
+        <tr><td>1/60s</td><td>1/8s</td><td>1s</td><td>16s</td></tr>
+        <tr><td>1/30s</td><td>1/4s</td><td>2s</td><td>33s</td></tr>
+        <tr><td>1/15s</td><td>1/2s</td><td>4s</td><td>66s</td></tr>
+        <tr><td>1/8s</td><td>1s</td><td>8s</td><td>~2 min</td></tr>
+      </tbody>
+    </table>
+    <p>These are base times before reciprocity correction. metergeist calculates the actual corrected time for your specific film stock automatically.</p>
+
+    <h2>Recommended Gear</h2>
+    <p>Everything you need for long exposure film photography. Links go to B&amp;H Photo.</p>
+
+    <h3>ND Filters</h3>
+    <p>For TLR cameras, you'll need either Bay-size filters (Bay I for <a href="/cameras/yashica-mat-124g.html">Yashica</a>, Bay II or III for <a href="/cameras/rolleiflex-35f.html">Rolleiflex</a>) or a filter holder system. Standard threaded ND filters work with an adapter ring.</p>
+    <ul>
+      <li><a href="https://www.bhphotovideo.com/c/search?q=nd8%20filter%2049mm" target="_blank" rel="noopener nofollow sponsored">ND8 (3-stop) Filters</a> &mdash; best all-around starter filter for waterfalls and light motion blur</li>
+      <li><a href="https://www.bhphotovideo.com/c/search?q=nd64%20filter%2049mm" target="_blank" rel="noopener nofollow sponsored">ND64 (6-stop) Filters</a> &mdash; smooth water and cloud streaks in daylight</li>
+      <li><a href="https://www.bhphotovideo.com/c/search?q=nd1000%20filter%2049mm" target="_blank" rel="noopener nofollow sponsored">ND1000 (10-stop) Filters</a> &mdash; extreme long exposures, ghosting people out of scenes</li>
+      <li><a href="https://www.bhphotovideo.com/c/search?q=variable%20nd%20filter%2049mm" target="_blank" rel="noopener nofollow sponsored">Variable ND Filters</a> &mdash; adjustable from 2 to 8+ stops, versatile but watch for color shift at extremes</li>
+      <li><a href="https://www.bhphotovideo.com/c/search?q=bay%20I%20filter%20nd" target="_blank" rel="noopener nofollow sponsored">Bay I Filters (Yashica)</a> &mdash; slip-on filters that fit Yashica TLR taking lenses</li>
+      <li><a href="https://www.bhphotovideo.com/c/search?q=rolleiflex%20bay%20filter%20nd" target="_blank" rel="noopener nofollow sponsored">Bay II/III Filters (Rolleiflex)</a> &mdash; slip-on filters for Rolleiflex taking lenses</li>
+    </ul>
+
+    <h3>Tripods</h3>
+    <p>Medium format cameras are heavier than 35mm bodies. A solid tripod prevents vibration during multi-second (or multi-minute) exposures.</p>
+    <ul>
+      <li><a href="https://www.bhphotovideo.com/c/search?q=carbon%20fiber%20tripod%20travel" target="_blank" rel="noopener nofollow sponsored">Carbon Fiber Travel Tripods</a> &mdash; lightweight but rigid, ideal for field work with TLRs</li>
+      <li><a href="https://www.bhphotovideo.com/c/search?q=aluminum%20tripod%20medium%20format" target="_blank" rel="noopener nofollow sponsored">Aluminum Tripods</a> &mdash; more affordable, heavier but very stable</li>
+      <li><a href="https://www.bhphotovideo.com/c/search?q=tabletop%20mini%20tripod" target="_blank" rel="noopener nofollow sponsored">Tabletop / Mini Tripods</a> &mdash; compact option for travel and street-level compositions</li>
+    </ul>
+
+    <h3>Cable Releases</h3>
+    <p>A cable release lets you trigger the shutter without touching the camera. Essential for bulb mode &mdash; most have a lock to hold the shutter open.</p>
+    <ul>
+      <li><a href="https://www.bhphotovideo.com/c/search?q=mechanical%20cable%20release" target="_blank" rel="noopener nofollow sponsored">Mechanical Cable Releases</a> &mdash; standard threaded releases that fit most TLR cameras</li>
+      <li><a href="https://www.bhphotovideo.com/c/search?q=locking%20cable%20release" target="_blank" rel="noopener nofollow sponsored">Locking Cable Releases</a> &mdash; lock screw holds the shutter open for bulb exposures so you don't have to</li>
+    </ul>
+
+    <h3>Film for Long Exposures</h3>
+    <p>Some films handle reciprocity failure better than others. T-Max films are engineered for it.</p>
+    <ul>
+      <li><a href="https://www.bhphotovideo.com/c/search?q=kodak%20tmax%20100%20120" target="_blank" rel="noopener nofollow sponsored">Kodak T-Max 100 (120)</a> &mdash; best-in-class reciprocity performance, fine grain, sharp</li>
+      <li><a href="https://www.bhphotovideo.com/c/search?q=ilford%20hp5%20plus%20120" target="_blank" rel="noopener nofollow sponsored">Ilford HP5 Plus (120)</a> &mdash; pushes well, forgiving latitude, classic look</li>
+      <li><a href="https://www.bhphotovideo.com/c/search?q=ilford%20fp4%20plus%20120" target="_blank" rel="noopener nofollow sponsored">Ilford FP4 Plus (120)</a> &mdash; fine grain with moderate reciprocity correction needed</li>
+      <li><a href="https://www.bhphotovideo.com/c/search?q=kodak%20portra%20400%20120" target="_blank" rel="noopener nofollow sponsored">Kodak Portra 400 (120)</a> &mdash; professional color negative, excellent latitude for long exposures</li>
+      <li><a href="https://www.bhphotovideo.com/c/search?q=cinestill%20800t%20120" target="_blank" rel="noopener nofollow sponsored">Cinestill 800T (120)</a> &mdash; tungsten-balanced for night photography with halation glow</li>
+    </ul>
+
+    <h3>Accessories</h3>
+    <ul>
+      <li><a href="https://www.bhphotovideo.com/c/search?q=dark%20focusing%20cloth%20camera" target="_blank" rel="noopener nofollow sponsored">Dark Cloth</a> &mdash; cover the waist-level viewfinder to prevent light leaking through during long exposures</li>
+      <li><a href="https://www.bhphotovideo.com/c/search?q=lens%20blower%20cleaning%20kit" target="_blank" rel="noopener nofollow sponsored">Lens Cleaning Kit</a> &mdash; ND filters collect dust and fingerprints; keep them clean for sharp results</li>
+      <li><a href="https://www.bhphotovideo.com/c/search?q=step%20up%20ring%20filter%20adapter" target="_blank" rel="noopener nofollow sponsored">Step-Up Adapter Rings</a> &mdash; use one set of larger filters across multiple lens/filter sizes</li>
+    </ul>
+
+    <div class="tip-box">
+      <strong>Download TLR Companion</strong>
+      <p>TLR Companion is a free light meter app for film photographers. It handles ND filter compensation, per-film reciprocity correction, and bulb timing so you can focus on the image. No ads, no subscriptions, no account required.</p>
+    </div>
+  </div>
+  </main>
+
+  <footer>
+    &copy; 2026 metergeist
+    <div class="links">
+      <a href="/cameras/">TLR Guide</a>
+      <a href="/film/">Film Guide</a>
+      <a href="/blog/">Blog</a>
+      <a href="/support.html">Support</a>
+      <a href="https://www.instagram.com/metergeist" target="_blank" rel="noopener">Instagram</a>
+    </div>
+  </footer>
+</body>
+</html>

@@ -60,7 +60,7 @@
 
     <h2>The gap between theory and hardware</h2>
 
-    <p>The meter app lived in a world of continuous values. It could suggest any aperture from f/1.0 to f/64 and any shutter speed from 30 seconds to 1/8000. My camera lived in a world of discrete click-stops: seven aperture positions and four shutter speeds. (I later wrote about this <a href="/blog/how-to-meter-without-a-built-in-meter.html">translation problem</a> in more detail.) These are fundamentally different domains, and every time I used the app, I was a translator between them.</p>
+    <p>The meter app lived in a world of continuous values. It could suggest any aperture from f/1.0 to f/64 and any shutter speed from 30 seconds to 1/8000. My camera lived in a world of discrete click-stops: seven aperture positions and four shutter speeds. (I later wrote about this <a href="/blog/how-to-meter-without-a-built-in-meter">translation problem</a> in more detail.) These are fundamentally different domains, and every time I used the app, I was a translator between them.</p>
 
     <p>f/6.3? My camera doesn't click at f/6.3. That's between f/5.6 and f/8. Which do I pick? It depends on whether I'd rather slightly overexpose or slightly underexpose, which depends on the film stock, which depends on whether I'm going to push the development &mdash; and now I'm standing in a park doing arithmetic instead of looking at the light.</p>
 
@@ -74,7 +74,7 @@
 
     <p>I searched the App Store for this. I found apps with camera "presets" that were really just ISO presets. I found apps with customizable aperture and shutter lists, but they required me to manually enter every value and offered no guidance on which combination to use. I found beautifully designed apps that ignored the problem entirely.</p>
 
-    <p>None of them knew what a Yashica A was. None of them knew that a <a href="/cameras/rolleicord-v.html">Rolleicord V</a> goes from 1 second to 1/500 but a Yashica A stops at 1/300. None of them knew that the <a href="/cameras/mamiya-c330f.html">Mamiya C330f</a> has interchangeable lenses, each with a different maximum aperture. The camera &mdash; the specific, physical instrument with specific, physical constraints &mdash; was invisible to every meter app I tried.</p>
+    <p>None of them knew what a Yashica A was. None of them knew that a <a href="/cameras/rolleicord-v">Rolleicord V</a> goes from 1 second to 1/500 but a Yashica A stops at 1/300. None of them knew that the <a href="/cameras/mamiya-c330f">Mamiya C330f</a> has interchangeable lenses, each with a different maximum aperture. The camera &mdash; the specific, physical instrument with specific, physical constraints &mdash; was invisible to every meter app I tried.</p>
 
     <p>So I decided to build one.</p>
 
@@ -82,9 +82,9 @@
 
     <p>The first thing I did was not write code. The first thing I did was research cameras. I wanted to build profiles &mdash; exact specifications for every TLR camera I could find documentation for. Not approximations. The real aperture detents, the real shutter speeds, the real lens specifications.</p>
 
-    <p>This turned out to be a deeper rabbit hole than I expected. Original documentation for many of these cameras is scarce. Manufacturer specifications sometimes conflict with what the cameras actually offer. The <a href="/cameras/yashica-mat-124g.html">Yashica-Mat 124G</a>'s manual lists certain shutter speeds, but the Copal-SV shutter installed in the camera has its own spec sheet with slightly different information. Which do you trust? The answer is: you find someone who owns the camera and ask them to count the click-stops.</p>
+    <p>This turned out to be a deeper rabbit hole than I expected. Original documentation for many of these cameras is scarce. Manufacturer specifications sometimes conflict with what the cameras actually offer. The <a href="/cameras/yashica-mat-124g">Yashica-Mat 124G</a>'s manual lists certain shutter speeds, but the Copal-SV shutter installed in the camera has its own spec sheet with slightly different information. Which do you trust? The answer is: you find someone who owns the camera and ask them to count the click-stops.</p>
 
-    <p>I built profiles for the most popular TLRs first: the Yashica-Mat 124G, the Rolleiflex 2.8F and 3.5F, the Rolleicord V and Vb, the Mamiya C330f. Then the less common ones: the <a href="/cameras/yashica-a.html">Yashica A</a> and <a href="/cameras/yashica-d.html">D</a>, the <a href="/cameras/minolta-autocord.html">Minolta Autocord</a>, the Seagull 4A-103. Each profile is a complete description of what the camera can do: minimum and maximum aperture, every click-stop in between, minimum and maximum shutter speed, every click-stop in between, whether it has bulb mode, the lens focal length and maximum aperture.</p>
+    <p>I built profiles for the most popular TLRs first: the Yashica-Mat 124G, the Rolleiflex 2.8F and 3.5F, the Rolleicord V and Vb, the Mamiya C330f. Then the less common ones: the <a href="/cameras/yashica-a">Yashica A</a> and <a href="/cameras/yashica-d">D</a>, the <a href="/cameras/minolta-autocord">Minolta Autocord</a>, the Seagull 4A-103. Each profile is a complete description of what the camera can do: minimum and maximum aperture, every click-stop in between, minimum and maximum shutter speed, every click-stop in between, whether it has bulb mode, the lens focal length and maximum aperture.</p>
 
     <p>The app now ships with 16 camera profiles across eight manufacturers. But the profiles were where it all started, because the profiles are the point. Without knowing the camera, you're just another meter app.</p>
 
@@ -94,7 +94,7 @@
 
     <p>Reciprocity failure is what happens when you make long exposures. Below about 1 second, film responds linearly to light: double the exposure time, double the light on the film. But above 1 second, the relationship breaks down. The film becomes less efficient. A metered 10-second exposure might actually need 15 seconds. A metered 30-second exposure might need 90 seconds. And the correction factor is different for every film stock.</p>
 
-    <p>This matters for TLR photographers because we shoot medium format, often at smaller apertures for depth of field, sometimes in low light, and frequently on tripods for landscapes and architecture. Long exposures come up more often than you'd think. And getting reciprocity wrong means wasting a frame &mdash; which, when you only have <a href="/blog/twelve-frames.html">twelve</a>, is a serious cost.</p>
+    <p>This matters for TLR photographers because we shoot medium format, often at smaller apertures for depth of field, sometimes in low light, and frequently on tripods for landscapes and architecture. Long exposures come up more often than you'd think. And getting reciprocity wrong means wasting a frame &mdash; which, when you only have <a href="/blog/twelve-frames">twelve</a>, is a serious cost.</p>
 
     <p>So TLR Companion includes reciprocity failure data for every film stock in the app. Load Ilford HP5 Plus, and the app knows that a metered 30-second exposure needs about 45 seconds on that emulsion. Load Fuji Acros 100 II, and the app knows it barely needs any correction at all. When the metered exposure exceeds your camera's slowest shutter speed, the app automatically switches to bulb mode, shows the corrected exposure time, and starts a countdown timer.</p>
 
@@ -132,7 +132,7 @@
 
     <p>More cameras. More film stocks. Localization for the Japanese and German film photography communities. Accessibility improvements. A widget that shows your current roll's frame count on the home screen. And the <a href="/cameras/">TLR Camera Guide</a> on the website, which has grown into a resource of its own &mdash; 48 cameras across four brands, with specs, history, and current market prices.</p>
 
-    <p>But the core stays the same. <a href="/blog/introducing-metergeist.html">TLR Companion is a light meter that knows your camera</a>. It's a notebook for your film. And it was built by someone who stands in parks doing arithmetic and decided there had to be a better way.</p>
+    <p>But the core stays the same. <a href="/blog/introducing-metergeist">TLR Companion is a light meter that knows your camera</a>. It's a notebook for your film. And it was built by someone who stands in parks doing arithmetic and decided there had to be a better way.</p>
 
     <div class="blog-divider"></div>
 
@@ -156,8 +156,8 @@
       <a href="/film/">Film Guide</a>
       <a href="/learn/">Learn</a>
       <a href="/blog/">Blog</a>
-      <a href="/privacy.html">Privacy</a>
-      <a href="/support.html">Support</a>
+      <a href="/privacy">Privacy</a>
+      <a href="/support">Support</a>
     </div>
   </footer>
 </body>
